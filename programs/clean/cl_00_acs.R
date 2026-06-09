@@ -52,13 +52,7 @@ for (current_year in 2020:2024) {
 va_insurance_percentages_binded <- bind_rows(storage) %>% 
   relocate(year)
 
+# Depends on if you want to view or create csv
 View(va_insurance_percentages_binded)
 
 write_csv(va_insurance_percentages_binded, "2020-2024_virginia_health_insurance.csv")
-
-
-
-# ACS Codebook ------------------------------------------------------------
-
-v24 <- load_variables(2024, "acs5", cache = TRUE)
-View(v24)
