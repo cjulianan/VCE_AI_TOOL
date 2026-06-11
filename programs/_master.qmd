@@ -3,3 +3,9 @@ title: "_master"
 format: html
 ---
 
+# Load Libraries ----------------------------------------------------------
+
+library(tidycensus)
+library(tidyverse)
+library(dplyr)
+library(readr)

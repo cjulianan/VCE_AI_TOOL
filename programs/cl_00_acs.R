@@ -1,11 +1,9 @@
 
-# Load Libraries ----------------------------------------------------------
+# Codebook ----------------------------------------------------------
 
-library(tidycensus)
-library(tidyverse)
-library(dplyr)
-library(readr)
-
+# View acs5 codebook for 2024
+v24 <- load_variables(2024, "acs5", cache = TRUE)
+View(v24)
 
 # Building table ----------------------------------------------------------
 
