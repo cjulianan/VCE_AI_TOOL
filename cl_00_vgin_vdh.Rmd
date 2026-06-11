@@ -1,0 +1,68 @@
+---
+title: "Data Exploration of Datasets VCE AI TOOL"
+author: "Nebiyou Mengistu"
+date: "2026-06-08"
+output: html_document
+---
+
+```{r}
+library(readr)
+library(tidyverse)
+library(dplyr)
+va_hospitals = read.csv("Virginia_Hospitals.csv") # VGIN Virginia Hospitals dataset
+va_hospitals
+```
+
+
+```{r}
+srctype_missingness = mean(is.na(va_hospitals$SrcTyp) | va_hospitals$SrcTyp == "-") * 100
+srctype_missingness
+# Source of admission to hospitals is missing for 11% of our data
+```
+
+
+```{r}
+missingness <- sapply(va_hospitals, function(col) {
+  mean(is.na(col) | trimws(col) == "-") * 100
+})
+
+missingness
+
+# URL and phone number should probably be omitted
+```
+
+
+```{r}
+pud_disease = read.csv("PUD Reportable Disease.csv") # VDH Reportable Diseases Dataset, looking to see if there are discrepancies between geographic value and FIPS Code
+
+filtered <- pud_disease %>%
+  filter(
+    grepl("Eastern|Northern|Northwest|Southwest", Geography.Value, ignore.case = FALSE), 
+    # This sees if certain regions like Southern or Northern have FIPS Codes. If they don't have an FIPS Code they're not useful
+    !grepl("County", Geography.Value, ignore.case = TRUE),   # Geography Value does NOT contain County
+    !is.na(FIPS),                                            # FIPS is not NA
+    FIPS != ""                                               # FIPS is not empty
+  )
+
+# The regions that do not have a county name in the Geography Value column all have an FIPS Code.
+# We can map them to specific counties
+
+nrow(filtered)
+filtered
+
+
+unique = unique(pud_disease$Geography.Value)
+unique
+
+
+library(dplyr)
+
+region_counts <- pud_disease %>%
+  filter(grepl("Eastern|Northern|Northwest|Southwest", Geography.Value)) %>%
+  count(Geography.Value) 
+
+region_counts # How many entries are from each region (they're equally divided)
+
+```
+
+
