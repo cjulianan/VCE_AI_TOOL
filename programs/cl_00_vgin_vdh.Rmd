@@ -9,7 +9,7 @@ output: html_document
 library(readr)
 library(tidyverse)
 library(dplyr)
-va_hospitals = read.csv("Virginia_Hospitals.csv") # VGIN Virginia Hospitals dataset
+va_hospitals = read.csv("~/VCE_AI_TOOL/data/sources/Virginia-Geographic-Information-Network/Virginia_Hospitals.csv") # VGIN Virginia Hospitals dataset
 va_hospitals
 ```
 
@@ -29,6 +29,18 @@ missingness <- sapply(va_hospitals, function(col) {
 missingness
 
 # URL and phone number should probably be omitted
+
+unique_admission = unique(va_hospitals$SrcTyp)
+unique_admission
+```
+
+
+```{r}
+va_hospitals <- va_hospitals %>% select(-Phone, -URL) # dropped phone and url, most are missing and irrelevant
+
+va_hospitals
+
+write.csv(va_hospitals, "vgin_hospitals.csv")
 ```
 
 
