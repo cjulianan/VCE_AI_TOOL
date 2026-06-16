@@ -37,7 +37,7 @@ pud_disease = read.csv("PUD Reportable Disease.csv") # VDH Reportable Diseases D
 
 filtered <- pud_disease %>%
   filter(
-    grepl("Eastern|Northern|Northwest|Southwest", Geography.Value, ignore.case = FALSE), 
+    grepl("Eastern|Northern|Northwest|Southwest|Central", Geography.Value, ignore.case = FALSE), 
     # This sees if certain regions like Southern or Northern have FIPS Codes. If they don't have an FIPS Code they're not useful
     !grepl("County", Geography.Value, ignore.case = TRUE),   # Geography Value does NOT contain County
     !is.na(FIPS),                                            # FIPS is not NA
@@ -48,8 +48,10 @@ filtered <- pud_disease %>%
 # We can map them to specific counties
 
 nrow(filtered)
-filtered
 
+
+missing_fips = sum(is.na(pud_disease$FIPS))
+missing_fips
 
 unique = unique(pud_disease$Geography.Value)
 unique
