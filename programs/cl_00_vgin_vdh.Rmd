@@ -44,8 +44,9 @@ filtered <- pud_disease %>%
     FIPS != ""                                               # FIPS is not empty
   )
 
-# The regions that do not have a county name in the Geography Value column all have an FIPS Code.
-# We can map them to specific counties
+# The regions that do not have a county name in the Geography Value column (and have a region like Eastern) all DO NOT have an FIPS Code.
+# This makes sense. Since we CANNOT map them to specific counties, I will most likely filter them out for our dataset
+# (Not as specific as county)
 
 nrow(filtered)
 
