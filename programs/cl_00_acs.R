@@ -19,16 +19,15 @@ race_letters  <- LETTERS[1:9]
 race_variants <- map(tables_with_race, ~ paste0(.x, race_letters)) %>% unlist()
 table_ids <- c(standard_tables, race_variants)
 
-test_table_ids <- c("B25064")
 # Building tables ---------------------------------------------------------
 
 # Loop through each year and table
 va_data <- map_dfr(years, function(yr) {
-  year_data <- map(test_table_ids, function(tb) {
+  year_data <- map(table_ids, function(tb) {
     print(paste0("Processing table ", tb, " for year ", yr))
     
     get_acs(
-      geography = "block group",
+      geography = "county",
       table     = tb,
       state     = "VA",
       survey    = "acs5",
@@ -43,7 +42,9 @@ va_data <- map_dfr(years, function(yr) {
   return(year_data)
 }) %>% 
   # put year column to very left
-  relocate(year)
+  relocate(year) %>%
+  # filter out columns ending in "M" (margin of errors should be calculated with data agent)
+  select(!ends_with("M"))
 
 # create csv
 write_csv(va_data, "2020-2024_acs_master_county.csv")
