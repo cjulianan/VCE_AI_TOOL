@@ -3,11 +3,15 @@ title: "_master"
 format: html
 ---
 
-# Load Libraries ----------------------------------------------------------
-
+```{r Load Libraries}
 library(tidycensus)
 library(tidyverse)
 library(dplyr)
 library(readr)
 library(educationdata)
 library(rnassqs)
+```
+
+```{r Load API Keys}
+nassqs_auth(key = Sys.getenv("NASS_API_KEY"))
+```
