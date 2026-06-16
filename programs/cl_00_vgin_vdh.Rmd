@@ -9,6 +9,7 @@ output: html_document
 library(readr)
 library(tidyverse)
 library(dplyr)
+################ HERE I AM LOOKING AT VGIN'S VIRGINIA HOSPITALS DATASET####################
 va_hospitals = read.csv("~/VCE_AI_TOOL/data/sources/Virginia-Geographic-Information-Network/Virginia_Hospitals.csv") # VGIN Virginia Hospitals dataset
 va_hospitals
 ```
@@ -45,7 +46,9 @@ write.csv(va_hospitals, "vgin_hospitals.csv")
 
 
 ```{r}
-pud_disease = read.csv("PUD Reportable Disease.csv") # VDH Reportable Diseases Dataset, looking to see if there are discrepancies between geographic value and FIPS Code
+################## HERE I AM LOOKING AT VDH PUD REPORTABLE DISEASES DATASET ####################
+
+pud_disease = read.csv("PUD Reportable Disease.csv") # primarily looking to see if there are discrepancies between geographic value and FIPS Code
 
 filtered <- pud_disease %>%
   filter(
@@ -63,11 +66,18 @@ filtered <- pud_disease %>%
 nrow(filtered)
 
 
-missing_fips = sum(is.na(pud_disease$FIPS))
-missing_fips
+missing_geo <- pud_disease # wanted to see the unique values of the Geographic names that don't have an FIPS code 
+  filter(is.na(FIPS) | str_trim(FIPS) == "") %>% 
+  distinct(Geography.Value)
 
-unique = unique(pud_disease$Geography.Value)
-unique
+View(missing_geo) ## it's only regions (Northern, Eastern, etc) and State of Virginia. 
+## We are good to go!
+
+missing_yearly = sum(is.na(pud_disease$Annual.Case.Count))
+missing_yearly # No missing values from Annual Case Count 
+
+missing_rate = sum(is.na(pud_disease$Incidence.Rate))
+missing_rate # No missing values from Incidence Rate
 
 
 library(dplyr)
@@ -76,8 +86,9 @@ region_counts <- pud_disease %>%
   filter(grepl("Eastern|Northern|Northwest|Southwest", Geography.Value)) %>%
   count(Geography.Value) 
 
-region_counts # How many entries are from each region (they're equally divided)
 
+
+View(pud_disease)
 ```
 
 
