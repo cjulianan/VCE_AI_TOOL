@@ -10,6 +10,10 @@ library(dplyr)
 library(readr)
 library(educationdata)
 library(rnassqs)
+library(reticulate)
+library(ellmer)
+library(shiny)
+library(bslib)
 ```
 
 ```{r Load API Keys}
