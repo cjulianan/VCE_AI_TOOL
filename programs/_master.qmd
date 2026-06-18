@@ -14,6 +14,7 @@ library(reticulate)
 library(ellmer)
 library(shiny)
 library(bslib)
+library(jsonlite)
 ```
 
 ```{r Load API Keys}

@@ -1,4 +1,3 @@
-
 # UI ----------------------------------------------------------------------
 
 ui <- fluidPage(
@@ -23,11 +22,45 @@ ui <- fluidPage(
 # Server ------------------------------------------------------------------
 
 server <- function(input, output, session) {
+  
+  # TEMPORARY, will probably change later but this is ok start
+  # Also need to put the datasets specified in datasets list into working local directory for it to work for now (do that manually)
+  
+  # Doesn't work since too big
+  # datasets <- list(
+  #   ccd_directory = "2020-2024_ccd_directory.csv",
+  #   ccd_enrollment = "2020-2024_ccd_enrollment.csv"
+  # )
+  
+  # Works since this is a small dataset
+  datasets <- list(
+    adhd = "Percent of Children (Ages 3 to 17) with ADHD"
+  )
+  
+  # Loop through datasets and convert them to json. Append each to combined_dataset
+  combined_dataset <- ""
+  for(dataset_name in names(datasets)) {
+    file_path <- datasets[[dataset_name]]
+    
+    if(file.exists(file_path)) {
+      df <- read.csv(file_path)
+      df_json <- toJSON(df, pretty=TRUE)
+      combined_dataset <- paste0(combined_dataset, "\n", df_json)
+    }
+  }
+  
+  # Tell system to only use dataset provided to respond
+  system_prompt <- paste0("Only answer user prompts using the following dataset provided. Do not answer user prompts that cannot be answered through using the following dataset. Following dataset: ", combined_dataset)
+  
+  
+  
+  
   # set up chatbot parameters
   chat_obj <- chat_openai_compatible(
     model = "gpt-oss-120b",
     base_url = "https://llm-api.arc.vt.edu/api/v1",
-    credentials = function() Sys.getenv("ARC_API_KEY")
+    credentials = function() Sys.getenv("ARC_API_KEY"),
+    system_prompt = system_prompt
   )
   
   # keep record of chat log so new responses aren't overwritten
