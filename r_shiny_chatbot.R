@@ -34,7 +34,7 @@ server <- function(input, output, session) {
   
   # Works since this is a small dataset
   datasets <- list(
-    adhd = "Percent of Children (Ages 3 to 17) with ADHD"
+    adhd = "Percent of Children (Ages 3 to 17) with ADHD.csv"
   )
   
   # Loop through datasets and convert them to json. Append each to combined_dataset
