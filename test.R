@@ -4,76 +4,69 @@
 library(ellmer)
 library(bslib)
 library(shiny)
-
-# =========================================================================
-# AUTOMATED DATA INGESTION LAYER
-# =========================================================================
-
-######### Function A: The Automated GPS Map
-
-## COMMENTED EVERYTHING UNDER HERE
+library(DBI)
+library(duckdb)
 
 
-# # Why: This runs once when the app boots. It maps out where every file lives 
-# # in 'data/outcome/' so you never have to hardcode paths when adding files (like if one of us updates a dataset in our Github).
-# ingest_all_metadata <- function() {
-#   base_folder <- file.path("data", "outcome")
-#   
-#   if (!dir.exists(base_folder)) {
-#     warning("The directory 'data/outcome/' was not detected.")
-#     return(NULL)
-#   }
-#   
-#   # 1. THE CRAWLER STEP: Scan all nested subfolders automatically
-#   # recursive = TRUE: Force R to jump into every subfolder depth
-#   # pattern = "\\.csv$": Only pick up clean CSV files, ignore other junk files
-#   # full.names = TRUE: Keep the entire usable relative path strin
-#   all_file_paths <- list.files(
-#     path = base_folder, 
-#     pattern = "\\.csv$", 
-#     recursive = TRUE, 
-#     full.names = TRUE
-#   )
-#   
-#   ## 2. Converts file paths into a searchable dictionary frame
-#   # This matches file names to their physical home paths automatically
-#   registry <- data.frame(
-#     file_name = basename(all_file_paths), # ex. "census_nass_crops.csv"
-#     full_path = all_file_paths,
-#     stringsAsFactors = FALSE
-#   )
-#   
-#   return(registry) # now we have the live directory map of all available datasets
-# }
-# 
-# # Run the GPS map once globally
-# cohort_file_map <- ingest_all_metadata()
-# 
-# 
-# ######### Function B: The On-Demand Data Grabber
-# 
-# # Why: This is the function your retrieval layer will call. It takes a file 
-# # name (like "census_nass_crops.csv"), looks up its full path from the GPS map,
-# # and reads the actual table rows into active memory instantly.
-# get_target_data <- function(target_file_name, path_map_df) {
-#   
-#   # Filter our GPS map to find the exact matching row for our target filename
-#   matched_row <- path_map_df[path_map_df$file_name == target_file_name, ]
-#   
-#   # Safety check: If the file name doesn't exist in the map, exit safely
-#   if (nrow(matched_row) == 0) {
-#     return(NULL)
-#   }
-#   
-#   # Extract the raw text path string from our dataframe row
-#   exact_file_path <- matched_row$full_path
-#   
-#   # READ THE ACTUAL DATA ROWS HERE! 
-#   # This makes the data active and queryable for your retrieval layer.
-#   actual_data <- read.csv(exact_file_path, stringsAsFactors = FALSE)
-#   
-#   return(actual_data)
-#}
+library(shiny)
+library(bslib)
+library(ellmer)
+library(DBI)
+library(duckdb)
+
+################### GLOBAL DATABASE CONNECTION 
+
+# Initialize the DuckDB driver and connect to an in-memory database instance.
+# This tells R to run the serverless engine directly in the app's RAM.
+con <- dbConnect(duckdb())
+
+# Shiny Habit: Ensures that when the Shiny application completely shuts down, 
+# it cleanly releases the database lock and frees up system resources.
+onStop(function() {
+  dbDisconnect(con, shutdown = TRUE)
+})
+
+
+################### THE RETRIEVAL ENGINE FUNCTION 
+
+# Why: We wrap this logic inside a function container so it doesn't run automatically 
+# on startup. It sits on standby until we pass it the target file and county variables
+query_database_context <- function(filename, column, target_county) {
+  
+  # Safety Check: If the file does not exist locally yet, we exit
+  if (!file.exists(filename)) {
+    return("Error: The requested dataset file is missing from the directory path.")
+  }
+  
+  # this is our template for how the duckdb sql query is going to search through our dataset
+  sql_query <- sprintf(
+    "SELECT county, %s FROM '%s' WHERE lower(county) = '%s' LIMIT 1",
+    column, filename, tolower(target_county)
+  )
+  
+  ############ EXECUTING THE DUCKDB QUERY
+  
+  # DuckDB opens the file, grabs the exact column and row cells, and returns 
+  # a 1-row data frame which we store in the variable 'result_df'.
+  result_df <- dbGetQuery(con, sql_query)
+  
+  # Safety Check: If a user types a typo or a county that doesn't exist in 
+  # that specific table, DuckDB will return 0 rows. This blocks R from crashing.
+  if (nrow(result_df) == 0) {
+    return(NULL)
+  }
+  
+  ############ ACTUAL ANSWER GENERATION/CONSTRUCTION
+  
+  # Transforms table cells into clean, plain text factual sentences 
+  context_sentence <- sprintf( 
+    "Factual Context from file [%s]: In %s, the value for %s is %s.",
+    basename(filename), result_df[1, "county"], column, result_df[1, column]
+  ) 
+  
+  return(context_sentence)
+}
+
 
 # UI ----------------------------------------------------------------------
 
@@ -118,7 +111,7 @@ server <- function(input, output, session) {
     updated_history <- paste0(
       chat_log(), "<br>",
       "<strong>User:</strong> ", input$user_prompt, "<br>",
-      "<strong>AI:</strong> ", new_response, "<br>"
+      "<strong>AI:</strong> <i>", new_response, "</i><br>"
     )
     
     # update chat log to include new prompt and response
