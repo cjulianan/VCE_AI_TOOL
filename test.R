@@ -6,65 +6,86 @@ library(bslib)
 library(shiny)
 library(DBI)
 library(duckdb)
+library(jsonlite)
 
 
-library(shiny)
-library(bslib)
-library(ellmer)
-library(DBI)
-library(duckdb)
+################### GLOBAL INITIALIZATION ###################
 
-################### GLOBAL DATABASE CONNECTION 
-
-# Initialize the DuckDB driver and connect to an in-memory database instance.
-# This tells R to run the serverless engine directly in the app's RAM.
+# Initialize the persistent background DuckDB database engine (Runs once)
 con <- dbConnect(duckdb())
 
-# Shiny Habit: Ensures that when the Shiny application completely shuts down, 
-# it cleanly releases the database lock and frees up system resources.
 onStop(function() {
   dbDisconnect(con, shutdown = TRUE)
 })
 
+# Here we load metadata JSON file right when the app loads. we make it an anctive readable R list object
 
-################### THE RETRIEVAL ENGINE FUNCTION 
+app_metadata <- fromJSON("metadata.json", simplifyVector = FALSE)
 
-# Why: We wrap this logic inside a function container so it doesn't run automatically 
-# on startup. It sits on standby until we pass it the target file and county variables
+
+################### THE RETRIEVAL ENGINE FUNCTION ###################
+
 query_database_context <- function(filename, column, target_county) {
   
-  # Safety Check: If the file does not exist locally yet, we exit
   if (!file.exists(filename)) {
     return("Error: The requested dataset file is missing from the directory path.")
   }
   
-  # this is our template for how the duckdb sql query is going to search through our dataset
+  dictionary_path <- file.path("data", "outcome", "census_dictionary.csv")
+  
+  # SQL JOIN TEMPLATE: Merges your raw table row with your local human translation key
   sql_query <- sprintf(
-    "SELECT county, %s FROM '%s' WHERE lower(county) = '%s' LIMIT 1",
-    column, filename, tolower(target_county)
+    "SELECT 
+       data.county, 
+       data.%s AS metric_value,
+       dict.human_label
+     FROM '%s' AS data
+     LEFT JOIN '%s' AS dict
+       ON dict.variable_code = '%s'
+     WHERE lower(data.county) = '%s' 
+     LIMIT 1",
+    column, filename, dictionary_path, toupper(column), tolower(target_county)
   )
   
-  ############ EXECUTING THE DUCKDB QUERY
-  
-  # DuckDB opens the file, grabs the exact column and row cells, and returns 
-  # a 1-row data frame which we store in the variable 'result_df'.
   result_df <- dbGetQuery(con, sql_query)
   
-  # Safety Check: If a user types a typo or a county that doesn't exist in 
-  # that specific table, DuckDB will return 0 rows. This blocks R from crashing.
   if (nrow(result_df) == 0) {
     return(NULL)
   }
   
-  ############ ACTUAL ANSWER GENERATION/CONSTRUCTION
+  # Fallback: If a dataset doesn't have a census lookup entry, use the raw column name 
+  # Here we are adjusting for the non Census datasetr
+  display_label <- result_df[1, "human_label"]
+  if (is.na(display_label) || is.null(display_label)) {
+    display_label <- column
+  }
   
-  # Transforms table cells into clean, plain text factual sentences 
   context_sentence <- sprintf( 
-    "Factual Context from file [%s]: In %s, the value for %s is %s.",
-    basename(filename), result_df[1, "county"], column, result_df[1, column]
+    "Factual Context from file [%s]: In %s, the data for (%s) indicates a value of %s.",
+    basename(filename), result_df[1, "county"], display_label, result_df[1, "metric_value"]
   ) 
   
   return(context_sentence)
+}
+
+
+################### THE COUNTY EXTRACTOR FUNCTION ###################
+
+extract_county_name <- function(user_prompt, filename) {
+  if (!file.exists(filename)) return(NULL)
+  
+  county_list_df <- dbGetQuery(con, sprintf("SELECT DISTINCT county FROM '%s'", filename))
+  raw_counties <- county_list_df$county
+  
+  clean_prompt <- tolower(user_prompt)
+  lower_counties <- tolower(raw_counties)
+  
+  match_index <- which(sapply(lower_counties, function(co) grepl(co, clean_prompt)))
+  
+  if (length(match_index) > 0) {
+    return(raw_counties[match_index[1]])
+  }
+  return(NULL)
 }
 
 
@@ -106,7 +127,34 @@ server <- function(input, output, session) {
   observeEvent(input$submit_button, {
     req(input$user_prompt) 
     
-    new_response <- chat_obj$chat(input$user_prompt)
+    # ---------------------------------------------------------------------
+    # PIPELINE INTEGRATION STEP: HARDCODED ROUTING FOR TODAY'S TEST
+    # ---------------------------------------------------------------------
+    # Once we map out our full JSON loop later this week, this part will be automatic.
+    # For today's test, we will point it directly to your master census file.
+    test_file <- "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv.csv"
+    test_column <- "B14005" # Adjust this to a column you know exists in your file!
+    
+    # Step A: Run your county text scanner on the user's prompt
+    matched_county <- extract_county_name(input$user_prompt, test_file)
+    
+    # Initialize an empty context string
+    data_context <- ""
+    
+    # Step B: If the scanner finds a county, use DuckDB to grab the facts
+    if (!is.null(matched_county)) {
+      data_context <- query_database_context(test_file, test_column, matched_county)
+    }
+    
+    # Step C: Combine the database fact sheet with the user's question
+    # This forces the LLM to look at your data instead of guessing.
+    final_prompt <- sprintf(
+      "You are a helpful policy assistant. Use the following data context to answer the user's question accurately. If the context is empty, answer normally.\n\nContext: %s\n\nUser Question: %s",
+      data_context,
+      input$user_prompt
+    )
+    
+    new_response <- chat_obj$chat(final_prompt)
     
     updated_history <- paste0(
       chat_log(), "<br>",
