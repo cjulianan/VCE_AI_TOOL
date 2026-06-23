@@ -1,0 +1,28 @@
+{
+    "file_name": "File name",
+    "desc": "Description for whole dataset",
+    "columns": [
+        {
+            "name": "Name of column",
+            "data_type": "",
+            "keywords": [
+                "keyword1",
+                "keyword2"
+            ],
+            "desc": "",
+            "organization": "",
+            "missing": ""
+        },
+        {
+            "name": "Name of column",
+            "data_type": "",
+            "keywords": [
+                "keyword1",
+                "keyword2"
+            ],
+            "desc": "",
+            "organization": "",
+            "missing": ""
+        }
+    ]
+}
