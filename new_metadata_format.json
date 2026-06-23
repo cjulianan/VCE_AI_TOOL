@@ -1,6 +1,7 @@
 {
     "file_name": "File name",
     "desc": "Description for whole dataset",
+    "organization": "",
     "columns": [
         {
             "name": "Name of column",
@@ -21,7 +22,6 @@
                 "keyword2"
             ],
             "desc": "",
-            "organization": "",
             "missing": ""
         }
     ]
