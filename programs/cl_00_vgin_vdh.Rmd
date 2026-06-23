@@ -37,9 +37,14 @@ unique_admission
 
 
 ```{r}
-va_hospitals <- va_hospitals %>% select(-Phone, -URL) # dropped phone and url, most are missing and irrelevant
+va_hospitals <- va_hospitals %>% select(-VAPID, -State, -LOC, -PlaceType) # dropped phone and url, most are missing and irrelevant
+# also dropped some others, doesn't help the user filter whtasoever, irrelevant
 
-va_hospitals
+
+unique_type = unique(va_hospitals$PlaceType)
+unique_type
+
+View(va_hospitals)
 
 write.csv(va_hospitals, "vgin_hospitals.csv")
 ```
