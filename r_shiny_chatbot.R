@@ -24,17 +24,16 @@ ui <- fluidPage(
 server <- function(input, output, session) {
   
   # TEMPORARY, will probably change later but this is ok start
-  # Also need to put the datasets specified in datasets list into working local directory for it to work for now (do that manually)
   
   # Doesn't work since too big
   # datasets <- list(
-  #   ccd_directory = "2020-2024_ccd_directory.csv",
-  #   ccd_enrollment = "2020-2024_ccd_enrollment.csv"
+  #   ccd_directory = "data/outcome/Urban-Institute/2020-2024_ccd_directory.csv",
+  #   ccd_enrollment = "data/outcome/Urban-Institute/2020-2024_ccd_directory.csv"
   # )
   
   # Works since this is a small dataset
   datasets <- list(
-    adhd = "Percent of Children (Ages 3 to 17) with ADHD.csv"
+    adhd = "data/sources/Kaiser-Family-Foundation/Percent of Children (Ages 3 to 17) with ADHD.csv"
   )
   
   # Loop through datasets and convert them to json. Append each to combined_dataset
@@ -50,14 +49,14 @@ server <- function(input, output, session) {
   }
   
   # Tell system to only use dataset provided to respond
-  system_prompt <- paste0("Only answer user prompts using the following dataset provided. Do not answer user prompts that cannot be answered through using the following dataset. Following dataset: ", combined_dataset)
+  system_prompt <- paste0("You are a data assistant. Only answer user prompts using the following dataset provided. Answer concisely and accurately based on the data and cite your answers. Do not answer user prompts that cannot be answered through using the following dataset. Following dataset: ", combined_dataset)
   
   
   
   
   # set up chatbot parameters
   chat_obj <- chat_openai_compatible(
-    model = "gpt-oss-120b",
+    model = "gpt-oss-120b-thinking-high",
     base_url = "https://llm-api.arc.vt.edu/api/v1",
     credentials = function() Sys.getenv("ARC_API_KEY"),
     system_prompt = system_prompt
