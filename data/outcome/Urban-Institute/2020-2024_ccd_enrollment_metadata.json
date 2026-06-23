@@ -1,0 +1,72 @@
+{
+    "file_name": "2020-2024_ccd_enrollment.csv",
+    "desc": "Student enrollment demographic numbers.",
+    "organization": "Common Core of Data (CCD)",
+    "columns": [
+        {
+            "name": "year",
+            "data_type": "int",
+            "keywords": [
+                "year",
+                "school year",
+                "academic year",
+                "time period"
+            ],
+            "desc": "The specific school or academic year that the enrollment data was collected.",
+            "missing": null
+        },
+        {
+            "name": "ncessch",
+            "data_type": "int",
+            "keywords": [
+                "ncessch",
+                "school id"
+            ],
+            "desc": "The 12-digit unique national public school ID used to cross-reference school directory details.",
+            "missing": null
+        },
+        {
+            "name": "enrollment",
+            "data_type": "int",
+            "keywords": [
+                "enrollment",
+                "student count",
+                "enrollment size",
+                "student population"
+            ],
+            "desc": "The total integer count of students enrolled in this specific subcategory slice.",
+            "missing": null
+        },
+        {
+            "name": "leaid",
+            "data_type": "int",
+            "keywords": [
+                "leaid",
+                "district",
+                "school district"
+            ],
+            "desc": "The 7-digit unique Local Education Agency ID mapping the school directly to its school district.",
+            "missing": null
+        },
+        {
+            "name": "grade",
+            "data_type": "string",
+            "keywords": [
+                "grade",
+                "grade level"
+            ],
+            "desc": "The specific student grade level or instructional level category for the enrollment count.",
+            "missing": null
+        },
+        {
+            "name": "sex",
+            "data_type": "string",
+            "keywords": [
+                "sex",
+                "gender"
+            ],
+            "desc": "The demographic student gender category used to filter the student counts.",
+            "missing": null
+        }
+    ]
+}

@@ -1,0 +1,214 @@
+{
+    "file_name": "2020-2024_ccd_directory.csv",
+    "desc": "Public school directory tracking geographic locations and administrative IDs.",
+    "organization": "Common Core of Data (CCD)",
+    "columns": [
+        {
+            "name": "year",
+            "data_type": "int",
+            "keywords": [
+                "year",
+                "school year",
+                "academic year",
+                "time period"
+            ],
+            "desc": "The specific school year the directory information represents.",
+            "missing": null
+        },
+        {
+            "name": "school_name",
+            "data_type": "string",
+            "keywords": [
+                "school name",
+                "institution name"
+            ],
+            "desc": "The official text name of the public school.",
+            "missing": null
+        },
+        {
+            "name": "ncessch",
+            "data_type": "int",
+            "keywords": [
+                "ncessch",
+                "school id"
+            ],
+            "desc": "The 12-digit unique national public school ID used to cross-reference school directory details.",
+            "missing": null
+        },
+        {
+            "name": "leaid",
+            "data_type": "int",
+            "keywords": [
+                "leaid",
+                "district",
+                "school district"
+            ],
+            "desc": "The 7-digit unique Local Education Agency ID mapping the school directly to its school district.",
+            "missing": null
+        },
+        {
+            "name": "lea_name",
+            "data_type": "string",
+            "keywords": [
+                "district name",
+                "school district name"
+            ],
+            "desc": "The official text name of the Local Education Agency (the school district).",
+            "missing": null
+        },
+        {
+            "name": "county_code",
+            "data_type": "int",
+            "keywords": [
+                "county code",
+                "fips"
+            ],
+            "desc": "The unique Federal Information Processing Series (FIPS) county code where the school is located.",
+            "missing": null
+        },
+        {
+            "name": "city_location",
+            "data_type": "string",
+            "keywords": [
+                "city location",
+                "town",
+                "municipality"
+            ],
+            "desc": "The city or municipality name where the school is physically located.",
+            "missing": null
+        },
+        {
+            "name": "urban_centric_locale",
+            "data_type": "string",
+            "keywords": [
+                "location",
+                "setting",
+                "environment"
+            ],
+            "desc": "Classifier for the school's location environment (e.g., City, Suburb, Town, Rural).",
+            "missing": null
+        },
+        {
+            "name": "longitude",
+            "data_type": "float",
+            "keywords": [
+                "longitude",
+                "coordinates",
+                "coords",
+                "location"
+            ],
+            "desc": "The precise geographic longitude coordinate of the school for mapping and distance math.",
+            "missing": null
+        },
+        {
+            "name": "latitude",
+            "data_type": "float",
+            "keywords": [
+                "latitude",
+                "coordinates",
+                "coords",
+                "location"
+            ],
+            "desc": "The precise geographic latitude coordinate of the school for mapping and distance math.",
+            "missing": null
+        },
+        {
+            "name": "school_level",
+            "data_type": "string",
+            "keywords": [
+                "school level",
+                "instructional level"
+            ],
+            "desc": "The operational level of the school (e.g., Primary, Middle, High, Other).",
+            "missing": null
+        },
+        {
+            "name": "school_type",
+            "data_type": "string",
+            "keywords": [
+                "school type",
+                "school classification"
+            ],
+            "desc": "The classification type of the school (e.g., Regular school, Special education).",
+            "missing": null
+        },
+        {
+            "name": "charter",
+            "data_type": "string",
+            "keywords": [
+                "charter",
+                "charter school"
+            ],
+            "desc": "An indicator flag indicating whether the institution is a public charter school.",
+            "missing": null
+        },
+        {
+            "name": "magnet",
+            "data_type": "string",
+            "keywords": [
+                "magnet",
+                "magnet school"
+            ],
+            "desc": "An indicator flag indicating whether the institution offers a magnet program or is a magnet school.",
+            "missing": "NA"
+        },
+        {
+            "name": "virtual",
+            "data_type": "string",
+            "keywords": [
+                "virtual",
+                "virtual school",
+                "remote instruction",
+                "online school"
+            ],
+            "desc": "An indicator classifying the school's level of virtual/remote instruction.",
+            "missing": null
+        },
+        {
+            "name": "enrollment",
+            "data_type": "int",
+            "keywords": [
+                "enrollment",
+                "student count",
+                "enrollment size",
+                "total students"
+            ],
+            "desc": "The total student enrollment count reported for the school during this directory year.",
+            "missing": null
+        },
+        {
+            "name": "teachers_fte",
+            "data_type": "int",
+            "keywords": [
+                "teachers",
+                "faculty",
+                "instructors",
+                "full time"
+            ],
+            "desc": "The total Full-Time Equivalent (FTE) classroom teacher count employed at the school.",
+            "missing": "NA"
+        },
+        {
+            "name": "free_or_reduced_lunch",
+            "data_type": "int",
+            "keywords": [
+                "free or reduced lunch",
+                "free lunch",
+                "reduced lunch"
+            ],
+            "desc": "The total number of students eligible to receive free or reduced-price lunch.",
+            "missing": "NA"
+        },
+        {
+            "name": "direct_certification",
+            "data_type": "int",
+            "keywords": [
+                "direct_certification",
+                "snap benefits",
+                "certified meals"
+            ],
+            "desc": "The count of students directly certified for free meals through assistance programs like SNAP.",
+            "missing": "NA"
+        }
+    ]
+}
