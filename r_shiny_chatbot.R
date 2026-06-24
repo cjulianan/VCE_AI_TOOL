@@ -58,7 +58,7 @@ server <- function(input, output, session) {
   chat_obj <- chat_openai_compatible(
     model = "gpt-oss-120b-thinking-high",
     base_url = "https://llm-api.arc.vt.edu/api/v1",
-    credentials = function() Sys.getenv("ARC_API_KEY"),
+    credentials = function() Sys.getenv("VT_ARC_API_KEY"),
     system_prompt = system_prompt
   )
   
