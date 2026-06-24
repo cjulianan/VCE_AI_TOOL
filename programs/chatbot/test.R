@@ -20,7 +20,7 @@ onStop(function() {
 
 # Here we load metadata JSON file right when the app loads. we make it an anctive readable R list object
 
-app_metadata <- fromJSON("metadata.json", simplifyVector = FALSE)
+app_metadata <- fromJSON("C:/Users/nebiy/Documents/VCE_AI_TOOL/data/outcome/Virginia Geographic Information Network/vgin_hospitals.json", simplifyVector = FALSE)
 
 
 ################### THE RETRIEVAL ENGINE FUNCTION ###################
@@ -74,8 +74,14 @@ query_database_context <- function(filename, column, target_county) {
 extract_county_name <- function(user_prompt, filename) {
   if (!file.exists(filename)) return(NULL)
   
-  county_list_df <- dbGetQuery(con, sprintf("SELECT DISTINCT county FROM '%s'", filename))
-  raw_counties <- county_list_df$county
+  # Load county names from the correct column
+  county_list_df <- dbGetQuery(con, sprintf("SELECT DISTINCT FIPSname FROM '%s'", filename))
+  raw_counties <- county_list_df$FIPSname
+  
+  # Safety check
+  if (length(raw_counties) == 0 || all(is.na(raw_counties))) {
+    return(NULL)
+  }
   
   clean_prompt <- tolower(user_prompt)
   lower_counties <- tolower(raw_counties)
@@ -85,8 +91,10 @@ extract_county_name <- function(user_prompt, filename) {
   if (length(match_index) > 0) {
     return(raw_counties[match_index[1]])
   }
+  
   return(NULL)
 }
+
 
 
 # UI ----------------------------------------------------------------------
@@ -132,8 +140,8 @@ server <- function(input, output, session) {
     # ---------------------------------------------------------------------
     # Once we map out our full JSON loop later this week, this part will be automatic.
     # For today's test, we will point it directly to your master census file.
-    test_file <- "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv.csv"
-    test_column <- "B14005" # Adjust this to a column you know exists in your file!
+    test_file <- "C:/Users/nebiy/Documents/VCE_AI_TOOL/data/outcome/Virginia Geographic Information Network/vgin_hospitals.csv"
+    test_column <- "FIPSname" # Adjust this to a column you know exists in your file!
     
     # Step A: Run your county text scanner on the user's prompt
     matched_county <- extract_county_name(input$user_prompt, test_file)
@@ -149,7 +157,7 @@ server <- function(input, output, session) {
     # Step C: Combine the database fact sheet with the user's question
     # This forces the LLM to look at your data instead of guessing.
     final_prompt <- sprintf(
-      "You are a helpful policy assistant. Use the following data context to answer the user's question accurately. If the context is empty, answer normally.\n\nContext: %s\n\nUser Question: %s",
+      "You are a helpful data assistant. Use the following data context to answer the user's question accurately. If the context is empty, say that you don't have the information to help the user.\n\nContext: %s\n\nUser Question: %s",
       data_context,
       input$user_prompt
     )
