@@ -88,7 +88,9 @@
         "outpatient"
       ],
       "desc": "The specific operating classification of the hospital (e.g., Inpatient Hospital, Outpatient Surgical Hospital).",
-      "missing": "-"
+      "missing": [
+        "-"
+      ]
     },
     {
       "name": "Src",
