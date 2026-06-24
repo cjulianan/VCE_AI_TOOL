@@ -150,7 +150,9 @@
                 "magnet school"
             ],
             "desc": "An indicator flag indicating whether the institution offers a magnet program or is a magnet school.",
-            "missing": "NA"
+            "missing": [
+                "NA"
+            ]
         },
         {
             "name": "virtual",
@@ -186,7 +188,9 @@
                 "full time"
             ],
             "desc": "The total Full-Time Equivalent (FTE) classroom teacher count employed at the school.",
-            "missing": "NA"
+            "missing": [
+                "NA"
+            ]
         },
         {
             "name": "free_or_reduced_lunch",
@@ -197,7 +201,9 @@
                 "reduced lunch"
             ],
             "desc": "The total number of students eligible to receive free or reduced-price lunch.",
-            "missing": "NA"
+            "missing": [
+                "NA"
+            ]
         },
         {
             "name": "direct_certification",
@@ -208,7 +214,9 @@
                 "certified meals"
             ],
             "desc": "The count of students directly certified for free meals through assistance programs like SNAP.",
-            "missing": "NA"
+            "missing": [
+                "NA"
+            ]
         }
     ]
 }

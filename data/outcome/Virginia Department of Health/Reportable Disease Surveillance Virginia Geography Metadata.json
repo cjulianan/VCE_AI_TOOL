@@ -1,0 +1,89 @@
+{
+    "file_name": "Reportable Disease Surveillance Virginia Geography.csv",
+    "desc": "Virginia Department of Health public use dataset containing annual case counts and incidence rates for reportable diseases.",
+    "organization": "Virginia Department of Health",
+    "columns": [
+        {
+            "name": "Year",
+            "data_type": "int",
+            "keywords": [
+                "Year",
+                "calendar year",
+                "time period"
+            ],
+            "desc": "The specific year the disease surveillance data was recorded.",
+            "missing": null
+        },
+        {
+            "name": "Condition",
+            "data_type": "string",
+            "keywords": [
+                "Condition",
+                "disease",
+                "illness",
+                "sickness",
+                "infection"
+            ],
+            "desc": "The name of the reportable disease.",
+            "missing": null
+        },
+        {
+            "name": "Geography Level",
+            "data_type": "string",
+            "keywords": [
+                "Geography Level",
+                "geographic scale",
+                "region type"
+            ],
+            "desc": "The scale of the geographic boundary used for reporting, typically classified as State, Health Planning Region, or Locality.",
+            "missing": null
+        },
+        {
+            "name": "Geography Value",
+            "data_type": "string",
+            "keywords": [
+                "Geography Value",
+                "location name",
+                "region name",
+                "county name",
+                "locality"
+            ],
+            "desc": "The specific text name of the reporting area corresponding to the geography level (e.g., Virginia, Eastern Region, Fairfax County).",
+            "missing": null
+        },
+        {
+            "name": "FIPS",
+            "data_type": "int",
+            "keywords": [
+                "FIPS",
+                "location id"
+            ],
+            "desc": "The standard Federal Information Processing Series numeric code uniquely identifying the specific Virginia county, independent city, or state boundary.",
+            "missing": [
+                "NA"
+            ]
+        },
+        {
+            "name": "Annual Case Count",
+            "data_type": "int",
+            "keywords": [
+                "Annual Case Count",
+                "total cases",
+                "number of cases"
+            ],
+            "desc": "The total integer count of confirmed or probable cases of the condition reported within that geography during the calendar year.",
+            "missing": null
+        },
+        {
+            "name": "Incidence Rate",
+            "data_type": "float",
+            "keywords": [
+                "Incidence Rate",
+                "frequency rate",
+                "cases per 100k"
+            ],
+            "desc": "The calculated rate of disease occurrence expressed as the number of reported cases per 100,000 population within the specified geography.",
+            "missing": null
+        }
+    ]
+}
