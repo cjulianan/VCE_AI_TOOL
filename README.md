@@ -1,4 +1,4 @@
-# 🤖 VCE AI Tool
+# VCE AI Tool
 
 
 VCE AI Tool is a Retrieval-Augmented Generation (RAG) chatbot designed to help Virginia Cooperative Extension (VCE) agents quickly access insights and data about communities across the Commonwealth.
