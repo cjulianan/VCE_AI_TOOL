@@ -21,7 +21,10 @@
                 "keyword2"
             ],
             "desc": "",
-            "missing": ""
+            "missing": [
+                "missing value type 1",
+                "missing value type 2"
+            ]
         }
     ]
 }
