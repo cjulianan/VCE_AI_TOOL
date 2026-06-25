@@ -1,0 +1,261 @@
+alias,official_name,locality_type,fips_code
+accomack county,Accomack County,county,51001
+accomack,Accomack County,county,51001
+albemarle county,Albemarle County,county,51003
+albemarle,Albemarle County,county,51003
+alleghany county,Alleghany County,county,51005
+alleghany,Alleghany County,county,51005
+amelia county,Amelia County,county,51007
+amelia,Amelia County,county,51007
+amherst county,Amherst County,county,51009
+amherst,Amherst County,county,51009
+appomattox county,Appomattox County,county,51011
+appomattox,Appomattox County,county,51011
+arlington county,Arlington County,county,51013
+arlington,Arlington County,county,51013
+augusta county,Augusta County,county,51015
+augusta,Augusta County,county,51015
+bath county,Bath County,county,51017
+bath,Bath County,county,51017
+bedford county,Bedford County,county,51019
+bedford,Bedford County,county,51019
+bland county,Bland County,county,51021
+bland,Bland County,county,51021
+botetourt county,Botetourt County,county,51023
+botetourt,Botetourt County,county,51023
+brunswick county,Brunswick County,county,51025
+brunswick,Brunswick County,county,51025
+buchanan county,Buchanan County,county,51027
+buchanan,Buchanan County,county,51027
+buckingham county,Buckingham County,county,51029
+buckingham,Buckingham County,county,51029
+campbell county,Campbell County,county,51031
+campbell,Campbell County,county,51031
+caroline county,Caroline County,county,51033
+caroline,Caroline County,county,51033
+carroll county,Carroll County,county,51035
+carroll,Carroll County,county,51035
+charles city county,Charles City County,county,51036
+charles city,Charles City County,county,51036
+charlotte county,Charlotte County,county,51037
+charlotte,Charlotte County,county,51037
+chesterfield county,Chesterfield County,county,51041
+chesterfield,Chesterfield County,county,51041
+clarke county,Clarke County,county,51043
+clarke,Clarke County,county,51043
+craig county,Craig County,county,51045
+craig,Craig County,county,51045
+culpeper county,Culpeper County,county,51047
+culpeper,Culpeper County,county,51047
+cumberland county,Cumberland County,county,51049
+cumberland,Cumberland County,county,51049
+dickenson county,Dickenson County,county,51051
+dickenson,Dickenson County,county,51051
+dinwiddie county,Dinwiddie County,county,51053
+dinwiddie,Dinwiddie County,county,51053
+essex county,Essex County,county,51057
+essex,Essex County,county,51057
+fairfax county,Fairfax County,county,51059
+fauquier county,Fauquier County,county,51061
+fauquier,Fauquier County,county,51061
+floyd county,Floyd County,county,51063
+floyd,Floyd County,county,51063
+fluvanna county,Fluvanna County,county,51065
+fluvanna,Fluvanna County,county,51065
+franklin county,Franklin County,county,51067
+franklin,Franklin County,county,51067
+frederick county,Frederick County,county,51069
+frederick,Frederick County,county,51069
+giles county,Giles County,county,51071
+giles,Giles County,county,51071
+gloucester county,Gloucester County,county,51073
+gloucester,Gloucester County,county,51073
+goochland county,Goochland County,county,51075
+goochland,Goochland County,county,51075
+grayson county,Grayson County,county,51077
+grayson,Grayson County,county,51077
+greene county,Greene County,county,51079
+greene,Greene County,county,51079
+greensville county,Greensville County,county,51081
+greensville,Greensville County,county,51081
+halifax county,Halifax County,county,51083
+halifax,Halifax County,county,51083
+hanover county,Hanover County,county,51085
+hanover,Hanover County,county,51085
+henrico county,Henrico County,county,51087
+henrico,Henrico County,county,51087
+henry county,Henry County,county,51089
+henry,Henry County,county,51089
+highland county,Highland County,county,51091
+highland,Highland County,county,51091
+isle of wight county,Isle of Wight County,county,51093
+isle of wight,Isle of Wight County,county,51093
+james city county,James City County,county,51095
+james city,James City County,county,51095
+king and queen county,King and Queen County,county,51097
+king and queen,King and Queen County,county,51097
+king george county,King George County,county,51099
+king george,King George County,county,51099
+king william county,King William County,county,51101
+king william,King William County,county,51101
+lancaster county,Lancaster County,county,51103
+lancaster,Lancaster County,county,51103
+lee county,Lee County,county,51105
+lee,Lee County,county,51105
+loudoun county,Loudoun County,county,51107
+loudoun,Loudoun County,county,51107
+louisa county,Louisa County,county,51109
+louisa,Louisa County,county,51109
+lunenburg county,Lunenburg County,county,51111
+lunenburg,Lunenburg County,county,51111
+madison county,Madison County,county,51113
+madison,Madison County,county,51113
+mathews county,Mathews County,county,51115
+mathews,Mathews County,county,51115
+mecklenburg county,Mecklenburg County,county,51117
+mecklenburg,Mecklenburg County,county,51117
+middlesex county,Middlesex County,county,51119
+middlesex,Middlesex County,county,51119
+montgomery county,Montgomery County,county,51121
+montgomery,Montgomery County,county,51121
+nelson county,Nelson County,county,51125
+nelson,Nelson County,county,51125
+new kent county,New Kent County,county,51127
+new kent,New Kent County,county,51127
+northampton county,Northampton County,county,51131
+northampton,Northampton County,county,51131
+northumberland county,Northumberland County,county,51133
+northumberland,Northumberland County,county,51133
+nottoway county,Nottoway County,county,51135
+nottoway,Nottoway County,county,51135
+orange county,Orange County,county,51137
+orange,Orange County,county,51137
+page county,Page County,county,51139
+page,Page County,county,51139
+patrick county,Patrick County,county,51141
+patrick,Patrick County,county,51141
+powhatan county,Powhatan County,county,51145
+powhatan,Powhatan County,county,51145
+pittsylvania county,Pittsylvania County,county,51143
+pittsylvania,Pittsylvania County,county,51143
+prince edward county,Prince Edward County,county,51147
+prince edward,Prince Edward County,county,51147
+prince george county,Prince George County,county,51149
+prince george,Prince George County,county,51149
+prince william county,Prince William County,county,51153
+prince william,Prince William County,county,51153
+pulaski county,Pulaski County,county,51155
+pulaski,Pulaski County,county,51155
+rappahannock county,Rappahannock County,county,51157
+rappahannock,Rappahannock County,county,51157
+richmond county,Richmond County,county,51159
+roanoke county,Roanoke County,county,51161
+rockbridge county,Rockbridge County,county,51163
+rockbridge,Rockbridge County,county,51163
+rockingham county,Rockingham County,county,51165
+rockingham,Rockingham County,county,51165
+russell county,Russell County,county,51167
+russell,Russell County,county,51167
+scott county,Scott County,county,51169
+scott,Scott County,county,51169
+shenandoah county,Shenandoah County,county,51171
+shenandoah,Shenandoah County,county,51171
+smyth county,Smyth County,county,51173
+smyth,Smyth County,county,51173
+southampton county,Southampton County,county,51175
+southampton,Southampton County,county,51175
+spotsylvania county,Spotsylvania County,county,51177
+spotsylvania,Spotsylvania County,county,51177
+stafford county,Stafford County,county,51179
+stafford,Stafford County,county,51179
+surry county,Surry County,county,51181
+surry,Surry County,county,51181
+sussex county,Sussex County,county,51183
+sussex,Sussex County,county,51183
+tazewell county,Tazewell County,county,51185
+tazewell,Tazewell County,county,51185
+warren county,Warren County,county,51187
+warren,Warren County,county,51187
+washington county,Washington County,county,51191
+washington,Washington County,county,51191
+westmoreland county,Westmoreland County,county,51193
+westmoreland,Westmoreland County,county,51193
+wise county,Wise County,county,51195
+wise,Wise County,county,51195
+wythe county,Wythe County,county,51197
+wythe,Wythe County,county,51197
+york county,York County,county,51199
+york,York County,county,51199
+alexandria city,Alexandria City,independent_city,51510
+alexandria,Alexandria City,independent_city,51510
+bristol city,Bristol City,independent_city,51520
+bristol,Bristol City,independent_city,51520
+buena vista city,Buena Vista City,independent_city,51530
+buena vista,Buena Vista City,independent_city,51530
+charlottesville city,Charlottesville City,independent_city,51540
+charlottesville,Charlottesville City,independent_city,51540
+chesapeake city,Chesapeake City,independent_city,51550
+chesapeake,Chesapeake City,independent_city,51550
+colonial heights city,Colonial Heights City,independent_city,51570
+colonial heights,Colonial Heights City,independent_city,51570
+covington city,Covington City,independent_city,51580
+covington,Covington City,independent_city,51580
+danville city,Danville City,independent_city,51590
+danville,Danville City,independent_city,51590
+emporia city,Emporia City,independent_city,51595
+emporia,Emporia City,independent_city,51595
+fairfax city,Fairfax City,independent_city,51600
+falls church city,Falls Church City,independent_city,51610
+falls church,Falls Church City,independent_city,51610
+franklin city,Franklin City,independent_city,51620
+franklin,Franklin City,independent_city,51620
+fredericksburg city,Fredericksburg City,independent_city,51630
+fredericksburg,Fredericksburg City,independent_city,51630
+galax city,Galax City,independent_city,51640
+galax,Galax City,independent_city,51640
+hampton city,Hampton City,independent_city,51650
+hampton,Hampton City,independent_city,51650
+harrisonburg city,Harrisonburg City,independent_city,51660
+harrisonburg,Harrisonburg City,independent_city,51660
+hopewell city,Hopewell City,independent_city,51670
+hopewell,Hopewell City,independent_city,51670
+lexington city,Lexington City,independent_city,51678
+lexington,Lexington City,independent_city,51678
+lynchburg city,Lynchburg City,independent_city,51680
+lynchburg,Lynchburg City,independent_city,51680
+manassas city,Manassas City,independent_city,51683
+manassas,Manassas City,independent_city,51683
+manassas park city,Manassas Park City,independent_city,51685
+manassas park,Manassas Park City,independent_city,51685
+martinsville city,Martinsville City,independent_city,51690
+martinsville,Martinsville City,independent_city,51690
+newport news city,Newport News City,independent_city,51700
+newport news,Newport News City,independent_city,51700
+norfolk city,Norfolk City,independent_city,51710
+norfolk,Norfolk City,independent_city,51710
+norton city,Norton City,independent_city,51720
+norton,Norton City,independent_city,51720
+petersburg city,Petersburg City,independent_city,51730
+petersburg,Petersburg City,independent_city,51730
+poquoson city,Poquoson City,independent_city,51735
+poquoson,Poquoson City,independent_city,51735
+portsmouth city,Portsmouth City,independent_city,51740
+portsmouth,Portsmouth City,independent_city,51740
+radford city,Radford City,independent_city,51750
+radford,Radford City,independent_city,51750
+richmond city,Richmond City,independent_city,51760
+roanoke city,Roanoke City,independent_city,51770
+salem city,Salem City,independent_city,51775
+salem,Salem City,independent_city,51775
+staunton city,Staunton City,independent_city,51790
+staunton,Staunton City,independent_city,51790
+suffolk city,Suffolk City,independent_city,51800
+suffolk,Suffolk City,independent_city,51800
+virginia beach city,Virginia Beach City,independent_city,51810
+virginia beach,Virginia Beach City,independent_city,51810
+waynesboro city,Waynesboro City,independent_city,51820
+waynesboro,Waynesboro City,independent_city,51820
+williamsburg city,Williamsburg City,independent_city,51830
+williamsburg,Williamsburg City,independent_city,51830
+winchester city,Winchester City,independent_city,51840
+winchester,Winchester City,independent_city,51840
