@@ -46,7 +46,7 @@ unique_type
 
 View(va_hospitals)
 
-write.csv(va_hospitals, "vgin_hospitals.csv")
+write.csv(va_hospitals, "Virginia Geographic Information Network/vgin_hospitals.csv")
 ```
 
 

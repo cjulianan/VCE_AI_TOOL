@@ -63,4 +63,4 @@ ccd_directory <- get_education_data(
 #View(ccd_directory)
 
 # create csv
-write_csv(ccd_directory, "2020-2024_ccd_directory.csv")
+write_csv(ccd_directory, "data/outcome/Urban-Institute/2020-2024_ccd_directory.csv")

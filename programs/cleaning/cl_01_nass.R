@@ -41,4 +41,4 @@ for (current_year in years) {
 crops_data <- bind_rows(storage)
 
 # Write csv
-write_csv(crops_data, "census_nass_irrigation.csv")
+write_csv(crops_data, "data/outcome/National-Agricultural-Statistics-Service/census_nass_irrigation.csv")

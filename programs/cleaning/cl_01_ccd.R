@@ -23,4 +23,4 @@ ccd_enrollment <- get_education_data(
 # View(ccd_enrollment)
 
 # write csv
-write_csv(ccd_enrollment, "2020-2024_ccd_enrollment.csv")
+write_csv(ccd_enrollment, "data/outcome/Urban-Institute/2020-2024_ccd_enrollment.csv")
