@@ -10,7 +10,7 @@ library(readr)
 library(tidyverse)
 library(dplyr)
 ################ HERE I AM LOOKING AT VGIN'S VIRGINIA HOSPITALS DATASET####################
-va_hospitals = read.csv("~/VCE_AI_TOOL/data/sources/Virginia-Geographic-Information-Network/Virginia_Hospitals.csv") # VGIN Virginia Hospitals dataset
+va_hospitals = read.csv("~/VCE_AI_TOOL/data/sources/Virginia-Geographic-Information-Network/vgin_hospitals.csv") # VGIN Virginia Hospitals dataset
 va_hospitals
 ```
 

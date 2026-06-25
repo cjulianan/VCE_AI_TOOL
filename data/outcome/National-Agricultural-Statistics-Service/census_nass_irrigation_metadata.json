@@ -2,6 +2,24 @@
     "file_name": "census_nass_irrigation.csv",
     "desc": "United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) data tracking irrigation from 2022 census.",
     "organization": "National Agricultural Statistics Service",
+    "file_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_irrigation.csv",
+    "raw_file_path": "data/sources/National-Agricultural-Statistics-Service/census_nass_irrigation.csv",
+    "geographic_level": "county",
+    "time_coverage": "2022",
+    "unit_of_analysis": "Agricultural statistic value per category per county.",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_01_nass.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": "fips_code",
+        "locality_name": "county_name"
+    },
     "columns": [
         {
             "name": "source_desc",
@@ -300,6 +318,18 @@
                 "(D)",
                 "(H)",
                 "(L)"
+            ]
+        },
+        {
+            "name": "fips_code",
+            "data_type": "string",
+            "keywords": [
+                "fips",
+                "county"
+            ],
+            "desc": "The 5-digit Federal Information Processing Standard (FIPS) code uniquely identifying the county. Combines the 2-digit state FIPS code and the 3-digit county code. Maintained as a string to preserve leading zeros.",
+            "missing": [
+                null
             ]
         }
     ]

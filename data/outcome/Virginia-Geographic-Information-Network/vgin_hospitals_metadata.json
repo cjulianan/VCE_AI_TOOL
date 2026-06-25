@@ -1,7 +1,25 @@
 {
   "file_name": "vgin_hospitals.csv",
   "desc": "Geospatial information on inpatient, outpatient, and mental health hospital facilities across Virginia counties, maintained by the Virginia Geographic Information Network (VGIN).",
-  "organization": "VGIN",
+  "organization": "Virginia Geographic Information Network",
+  "file_path": "data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals.csv",
+  "raw_file_path": "data/sources/Virginia-Geographic-Information-Network/vgin_hospitals.csv",
+  "geographic_level": "county",
+  "time_coverage": "2024",
+  "unit_of_analysis": "Hospitals per source of admission per county",
+  "primary_keys": [
+    ""
+  ],
+  "join_keys": [
+    ""
+  ],
+  "cleaning_scripts": [
+    "program/cleaning/cl_00_vgin_vdh.Rmd"
+  ],
+  "spatial_alignment": {
+    "locality_fips": "FIPScode",
+    "locality_name": "FIPSname"
+  },
   "columns": [
     {
       "name": "LandmkName",

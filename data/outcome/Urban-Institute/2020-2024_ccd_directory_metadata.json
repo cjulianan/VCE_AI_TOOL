@@ -2,6 +2,24 @@
     "file_name": "2020-2024_ccd_directory.csv",
     "desc": "Public school directory tracking geographic locations and administrative IDs.",
     "organization": "Common Core of Data (CCD)",
+    "file_path": "data/outcome/Urban-Institute/2020-2024_ccd_directory.csv",
+    "raw_file_path": "data/sources/Urban-Institute/2020-2024_ccd_directory.csv",
+    "geographic_level": "county",
+    "time_coverage": "2020-2024",
+    "unit_of_analysis": null,
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_00_ccd.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": "county_code",
+        "locality_name": null
+    },
     "columns": [
         {
             "name": "year",

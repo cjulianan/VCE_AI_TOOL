@@ -2,6 +2,24 @@
     "file_name": "reportable_disease_surveillance_virginia_geography",
     "desc": "Virginia Department of Health public use dataset containing annual case counts and incidence rates for reportable diseases.",
     "organization": "Virginia Department of Health",
+    "file_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
+    "raw_file_path": "data/sources/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
+    "geographic_level": "county",
+    "time_coverage": "2024",
+    "unit_of_analysis": "Health condition cases reported per geography per 100000 population",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        null
+    ],
+    "spatial_alignment": {
+        "locality_fips": "FIPS",
+        "locality_name": "Geography Value"
+    },
     "columns": [
         {
             "name": "Year",

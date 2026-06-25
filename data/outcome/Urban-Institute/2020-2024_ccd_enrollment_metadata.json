@@ -2,6 +2,24 @@
     "file_name": "2020-2024_ccd_enrollment.csv",
     "desc": "Student enrollment demographic numbers.",
     "organization": "Common Core of Data (CCD)",
+    "file_path": "data/outcome/Urban-Institute/2020-2024_ccd_enrollment.csv",
+    "raw_file_path": "data/sources/Urban-Institute/2020-2024_ccd_enrollment.csv",
+    "geographic_level": "school",
+    "time_coverage": "2020-2024",
+    "unit_of_analysis": "Student enrollment count per grade, race, and sex per school per year",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_01_ccd.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": null,
+        "locality_name": null
+    },
     "columns": [
         {
             "name": "year",
