@@ -1,5 +1,5 @@
 {
-    "file_name": "Reportable Disease Surveillance Virginia Geography.csv",
+    "file_name": "reportable_disease_surveillance_virginia_geography",
     "desc": "Virginia Department of Health public use dataset containing annual case counts and incidence rates for reportable diseases.",
     "organization": "Virginia Department of Health",
     "columns": [

@@ -15,6 +15,7 @@ library(ellmer)
 library(shiny)
 library(bslib)
 library(jsonlite)
+library(here)
 ```
 
 ```{r Load API Keys}

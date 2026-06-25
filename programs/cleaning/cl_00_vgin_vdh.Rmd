@@ -46,7 +46,7 @@ unique_type
 
 View(va_hospitals)
 
-write.csv(va_hospitals, "~/VCE_AI_TOOL/data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals.csv")
+write.csv(va_hospitals, "~/VCE_AI_TOOL/data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals.csv", row.names = FALSE)
 ```
 
 
