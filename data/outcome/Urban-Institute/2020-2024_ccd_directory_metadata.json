@@ -193,7 +193,7 @@
             ]
         },
         {
-            "name": "free_or_reduced_lunch",
+            "name": "free_or_reduced_price_lunch",
             "data_type": "int",
             "keywords": [
                 "free or reduced lunch",

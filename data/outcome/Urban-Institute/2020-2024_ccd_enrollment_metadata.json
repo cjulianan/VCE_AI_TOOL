@@ -59,6 +59,17 @@
             "missing": null
         },
         {
+            "name": "race",
+            "data_type": "string",
+            "keywords": [
+                "race",
+                "ethnicity",
+                "demographics"
+            ],
+            "desc": "The demographic or racial/ethnic category of the student population for the reported school enrollment count (e.g., White, Black, Hispanic, Asian, American Indian).",
+            "missing": null
+        },
+        {
             "name": "sex",
             "data_type": "string",
             "keywords": [

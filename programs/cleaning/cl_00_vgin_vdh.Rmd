@@ -37,7 +37,7 @@ unique_admission
 
 
 ```{r}
-va_hospitals <- va_hospitals %>% select(-VAPID, -State, -LOC, -PlaceType) # dropped phone and url, most are missing and irrelevant
+va_hospitals <- va_hospitals %>% select(LandmkName, Address, City, Zip, X, Y, LastCheck, SrcTyp, FIPScode, FIPSname) # dropped phone and url, most are missing and irrelevant
 # also dropped some others, doesn't help the user filter whtasoever, irrelevant
 
 
@@ -46,7 +46,7 @@ unique_type
 
 View(va_hospitals)
 
-write.csv(va_hospitals, "Virginia Geographic Information Network/vgin_hospitals.csv")
+write.csv(va_hospitals, "~/VCE_AI_TOOL/data/outcome/Virginia-Geographic-Information-Network/NEWvgin_hospitals.csv")
 ```
 
 
