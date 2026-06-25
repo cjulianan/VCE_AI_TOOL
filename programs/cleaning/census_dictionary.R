@@ -46,6 +46,6 @@ for (table in active_parent_tables) {
 
 # 3. EXPORT TO YOUR GITHUB DIRECTORY
 # Ensure this folder path matches your repository data structure
-output_path <- file.path("data", "outcome", "date/outcome/American-Community-Survey/census_dictionary.csv")
+output_path <- file.path("data", "outcome", "American-Community-Survey/census_dictionary.csv")
 write.csv(all_labels, output_path, row.names = FALSE)
 print(paste("Success! Local dictionary compiled and saved to:", output_path))
