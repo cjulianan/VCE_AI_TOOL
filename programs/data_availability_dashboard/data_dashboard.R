@@ -1,5 +1,5 @@
 # =========================================================================
-# DSPG 2026: Joint Data Availability Dashboard
+# DSPG 2026: Data Availability Dashboard
 # =========================================================================
 library(shiny)
 library(tidyverse)
@@ -21,7 +21,7 @@ SECRET_GOOGLE_SHEET_URL <- "https://docs.google.com/spreadsheets/d/1n7NAei9LGKbb
 ui <- fluidPage(
   theme = bs_theme(version = 5, bootswatch = "minty"), 
   
-  titlePanel("DSPG 2026: Cohort Data Availability Portal"),
+  titlePanel("DSPG 2026: VCE Team Data Availability Portal"),
   p("Search and filter for clean variables available in our shared database repository"),
   hr(),
   
@@ -91,6 +91,18 @@ server <- function(input, output, session) {
       bordered = TRUE,     
       pageSizeOptions = c(10, 25, 50, 100), 
       defaultPageSize = 25,
+      
+      # New addition, injects a professional theme to match Bootswatch "Minty"
+      theme = reactableTheme(
+        headerStyle = list(
+          background = "#2c3e50",        # Crisp dark slate header background
+          color = "#ffffff",             # Clean white text for readability
+          fontWeight = "bold",
+          borderBottom = "3px solid #78c2ad" # Mint green accent border under headers
+        ),
+        rowStripedStyle = list(background = "#f8f9fa"),
+        rowHighlightStyle = list(background = "#e8f4f1") # Subtle mint glow on hover
+      ),
       
       # Maps the spreadsheet columns to capitalized UI headers
       columns = list(
