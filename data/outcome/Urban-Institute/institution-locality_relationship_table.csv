@@ -1,0 +1,25 @@
+institution_id,institution_name,locality_fips,relationship_type,weight
+5100090,Albemarle County Public Schools,51003,serves,shared
+5100090,Albemarle County Public Schools,51540,serves,shared
+5100152,Alleghany Highlands Public Schools,51580,serves,shared
+5100152,Alleghany Highlands Public Schools,51005,serves,shared
+5101260,Fairfax County Public Schools,51059,serves,shared
+5101260,Fairfax County Public Schools,51600,serves,shared
+5101290,Falls Church City Public Schools,51610,serves,shared
+5101290,Falls Church City Public Schools,51059,serves,shared
+5101470,Frederick County Public Schools,51069,serves,shared
+5101470,Frederick County Public Schools,51840,serves,shared
+5101740,Greensville County Public Schools,51595,serves,shared
+5101740,Greensville County Public Schools,51081,serves,shared
+5103130,Prince William County Public Schools,51153,serves,shared
+5103130,Prince William County Public Schools,51683,serves,shared
+5103240,Richmond City Public Schools,51760,serves,shared
+5103240,Richmond City Public Schools,51087,serves,shared
+5103330,Roanoke County Public Schools,51161,serves,shared
+5103330,Roanoke County Public Schools,51770,serves,shared
+5103370,Rockbridge County Public Schools,51163,serves,shared
+5103370,Rockbridge County Public Schools,51678,serves,shared
+5103390,Rockingham County Public Schools,51165,serves,shared
+5103390,Rockingham County Public Schools,51660,serves,shared
+5104020,Williamsburg-James City County Public Schools,51095,serves,shared
+5104020,Williamsburg-James City County Public Schools,51830,serves,shared
