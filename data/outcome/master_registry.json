@@ -1,0 +1,39 @@
+{ 
+  "routing_registry": [
+    {
+      "dataset_id": "acs_census", 
+      "metadata_path": "data/outcome/American-Community-Survey/census_dictionary.csv",
+      "keywords": ["census", "demographics", "poverty", "income", "population", "acs"]
+    },
+    {
+      "dataset_id": "nass_crops",
+      "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_crops_metadata.json",
+      "keywords": ["crop", "crops", "corn", "soybean", "harvest", "acres", "agriculture", "farm"]
+    },
+    {
+      "dataset_id": "nass_fertilizers",
+      "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_fertilizers_metadata.json",
+      "keywords": ["fertilizer", "chemical", "fertilizers", "nitrogen", "pesticide"]
+    },
+    {
+      "dataset_id": "nass_irrigation",
+      "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_irrigation_metadata.json",
+      "keywords": ["irrigation", "water", "acres irrigated", "sprinkler"]
+    },
+    {
+      "dataset_id": "ccd_education",
+      "metadata_path": "data/outcome/Urban-Institute/2020-2024_ccd_directory_metadata.json",
+      "keywords": ["school", "education", "district", "teacher", "student", "enrollment", "grade", "schools"]
+    },
+    {
+      "dataset_id": "vdh_diseases",
+      "metadata_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography_metadata.json",
+      "keywords": ["disease", "health", "case", "infection", "outbreak", "surveillance", "vdh", "illness"]
+    },
+    {
+      "dataset_id": "vgin_hospitals",
+      "metadata_path": "data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals_metadata.json",
+      "keywords": ["hospital", "clinic", "beds", "medical", "healthcare", "trauma", "vgin"]
+    }
+  ]
+}
