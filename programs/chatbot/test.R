@@ -7,93 +7,30 @@ library(shiny)
 library(DBI)
 library(duckdb)
 library(jsonlite)
+library(readr)
+library(here) # fixes directory issues with Shiny app
 
 
-################### GLOBAL INITIALIZATION ###################
+# =========================================================================
+# GLOBAL INITIALIZATION (Runs once when app boots)
+# =========================================================================
 
-# Initialize the persistent background DuckDB database engine (Runs once)
-con <- dbConnect(duckdb())
+# 1. Load our structural lookup files using here() to prevent working directory issues
+VIRGINIA_LOCALITIES <- read.csv(here("data/outcome/virginia_localities.csv"), stringsAsFactors = FALSE)
+SCHOOL_BRIDGES      <- read.csv(here("data/outcome/Urban-Institute/institution-locality_relationship_table.csv"), stringsAsFactors = FALSE)
 
+# Force names to lowercase to make string matching bulletproof
+VIRGINIA_LOCALITIES$alias <- tolower(VIRGINIA_LOCALITIES$alias)
+
+# View(VIRGINIA_LOCALITIES) # testing it looaded
+
+# 2. Spin up the background serverless DuckDB engine
+DB_CON <- dbConnect(duckdb())
+
+# 3. Clean up the database connection gracefully if the Shiny app stops
 onStop(function() {
-  dbDisconnect(con, shutdown = TRUE)
+  dbDisconnect(DB_CON, shutdown = TRUE)
 })
-
-# Here we load metadata JSON file right when the app loads. we make it an anctive readable R list object
-
-app_metadata <- fromJSON("C:/Users/nebiy/Documents/VCE_AI_TOOL/data/outcome/Virginia Geographic Information Network/vgin_hospitals.json", simplifyVector = FALSE)
-
-
-################### THE RETRIEVAL ENGINE FUNCTION ###################
-
-query_database_context <- function(filename, column, target_county) {
-  
-  if (!file.exists(filename)) {
-    return("Error: The requested dataset file is missing from the directory path.")
-  }
-  
-  dictionary_path <- file.path("data", "outcome", "census_dictionary.csv")
-  
-  # SQL JOIN TEMPLATE: Merges your raw table row with your local human translation key
-  sql_query <- sprintf(
-    "SELECT 
-       data.county, 
-       data.%s AS metric_value,
-       dict.human_label
-     FROM '%s' AS data
-     LEFT JOIN '%s' AS dict
-       ON dict.variable_code = '%s'
-     WHERE lower(data.county) = '%s' 
-     LIMIT 1",
-    column, filename, dictionary_path, toupper(column), tolower(target_county)
-  )
-  
-  result_df <- dbGetQuery(con, sql_query)
-  
-  if (nrow(result_df) == 0) {
-    return(NULL)
-  }
-  
-  # Fallback: If a dataset doesn't have a census lookup entry, use the raw column name 
-  # Here we are adjusting for the non Census datasetr
-  display_label <- result_df[1, "human_label"]
-  if (is.na(display_label) || is.null(display_label)) {
-    display_label <- column
-  }
-  
-  context_sentence <- sprintf( 
-    "Factual Context from file [%s]: In %s, the data for (%s) indicates a value of %s.",
-    basename(filename), result_df[1, "county"], display_label, result_df[1, "metric_value"]
-  ) 
-  
-  return(context_sentence)
-}
-
-
-################### THE COUNTY EXTRACTOR FUNCTION ###################
-
-extract_county_name <- function(user_prompt, filename) {
-  if (!file.exists(filename)) return(NULL)
-  
-  # Load county names from the correct column
-  county_list_df <- dbGetQuery(con, sprintf("SELECT DISTINCT FIPSname FROM '%s'", filename))
-  raw_counties <- county_list_df$FIPSname
-  
-  # Safety check
-  if (length(raw_counties) == 0 || all(is.na(raw_counties))) {
-    return(NULL)
-  }
-  
-  clean_prompt <- tolower(user_prompt)
-  lower_counties <- tolower(raw_counties)
-  
-  match_index <- which(sapply(lower_counties, function(co) grepl(co, clean_prompt)))
-  
-  if (length(match_index) > 0) {
-    return(raw_counties[match_index[1]])
-  }
-  
-  return(NULL)
-}
 
 
 
@@ -135,27 +72,128 @@ server <- function(input, output, session) {
   observeEvent(input$submit_button, {
     req(input$user_prompt) 
     
-    # ---------------------------------------------------------------------
-    # PIPELINE INTEGRATION STEP: HARDCODED ROUTING FOR TODAY'S TEST
-    # ---------------------------------------------------------------------
-    # Once we map out our full JSON loop later this week, this part will be automatic.
-    # For today's test, we will point it directly to your master census file.
-    test_file <- "C:/Users/nebiy/Documents/VCE_AI_TOOL/data/outcome/Virginia Geographic Information Network/vgin_hospitals.csv"
-    test_column <- "FIPSname" # Adjust this to a column you know exists in your file!
+    # =========================================================================
+    # MILESTONE 1: DISAMBIGUATION GATEKEEPER
+    # =========================================================================
     
-    # Step A: Run your county text scanner on the user's prompt
-    matched_county <- extract_county_name(input$user_prompt, test_file)
+    # This shouldd take care of when a user asks about one of these ambiguoous areas (the code stops and asks)
+    # the way its supposed to, but context is not updated
     
-    # Initialize an empty context string
-    data_context <- ""
+    user_prompt_clean <- tolower(trimws(input$user_prompt))
+    collision_words   <- c("richmond", "roanoke", "fairfax")
     
-    # Step B: If the scanner finds a county, use DuckDB to grab the facts
-    if (!is.null(matched_county)) {
-      data_context <- query_database_context(test_file, test_column, matched_county)
+    for (word in collision_words) {
+      if (grepl(word, user_prompt_clean)) {
+        if (!grepl("city", user_prompt_clean) && !grepl("county", user_prompt_clean)) {
+          
+          updated_history <- paste0(
+            chat_log(), "<br>",
+            "<strong>User:</strong> ", input$user_prompt, "<br>",
+            "⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ", 
+            tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i><br>"
+          )
+          chat_log(updated_history)
+          updateTextInput(session, "user_prompt", value = "")
+          return() 
+        }
+      }
     }
     
-    # Step C: Combine the database fact sheet with the user's question
-    # This forces the LLM to look at your data instead of guessing.
+    # =========================================================================
+    # MILESTONE 2: DYNAMIC ROUTING & LOCALITY MATCHING
+    # =========================================================================
+    
+    # A. Scan master registry for keyword matches
+    master_registry <- jsonlite::fromJSON(txt = readLines(here("data/outcome/master_registry.json"), warn = FALSE), simplifyVector = FALSE)
+    matched_metadata_paths <- c()
+    
+    for (dataset in master_registry$routing_registry) {
+      for (keyword in dataset$keywords) {
+        if (grepl(keyword, user_prompt_clean)) {
+          matched_metadata_paths <- c(matched_metadata_paths, dataset$metadata_path)
+          break
+        }
+      }
+    }
+    
+    # B. Match prompt against virginia_localities data frame to find FIPS
+    target_fips <- NULL
+    target_locality_name <- NULL
+    
+    for (i in 1:nrow(VIRGINIA_LOCALITIES)) {
+      if (grepl(VIRGINIA_LOCALITIES$alias[i], user_prompt_clean)) {
+        target_fips <- sprintf("%05d", as.integer(VIRGINIA_LOCALITIES$fips[i]))
+        target_locality_name <- VIRGINIA_LOCALITIES$locality[i]
+        break
+      }
+    }
+    
+    # Initialize the data context tracker
+    data_context <- ""
+    
+    # =========================================================================
+    # MILESTONE 3: DUCKDB DIRECT-FROM-DISK EXTRACTION LOOP
+    # =========================================================================
+    if (length(matched_metadata_paths) > 0 && !is.null(target_fips)) {
+      data_context <- paste0("Targeting Locality: ", target_locality_name, " (FIPS: ", target_fips, ")\n\n")
+      
+      for (meta_path in matched_metadata_paths) {
+        # Load specific dataset metadata passport
+        metadata <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
+        
+        # Extract the FIPS column name directly from your spatial_alignment block
+        fips_col_name <- NULL
+        if (!is.null(metadata$spatial_alignment) && !is.null(metadata$spatial_alignment$locality_fips)) {
+          fips_col_name <- metadata$spatial_alignment$locality_fips
+        }
+        
+        # Absolute safety fallback: if it's completely missing or blank, default to "fips"
+        if (is.null(fips_col_name) || fips_col_name == "") {
+          fips_col_name <- "fips" 
+        }
+        
+        raw_file_absolute_path <- here(metadata$file_path)
+        
+        # Branch if querying school data to hit the bridge table
+        if (!is.null(metadata$file_name) && metadata$file_name %in% c("2020-2024_ccd_directory.csv", "2020-2024_ccd_enrollment.csv")) {
+          matching_bridges <- SCHOOL_BRIDGES[SCHOOL_BRIDGES$fips == target_fips, ]
+          
+          if (nrow(matching_bridges) > 0) {
+            target_leaid <- matching_bridges$leaid[1]
+            relationship <- matching_bridges$relationship_type[1]
+            
+            query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s'", raw_file_absolute_path, target_leaid)
+            records <- dbGetQuery(DB_CON, query)
+            
+            if (relationship == "shared") {
+              data_context <- paste0(data_context, "⚠️ NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
+            }
+          } else {
+            query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
+            records <- dbGetQuery(DB_CON, query)
+          }
+          
+        } else {
+          # Standard dataset file path query
+          query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
+          records <- dbGetQuery(DB_CON, query)
+        }
+        
+        # Append found row string to our pipeline context buffer
+        if (nrow(records) > 0) {
+          record_string <- paste(capture.output(print(records)), collapse = "\n")
+          
+          # Dynamic label extraction using file_name or file path fallback
+          dataset_label <- if(!is.null(metadata$file_name)) metadata$file_name else basename(meta_path)
+          
+          data_context <- paste0(data_context, "Dataset [", dataset_label, "] Records:\n", record_string, "\n\n")
+        }
+      }
+    }
+    
+    # =========================================================================
+    # AI EXECUTION & STREAMING HAND-OFF
+    # =========================================================================
     final_prompt <- sprintf(
       "You are a helpful data assistant. Use the following data context to answer the user's question accurately. If the context is empty, say that you don't have the information to help the user.\n\nContext: %s\n\nUser Question: %s",
       data_context,
@@ -170,10 +208,7 @@ server <- function(input, output, session) {
       "<strong>AI:</strong> <i>", new_response, "</i><br>"
     )
     
-    # update chat log to include new prompt and response
     chat_log(updated_history)
-    
-    # resets the prompt input box to be empty after prompt has been entered and submitted
     updateTextInput(session, "user_prompt", value = "")
   })
   
@@ -182,7 +217,6 @@ server <- function(input, output, session) {
     HTML(chat_log())
   })
 }
-
 
 # Launch App ------------------------------------------------------------------
 
