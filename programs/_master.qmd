@@ -16,6 +16,9 @@ library(shiny)
 library(bslib)
 library(jsonlite)
 library(here)
+library(duckdb)
+library(DBI)
+library(stringr)
 ```
 
 ```{r Load API Keys}
