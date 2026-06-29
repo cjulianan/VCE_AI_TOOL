@@ -21,9 +21,24 @@
       "keywords": ["irrigation", "water", "acres irrigated", "sprinkler"]
     },
     {
+      "dataset_id": "survey_crops",
+      "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/survey_nass_crops_metadata.json",
+      "keywords": ["crop", "crops", "crop name", "corn", "soybean", "harvest", "acres", "agriculture", "farm"]
+    },
+    {
+      "dataset_id": "nass_pesticides",
+      "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_pesticides_metadata.json",
+      "keywords": ["pesticide", "chemical", "pesticides", "herbicide"]
+    },
+    {
       "dataset_id": "ccd_education",
       "metadata_path": "data/outcome/Urban-Institute/2020-2024_ccd_directory_metadata.json",
       "keywords": ["school", "education", "district", "teacher", "student", "enrollment", "grade", "schools"]
+    },
+    {
+      "dataset_id": "ccd_enrollment",
+      "metadata_path": "data/outcome/Urban-Institute/2020-2024_ccd_enrollment_metadata.json",
+      "keywords": ["enrollment", "education", "district", "teacher", "student", "school", "grade", "schools"]
     },
     {
       "dataset_id": "vdh_diseases",
