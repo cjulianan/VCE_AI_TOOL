@@ -153,9 +153,10 @@ server <- function(input, output, session) {
     # MILESTONE 3: DUCKDB DIRECT-FROM-DISK EXTRACTION LOOP
     # =========================================================================
     
-    cat(paste0("MATCHED METADATA PATHS: ", matched_metadata_paths))
-    cat(paste0("TARGET FIPS: ", target_fips))
-    cat(paste0("TARGET LOCALITY NAME", target_locality_name))
+    # debug statements
+    # cat(paste0("MATCHED METADATA PATHS: ", matched_metadata_paths))
+    # cat(paste0("TARGET FIPS: ", target_fips))
+    # cat(paste0("TARGET LOCALITY NAME", target_locality_name))
     
     
     if (length(matched_metadata_paths) > 0 && !is.null(target_fips)) {
