@@ -19,6 +19,7 @@ library(here)
 library(duckdb)
 library(DBI)
 library(stringr)
+library(markdown)
 ```
 
 ```{r Load API Keys}

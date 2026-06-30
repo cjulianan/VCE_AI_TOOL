@@ -36,22 +36,40 @@ onStop(function() {
 
 # UI ----------------------------------------------------------------------
 
-ui <- fluidPage(
-  titlePanel("Chatbot Prototype"),
+ui <- page_fixed(
+  # bslib theme
+  theme = bs_theme(version = 5, bootswatch = "yeti"),
   
-  textInput("user_prompt", "Please input your prompt: ", placeholder = "Ask AI"),
-  actionButton("submit_button", "Submit prompt"),
-  
-  hr(),
-  h4("AI Response:"),
-  
-  # used to style response box
-  card(
-    card_body(
-      uiOutput("ai_response"),
-      style = "max-height: 400px; overflow-y: auto;"
+  div (
+    # center the chatbot box
+    class = "d-flex flex-column justify-content-center min-vh-100",
+    
+    card(
+      # website banner to match color picked by theme
+      card_header(
+        class = "bg-primary text-primary-inverse",
+        icon("robot"),
+        span("VCE AI Tool", class = "fw-bold")
+      ),
+      
+      # website body, where chat is recorded
+      card_body(
+        uiOutput("ai_response"),
+        height = "400px",       
+        fillable = FALSE        
+      ),
+      
+      # website footer, where input box and submit button are located
+      card_footer(
+        layout_columns(
+          col_widths = c(10, 2),
+          textInput("user_prompt", label = NULL, placeholder = "Ask AI something..."),
+          actionButton("submit_button", label = NULL, class = "btn-primary", icon = icon("paper-plane"))
+        )
+      )
     )
   )
+  
 )
 
 
@@ -134,6 +152,12 @@ server <- function(input, output, session) {
     # =========================================================================
     # MILESTONE 3: DUCKDB DIRECT-FROM-DISK EXTRACTION LOOP
     # =========================================================================
+    
+    cat(paste0("MATCHED METADATA PATHS: ", matched_metadata_paths))
+    cat(paste0("TARGET FIPS: ", target_fips))
+    cat(paste0("TARGET LOCALITY NAME", target_locality_name))
+    
+    
     if (length(matched_metadata_paths) > 0 && !is.null(target_fips)) {
       data_context <- paste0("Targeting Locality: ", target_locality_name, " (FIPS: ", target_fips, ")\n\n")
       
@@ -195,7 +219,7 @@ server <- function(input, output, session) {
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
     final_prompt <- sprintf(
-      "You are a helpful data assistant. Use the following data context to answer the user's question accurately. If the context is empty, say that you don't have the information to help the user.\n\nContext: %s\n\nUser Question: %s",
+      "You are a helpful data assistant. Use the following data context to answer the user's question accurately. Format your response in clear and precise sentence form. Don't add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source. If the context is empty, say that you don't have the information to help the user.\n\nContext: %s\n\nUser Question: %s",
       data_context,
       input$user_prompt
     )
@@ -214,7 +238,7 @@ server <- function(input, output, session) {
   
   # render the new chat along with all the previous dialogues coming before it
   output$ai_response <- renderUI({
-    HTML(chat_log())
+      HTML(markdown::markdownToHTML(text = chat_log(), fragment.only = TRUE))
   })
 }
 
