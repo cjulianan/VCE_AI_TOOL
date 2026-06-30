@@ -1,4 +1,3 @@
-
 ## HERE IS THE START OF OUR PROTOTYPE
 
 library(ellmer)
