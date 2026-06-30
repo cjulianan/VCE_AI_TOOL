@@ -8,6 +8,7 @@ library(DBI)
 library(duckdb)
 library(jsonlite)
 library(readr)
+library(markdown)
 library(here) # fixes directory issues with Shiny app
 
 
