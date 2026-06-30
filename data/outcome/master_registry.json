@@ -2,9 +2,10 @@
   "routing_registry": [
     {
       "dataset_id": "acs_census",
-      "metadata_path": "data/outcome/American-Community-Survey/census_dictionary.csv",
+      "metadata_path": "data/outcome/American-Community-Survey/census_metadata.json",
       "keywords": [
         "census",
+        "disability",
         "demographics",
         "poverty",
         "income",
