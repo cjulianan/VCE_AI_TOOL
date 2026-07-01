@@ -131,6 +131,12 @@ server <- function(input, output, session) {
       }
     }
     
+    # here if no new dataset keywords are found, we carry forward the last successfully 
+    # queried metadata path from the cache.
+    if (length(matched_metadata_paths) == 0 && !is.null(cache$last_metadata_path)) {
+      matched_metadata_paths <- cache$last_metadata_path
+    }
+    
     for (word in collision_words) {
       if (grepl(word, user_prompt_clean)) {
         if (!grepl("city", user_prompt_clean) && !grepl("county", user_prompt_clean)) {
@@ -268,7 +274,10 @@ server <- function(input, output, session) {
     # reset cache and input box
     cache$pending_disambiguation <- FALSE
     cache$cached_intent_phrase   <- NULL
-    cache$last_metadata_path     <- NULL
+    # Update our long-term baseline cache if we found data during this run
+    if (length(matched_metadata_paths) > 0) {
+      cache$last_metadata_path <- matched_metadata_paths
+    }
     updateTextInput(session, "user_prompt", value = "")
   })
   
