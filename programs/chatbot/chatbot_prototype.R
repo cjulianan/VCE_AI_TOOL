@@ -187,13 +187,19 @@ server <- function(input, output, session) {
     # cat(paste0("TARGET FIPS: ", target_fips))
     # cat(paste0("TARGET LOCALITY NAME", target_locality_name))
     
-    
+    # Three paths based on availability of metadata path and fips
     if (length(matched_metadata_paths) > 0 && !is.null(target_fips)) {
+      # Path 1: metadata path and fips is found
       data_context <- paste0("Targeting Locality: ", target_locality_name, " (FIPS: ", target_fips, ")\n\n")
       
       for (meta_path in matched_metadata_paths) {
         # Load specific dataset metadata passport
         metadata <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
+        
+        # add dataset metaset description
+        if (!is.null(metadata$desc)) {
+          data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n")
+        }
         
         # Extract the FIPS column name directly from your spatial_alignment block
         fips_col_name <- NULL
@@ -207,31 +213,9 @@ server <- function(input, output, session) {
         }
         
         raw_file_absolute_path <- here(metadata$file_path)
-        
-        # Branch if querying school data to hit the bridge table
-        if (!is.null(metadata$file_name) && metadata$file_name %in% c("2020-2024_ccd_directory.csv", "2020-2024_ccd_enrollment.csv")) {
-          matching_bridges <- SCHOOL_BRIDGES[SCHOOL_BRIDGES$fips == target_fips, ]
-          
-          if (nrow(matching_bridges) > 0) {
-            target_leaid <- matching_bridges$leaid[1]
-            relationship <- matching_bridges$relationship_type[1]
-            
-            query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s'", raw_file_absolute_path, target_leaid)
-            records <- dbGetQuery(DB_CON, query)
-            
-            if (relationship == "shared") {
-              data_context <- paste0(data_context, "⚠️ NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
-            }
-          } else {
-            query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
-            records <- dbGetQuery(DB_CON, query)
-          }
-          
-        } else {
-          # Standard dataset file path query
-          query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
-          records <- dbGetQuery(DB_CON, query)
-        }
+        # Standard dataset file path query
+        query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
+        records <- dbGetQuery(DB_CON, query)
         
         # Append found row string to our pipeline context buffer
         if (nrow(records) > 0) {
@@ -243,7 +227,60 @@ server <- function(input, output, session) {
           data_context <- paste0(data_context, "Dataset [", dataset_label, "] Records:\n", record_string, "\n\n")
         }
       }
+    } else if (length(matched_metadata_paths) > 0 && is.null(target_fips)) {
+      # Path 2: metadata path is found but fips is not
+      
+      data_context <- "The user is asking a structural or metadata question about these specific dataset blueprints:\n\n"
+      
+      for (meta_path in matched_metadata_paths) {
+        metadata <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
+        
+        # add metadata columns into schema
+        if (!is.null(metadata$columns)) {
+          column_schema <- paste(capture.output(print(metadata$columns)), collapse = "\n")
+        } else {
+          column_schema <- "N/A"
+        }
+        
+        dataset_manifest <- paste0(
+          "--- DATASET PROFILE ---\n",
+          "File: ", if(!is.null(metadata$file_name)) metadata$file_name else basename(meta_path), "\n",
+          "Description: ", if(!is.null(metadata$desc)) metadata$desc else "N/A", "\n",
+          "Source: ", if(!is.null(metadata$source)) metadata$source else "N/A", "\n",
+          "Geographic Coverage: ", if(!is.null(metadata$geographic_coverage)) metadata$geographic_coverage else "N/A", "\n",
+          "Spatial Alignment: ", if(!is.null(metadata$spatial_alignment)) metadata$spatial_alignment else "N/A", "\n",
+          "Temporal Coverage: ", if(!is.null(metadata$temporal_coverage)) metadata$temporal_coverage else "N/A", "\n",
+          "Dataset Columns:\n", column_schema, "\n",
+          "---------------------------------\n\n"
+        )
+        data_context <- paste0(data_context, dataset_manifest)
+      }
+    } else {
+      # Path 3: neither metadata path nor fips is found
+      data_context <- "Provide context on what the user can ask based on available data."
     }
+        
+        # COMMENTED OUT CCD IF STATEMENT BLOCK (PROBABLY GONNA CHANGE LOGIC FOR THIS LATER)
+        # # Branch if querying school data to hit the bridge table
+        # if (!is.null(metadata$file_name) && metadata$file_name %in% c("2020-2024_ccd_directory.csv", "2020-2024_ccd_enrollment.csv")) {
+        #   matching_bridges <- SCHOOL_BRIDGES[SCHOOL_BRIDGES$fips == target_fips, ]
+        #   
+        #   if (nrow(matching_bridges) > 0) {
+        #     target_leaid <- matching_bridges$leaid[1]
+        #     relationship <- matching_bridges$relationship_type[1]
+        #     
+        #     query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s'", raw_file_absolute_path, target_leaid)
+        #     records <- dbGetQuery(DB_CON, query)
+        #     
+        #     if (relationship == "shared") {
+        #       data_context <- paste0(data_context, "⚠️ NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
+        #     }
+        #   } else {
+        #     query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
+        #     records <- dbGetQuery(DB_CON, query)
+        #   }
+        #   
+        # }
     
     # =========================================================================
     # AI EXECUTION & STREAMING HAND-OFF
