@@ -86,6 +86,13 @@ server <- function(input, output, session) {
   # keep record of chat log so new responses aren't overwritten
   chat_log <- reactiveVal("Chat Started: <br>")
   
+  # cache for when user clarifies about ambiguous county/city (ex. fairfax county or fairfax city)
+  cache <- reactiveValues(
+    last_metadata_path = NULL,
+    cached_intent_phrase = NULL,
+    pending_disambiguation = FALSE
+  )
+  
   # only update chat box if user hits submit button and user has something in prompt input box
   observeEvent(input$submit_button, {
     req(input$user_prompt) 
@@ -98,11 +105,40 @@ server <- function(input, output, session) {
     # the way its supposed to, but context is not updated
     
     user_prompt_clean <- tolower(trimws(input$user_prompt))
-    collision_words   <- c("richmond", "roanoke", "fairfax")
+    collision_words <- c("richmond", "roanoke", "fairfax")
+    
+    # check first if there is a pending disambiguation from user's last prompt
+    if (isTRUE(cache$pending_disambiguation)) {
+      # set the current metadata path to whatever was retrieved from last prompt
+      matched_metadata_paths <- cache$last_metadata_path
+
+      
+      # the new prompt will be whatever prompt was cached from previous prompt combined with the new prompt where user clarifies
+      combined_prompt <- paste(cache$cached_intent_phrase, user_prompt_clean)
+      user_prompt_clean <- combined_prompt
+      
+    } else {
+      master_registry <- jsonlite::fromJSON(txt = readLines(here("data/outcome/master_registry.json"), warn = FALSE), simplifyVector = FALSE)
+      matched_metadata_paths <- c()
+      
+      for (dataset in master_registry$routing_registry) {
+        for (keyword in dataset$keywords) {
+          if (grepl(keyword, user_prompt_clean)) {
+            matched_metadata_paths <- c(matched_metadata_paths, dataset$metadata_path)
+            break
+          }
+        }
+      }
+    }
     
     for (word in collision_words) {
       if (grepl(word, user_prompt_clean)) {
         if (!grepl("city", user_prompt_clean) && !grepl("county", user_prompt_clean)) {
+          
+          # cache the current metadata path and user prompt and set disambiguation flag to true so next prompt will use the stored cache values
+          cache$last_metadata_path <- matched_metadata_paths
+          cache$cached_intent_phrase = input$user_prompt
+          cache$pending_disambiguation <- TRUE
           
           updated_history <- paste0(
             chat_log(), "<br>",
@@ -121,20 +157,7 @@ server <- function(input, output, session) {
     # MILESTONE 2: DYNAMIC ROUTING & LOCALITY MATCHING
     # =========================================================================
     
-    # A. Scan master registry for keyword matches
-    master_registry <- jsonlite::fromJSON(txt = readLines(here("data/outcome/master_registry.json"), warn = FALSE), simplifyVector = FALSE)
-    matched_metadata_paths <- c()
-    
-    for (dataset in master_registry$routing_registry) {
-      for (keyword in dataset$keywords) {
-        if (grepl(keyword, user_prompt_clean)) {
-          matched_metadata_paths <- c(matched_metadata_paths, dataset$metadata_path)
-          break
-        }
-      }
-    }
-    
-    # B. Match prompt against virginia_localities data frame to find FIPS
+    # Match prompt against virginia_localities data frame to find FIPS
     target_fips <- NULL
     target_locality_name <- NULL
     
@@ -219,11 +242,19 @@ server <- function(input, output, session) {
     # =========================================================================
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
+    # resolved prompt to clarify if there is ambiguous city/county
+    if (!is.null(cache$cached_intent_phrase)) {
+      resolved_prompt <- paste(cache$cached_intent_phrase, "-> Clarified as:", input$user_prompt)
+    } else {
+      resolved_prompt <- input$user_prompt
+    }
+    
     final_prompt <- sprintf(
       "You are a helpful data assistant. Use the following data context to answer the user's question accurately. Format your response in clear and precise sentence form. Don't add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source. If the context is empty, say that you don't have the information to help the user.\n\nContext: %s\n\nUser Question: %s",
       data_context,
-      input$user_prompt
+      resolved_prompt
     )
+    cat(final_prompt)
     
     new_response <- chat_obj$chat(final_prompt)
     
@@ -234,6 +265,10 @@ server <- function(input, output, session) {
     )
     
     chat_log(updated_history)
+    # reset cache and input box
+    cache$pending_disambiguation <- FALSE
+    cache$cached_intent_phrase   <- NULL
+    cache$last_metadata_path     <- NULL
     updateTextInput(session, "user_prompt", value = "")
   })
   
