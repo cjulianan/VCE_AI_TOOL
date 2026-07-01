@@ -246,10 +246,10 @@ server <- function(input, output, session) {
           "--- DATASET PROFILE ---\n",
           "File: ", if(!is.null(metadata$file_name)) metadata$file_name else basename(meta_path), "\n",
           "Description: ", if(!is.null(metadata$desc)) metadata$desc else "N/A", "\n",
-          "Source: ", if(!is.null(metadata$source)) metadata$source else "N/A", "\n",
+          "Source: ", if(!is.null(metadata$source)) metadata$organization else "N/A", "\n",
           "Geographic Coverage: ", if(!is.null(metadata$geographic_coverage)) metadata$geographic_coverage else "N/A", "\n",
           "Spatial Alignment: ", if(!is.null(metadata$spatial_alignment)) metadata$spatial_alignment else "N/A", "\n",
-          "Temporal Coverage: ", if(!is.null(metadata$temporal_coverage)) metadata$temporal_coverage else "N/A", "\n",
+          "Temporal Coverage: ", if(!is.null(metadata$time_coverage)) metadata$temporal_coverage else "N/A", "\n",
           "Dataset Columns:\n", column_schema, "\n",
           "---------------------------------\n\n"
         )
