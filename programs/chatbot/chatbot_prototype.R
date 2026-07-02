@@ -9,6 +9,7 @@ library(jsonlite)
 library(readr)
 library(markdown)
 library(here) # fixes directory issues with Shiny app
+library(shinycssloaders) # package for UI CSS, this gives us the s
 
 
 # =========================================================================
@@ -55,7 +56,7 @@ ui <- page_fixed(
       # website body, where chat is recorded
       card_body(
         uiOutput("ai_response"),
-        height = "400px",       
+        height = "500px",       
         fillable = FALSE        
       ),
       
@@ -299,7 +300,10 @@ server <- function(input, output, session) {
     )
     cat(final_prompt)
     
-    new_response <- chat_obj$chat(final_prompt)
+    # THIS FORCE-TRIGGERS A NATIVE LOADING BAR THE MICROSECOND THE API IS CALLED
+    new_response <- withProgress(message = 'Thinking...', detail = 'Consulting database and AI engine...', {
+      chat_obj$chat(final_prompt)
+    })
     
     updated_history <- paste0(
       chat_log(), "<br>",
