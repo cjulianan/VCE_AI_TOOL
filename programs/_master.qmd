@@ -20,6 +20,8 @@ library(duckdb)
 library(DBI)
 library(stringr)
 library(markdown)
+library(rlang)
+library(shinycssloaders)
 ```
 
 ```{r Load API Keys}

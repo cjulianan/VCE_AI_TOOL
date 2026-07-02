@@ -8,9 +8,34 @@ library(duckdb)
 library(jsonlite)
 library(readr)
 library(markdown)
+library(rlang)
 library(here) # fixes directory issues with Shiny app
 library(shinycssloaders) # package for UI CSS, this gives us the s
 
+# function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
+normalize_metadata <- function(meta, meta_path) {
+  col_list <- meta$columns %||% list()
+  col_string <- "N/A"
+  if (length(col_list) > 0) {
+    lines <- sapply(col_list, function(c) {
+      name <- c$name %||% c$variable_code %||% "No name"
+      desc <- c$desc %||% c$human_label %||% "No description."
+      paste0("  - ", name, ": ", desc)
+    })
+    col_string <- paste(lines, collapse = "\n")
+  }
+  
+  return(list(
+    file_name = meta$file_name %||% basename(meta_path),
+    file_path = meta$file_path %||% "N/A",
+    desc = meta$desc %||% "N/A",
+    organization = meta$organization %||% "N/A",
+    geo_coverage = meta$geographic_level %||% "N/A",
+    time_coverage = meta$time_coverage %||% "N/A",
+    locality_fips_col = meta$spatial_alignment$locality_fips %||% "GEOID",
+    columns_scheme = col_string
+  ))
+}
 
 # =========================================================================
 # GLOBAL INITIALIZATION (Runs once when app boots)
@@ -194,38 +219,25 @@ server <- function(input, output, session) {
       data_context <- paste0("Targeting Locality: ", target_locality_name, " (FIPS: ", target_fips, ")\n\n")
       
       for (meta_path in matched_metadata_paths) {
-        # Load specific dataset metadata passport
-        metadata <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
+        # gets the raw metadata json and normalizes it with normalize_metadata function
+        raw_json <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
+        metadata <- normalize_metadata(raw_json, meta_path)
         
-        # add dataset metaset description
-        if (!is.null(metadata$desc)) {
-          data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n")
-        }
-        
-        # Extract the FIPS column name directly from your spatial_alignment block
-        fips_col_name <- NULL
-        if (!is.null(metadata$spatial_alignment) && !is.null(metadata$spatial_alignment$locality_fips)) {
-          fips_col_name <- metadata$spatial_alignment$locality_fips
-        }
-        
-        # Absolute safety fallback: if it's completely missing or blank, default to "fips"
-        if (is.null(fips_col_name) || fips_col_name == "") {
-          fips_col_name <- "fips" 
-        }
+        data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n")
         
         raw_file_absolute_path <- here(metadata$file_path)
-        # Standard dataset file path query
-        query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
+        
+        query <- sprintf(
+          "SELECT * FROM '%s' WHERE %s = '%s'", 
+          raw_file_absolute_path, 
+          metadata$locality_fips_col, 
+          target_fips
+        )
         records <- dbGetQuery(DB_CON, query)
         
-        # Append found row string to our pipeline context buffer
         if (nrow(records) > 0) {
           record_string <- paste(capture.output(print(records)), collapse = "\n")
-          
-          # Dynamic label extraction using file_name or file path fallback
-          dataset_label <- if(!is.null(metadata$file_name)) metadata$file_name else basename(meta_path)
-          
-          data_context <- paste0(data_context, "Dataset [", dataset_label, "] Records:\n", record_string, "\n\n")
+          data_context <- paste0(data_context, "Dataset [", metadata$file_name, "] Records:\n", record_string, "\n\n")
         }
       }
     } else if (length(matched_metadata_paths) > 0 && is.null(target_fips)) {
@@ -234,24 +246,17 @@ server <- function(input, output, session) {
       data_context <- "The user is asking a structural or metadata question about these specific dataset blueprints:\n\n"
       
       for (meta_path in matched_metadata_paths) {
-        metadata <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
-        
-        # add metadata columns into schema
-        if (!is.null(metadata$columns)) {
-          column_schema <- paste(capture.output(print(metadata$columns)), collapse = "\n")
-        } else {
-          column_schema <- "N/A"
-        }
+        raw_json <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
+        metadata <- normalize_metadata(raw_json, meta_path)
         
         dataset_manifest <- paste0(
           "--- DATASET PROFILE ---\n",
-          "File: ", if(!is.null(metadata$file_name)) metadata$file_name else basename(meta_path), "\n",
-          "Description: ", if(!is.null(metadata$desc)) metadata$desc else "N/A", "\n",
-          "Source: ", if(!is.null(metadata$source)) metadata$organization else "N/A", "\n",
-          "Geographic Coverage: ", if(!is.null(metadata$geographic_coverage)) metadata$geographic_coverage else "N/A", "\n",
-          "Spatial Alignment: ", if(!is.null(metadata$spatial_alignment)) metadata$spatial_alignment else "N/A", "\n",
-          "Temporal Coverage: ", if(!is.null(metadata$time_coverage)) metadata$temporal_coverage else "N/A", "\n",
-          "Dataset Columns:\n", column_schema, "\n",
+          "File: ", metadata$file_name, "\n",
+          "Description: ", metadata$desc, "\n",
+          "Source: ", metadata$organization, "\n",
+          "Geographic Coverage: ", metadata$geo_coverage, "\n",
+          "Temporal Coverage: ", metadata$time_coverage, "\n",
+          "Dataset Columns:\n", metadata$columns_schema, "\n",
           "---------------------------------\n\n"
         )
         data_context <- paste0(data_context, dataset_manifest)
