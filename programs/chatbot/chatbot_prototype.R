@@ -33,7 +33,7 @@ normalize_metadata <- function(meta, meta_path) {
     geo_coverage = meta$geographic_level %||% "N/A",
     time_coverage = meta$time_coverage %||% "N/A",
     locality_fips_col = meta$spatial_alignment$locality_fips %||% "GEOID",
-    columns_scheme = col_string
+    columns_schema = col_string
   ))
 }
 
@@ -223,20 +223,28 @@ server <- function(input, output, session) {
         raw_json <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
         metadata <- normalize_metadata(raw_json, meta_path)
         
-        data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n")
+        data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n", "Dataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
         
         raw_file_absolute_path <- here(metadata$file_path)
         
         query <- sprintf(
-          "SELECT * FROM '%s' WHERE %s = '%s'", 
+          "SELECT * FROM '%s' WHERE CAST(%s AS VARCHAR) = '%s' OR TRY_CAST(%s AS BIGINT) = %d", 
           raw_file_absolute_path, 
-          metadata$locality_fips_col, 
-          target_fips
+          metadata$locality_fips_col, target_fips,
+          metadata$locality_fips_col, as.integer(target_fips)
         )
         records <- dbGetQuery(DB_CON, query)
         
+        # loops through the rows that match the query results and store them into a vector to be read in data_context
         if (nrow(records) > 0) {
-          record_string <- paste(capture.output(print(records)), collapse = "\n")
+          all_rows_vector <- c()
+          
+          for (row_idx in 1:nrow(records)) {
+            col_bullets <- paste0("    - ", names(records), ": ", records[row_idx, ])
+            current_row_block <- paste0("[Row ", row_idx, " Data]:\n", paste(col_bullets, collapse = "\n"))
+            all_rows_vector <- c(all_rows_vector, current_row_block)
+          }
+          record_string <- paste(all_rows_vector, collapse = "\n\n--- next year ---\n\n")
           data_context <- paste0(data_context, "Dataset [", metadata$file_name, "] Records:\n", record_string, "\n\n")
         }
       }
@@ -303,11 +311,13 @@ server <- function(input, output, session) {
       data_context,
       resolved_prompt
     )
-    cat(final_prompt)
+    # cat(final_prompt)
     
+    # clear history (doesn't affect cache) so that it doesn't hit character limit from multiple prompts from large datasets such as acs
+    stateless_chat <- chat_obj$clone()$set_turns(list())
     # THIS FORCE-TRIGGERS A NATIVE LOADING BAR THE MICROSECOND THE API IS CALLED
     new_response <- withProgress(message = 'Thinking...', detail = 'Consulting database and AI engine...', {
-      chat_obj$chat(final_prompt)
+      stateless_chat$chat(final_prompt, echo = "none")
     })
     
     updated_history <- paste0(

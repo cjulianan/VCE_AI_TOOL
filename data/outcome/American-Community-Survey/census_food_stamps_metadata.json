@@ -1,0 +1,497 @@
+{
+    "file_name": "2020-2024_acs_master_county.csv",
+    "desc": "American Community Survey(ACS) data tracking food stamps.",
+    "organization": "American Community Survey",
+    "file_path": "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "raw_file_path": "data/sources/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "geographic_level": "county",
+    "time_coverage": "2020-2024",
+    "unit_of_analysis": {},
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_00_acs.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": null,
+        "locality_name": null
+    },
+    "columns": [
+        {
+            "variable_code": "B22001_004",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No people in household 60 years or over"
+        },
+        {
+            "variable_code": "B22001_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!At least one person in household 60 years or over"
+        },
+        {
+            "variable_code": "B22001_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22001_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22001_007",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No people in household 60 years or over"
+        },
+        {
+            "variable_code": "B22001_006",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!At least one person in household 60 years or over"
+        },
+        {
+            "variable_code": "B22001_005",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of People 60 Years and Over for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22002_025",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Other family:!!Male householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_024",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Other family:"
+        },
+        {
+            "variable_code": "B22002_027",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Nonfamily households"
+        },
+        {
+            "variable_code": "B22002_026",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Other family:!!Female householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_021",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Nonfamily households"
+        },
+        {
+            "variable_code": "B22002_020",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Other family:!!Female householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_023",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Married-couple family"
+        },
+        {
+            "variable_code": "B22002_022",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!No children under 18 years:"
+        },
+        {
+            "variable_code": "B22002_018",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Other family:"
+        },
+        {
+            "variable_code": "B22002_017",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Married-couple family"
+        },
+        {
+            "variable_code": "B22002_019",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Other family:!!Male householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_013",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Other family:!!Female householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_012",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Other family:!!Male householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_016",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!With children under 18 years:"
+        },
+        {
+            "variable_code": "B22002_015",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22002_014",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Nonfamily households"
+        },
+        {
+            "variable_code": "B22002_011",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Other family:"
+        },
+        {
+            "variable_code": "B22002_010",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No children under 18 years:!!Married-couple family"
+        },
+        {
+            "variable_code": "B22002_006",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Other family:!!Male householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_005",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Other family:"
+        },
+        {
+            "variable_code": "B22002_004",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Married-couple family"
+        },
+        {
+            "variable_code": "B22002_008",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Nonfamily households"
+        },
+        {
+            "variable_code": "B22002_007",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!With children under 18 years:!!Other family:!!Female householder, no spouse present"
+        },
+        {
+            "variable_code": "B22002_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22002_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!With children under 18 years:"
+        },
+        {
+            "variable_code": "B22002_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22002_009",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Presence of Children Under 18 Years by Household Type for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!No children under 18 years:"
+        },
+        {
+            "variable_code": "B22003_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22003_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22003_007",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Income in the past 12 months at or above poverty level"
+        },
+        {
+            "variable_code": "B22003_006",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Income in the past 12 months below poverty level"
+        },
+        {
+            "variable_code": "B22003_005",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22003_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Income in the past 12 months below poverty level"
+        },
+        {
+            "variable_code": "B22003_004",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Poverty Status in the Past 12 Months for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Income in the past 12 months at or above poverty level"
+        },
+        {
+            "variable_code": "B22005B_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Black or African American Alone) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005B_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Black or African American Alone) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005B_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Black or African American Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005G_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Two or More Races) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005G_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Two or More Races) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005G_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Two or More Races) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005C_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (American Indian and Alaska Native Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005C_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005C_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005D_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Asian Alone) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005D_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Asian Alone) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005D_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Asian Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005H_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005H_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005H_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (White Alone, Not Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005I_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Hispanic or Latino) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005I_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Hispanic or Latino) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005I_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005E_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005E_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005E_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005A_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (White Alone) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005A_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (White Alone) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005A_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (White Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005F_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Some Other Race Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22005F_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Some Other Race Alone) -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22005F_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Race of Householder (Some Other Race Alone) -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months"
+        },
+        {
+            "variable_code": "B22007_040",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!No workers"
+        },
+        {
+            "variable_code": "B22007_042",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!2 workers"
+        },
+        {
+            "variable_code": "B22007_041",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!1 worker"
+        },
+        {
+            "variable_code": "B22007_043",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!3 or more workers"
+        },
+        {
+            "variable_code": "B22007_013",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:"
+        },
+        {
+            "variable_code": "B22007_012",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:"
+        },
+        {
+            "variable_code": "B22007_015",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!1 worker"
+        },
+        {
+            "variable_code": "B22007_014",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!No workers"
+        },
+        {
+            "variable_code": "B22007_017",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!3 or more workers"
+        },
+        {
+            "variable_code": "B22007_016",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!2 workers"
+        },
+        {
+            "variable_code": "B22007_019",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!No workers"
+        },
+        {
+            "variable_code": "B22007_018",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:"
+        },
+        {
+            "variable_code": "B22007_011",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!3 or more workers:!!Other"
+        },
+        {
+            "variable_code": "B22007_010",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!3 or more workers:!!Both spouses worked"
+        },
+        {
+            "variable_code": "B22007_009",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!3 or more workers:"
+        },
+        {
+            "variable_code": "B22007_008",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!2 workers:!!Other"
+        },
+        {
+            "variable_code": "B22007_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22007_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:"
+        },
+        {
+            "variable_code": "B22007_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22007_005",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!1 worker"
+        },
+        {
+            "variable_code": "B22007_004",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!No workers"
+        },
+        {
+            "variable_code": "B22007_007",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!2 workers:!!Both spouses worked"
+        },
+        {
+            "variable_code": "B22007_006",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!2 workers:"
+        },
+        {
+            "variable_code": "B22007_037",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!2 workers"
+        },
+        {
+            "variable_code": "B22007_036",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!1 worker"
+        },
+        {
+            "variable_code": "B22007_039",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:"
+        },
+        {
+            "variable_code": "B22007_038",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!3 or more workers"
+        },
+        {
+            "variable_code": "B22007_030",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!3 or more workers:"
+        },
+        {
+            "variable_code": "B22007_033",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:"
+        },
+        {
+            "variable_code": "B22007_032",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!3 or more workers:!!Other"
+        },
+        {
+            "variable_code": "B22007_031",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!3 or more workers:!!Both spouses worked"
+        },
+        {
+            "variable_code": "B22007_035",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:!!No workers"
+        },
+        {
+            "variable_code": "B22007_034",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Other family:!!Male householder, no spouse present:"
+        },
+        {
+            "variable_code": "B22007_025",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!No workers"
+        },
+        {
+            "variable_code": "B22007_024",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:"
+        },
+        {
+            "variable_code": "B22007_027",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!2 workers:"
+        },
+        {
+            "variable_code": "B22007_026",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!1 worker"
+        },
+        {
+            "variable_code": "B22007_029",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!2 workers:!!Other"
+        },
+        {
+            "variable_code": "B22007_028",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Married-couple family:!!2 workers:!!Both spouses worked"
+        },
+        {
+            "variable_code": "B22007_020",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!1 worker"
+        },
+        {
+            "variable_code": "B22007_023",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22007_022",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!3 or more workers"
+        },
+        {
+            "variable_code": "B22007_021",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Family Type by Number of Workers in Family in the Past 12 Months -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Other family:!!Female householder, no spouse present:!!2 workers"
+        },
+        {
+            "variable_code": "B22010_001",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B22010_003",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Households with 1 or more persons with a disability"
+        },
+        {
+            "variable_code": "B22010_002",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22010_005",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:"
+        },
+        {
+            "variable_code": "B22010_004",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:!!Household received Food Stamps/SNAP in the past 12 months:!!Households with no persons with a disability"
+        },
+        {
+            "variable_code": "B22010_007",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Households with no persons with a disability"
+        },
+        {
+            "variable_code": "B22010_006",
+            "human_label": "Receipt of Food Stamps/SNAP in the Past 12 Months by Disability Status for Households -> Estimate!!Total:!!Household did not receive Food Stamps/SNAP in the past 12 months:!!Households with 1 or more persons with a disability"
+        }
+    ]
+}

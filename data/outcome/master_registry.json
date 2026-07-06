@@ -2,19 +2,33 @@
   "routing_registry": [
     {
       "dataset_id": "acs_census",
-      "metadata_path": "data/outcome/American-Community-Survey/census_metadata.json",
+      "metadata_path": "data/outcome/American-Community-Survey/census_education_metadata.json",
       "keywords": [
-        "census",
-        "disability",
-        "demographics",
+        "education",
+        "acs"
+      ]
+    },
+    {
+      "dataset_id": "acs_census",
+      "metadata_path": "data/outcome/American-Community-Survey/census_health_insurance_metadata.json",
+      "keywords": [
         "health insurance",
-        "medicaid",
-        "insurance",
-        "snap",
-        "food stamps",
-        "poverty",
-        "income",
-        "population",
+        "acs"
+      ]
+    },
+    {
+      "dataset_id": "acs_census",
+      "metadata_path": "data/outcome/American-Community-Survey/census_disability_metadata.json",
+      "keywords": [
+        "disability",
+        "acs"
+      ]
+    },
+    {
+      "dataset_id": "acs_census",
+      "metadata_path": "data/outcome/American-Community-Survey/census_food_stamps_metadata.json",
+      "keywords": [
+        "food",
         "acs"
       ]
     },
