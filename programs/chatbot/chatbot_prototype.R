@@ -21,7 +21,12 @@ normalize_metadata <- function(meta, meta_path) {
     lines <- sapply(col_list, function(c) {
       name <- c$name %||% c$variable_code %||% "No name"
       desc <- c$desc %||% c$human_label %||% "No description."
-      paste0("  - ", name, ": ", desc)
+      
+      # used to clean acs metadata so the chatbot doesn't get confused over the !! and choose wrong columns
+      clean_desc <- gsub("Estimate!!Total:!!", "Total for ", desc)
+      clean_desc <- gsub("!!", " ", clean_desc)
+      
+      paste0("  - ", name, ": ", clean_desc)
     })
     col_string <- paste(lines, collapse = "\n")
   }
@@ -257,6 +262,11 @@ server <- function(input, output, session) {
         raw_json <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
         metadata <- normalize_metadata(raw_json, meta_path)
         
+        # build list of columns that will be used
+        col_list <- raw_json$columns %||% list()
+        defined_columns <- sapply(col_list, function(c) c$name %||% c$variable_code)
+        safe_select_columns <- unique(c("year", metadata$locality_fips_col, defined_columns))
+        
         data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n", "Dataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
         
         raw_file_absolute_path <- here(metadata$file_path)
@@ -268,6 +278,12 @@ server <- function(input, output, session) {
           metadata$locality_fips_col, as.integer(target_fips)
         )
         records <- dbGetQuery(DB_CON, query)
+        
+        # drops all columns not used
+        available_cols <- intersect(safe_select_columns, names(records))
+        if(length(available_cols) > 0) {
+          records <- records[, available_cols, drop = FALSE]
+        }
         
         # loops through the rows that match the query results and store them into a vector to be read in data_context
         if (nrow(records) > 0) {

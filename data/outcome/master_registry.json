@@ -117,7 +117,6 @@
       "metadata_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography_metadata.json",
       "keywords": [
         "disease",
-        "health",
         "case",
         "infection",
         "outbreak",
@@ -134,7 +133,6 @@
         "clinic",
         "beds",
         "medical",
-        "healthcare",
         "trauma",
         "vgin"
       ]

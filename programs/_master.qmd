@@ -22,6 +22,7 @@ library(stringr)
 library(markdown)
 library(rlang)
 library(shinycssloaders)
+library(stringdist)
 ```
 
 ```{r Load API Keys}
