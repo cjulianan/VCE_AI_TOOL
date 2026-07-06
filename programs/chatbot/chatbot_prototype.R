@@ -11,6 +11,7 @@ library(markdown)
 library(rlang)
 library(here) # fixes directory issues with Shiny app
 library(shinycssloaders) # package for UI CSS, this gives us the s
+library(stringdist) # helps us do syntactic scoring (doesnt use embeddings - mainly solves typos)
 
 # function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
 normalize_metadata <- function(meta, meta_path) {
@@ -128,7 +129,7 @@ server <- function(input, output, session) {
     # =========================================================================
     
     # This shouldd take care of when a user asks about one of these ambiguoous areas (the code stops and asks)
-    # the way its supposed to, but context is not updated
+    # the way its supposed to, but context is not updated (Roanoke, Fairfax, Richmond)
     
     user_prompt_clean <- tolower(trimws(input$user_prompt))
     collision_words <- c("richmond", "roanoke", "fairfax")
@@ -147,12 +148,45 @@ server <- function(input, output, session) {
       master_registry <- jsonlite::fromJSON(txt = readLines(here("data/outcome/master_registry.json"), warn = FALSE), simplifyVector = FALSE)
       matched_metadata_paths <- c()
       
+      #  Tokenize the clean user prompt into individual words
+      user_words <- unlist(strsplit(user_prompt_clean, "\\s+"))
+      
+      # Setup tracking variables for our numerical scoring engine
+      best_overall_score <- 0
+      target_metadata_path <- NULL
+      similarity_threshold <- 0.75 # 75% similarity required to trigger a match
+      
+      #  Loop through every dataset in the registry to find the highest match
       for (dataset in master_registry$routing_registry) {
+        max_dataset_score <- 0
+        
         for (keyword in dataset$keywords) {
-          if (grepl(keyword, user_prompt_clean)) {
-            matched_metadata_paths <- c(matched_metadata_paths, dataset$metadata_path)
-            break
+          # Calculates Jaro-Winkler similarity (1 - distance)
+          scores <- 1 - stringdist::stringdistmatrix(user_words, keyword, method = "jw")
+          max_keyword_score <- max(scores, na.rm = TRUE)
+          
+          # Keeps track of the highest match word within this specific dataset
+          if (max_keyword_score > max_dataset_score) {
+            max_dataset_score <- max_keyword_score
           }
+        }
+        
+        # Checks if this dataset is our best-scoring match so far across the whole registry
+        if (max_dataset_score > best_overall_score) {
+          best_overall_score <- max_dataset_score
+          target_metadata_path <- dataset$metadata_path
+        }
+      }
+      
+      # Locks in the path ONLY if the highest score clears our confidence threshold
+      if (best_overall_score >= similarity_threshold && !is.null(target_metadata_path)) {
+        matched_metadata_paths <- c(matched_metadata_paths, target_metadata_path)
+      } else {
+        # If no keyword clears the threshold, 
+        # fall back to the last successfully used dataset in the cache!
+        # (we don't overwrite the context just because we couldnt find a relevant dataset)
+        if (!is.null(cache$last_metadata_path)) {
+          matched_metadata_paths <- cache$last_metadata_path
         }
       }
     }
