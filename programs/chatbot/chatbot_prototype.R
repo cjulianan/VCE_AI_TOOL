@@ -166,9 +166,18 @@ server <- function(input, output, session) {
         max_dataset_score <- 0
         
         for (keyword in dataset$keywords) {
-          # Calculates Jaro-Winkler similarity (1 - distance)
-          scores <- 1 - stringdist::stringdistmatrix(user_words, keyword, method = "jw")
-          max_keyword_score <- max(scores, na.rm = TRUE)
+          # 1. Force keyword to lowercase to prevent casing mismatches
+          keyword_clean <- tolower(keyword)
+          
+          # 2. DEFENSIVE PHRASE CHECK: If the exact phrase is inside the prompt,
+          # we skip the word-splitting math and give it a perfect score
+          if (grepl(keyword_clean, user_prompt_clean, fixed = TRUE)) {
+            max_keyword_score <- 1.00
+          } else {
+            # 3. TYPO FALLBACK: Calculate character-distance similarity
+            scores <- 1 - stringdist::stringdistmatrix(user_words, keyword_clean, method = "jw")
+            max_keyword_score <- max(scores, na.rm = TRUE)
+          }
           
           # Keeps track of the highest match word within this specific dataset
           if (max_keyword_score > max_dataset_score) {
