@@ -79,7 +79,7 @@ ui <- page_fixed(
     div(
       class = "d-flex gap-2 mb-2",
       downloadButton("export_log", "Save Chat Session", class = "btn-outline-primary w-50"),
-      fileInput("import_log", NULL, accept = c(".json"), buttonLabel = "Resume Session", placeholder = "No file selected")
+      fileInput("import_log", NULL, accept = c(".json"), buttonLabel = "Upload Previous Chat Session", placeholder = "No file selected")
     ),
     
     card(
