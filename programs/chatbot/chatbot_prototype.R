@@ -308,7 +308,7 @@ server <- function(input, output, session) {
         if (is.null(fips_col) || length(fips_col) == 0 || is.na(fips_col) || fips_col == "") {
           fips_col <- "GEOID"
         }
-        safe_select_columns <- unique(c("year", metadata$locality_fips_col, defined_columns))
+        safe_select_columns <- unique(c("year", metadata$fips_col, defined_columns))
         
         data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n", "Dataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
         
@@ -354,15 +354,8 @@ server <- function(input, output, session) {
         
         # loops through the rows that match the query results and store them into a vector to be read in data_context
         if (nrow(records) > 0) {
-          all_rows_vector <- c()
-          
-          for (row_idx in 1:nrow(records)) {
-            col_bullets <- paste0("    - ", names(records), ": ", records[row_idx, ])
-            current_row_block <- paste0("[Row ", row_idx, " Data]:\n", paste(col_bullets, collapse = "\n"))
-            all_rows_vector <- c(all_rows_vector, current_row_block)
-          }
-          record_string <- paste(all_rows_vector, collapse = "\n\n--- next year ---\n\n")
-          data_context <- paste0(data_context, "Dataset [", metadata$file_name, "] Records:\n", record_string, "\n\n")
+          record_string <- jsonlite::toJSON(records, auto_unbox = TRUE, pretty = FALSE)
+          data_context <- paste0(data_context, "Dataset [", metadata$file_name, "] Minified JSON Records:\n", record_string, "\n\n")
         }
       }
     } else if (length(matched_metadata_paths) > 0 && is.null(target_fips)) {
