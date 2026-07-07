@@ -4,6 +4,7 @@
   "organization": "Virginia Geographic Information Network",
   "file_path": "data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals.csv",
   "raw_file_path": "data/sources/Virginia-Geographic-Information-Network/vgin_hospitals.csv",
+  "url_source": "https://vgin.vdem.virginia.gov/datasets/VGIN::virginia-hospitals/about",
   "geographic_level": "county",
   "time_coverage": "2024",
   "unit_of_analysis": "Hospitals per source of admission per county",

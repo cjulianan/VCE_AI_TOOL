@@ -4,6 +4,7 @@
     "organization": "National Agricultural Statistics Service",
     "file_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_crops.csv",
     "raw_file_path": "data/sources/National-Agricultural-Statistics-Service/census_nass_crops.csv",
+    "url_source": "https://quickstats.nass.usda.gov/api",
     "geographic_level": "county",
     "time_coverage": "2022",
     "unit_of_analysis": "Agricultural statistic value per category per county.",

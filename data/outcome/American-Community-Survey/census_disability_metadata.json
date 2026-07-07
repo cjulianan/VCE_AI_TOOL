@@ -4,6 +4,7 @@
     "organization": "American Community Survey",
     "file_path": "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv",
     "raw_file_path": "data/sources/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "url_source": "https://www.census.gov/data/developers/data-sets.html",
     "geographic_level": "county",
     "time_coverage": "2020-2024",
     "unit_of_analysis": null,

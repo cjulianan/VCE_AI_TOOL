@@ -308,7 +308,7 @@ server <- function(input, output, session) {
         if (is.null(fips_col) || length(fips_col) == 0 || is.na(fips_col) || fips_col == "") {
           fips_col <- "GEOID"
         }
-        safe_select_columns <- unique(c("year", metadata$fips_col, defined_columns))
+        safe_select_columns <- unique(c("year", fips_col, defined_columns))
         
         data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n", "Dataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
         

@@ -4,6 +4,7 @@
     "organization": "Virginia Department of Health",
     "file_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
     "raw_file_path": "data/sources/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
+    "url_source": "https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography",
     "geographic_level": "county",
     "time_coverage": "2024",
     "unit_of_analysis": "Health condition cases reported per geography per 100000 population",

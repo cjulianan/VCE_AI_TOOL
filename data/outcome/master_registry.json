@@ -4,8 +4,12 @@
       "dataset_id": "acs_census",
       "metadata_path": "data/outcome/American-Community-Survey/census_education_metadata.json",
       "keywords": [
-        "education",
-        "acs"
+        "schooling",
+        "college",
+        "degree",
+        "attainment",
+        "graduation",
+        "diploma"
       ]
     },
     {
@@ -13,38 +17,92 @@
       "metadata_path": "data/outcome/American-Community-Survey/census_health_insurance_metadata.json",
       "keywords": [
         "health insurance",
-        "acs"
+        "medical coverage",
+        "uninsured",
+        "insured status",
+        "medicaid",
+        "medicare",
+        "tricare",
+        "military insurance",
+        "private insurance",
+        "public insurance",
+        "citizenship insurance",
+        "noncitizen coverage",
+        "employed insurance",
+        "income coverage",
+        "employer insurance",
+        "direct purchase",
+        "va healthcare",
+        "veteran insurance",
+        "employment coverage",
+        "family insurance"
       ]
     },
     {
       "dataset_id": "acs_census",
       "metadata_path": "data/outcome/American-Community-Survey/census_disability_metadata.json",
       "keywords": [
-        "disability",
-        "acs"
+        "disability status",
+        "disabled",
+        "race disability",
+        "minority disability",
+        "hearing difficulty",
+        "deafness",
+        "vision difficulty",
+        "blindness",
+        "cognitive difficulty",
+        "mental limitation",
+        "ambulatory difficulty",
+        "mobility limitation",
+        "self care",
+        "independent living"
       ]
     },
     {
       "dataset_id": "acs_census",
       "metadata_path": "data/outcome/American-Community-Survey/census_food_stamps_metadata.json",
       "keywords": [
-        "food",
-        "acs"
+        "food stamps",
+        "snap benefits",
+        "poverty status",
+        "low income",
+        "household assistance",
+        "senior benefits",
+        "child assistance",
+        "impoverished",
+        "household workers",
+        "disability assistance"
       ]
     },
     {
       "dataset_id": "nass_crops",
       "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_crops_metadata.json",
       "keywords": [
-        "crop",
-        "crops",
-        "corn",
-        "soybean",
+        "census crops",
+        "grain",
         "harvest",
+        "silage",
+        "seed",
+        "grasses",
+        "hay",
+        "herb",
+        "millet",
+        "oats",
+        "tobacco",
+        "nuts",
+        "berries",
+        "figs",
+        "fruit",
+        "orchards",
+        "flower",
+        "mushrooms",
+        "vegetables",
+        "melons",
+        "market",
         "acres",
+        "harvest",
         "agriculture",
-        "farm",
-        "cattle"
+        "farm"
       ]
     },
     {
@@ -53,6 +111,8 @@
       "keywords": [
         "fertilizer",
         "chemical",
+        "fungicide",
+        "insecticide",
         "fertilizers",
         "herbicide",
         "pesticide"
@@ -73,10 +133,12 @@
       "dataset_id": "survey_nass_crops",
       "metadata_path": "data/outcome/National-Agricultural-Statistics-Service/survey_nass_crops_metadata.json",
       "keywords": [
-        "crop",
-        "crops",
-        "crop name",
+        "survey crops",
         "corn",
+        "cotton",
+        "barley",
+        "peanut",
+        "wheat",
         "soybean",
         "harvest",
         "acres",
@@ -88,40 +150,45 @@
       "dataset_id": "ccd_directory",
       "metadata_path": "data/outcome/Urban-Institute/2020-2024_ccd_directory_metadata.json",
       "keywords": [
-        "school",
-        "education",
-        "district",
-        "teacher",
-        "student",
-        "enrollment",
-        "grade",
-        "schools"
+        "ccd directory",
+        "school profile",
+        "district info",
+        "teacher count",
+        "gade levels",
+        "virtual school",
+        "magnet school",
+        "charter school",
+        "direct certification",
+        "free lunch",
+        "reduced lunch"
       ]
     },
     {
       "dataset_id": "ccd_enrollment",
       "metadata_path": "data/outcome/Urban-Institute/2020-2024_ccd_enrollment_metadata.json",
       "keywords": [
-        "enrollment",
-        "education",
-        "district",
-        "teacher",
-        "student",
-        "school",
-        "grade",
-        "schools"
+        "ccd enrollment",
+        "student counts",
+        "enrollment totals",
+        "school size",
+        "student demographics",
+        "grade enrollment"
       ]
     },
     {
       "dataset_id": "vdh_diseases",
       "metadata_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography_metadata.json",
       "keywords": [
+        "vdh diseases",
         "disease",
         "case",
         "infection",
         "outbreak",
         "surveillance",
-        "vdh",
+        "case counts",
+        "incidence rates",
+        "virus",
+        "sickness",
         "illness"
       ]
     },
@@ -129,13 +196,15 @@
       "dataset_id": "vgin_hospitals",
       "metadata_path": "data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals_metadata.json",
       "keywords": [
+        "vgin hospitals",
         "hospital",
         "health",
-        "clinic",
-        "beds",
-        "medical",
-        "trauma",
-        "vgin"
+        "outpatient",
+        "inpatient",
+        "health facility",
+        "medical infrastructure",
+        "care facility",
+        "clinic"
       ]
     }
   ]

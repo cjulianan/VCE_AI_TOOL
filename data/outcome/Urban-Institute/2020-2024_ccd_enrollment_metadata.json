@@ -4,6 +4,7 @@
     "organization": "Common Core of Data (CCD)",
     "file_path": "data/outcome/Urban-Institute/2020-2024_ccd_enrollment.csv",
     "raw_file_path": "data/sources/Urban-Institute/2020-2024_ccd_enrollment.csv",
+    "url_source": "https://educationdata.urban.org/documentation/index.html",
     "geographic_level": "school",
     "time_coverage": "2020-2024",
     "unit_of_analysis": "Student enrollment count per grade, race, and sex per school per year",
