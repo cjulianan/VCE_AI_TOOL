@@ -10,8 +10,7 @@ library(readr)
 library(markdown)
 library(rlang)
 library(here) # fixes directory issues with Shiny app
-library(shinycssloaders) # package for UI CSS, this gives us the s
-library(stringdist) # helps us do syntactic scoring (doesnt use embeddings - mainly solves typos)
+library(stringdist) # helps us do syntactic scoring (doesnt use embeddings - this package mainly solves typos)
 
 # function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
 normalize_metadata <- function(meta, meta_path) {
@@ -75,6 +74,13 @@ ui <- page_fixed(
   div (
     # center the chatbot box
     class = "d-flex flex-column justify-content-center min-vh-100",
+    
+    # this part is UI for the export and import chat log buttons
+    div(
+      class = "d-flex gap-2 mb-2",
+      downloadButton("export_log", "Save Chat Session", class = "btn-outline-primary w-50"),
+      fileInput("import_log", NULL, accept = c(".json"), buttonLabel = "Resume Session", placeholder = "No file selected")
+    ),
     
     card(
       # website banner to match color picked by theme
@@ -374,8 +380,8 @@ server <- function(input, output, session) {
     
     # clear history (doesn't affect cache) so that it doesn't hit character limit from multiple prompts from large datasets such as acs
     stateless_chat <- chat_obj$clone()$set_turns(list())
-    # THIS FORCE-TRIGGERS A NATIVE LOADING BAR THE MICROSECOND THE API IS CALLED
-    new_response <- withProgress(message = 'Thinking...', detail = 'Consulting database and AI engine...', {
+    # THIS FORCE-TRIGGERS A NATIVE LOADING BAR THE SECOND THE API IS CALLED
+    new_response <- withProgress(message = 'Thinking...', detail = 'Consulting database and our AI...', {
       stateless_chat$chat(final_prompt, echo = "none")
     })
     
@@ -400,6 +406,56 @@ server <- function(input, output, session) {
   output$ai_response <- renderUI({
       HTML(markdown::markdownToHTML(text = chat_log(), fragment.only = TRUE))
   })
+  
+  
+  # =========================================================================
+  # CHAT LOG EXPORT HANDLER (USER CAN SAVE FILE TO LAPTOP)
+  # =========================================================================
+  output$export_log <- downloadHandler(
+    filename = function() {
+      paste("chat-session-", Sys.Date(), ".json", sep = "")
+    },
+    content = function(file) {
+      # Take a complete snapshot of your active reactive values
+      session_snapshot <- list(
+        saved_chat_text        = chat_log(), 
+        last_metadata_path     = cache$last_metadata_path,
+        pending_disambiguation = cache$pending_disambiguation,
+        cached_intent_phrase   = cache$cached_intent_phrase
+      )
+      
+      # Pack it into a structured text file and download it
+      jsonlite::write_json(session_snapshot, file, pretty = TRUE, auto_unbox = TRUE)
+    }
+  )
+  
+  # =========================================================================
+  # CHAT LOG IMPORT HANDLER (USER CAN RELOAD PAST FILE)
+  # =========================================================================
+  observeEvent(input$import_log, {
+    req(input$import_log)
+    
+    # Read the uploaded text file safely
+    uploaded_snapshot <- tryCatch({
+      jsonlite::fromJSON(input$import_log$datapath, simplifyVector = TRUE)
+    }, error = function(e) {
+      showNotification("Invalid chat log file format.", type = "error")
+      return(NULL)
+    })
+    
+    req(uploaded_snapshot)
+    
+    # 1. Update the reactiveVal to restore visual HTML history on screen
+    chat_log(uploaded_snapshot$saved_chat_text)
+    
+    # 2. Re-inject all background tracking variables back into the cache
+    cache$last_metadata_path      <- uploaded_snapshot$last_metadata_path
+    cache$pending_disambiguation  <- uploaded_snapshot$pending_disambiguation
+    cache$cached_intent_phrase    <- uploaded_snapshot$cached_intent_phrase
+    
+    showNotification("Chat session successfully restored!", type = "message")
+  })
+  
 }
 
 # Launch App ------------------------------------------------------------------
