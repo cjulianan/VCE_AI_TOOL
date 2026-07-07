@@ -125,7 +125,7 @@ server <- function(input, output, session) {
   ## chat_log <- reactiveVal("Chat Started: <br>") ## OLD LINE 
 
   # Replaced with a clean, centered starter label:
-  chat_log <- reactiveVal("<div class='text-center text-muted large my-2'>Conversation Started</div>") # can adjust size for the text
+  chat_log <- reactiveVal("<div class='text-center text-muted large my-2'><strong>Conversation Started</strong></div>") # can adjust size for the text
   
   # cache to save previous metadata paths, user prompts, and solve ambiguations between counties/cities
   cache <- reactiveValues(
@@ -244,7 +244,7 @@ server <- function(input, output, session) {
             
             # 'bg-secondary' makes the box dark gray; 'text-white' colors the text; 'rounded-3' rounds the corners
             # 'small' drops font size; 'max-width: 85%' stops the gray bar from completely hitting the card edge
-            "  <div class='bg-secondary text-white p-2 px-3 rounded-3 text-center small' style='max-width: 85%;'>",
+            "  <div class='bg-secondary text-secondary-inverse p-2 px-3 rounded-3 text-center small' style='max-width: 85%;'>",
             "    ⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ", 
             tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i>",
             "  </div>",
