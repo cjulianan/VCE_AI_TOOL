@@ -122,7 +122,10 @@ server <- function(input, output, session) {
   )
   
   # keep record of chat log so new responses aren't overwritten
-  chat_log <- reactiveVal("Chat Started: <br>")
+  ## chat_log <- reactiveVal("Chat Started: <br>") ## OLD LINE 
+
+  # Replaced with a clean, centered starter label:
+  chat_log <- reactiveVal("<div class='text-center text-muted large my-2'>Conversation Started</div>") # can adjust size for the text
   
   # cache for when user clarifies about ambiguous county/city (ex. fairfax county or fairfax city)
   cache <- reactiveValues(
@@ -226,12 +229,31 @@ server <- function(input, output, session) {
           cache$cached_intent_phrase = input$user_prompt
           cache$pending_disambiguation <- TRUE
           
-          updated_history <- paste0(
-            chat_log(), "<br>",
-            "<strong>User:</strong> ", input$user_prompt, "<br>",
-            "⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ", 
-            tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i><br>"
+          # updated_history <- paste0(
+          #   chat_log(), "<br>",
+          #   "<strong>User:</strong> ", input$user_prompt, "<br>",
+          #   "⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ",
+          #   tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i><br>"
+          # )
+          
+          
+          # Construct a centered system alert bubble using Bootstrap flexbox
+          system_bubble <- paste0(
+            # 'd-flex' opens a flex container; 'justify-content-center' pushes the box to the exact middle
+            "<div class='d-flex justify-content-center mb-3'>",
+            
+            # 'bg-secondary' makes the box dark gray; 'text-white' colors the text; 'rounded-3' rounds the corners
+            # 'small' drops font size; 'max-width: 85%' stops the gray bar from completely hitting the card edge
+            "  <div class='bg-secondary text-white p-2 px-3 rounded-3 text-center small' style='max-width: 85%;'>",
+            "    ⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ", 
+            tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i>",
+            "  </div>",
+            "</div>"
           )
+          
+          # Append the newly generated system bubble to our master HTML chat string
+          updated_history <- paste0(chat_log(), system_bubble)
+          
           chat_log(updated_history)
           updateTextInput(session, "user_prompt", value = "")
           return() 
@@ -314,7 +336,7 @@ server <- function(input, output, session) {
         }
       }
     } else if (length(matched_metadata_paths) > 0 && is.null(target_fips)) {
-      # Path 2: metadata path is found but fips is not
+      # Path 2: metadata path is found but FIPS is not
       
       data_context <- "The user is asking a structural or metadata question about these specific dataset blueprints:\n\n"
       
@@ -385,11 +407,39 @@ server <- function(input, output, session) {
       stateless_chat$chat(final_prompt, echo = "none")
     })
     
-    updated_history <- paste0(
-      chat_log(), "<br>",
-      "<strong>User:</strong> ", input$user_prompt, "<br>",
-      "<strong>AI:</strong> <i>", new_response, "</i><br>"
+    # updated_history <- paste0(
+    #   chat_log(), "<br>",
+    #   "<strong>User:</strong> ", input$user_prompt, "<br>",
+    #   "<strong>AI:</strong> <i>", new_response, "</i><br>"
+    # )
+    
+    # Build a Right-Aligned User Bubble
+    user_bubble <- paste0(
+      # 'justify-content-end' acts like a right-side magnet, pulling the text box to the right side of the screen
+      "<div class='d-flex justify-content-end mb-3'>",
+      
+      # 'bg-primary' sets the background to your theme color (Yeti Blue); 'text-white' forces white lettering
+      # 'shadow-sm' adds a tiny drop shadow; 'max-width: 75%' forces long sentences to wrap into a clean block
+      "  <div class='bg-primary text-white p-2 px-3 rounded-3 shadow-sm' style='max-width: 75%; text-align: left;'>",
+      "    ", input$user_prompt,
+      "  </div>",
+      "</div>"
     )
+    
+    # Build a Left-Aligned AI Bubble
+    ai_bubble <- paste0(
+      # 'justify-content-start' acts like a left-side magnet, pinning the text box to the left side of the screen
+      "<div class='d-flex justify-content-start mb-3'>",
+      
+      # 'bg-light' colors the box light gray; 'text-dark' keeps text black; 'border' draws a clean separator line
+      "  <div class='bg-light text-dark p-2 px-3 rounded-3 border shadow-sm' style='max-width: 75%; text-align: left;'>",
+      "    ", new_response,
+      "  </div>",
+      "</div>"
+    )
+    
+    # Combine both new elements and append them smoothly to your visual history string
+    updated_history <- paste0(chat_log(), user_bubble, ai_bubble)
     
     chat_log(updated_history)
     # reset cache and input box
