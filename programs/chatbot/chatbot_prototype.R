@@ -127,7 +127,7 @@ server <- function(input, output, session) {
   # Replaced with a clean, centered starter label:
   chat_log <- reactiveVal("<div class='text-center text-muted large my-2'>Conversation Started</div>") # can adjust size for the text
   
-  # cache for when user clarifies about ambiguous county/city (ex. fairfax county or fairfax city)
+  # cache to save previous metadata paths, user prompts, and solve ambiguations between counties/cities
   cache <- reactiveValues(
     last_metadata_path = NULL,
     cached_intent_phrase = NULL,
@@ -302,19 +302,49 @@ server <- function(input, output, session) {
         # build list of columns that will be used
         col_list <- raw_json$columns %||% list()
         defined_columns <- sapply(col_list, function(c) c$name %||% c$variable_code)
+        
+        # make sure the locality is just one code so the querying doesn't break
+        fips_col <- as.character(metadata$locality_fips_col)[1]
+        if (is.null(fips_col) || length(fips_col) == 0 || is.na(fips_col) || fips_col == "") {
+          fips_col <- "GEOID"
+        }
         safe_select_columns <- unique(c("year", metadata$locality_fips_col, defined_columns))
         
         data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n", "Dataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
         
         raw_file_absolute_path <- here(metadata$file_path)
         
-        query <- sprintf(
-          "SELECT * FROM '%s' WHERE CAST(%s AS VARCHAR) = '%s' OR TRY_CAST(%s AS BIGINT) = %d", 
-          raw_file_absolute_path, 
-          metadata$locality_fips_col, target_fips,
-          metadata$locality_fips_col, as.integer(target_fips)
-        )
-        records <- dbGetQuery(DB_CON, query)
+        # path for ccd files
+        if (!is.null(metadata$file_name) && metadata$file_name %in% c("2020-2024_ccd_directory.csv", "2020-2024_ccd_enrollment.csv")) {
+          
+          # see if the target fips matches any fips inside the school bridges csv (school district spans 2 counties)
+          matching_bridges <- SCHOOL_BRIDGES[as.integer(SCHOOL_BRIDGES$locality_fips) == as.integer(target_fips), ]
+          if (nrow(matching_bridges) > 0) {
+            target_leaid <- as.character(matching_bridges$institution_id[1])
+            relationship <- matching_bridges$relationship_type[1]
+            
+            # query for school districts spanning across two counties
+            query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s'", raw_file_absolute_path, target_leaid)
+            records <- dbGetQuery(DB_CON, query)
+            
+            if (relationship == "shared") {
+              data_context <- paste0(data_context, "⚠️ NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
+            }
+          } else {
+            # query for if the school district doesn't span across two counties
+            query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col, target_fips)
+            records <- dbGetQuery(DB_CON, query)
+          }
+        } else {
+          # query for all other datasets other than ccd
+          query <- sprintf(
+            "SELECT * FROM '%s' WHERE CAST(%s AS VARCHAR) = '%s' OR TRY_CAST(%s AS BIGINT) = %d", 
+            raw_file_absolute_path, 
+            fips_col, target_fips,
+            fips_col, as.integer(target_fips)
+          )
+          records <- dbGetQuery(DB_CON, query) 
+        }
         
         # drops all columns not used
         available_cols <- intersect(safe_select_columns, names(records))
