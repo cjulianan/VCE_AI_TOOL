@@ -21,7 +21,6 @@ library(DBI)
 library(stringr)
 library(markdown)
 library(rlang)
-library(shinycssloaders)
 library(stringdist)
 ```
 
