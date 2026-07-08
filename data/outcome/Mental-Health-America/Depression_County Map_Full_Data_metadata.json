@@ -1,0 +1,35 @@
+{
+    "file_name": "Depression_County Map_Full_Data.csv",
+    "desc": "Tracking number of people who report having depression grouped by county and per 100k people",
+    "organization": "Mental Health America",
+    "file_path": "data/outcome/Mental-Health-America/Depression_County Map_Full_Data.csv",
+    "raw_file_path": "data/sources/Mental-Health-America/Depression_County Map_Full_Data.csv",
+    "url_source": "https://mhanational.org/data-in-your-community/mha-state-county-data/",
+    "geographic_level": "county",
+    "time_coverage": "2020-2025",
+    "unit_of_analysis": "Depression count per 100k",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        ""
+    ],
+    "spatial_alignment": {
+        "locality_fips": "",
+        "locality_name": ""
+    },
+    "columns": [
+        {
+            "name": "",
+            "data_type": "",
+            "keywords": [
+                ""
+            ],
+            "desc": "",
+            "missing": null
+        }
+    ]
+}
