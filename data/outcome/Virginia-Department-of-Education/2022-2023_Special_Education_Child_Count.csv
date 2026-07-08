@@ -52,13 +52,6 @@ School Year,Division Name,fips_code,School Number,School Name,Total Count
 2022-2023,Alexandria City,51510,50,Patrick Henry K-8 School,88
 2022-2023,Alexandria City,51510,333,Samuel W. Tucker Elementary,68
 2022-2023,Alexandria City,51510,190,William Ramsay Elementary,64
-2022-2023,Alleghany Highlands,NA,310,Alleghany High,95
-2022-2023,Alleghany Highlands,NA,110,Callaghan Elementary,30
-2022-2023,Alleghany Highlands,NA,1040,Clifton Middle,65
-2022-2023,Alleghany Highlands,NA,350,Covington High,66
-2022-2023,Alleghany Highlands,NA,360,Jeter-Watson Elementary,128
-2022-2023,Alleghany Highlands,NA,1041,Mountain View Elementary,72
-2022-2023,Alleghany Highlands,NA,90,Sharon Elementary,31
 2022-2023,Amelia County,51007,220,Amelia County Elementary,85
 2022-2023,Amelia County,51007,10,Amelia County High,62
 2022-2023,Amelia County,51007,210,Amelia County Middle,42
@@ -350,8 +343,6 @@ School Year,Division Name,fips_code,School Number,School Name,Total Count
 2022-2023,Clarke County,51043,10,Clarke County High,76
 2022-2023,Clarke County,51043,290,D.G. Cooley Elementary,48
 2022-2023,Clarke County,51043,280,Johnson-Williams Middle,50
-2022-2023,Colonial Beach,NA,22,Colonial Beach Elementary,65
-2022-2023,Colonial Beach,NA,21,Colonial Beach High,31
 2022-2023,Colonial Heights City,51570,40,Colonial Heights High,145
 2022-2023,Colonial Heights City,51570,20,Colonial Heights Middle,107
 2022-2023,Colonial Heights City,51570,50,Lakeview Elementary,56
@@ -1801,28 +1792,10 @@ School Year,Division Name,fips_code,School Number,School Name,Total Count
 2022-2023,Waynesboro City,51820,580,Wenonah Elementary,25
 2022-2023,Waynesboro City,51820,630,Westwood Hills Elementary,62
 2022-2023,Waynesboro City,51820,751,William Perry Elementary,58
-2022-2023,West Point,NA,280,West Point Elementary,60
-2022-2023,West Point,NA,290,West Point Middle/High,51
 2022-2023,Westmoreland County,51193,210,Cople Elementary,57
 2022-2023,Westmoreland County,51193,300,Montross Middle,35
 2022-2023,Westmoreland County,51193,310,Washington District Elementary,61
 2022-2023,Westmoreland County,51193,120,Westmoreland High,80
-2022-2023,Williamsburg-James City County,NA,60,Berkeley Middle,109
-2022-2023,Williamsburg-James City County,NA,40,Clara Byrd Baker Elementary,124
-2022-2023,Williamsburg-James City County,NA,80,D.J. Montague Elementary,89
-2022-2023,Williamsburg-James City County,NA,190,J. Blaine Blayton Elementary,135
-2022-2023,Williamsburg-James City County,NA,25,James Blair Middle,89
-2022-2023,Williamsburg-James City County,NA,201,James River Elementary,64
-2022-2023,Williamsburg-James City County,NA,202,Jamestown High,154
-2022-2023,Williamsburg-James City County,NA,90,Lafayette High,173
-2022-2023,Williamsburg-James City County,NA,50,Laurel Lane Elementary,115
-2022-2023,Williamsburg-James City County,NA,191,Lois Hornsby Middle,135
-2022-2023,Williamsburg-James City County,NA,205,Matoaka Elementary,103
-2022-2023,Williamsburg-James City County,NA,10,Matthew Whaley Elementary,78
-2022-2023,Williamsburg-James City County,NA,70,Norge Elementary,157
-2022-2023,Williamsburg-James City County,NA,203,Stonehouse Elementary,121
-2022-2023,Williamsburg-James City County,NA,100,Toano Middle,101
-2022-2023,Williamsburg-James City County,NA,204,Warhill High,223
 2022-2023,Winchester City,51840,75,Daniel Morgan Intermediate,89
 2022-2023,Winchester City,51840,70,Daniel Morgan Middle,107
 2022-2023,Winchester City,51840,80,Frederick Douglass Elementary,47

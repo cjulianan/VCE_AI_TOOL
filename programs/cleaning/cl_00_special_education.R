@@ -18,6 +18,7 @@ updated_data <- special_education_data %>%
   
   # drop unused columns
   select(-c("Division_Lower", "official_name", "locality_type", "Division Number")) %>% 
+  drop_na(fips_code) %>%
   
   # relocate new column
   relocate(fips_code, .after = "Division Name")

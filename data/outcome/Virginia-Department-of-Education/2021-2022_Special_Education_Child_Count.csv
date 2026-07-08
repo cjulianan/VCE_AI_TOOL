@@ -346,8 +346,6 @@ School Year,Division Name,fips_code,School Number,School Name,Total Count
 2021-2022,Clarke County,51043,10,Clarke County High,70
 2021-2022,Clarke County,51043,290,D.G. Cooley Elementary,44
 2021-2022,Clarke County,51043,280,Johnson-Williams Middle,53
-2021-2022,Colonial Beach,NA,22,Colonial Beach Elementary,62
-2021-2022,Colonial Beach,NA,21,Colonial Beach High,30
 2021-2022,Colonial Heights City,51570,40,Colonial Heights High,138
 2021-2022,Colonial Heights City,51570,20,Colonial Heights Middle,131
 2021-2022,Colonial Heights City,51570,50,Lakeview Elementary,62
@@ -1790,28 +1788,10 @@ School Year,Division Name,fips_code,School Number,School Name,Total Count
 2021-2022,Waynesboro City,51820,580,Wenonah Elementary,22
 2021-2022,Waynesboro City,51820,630,Westwood Hills Elementary,55
 2021-2022,Waynesboro City,51820,751,William Perry Elementary,52
-2021-2022,West Point,NA,280,West Point Elementary,46
-2021-2022,West Point,NA,290,West Point Middle/High,52
 2021-2022,Westmoreland County,51193,210,Cople Elementary,50
 2021-2022,Westmoreland County,51193,300,Montross Middle,44
 2021-2022,Westmoreland County,51193,120,Washington & Lee High,80
 2021-2022,Westmoreland County,51193,310,Washington District Elementary,44
-2021-2022,Williamsburg-James City County,NA,60,Berkeley Middle,100
-2021-2022,Williamsburg-James City County,NA,40,Clara Byrd Baker Elementary,130
-2021-2022,Williamsburg-James City County,NA,80,D.J. Montague Elementary,87
-2021-2022,Williamsburg-James City County,NA,190,J. Blaine Blayton Elementary,122
-2021-2022,Williamsburg-James City County,NA,25,James Blair Middle,88
-2021-2022,Williamsburg-James City County,NA,201,James River Elementary,59
-2021-2022,Williamsburg-James City County,NA,202,Jamestown High,150
-2021-2022,Williamsburg-James City County,NA,90,Lafayette High,171
-2021-2022,Williamsburg-James City County,NA,50,Laurel Lane Elementary,96
-2021-2022,Williamsburg-James City County,NA,191,Lois Hornsby Middle,133
-2021-2022,Williamsburg-James City County,NA,205,Matoaka Elementary,96
-2021-2022,Williamsburg-James City County,NA,10,Matthew Whaley Elementary,82
-2021-2022,Williamsburg-James City County,NA,70,Norge Elementary,144
-2021-2022,Williamsburg-James City County,NA,203,Stonehouse Elementary,129
-2021-2022,Williamsburg-James City County,NA,100,Toano Middle,93
-2021-2022,Williamsburg-James City County,NA,204,Warhill High,233
 2021-2022,Winchester City,51840,75,Daniel Morgan Intermediate,112
 2021-2022,Winchester City,51840,70,Daniel Morgan Middle,111
 2021-2022,Winchester City,51840,80,Frederick Douglass Elementary,49
