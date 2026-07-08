@@ -1,0 +1,97 @@
+import os
+import csv
+
+# Authoritative lists of Virginia localities and their 3-digit local codes.
+# Virginia's state FIPS code is 51, so we combine '51' with these codes.
+counties = {
+    "001": "Accomack County", "003": "Albemarle County", "005": "Alleghany County",
+    "007": "Amelia County", "009": "Amherst County", "011": "Appomattox County",
+    "013": "Arlington County", "015": "Augusta County", "017": "Bath County",
+    "019": "Bedford County", "021": "Bland County", "023": "Botetourt County",
+    "025": "Brunswick County", "027": "Buchanan County", "029": "Buckingham County",
+    "031": "Campbell County", "033": "Caroline County", "035": "Carroll County",
+    "036": "Charles City County", "037": "Charlotte County", "041": "Chesterfield County",
+    "043": "Clarke County", "045": "Craig County", "047": "Culpeper County",
+    "049": "Cumberland County", "051": "Dickenson County", "053": "Dinwiddie County",
+    "057": "Essex County", "059": "Fairfax County", "061": "Fauquier County",
+    "063": "Floyd County", "065": "Fluvanna County", "067": "Franklin County",
+    "069": "Frederick County", "071": "Giles County", "073": "Gloucester County",
+    "075": "Goochland County", "077": "Grayson County", "079": "Greene County",
+    "081": "Greensville County", "083": "Halifax County", "085": "Hanover County",
+    "087": "Henrico County", "089": "Henry County", "091": "Highland County",
+    "093": "Isle of Wight County", "095": "James City County", "097": "King and Queen County",
+    "099": "King George County", "101": "King William County", "103": "Lancaster County",
+    "105": "Lee County", "107": "Loudoun County", "109": "Louisa County",
+    "111": "Lunenburg County", "113": "Madison County", "115": "Mathews County",
+    "117": "Mecklenburg County", "119": "Middlesex County", "121": "Montgomery County",
+    "125": "Nelson County", "127": "New Kent County", "131": "Northampton County",
+    "133": "Northumberland County", "135": "Nottoway County", "137": "Orange County",
+    "139": "Page County", "141": "Patrick County", "145": "Powhatan County",
+    "143": "Pittsylvania County", "147": "Prince Edward County", "149": "Prince George County",
+    "153": "Prince William County", "155": "Pulaski County", "157": "Rappahannock County",
+    "159": "Richmond County", "161": "Roanoke County", "163": "Rockbridge County",
+    "165": "Rockingham County", "167": "Russell County", "169": "Scott County",
+    "171": "Shenandoah County", "173": "Smyth County", "175": "Southampton County",
+    "177": "Spotsylvania County", "179": "Stafford County", "181": "Surry County",
+    "183": "Sussex County", "185": "Tazewell County", "187": "Warren County",
+    "191": "Washington County", "193": "Westmoreland County", "195": "Wise County",
+    "197": "Wythe County", "199": "York County"
+}
+
+cities = {
+    "510": "Alexandria City", "520": "Bristol City", "530": "Buena Vista City",
+    "540": "Charlottesville City", "550": "Chesapeake City", "570": "Colonial Heights City",
+    "580": "Covington City", "590": "Danville City", "595": "Emporia City",
+    "600": "Fairfax City", "610": "Falls Church City", "620": "Franklin City",
+    "630": "Fredericksburg City", "640": "Galax City", "650": "Hampton City",
+    "660": "Harrisonburg City", "670": "Hopewell City", "678": "Lexington City",
+    "680": "Lynchburg City", "683": "Manassas City", "685": "Manassas Park City",
+    "690": "Martinsville City", "700": "Newport News City", "710": "Norfolk City",
+    "720": "Norton City", "730": "Petersburg City", "735": "Poquoson City",
+    "740": " Portsmouth City", "750": "Radford City", "760": "Richmond City",
+    "770": "Roanoke City", "775": "Salem City", "790": "Staunton City",
+    "800": "Suffolk City", "810": "Virginia Beach City", "820": "Waynesboro City",
+    "830": "Williamsburg City", "840": "Winchester City"
+}
+
+output_rows = []
+
+# Generate county mappings
+for code, name in counties.items():
+    fips = f"51{code}"
+    base_name = name.replace(" County", "")
+    
+    # 1. Add the full lowercase phrase: "james city county"
+    output_rows.append([name.lower(), name, "county", fips])
+    
+    # 2. Add the clean lowercase base version: "james city"
+    output_rows.append([base_name.lower(), name, "county", fips])
+
+# Generate independent city mappings
+for code, name in cities.items():
+    fips = f"51{code}"
+    base_name = name.replace(" City", "")
+    
+    # 1. Add the full lowercase phrase: "williamsburg city"
+    output_rows.append([name.lower(), name, "independent_city", fips])
+    
+    # 2. Add the clean lowercase base version: "williamsburg"
+    output_rows.append([base_name.lower(), name, "independent_city", fips])
+
+# Create the full dynamic path to your target folder layout
+target_directory = os.path.join("data", "outcome")
+
+# Safety Check: Automatically creates the directories if they don't exist yet
+os.makedirs(target_directory, exist_ok=True)
+
+# Define the full output file path mapping
+output_file_path = os.path.join(target_directory, "virginia_localities.csv")
+
+# Save out to your target local folder location
+with open(output_file_path, mode="w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    # FIX: "fips_code" is now a string literal header row title
+    writer.writerow(["alias", "official_name", "locality_type", "fips_code"])
+    writer.writerows(output_rows)
+
+print(f"Successfully compiled virginia_localities.csv at: {output_file_path}")
