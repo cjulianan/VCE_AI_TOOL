@@ -25,6 +25,7 @@ updated_data <- depression_data %>%
     fips_lookup, 
     by = c("County_Lower" = "alias")
   ) %>%
+  # remove the columns from virginia localities csv
   select(-c("County_Lower", "official_name", "locality_type")) %>% 
   relocate(fips_code, .after = "County Name")
 
