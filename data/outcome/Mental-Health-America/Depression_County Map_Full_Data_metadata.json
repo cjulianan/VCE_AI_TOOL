@@ -2,8 +2,8 @@
     "file_name": "Depression_County Map_Full_Data.csv",
     "desc": "Tracking number of people who report having depression grouped by county and per 100k people",
     "organization": "Mental Health America",
-    "file_path": "data/outcome/Mental-Health-America/Depression_County Map_Full_Data.csv",
-    "raw_file_path": "data/sources/Mental-Health-America/Depression_County Map_Full_Data.csv",
+    "file_path": "data/outcome/Mental-Health-America/Depression_County_Map_Full_Data.csv",
+    "raw_file_path": "data/sources/Mental-Health-America/Depression_County_Map_Full_Data.csv",
     "url_source": "https://mhanational.org/data-in-your-community/mha-state-county-data/",
     "geographic_level": "county",
     "time_coverage": "2020-2025",
@@ -15,20 +15,403 @@
         ""
     ],
     "cleaning_scripts": [
-        ""
+        "program/cleaning/cl_00_mental_health.R"
     ],
     "spatial_alignment": {
-        "locality_fips": "",
-        "locality_name": ""
+        "locality_fips": "fips_code",
+        "locality_name": "County Name"
     },
     "columns": [
         {
-            "name": "",
-            "data_type": "",
+            "name": "County Name",
+            "data_type": "string",
             "keywords": [
-                ""
+                "county", 
+                "location", 
+                "area", 
+                "region", 
+                "place"
             ],
-            "desc": "",
+            "desc": "The name of the local county geographic area.",
+            "missing": null
+        },
+        {
+            "name": "fips_code",
+            "data_type": "integer",
+            "keywords": [
+                "fips", 
+                "code", 
+                "county code"
+            ],
+            "desc": "Federal Information Processing Series unique numerical code identifier for the county.",
+            "missing": null
+        },
+        {
+            "name": "State",
+            "data_type": "string",
+            "keywords": [
+                "state"
+            ],
+            "desc": "The name of the US state where the county is located.",
+            "missing": null
+        },
+        {
+            "name": "# per 100K 2020",
+            "data_type": "float",
+            "keywords": [
+                "rate 2020", 
+                "prevalence 2020", 
+                "ratio 2020", 
+                "per 100k 2020", 
+                "proportion 2020", 
+                "percentage 2020"],
+            "desc": "Severe depression prevalence rate normalized per 100,000 residents in the year 2020.",
+            "missing": "NA"
+        },
+        {
+            "name": "# per 100K 2021",
+            "data_type": "float",
+            "keywords": [
+                "rate 2021", 
+                "prevalence 2021", 
+                "ratio 2021", 
+                "per 100k 2021", 
+                "proportion 2021", 
+                "percentage 2021"
+            ],
+            "desc": "Severe depression prevalence rate normalized per 100,000 residents in the year 2021.",
+            "missing": "NA"
+        },
+        {
+            "name": "# per 100K 2022",
+            "data_type": "float",
+            "keywords": [
+                "rate 2022", 
+                "prevalence 2022",
+                "ratio 2022", 
+                "per 100k 2022", 
+                "proportion 2022", 
+                "percentage 2022"
+            ],
+            "desc": "Severe depression prevalence rate normalized per 100,000 residents in the year 2022.",
+            "missing": "NA"
+        },
+        {
+            "name": "# per 100K 2023",
+            "data_type": "float",
+            "keywords": [
+                "rate 2023", 
+                "prevalence 2023", 
+                "ratio 2023", 
+                "per 100k 2023", 
+                "proportion 2023", 
+                "percentage 2023"
+            ],
+            "desc": "Severe depression prevalence rate normalized per 100,000 residents in the year 2023.",
+            "missing": null
+        },
+        {
+            "name": "# per 100K 2024",
+            "data_type": "float",
+            "keywords": [
+                "rate 2024", 
+                "prevalence 2024", 
+                "ratio 2024", 
+                "per 100k 2024", 
+                "proportion 2024", 
+                "percentage 2024"
+            ],
+            "desc": "Severe depression prevalence rate normalized per 100,000 residents in the year 2024.",
+            "missing": "NA"
+        },
+        {
+            "name": "# per 100K 2025",
+            "data_type": "float",
+            "keywords": [
+                "rate 2025", 
+                "prevalence 2025", 
+                "ratio 2025", 
+                "per 100k 2025", 
+                "proportion 2025", 
+                "percentage 2025"
+            ],
+            "desc": "Severe depression prevalence rate normalized per 100,000 residents in the year 2025.",
+            "missing": null
+        },
+        {
+            "name": "# per 100K All Years",
+            "data_type": "float",
+            "keywords": [
+                "average rate", 
+                "overall rate", 
+                "historical rate", 
+                "total per 100k"
+            ],
+            "desc": "The overall severe depression rate per 100,000 residents across all recorded tracking years.",
+            "missing": null
+        },
+        {
+            "name": "2020 Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "cases 2020", 
+                "severe 2020", 
+                "count 2020",  
+                "positive screenings 2020", 
+                "depression 2020"
+            ],
+            "desc": "Total count of individuals who screened positive for severe depression in 2020.",
+            "missing": "NA"
+        },
+        {
+            "name": "2020 Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "surveys 2020", 
+                "responses 2020", 
+                "screenings 2020", 
+                "participants 2020", 
+                "sample 2020", 
+                "total tests 2020"
+            ],
+            "desc": "Total number of survey or screening assessments collected in 2020.",
+            "missing": "NA"
+        },
+        {
+            "name": "2021 Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "cases 2021", 
+                "severe 2021", 
+                "count 2021",  
+                "positive screenings 2021", 
+                "depression 2021"
+            ],
+            "desc": "Total count of individuals who screened positive for severe depression in 2021.",
+            "missing": "NA"
+        },
+        {
+            "name": "2021 Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "surveys 2021", 
+                "responses 2021", 
+                "screenings 2021", 
+                "participants 2021", 
+                "sample 2021", 
+                "total tests 2021"
+            ],
+            "desc": "Total number of survey or screening assessments collected in 2021.",
+            "missing": "NA"
+        },
+        {
+            "name": "2022 Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "cases 2022", 
+                "severe 2022", 
+                "count 2022",  
+                "positive screenings 2022", 
+                "depression 2022"
+            ],
+            "desc": "Total count of individuals who screened positive for severe depression in 2022.",
+            "missing": null
+        },
+        {
+            "name": "2022 Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "surveys 2022", 
+                "responses 2022", 
+                "screenings 2022", 
+                "participants 2022", 
+                "sample 2022", 
+                "total tests 2022"],
+            "desc": "Total number of survey or screening assessments collected in 2022.",
+            "missing": null
+        },
+        {
+            "name": "2023 Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "cases 2023", 
+                "severe 2023", 
+                "count 2023",  
+                "positive screenings 2023", 
+                "depression 2023"
+            ],
+            "desc": "Total count of individuals who screened positive for severe depression in 2023.",
+            "missing": null
+        },
+        {
+            "name": "2023 Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "surveys 2023", 
+                "responses 2023", 
+                "screenings 2023", 
+                "participants 2023", 
+                "sample 2023", 
+                "total tests 2023"
+            ],
+            "desc": "Total number of survey or screening assessments collected in 2023.",
+            "missing": null
+        },
+        {
+            "name": "2024 Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "cases 2024", 
+                "severe 2024", 
+                "count 2024",  
+                "positive screenings 2024", 
+                "depression 2024"
+            ],
+            "desc": "Total count of individuals who screened positive for severe depression in 2024.",
+            "missing": "NA"
+        },
+        {
+            "name": "2024 Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "surveys 2024", 
+                "responses 2024", 
+                "screenings 2024", 
+                "participants 2024", 
+                "sample 2024", 
+                "total tests 2024"
+            ],
+            "desc": "Total number of survey or screening assessments collected in 2024.",
+            "missing": "NA"
+        },
+        {
+            "name": "2025 Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "cases 2025", 
+                "severe 2025", 
+                "count 2025",  
+                "positive screenings 2025", 
+                "depression 2025"
+            ],
+            "desc": "Total count of individuals who screened positive for severe depression in 2025.",
+            "missing": null
+        },
+        {
+            "name": "2025 Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "surveys 2025", 
+                "responses 2025", 
+                "screenings 2025", 
+                "participants 2025", 
+                "sample 2025", 
+                "total tests 2025"
+            ],
+            "desc": "Total number of survey or screening assessments collected in 2025.",
+            "missing": null
+        },
+        {
+            "name": "Positive Severe Depression",
+            "data_type": "integer",
+            "keywords": [
+                "total cases", 
+                "total severe", 
+                "overall count", 
+                "cumulative cases", 
+                "all severe cases"
+            ],
+            "desc": "The total count of all severe depression cases across the dataset.",
+            "missing": null
+        },
+        {
+            "name": "Total Depression Responses",
+            "data_type": "integer",
+            "keywords": [
+                "total responses", 
+                "total assessments", 
+                "all surveys", 
+                "total tests"
+                ],
+            "desc": "The total count of all screening assessments collected across the dataset.",
+            "missing": null
+        },
+        {
+            "name": "Population_2020",
+            "data_type": "integer",
+            "keywords": [
+                "population 2020", 
+                "residents 2020", 
+                "people 2020", 
+                "community size 2020", 
+                "citizens 2020"
+            ],
+            "desc": "Total population count for the county in the year 2020.",
+            "missing": "NA"
+        },
+        {
+            "name": "Population_2021",
+            "data_type": "integer",
+            "keywords": [
+                "population 2021", 
+                "residents 2021", 
+                "people 2021", 
+                "community size 2021", 
+                "citizens 2021"
+            ],
+            "desc": "Total population count for the county in the year 2021.",
+            "missing": "NA"
+        },
+        {
+            "name": "Population_2022",
+            "data_type": "integer",
+            "keywords": [
+                "population 2022", 
+                "residents 2022",
+                "people 2022", 
+                "community size 2022", 
+                "citizens 2022"
+            ],
+            "desc": "Total population count for the county in the year 2022.",
+            "missing": "NA"
+        },
+        {
+            "name": "Population_2023",
+            "data_type": "integer",
+            "keywords": [
+                "population 2023", 
+                "residents 2023", 
+                "people 2023", 
+                "community size 2023", 
+                "citizens 2023"
+            ],
+            "desc": "Total population count for the county in the year 2023.",
+            "missing": null
+        },
+        {
+            "name": "Population_2024",
+            "data_type": "integer",
+            "keywords": [
+                "population 2024",
+                "residents 2024", 
+                "people 2024", 
+                "community size 2024", 
+                "citizens 2024"
+            ],
+            "desc": "Total population count for the county in the year 2024.",
+            "missing": "NA"
+        },
+        {
+            "name": "Population_2025",
+            "data_type": "integer",
+            "keywords": [
+                "population 2025", 
+                "residents 2025", 
+                "people 2025", 
+                "community size 2025", 
+                "citizens 2025"
+            ],
+            "desc": "Total population count for the county in the year 2025.",
             "missing": null
         }
     ]
