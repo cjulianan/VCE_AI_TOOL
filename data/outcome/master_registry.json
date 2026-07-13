@@ -206,6 +206,84 @@
         "care facility",
         "clinic"
       ]
+    },
+    {
+      "dataset_id": "Depression_County_Map_Full_Data",
+      "metadata_path": "data/outcome/Mental-Health-America/Depression_County_Map_Full_Data_metadata.json",
+      "keywords": [
+        "depression",
+        "mental health",
+        "depression survey",
+        "depressed population"
+      ]
+    },
+    {
+      "dataset_id": "2022-2023_Special_Education_Child_Count",
+      "metadata_path": "data/outcome/Virginia-Department-of-Education/2022-2023_Special_Education_Child_Count_metadata.json",
+      "keywords": [
+        "2023 special education",
+        "special education",
+        "special education students",
+        "total special education"
+      ]
+    },
+    {
+      "dataset_id": "2021-2022_Special_Education_Child_Count",
+      "metadata_path": "data/outcome/Virginia-Department-of-Education/2021-2022_Special_Education_Child_Count_metadata.json",
+      "keywords": [
+        "2021 special education",
+        "special education",
+        "special education students",
+        "total special education"
+      ]
+    },
+    {
+      "dataset_id": "2022-2025_State_Testing",
+      "metadata_path": "data/outcome/Virginia-Department-of-Education/2022-2025_State_Testing_metadata.json",
+      "keywords": [
+        "state testing",
+        "sol",
+        "standards of learning",
+        "pass rate",
+        "english test",
+        "history test",
+        "science test",
+        "math test"
+      ]
+    },
+    {
+      "dataset_id": "2025 County Health Rankings Virginia Data - v4",
+      "metadata_path": "data/outcome/County-Health-Rankings-&-Roadmaps/county_health_metadata.json",
+      "keywords": [
+        "premature death",
+        "physical health",
+        "birth weight",
+        "flu vaccinations",
+        "exercise oppurtunities",
+        "mental health providers",
+        "dentists",
+        "preventable hospital stays",
+        "mammography screenings",
+        "uninsured",
+        "housing problems",
+        "air pollution",
+        "injury deaths",
+        "child care costs"
+      ]
+    },
+    {
+      "dataset_id": "health_resources_va",
+      "metadata_path": "data/outcome/Health-Resources-and-Services-Administration/hrsa_ahrf_metadata.json",
+      "keywords": [
+        "health professionals",
+        "child poverty",
+        "surgeon",
+        "medical doctor",
+        "pediatric",
+        "pulmonary",
+        "ob-gyn",
+        "mortality age"
+      ]
     }
   ]
 }

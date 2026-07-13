@@ -1,5 +1,5 @@
 my_data <- read_excel("data/sources/Virginia-Department-of-Education/2022-2025_State_Testing.xlsx")
-write.csv(my_data, "data/sources/Virginia-Department-of-Education/20222-2025_State_Testing.csv", row.names = FALSE)
+write.csv(my_data, "data/sources/Virginia-Department-of-Education/2022-2025_State_Testing.csv", row.names = FALSE)
 
 state_testing_data <- read_csv("data/sources/Virginia-Department-of-Education/2022-2025_State_Testing.csv")
 fips_lookup <- read_csv("data/outcome/virginia_localities.csv")
