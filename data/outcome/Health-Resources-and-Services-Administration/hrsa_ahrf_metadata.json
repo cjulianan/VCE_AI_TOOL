@@ -125,7 +125,7 @@
     },
     {
       "name": "econ_depndnt_typolgy_15",
-      "desc": "[Category: GEO] Economic-Dependnt Typology Code"
+      "desc": "[Category: GEO] Economic-Dependent Typology Code"
     },
     {
       "name": "farmng_depndnt_typolgy_15",
@@ -137,19 +137,19 @@
     },
     {
       "name": "mfg_depndnt_typolgy_15",
-      "desc": "[Category: GEO] Manufacturing-Dep Typology Code"
+      "desc": "[Category: GEO] Manufacturing-Dependent Typology Code"
     },
     {
       "name": "fed_st_govt_depndnt_typolgy_15",
-      "desc": "[Category: GEO] Fed/State Govt-Depdnt Typolgy Code (Details: Federal/State Government)"
+      "desc": "[Category: GEO] Fed/State Govt-Dependent Typology Code (Details: Federal/State Government)"
     },
     {
       "name": "recrtn_typolgy_15",
-      "desc": "[Category: GEO] Recreation Typolpgy Code"
+      "desc": "[Category: GEO] Recreation Typology Code"
     },
     {
       "name": "nonspclzd_depndnt_typolgy_15",
-      "desc": "[Category: GEO] Nonspecializd-Dep Typology Code"
+      "desc": "[Category: GEO] Nonspecialized-Dep Typology Code"
     },
     {
       "name": "lo_eductn_typolgy_15",
@@ -165,7 +165,7 @@
     },
     {
       "name": "prstnt_povty_typolgy_14",
-      "desc": "[Category: GEO] Persistent Povrty Typology Code"
+      "desc": "[Category: GEO] Persistent Poverty Typology Code"
     },
     {
       "name": "prstnt_child_povty_typolgy_15",
@@ -177,7 +177,7 @@
     },
     {
       "name": "retrmnt_destntn_typolgy_15",
-      "desc": "[Category: GEO] Retirement Destnatn Typology Code"
+      "desc": "[Category: GEO] Retirement Destination Typology Code"
     },
     {
       "name": "hpsa_prim_care_25",
@@ -593,7 +593,7 @@
     },
     {
       "name": "md_nf_fammed_gen_pc_rsdnt_22",
-      "desc": "[Category: HP] MD's, Fam Med Gen,PC,Hsp Rsdnt (Details: Non-Fed;Patn Care Hosp-Based)"
+      "desc": "[Category: HP] MD's, Fam Med Gen,PC,Hsp Resident (Details: Non-Fed;Patn Care Hosp-Based)"
     },
     {
       "name": "md_nf_fammed_gen_pc_hosp_ft_23",
@@ -2221,75 +2221,75 @@
     },
     {
       "name": "md_nf_thor_surg_23",
-      "desc": "[Category: HP] Thoracic Surg, Total (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Total (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_22",
-      "desc": "[Category: HP] Thoracic Surg, Total (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Total (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_all_pc_23",
-      "desc": "[Category: HP] Thoracic Surg, Total Patn Care (Details: Non-Fed;Patient Care)"
+      "desc": "[Category: HP] Thoracic Surgeon, Total Patn Care (Details: Non-Fed;Patient Care)"
     },
     {
       "name": "md_nf_thor_surg_all_pc_22",
-      "desc": "[Category: HP] Thoracic Surg, Total Patn Care (Details: Non-Fed;Patient Care)"
+      "desc": "[Category: HP] Thoracic Surgeon, Total Patn Care (Details: Non-Fed;Patient Care)"
     },
     {
       "name": "md_nf_thor_surg_pc_ofc_23",
-      "desc": "[Category: HP] Thoracic Surg, PC, Office Based (Details: Non-Fed;Patn Care Office-Based)"
+      "desc": "[Category: HP] Thoracic Surgeon, PC, Office Based (Details: Non-Fed;Patn Care Office-Based)"
     },
     {
       "name": "md_nf_thor_surg_pc_ofc_22",
-      "desc": "[Category: HP] Thoracic Surg, PC, Office Based (Details: Non-Fed;Patn Care Office-Based)"
+      "desc": "[Category: HP] Thoracic Surgeon, PC, Office Based (Details: Non-Fed;Patn Care Office-Based)"
     },
     {
       "name": "md_nf_thor_surg_pc_rsdnt_23",
-      "desc": "[Category: HP] Thoracic Surg, PC, Hosp Resdnt (Details: Non-Fed;Patn Care Hosp-Based)"
+      "desc": "[Category: HP] Thoracic Surgeon, PC, Hosp Resdnt (Details: Non-Fed;Patn Care Hosp-Based)"
     },
     {
       "name": "md_nf_thor_surg_pc_rsdnt_22",
-      "desc": "[Category: HP] Thoracic Surg, PC, Hosp Resdnt (Details: Non-Fed;Patn Care Hosp-Based)"
+      "desc": "[Category: HP] Thoracic Surgeon, PC, Hosp Resdnt (Details: Non-Fed;Patn Care Hosp-Based)"
     },
     {
       "name": "md_nf_thor_surg_pc_hosp_ft_23",
-      "desc": "[Category: HP] Thoracic Surg, PC, Hosp FT Stf (Details: Non-Fed;Patn Care Hosp-Based)"
+      "desc": "[Category: HP] Thoracic Surgeon, PC, Hosp FT Stf (Details: Non-Fed;Patn Care Hosp-Based)"
     },
     {
       "name": "md_nf_thor_surg_pc_hosp_ft_22",
-      "desc": "[Category: HP] Thoracic Surg, PC, Hosp FT Stf (Details: Non-Fed;Patn Care Hosp-Based)"
+      "desc": "[Category: HP] Thoracic Surgeon, PC, Hosp FT Stf (Details: Non-Fed;Patn Care Hosp-Based)"
     },
     {
       "name": "md_nf_thor_surg_admin_23",
-      "desc": "[Category: HP] Thoracic Surg, Administration (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Administration (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_admin_22",
-      "desc": "[Category: HP] Thoracic Surg, Administration (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Administration (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_teach_23",
-      "desc": "[Category: HP] Thoracic Surg, Teaching (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Teaching (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_teach_22",
-      "desc": "[Category: HP] Thoracic Surg, Teaching (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Teaching (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_resrch_23",
-      "desc": "[Category: HP] Thoracic Surg, Research (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Research (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_resrch_22",
-      "desc": "[Category: HP] Thoracic Surg, Research (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Research (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_oth_23",
-      "desc": "[Category: HP] Thoracic Surg, Other (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Other (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_thor_surg_oth_22",
-      "desc": "[Category: HP] Thoracic Surg, Other (Details: Non-Fed;MD's By Speclty/Actvty)"
+      "desc": "[Category: HP] Thoracic Surgeon, Other (Details: Non-Fed;MD's By Speclty/Actvty)"
     },
     {
       "name": "md_nf_urolgy_23",
@@ -14161,19 +14161,19 @@
     },
     {
       "name": "child_povty_famls_5_17_23",
-      "desc": "[Category: POP] Relat Chldrn 5-17 in Fam in Poverty (Details: Estimates)"
+      "desc": "[Category: POP] Relat Children 5-17 in Fam in Poverty (Details: Estimates)"
     },
     {
       "name": "child_povty_famls_5_17_22",
-      "desc": "[Category: POP] Relat Chldrn 5-17 in Fam in Poverty (Details: Estimates)"
+      "desc": "[Category: POP] Relat Children 5-17 in Fam in Poverty (Details: Estimates)"
     },
     {
       "name": "child_povty_famls_5_17_pct_23",
-      "desc": "[Category: POP] Pct Related Chldrn 5-17 in Poverty (Details: (.1) Estimates)"
+      "desc": "[Category: POP] Pct Related Children 5-17 in Poverty (Details: (.1) Estimates)"
     },
     {
       "name": "child_povty_famls_5_17_pct_22",
-      "desc": "[Category: POP] Pct Related Chldrn 5-17 in Poverty (Details: (.1) Estimates)"
+      "desc": "[Category: POP] Pct Related Children 5-17 in Poverty (Details: (.1) Estimates)"
     },
     {
       "name": "pers_lt_fpl_pct_23",
@@ -14553,11 +14553,11 @@
     },
     {
       "name": "vetn_civln_popn_ge18_23",
-      "desc": "[Category: POP] Veterans Civilian Pop 18+ Yrs (Details: Table C21007)"
+      "desc": "[Category: POP] Veterans Civilian Population 18+ Yrs (Details: Table C21007)"
     },
     {
       "name": "vetn_civln_popn_ge18_22",
-      "desc": "[Category: POP] Veterans Civilian Pop 18+ Yrs (Details: Table C21007)"
+      "desc": "[Category: POP] Veterans Civilian Population 18+ Yrs (Details: Table C21007)"
     },
     {
       "name": "vetn_disblty_civln_ge18_23",
@@ -14577,11 +14577,11 @@
     },
     {
       "name": "nonvtn_civln_popn_ge18_23",
-      "desc": "[Category: POP] Nonvets Civilian Pop 18+ Yrs (Details: Table C21007)"
+      "desc": "[Category: POP] Nonvets Civilian Population 18+ Yrs (Details: Table C21007)"
     },
     {
       "name": "nonvtn_civln_popn_ge18_22",
-      "desc": "[Category: POP] Nonvets Civilian Pop 18+ Yrs (Details: Table C21007)"
+      "desc": "[Category: POP] Nonvets Civilian Population 18+ Yrs (Details: Table C21007)"
     },
     {
       "name": "nonvtn_disblty_civln_ge18_23",
@@ -16513,11 +16513,11 @@
     },
     {
       "name": "vetn_civln_popn_18_64_23",
-      "desc": "[Category: POP] Veteran Civilian Pop, 18-64 Yrs (Details: Table B21005)"
+      "desc": "[Category: POP] Veteran Civilian Population, 18-64 Yrs (Details: Table B21005)"
     },
     {
       "name": "vetn_civln_popn_18_64_22",
-      "desc": "[Category: POP] Veteran Civilian Pop, 18-64 Yrs (Details: Table B21005)"
+      "desc": "[Category: POP] Veteran Civilian Population, 18-64 Yrs (Details: Table B21005)"
     },
     {
       "name": "vetn_clf_18_64_23",
@@ -16553,11 +16553,11 @@
     },
     {
       "name": "nonvtn_civln_popn_18_64_23",
-      "desc": "[Category: POP] Nonvets Civilian Pop, 18-64 Yrs (Details: Table B21005)"
+      "desc": "[Category: POP] Nonvets Civilian Population, 18-64 Yrs (Details: Table B21005)"
     },
     {
       "name": "nonvtn_civln_popn_18_64_22",
-      "desc": "[Category: POP] Nonvets Civilian Pop, 18-64 Yrs (Details: Table B21005)"
+      "desc": "[Category: POP] Nonvets Civilian Population, 18-64 Yrs (Details: Table B21005)"
     },
     {
       "name": "nonvtn_clf_18_64_23",
@@ -16569,43 +16569,43 @@
     },
     {
       "name": "nonvtn_emply_clf_18_64_23",
-      "desc": "[Category: POP] Nonvets Employd in CivLab Force (Details: 18-64 Yrs; Table B21005)"
+      "desc": "[Category: POP] Nonvets Employed in Civilian Labor Force (Details: 18-64 Yrs; Table B21005)"
     },
     {
       "name": "nonvtn_emply_clf_18_64_22",
-      "desc": "[Category: POP] Nonvets Employd in CivLab Force (Details: 18-64 Yrs; Table B21005)"
+      "desc": "[Category: POP] Nonvets Employed in Civilian Labor Force (Details: 18-64 Yrs; Table B21005)"
     },
     {
       "name": "nonvtn_unemply_clf_18_64_23",
-      "desc": "[Category: POP] Nonvets Unemplyd in CivLabForce (Details: 18-64 Yrs; Table B21005)"
+      "desc": "[Category: POP] Nonvets Unemployed in Civilian Labor Force (Details: 18-64 Yrs; Table B21005)"
     },
     {
       "name": "nonvtn_unemply_clf_18_64_22",
-      "desc": "[Category: POP] Nonvets Unemplyd in CivLabForce (Details: 18-64 Yrs; Table B21005)"
+      "desc": "[Category: POP] Nonvets Unemployed in Civilian Labor Force (Details: 18-64 Yrs; Table B21005)"
     },
     {
       "name": "nonvtn_not_clf_18_64_23",
-      "desc": "[Category: POP] Nonvets not in Civiln Lab Force (Details: 18-64 Yrs; Table B21005)"
+      "desc": "[Category: POP] Nonvets not in Civilian Labor Force (Details: 18-64 Yrs; Table B21005)"
     },
     {
       "name": "nonvtn_not_clf_18_64_22",
-      "desc": "[Category: POP] Nonvets not in Civiln Lab Force (Details: 18-64 Yrs; Table B21005)"
+      "desc": "[Category: POP] Nonvets not in Civilian Labor Force (Details: 18-64 Yrs; Table B21005)"
     },
     {
       "name": "pers_did_not_wk_old_16_64_23",
-      "desc": "[Category: POP] # Pop Did Not Work 16-64 (Details: Table B23022)"
+      "desc": "[Category: POP] # Population Did Not Work 16-64 (Details: Table B23022)"
     },
     {
       "name": "pers_did_not_wk_old_16_64_22",
-      "desc": "[Category: POP] # Pop Did Not Work 16-64 (Details: Table B23022)"
+      "desc": "[Category: POP] # Population Did Not Work 16-64 (Details: Table B23022)"
     },
     {
       "name": "pers_did_not_wk_old_16_64_pct_23",
-      "desc": "[Category: POP] % Pop Did Not Work 16-64 (Details: (.1) Table B23022)"
+      "desc": "[Category: POP] % Population Did Not Work 16-64 (Details: (.1) Table B23022)"
     },
     {
       "name": "pers_did_not_wk_old_16_64_pct_22",
-      "desc": "[Category: POP] % Pop Did Not Work 16-64 (Details: (.1) Table B23022)"
+      "desc": "[Category: POP] % Population Did Not Work 16-64 (Details: (.1) Table B23022)"
     },
     {
       "name": "wkers_ge16_23",
