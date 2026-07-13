@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VCE AI Tool - Technical Modification Record</title>
+  <style>
+    :root {
+      --navy: #15324a;
+      --blue: #2a6f97;
+      --teal: #2a9d8f;
+      --gold: #e9c46a;
+      --ink: #24313b;
+      --muted: #637381;
+      --line: #d9e2e8;
+      --paper: #ffffff;
+      --wash: #f4f8fa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eaf0f3;
+      font: 15.5px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    main {
+      width: min(1020px, calc(100% - 36px));
+      margin: 32px auto;
+      background: var(--paper);
+      box-shadow: 0 16px 50px rgba(21, 50, 74, .13);
+    }
+    header {
+      padding: 58px 64px 48px;
+      color: white;
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      border-bottom: 7px solid var(--gold);
+    }
+    header .eyebrow {
+      margin: 0 0 12px;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: .83;
+    }
+    h1 { margin: 0; font-size: clamp(32px, 5vw, 49px); line-height: 1.08; }
+    header p { max-width: 760px; margin: 18px 0 0; font-size: 18px; opacity: .92; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 28px; font-size: 13px; opacity: .82; }
+    .content { padding: 48px 64px 60px; }
+    h2 { margin: 42px 0 14px; color: var(--navy); font-size: 27px; line-height: 1.2; }
+    h2:first-child { margin-top: 0; }
+    h3 { margin: 26px 0 8px; color: var(--blue); font-size: 19px; }
+    p { margin: 8px 0 14px; }
+    ul, ol { margin: 8px 0 18px; padding-left: 23px; }
+    li { margin: 6px 0; }
+    code { padding: 2px 5px; background: #edf3f6; border-radius: 4px; font-size: .92em; }
+    pre {
+      overflow-x: auto;
+      padding: 18px 20px;
+      color: #eaf7fb;
+      background: #17384d;
+      border-radius: 8px;
+      font: 13px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    .summary {
+      padding: 22px 24px;
+      background: var(--wash);
+      border-left: 5px solid var(--teal);
+      border-radius: 0 8px 8px 0;
+    }
+    .summary strong { color: var(--navy); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 18px 0; }
+    .card { padding: 20px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+    .card h3 { margin-top: 0; }
+    .tag {
+      display: inline-block;
+      margin-bottom: 9px;
+      padding: 3px 9px;
+      color: var(--navy);
+      background: #e2f2ef;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 750;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    th, td { padding: 12px 11px; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: white; background: var(--navy); }
+    tr:nth-child(even) td { background: var(--wash); }
+    .decision { padding: 18px 20px; border: 1px solid #efd68e; background: #fff9e9; border-radius: 8px; }
+    footer { padding: 22px 64px; color: var(--muted); background: var(--wash); border-top: 1px solid var(--line); font-size: 12px; }
+    @media (max-width: 720px) {
+      header, .content { padding-left: 28px; padding-right: 28px; }
+      .grid { grid-template-columns: 1fr; }
+      footer { padding: 20px 28px; }
+    }
+    @media print {
+      @page { margin: 0.55in; }
+      body { background: white; font-size: 11pt; }
+      main { width: 100%; margin: 0; box-shadow: none; }
+      header { padding: 34px 40px 28px; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .content { padding: 30px 40px; }
+      h2 { break-after: avoid; }
+      .card, .summary, table, pre { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="eyebrow">VCE AI Tool / Week 7</p>
+    <h1>Technical Modification Record</h1>
+    <p>Recommended changes for reliable multi-question handling, controlled data analysis, semantic retrieval, and future document integration.</p>
+    <div class="meta"><span>Status: Proposed</span><span>Audience: Project Team</span><span>Date: July 2026</span></div>
+  </header>
+
+  <div class="content">
+    <h2>1. Executive Summary</h2>
+    <div class="summary">
+      <strong>Recommendation:</strong> Do not begin with a fully autonomous data agent. First stabilize the data and metadata contracts, then change the application from a single-route pipeline into a structured multi-task pipeline. After that, add a small set of validated DuckDB tools for calculations. Embeddings and PDF retrieval should follow once routing and citation behavior are reliable.
+    </div>
+
+    <p>The current prototype already provides useful foundations: a Shiny interface, metadata-based routing, locality lookup, DuckDB access, and an LLM connection through ellmer. The next phase should preserve that architecture while making its internal state explicit, testable, and capable of handling more than one dataset, locality, or operation per prompt.</p>
+
+    <h2>2. Current Constraints</h2>
+    <div class="grid">
+      <section class="card">
+        <span class="tag">Routing</span>
+        <h3>Single-result state</h3>
+        <p>The current cache primarily retains one metadata path and one locality. This prevents reliable execution of prompts containing multiple questions, datasets, counties, or entity lookups.</p>
+      </section>
+      <section class="card">
+        <span class="tag">Data contracts</span>
+        <h3>Metadata inconsistencies</h3>
+        <p>Some newly added datasets are not registered for chatbot routing, and several CSV, metadata, locality, and school-district mappings require alignment before automated analysis is added.</p>
+      </section>
+      <section class="card">
+        <span class="tag">Calculation</span>
+        <h3>LLM-dependent statistics</h3>
+        <p>The prototype may occasionally infer percentages from retrieved records, but the language model is not a reliable calculation engine. Numerical operations should be executed by DuckDB.</p>
+      </section>
+      <section class="card">
+        <span class="tag">Retrieval</span>
+        <h3>Keyword-only matching</h3>
+        <p>Keyword and string-similarity routing is useful for the prototype but will not scale well to varied wording, policy documents, and cross-domain questions.</p>
+      </section>
+    </div>
+
+    <h2>3. Proposed Modifications</h2>
+
+    <h3>3.1 Stabilize the data and metadata layer</h3>
+    <p>This work should be completed before adding agent behavior.</p>
+    <ul>
+      <li>Adopt one required metadata schema for every routable dataset.</li>
+      <li>Register all approved datasets in the master registry, including the newly added health, mental-health, special-education, and state-testing data.</li>
+      <li>Validate metadata-to-CSV field names in both directions.</li>
+      <li>Replace user-specific absolute paths with project-relative paths.</li>
+      <li>Resolve county, independent-city, and multi-jurisdiction school-division mappings without silently dropping unmatched records.</li>
+      <li>Add a reproducible dependency manifest and automated contract checks.</li>
+    </ul>
+
+    <h3>3.2 Replace single-route state with a structured task plan</h3>
+    <p>Each user prompt should first be converted into an array of independent tasks. A task should contain:</p>
+    <ul>
+      <li>a stable task identifier and the original sub-question;</li>
+      <li>one or more candidate datasets;</li>
+      <li>zero or more localities, FIPS codes, or named entities;</li>
+      <li>an operation such as <code>describe</code>, <code>lookup</code>, <code>compare</code>, <code>count</code>, or <code>average</code>;</li>
+      <li>requested measures, filters, years, and grouping fields;</li>
+      <li>retrieved records, calculation results, and source information.</li>
+    </ul>
+
+    <pre>Prompt
+  -&gt; Structured task decomposition
+  -&gt; Independent dataset and locality routing
+  -&gt; Validated data execution per task
+  -&gt; Results labeled by task and source
+  -&gt; Final response synthesis in the user's original order</pre>
+
+    <h3>3.3 Add controlled data tools</h3>
+    <p>A limited data-query agent is feasible within the existing stack. The model should select from a small set of application-owned functions rather than execute unrestricted SQL.</p>
+
+    <table>
+      <thead><tr><th>Tool</th><th>Purpose</th><th>Required safeguards</th></tr></thead>
+      <tbody>
+        <tr><td><code>search_dataset()</code></td><td>Retrieve selected fields using approved filters and localities.</td><td>Allowlisted datasets, fields, and operators.</td></tr>
+        <tr><td><code>find_entity()</code></td><td>Locate a named hospital, school, facility, or other entity.</td><td>Normalized matching, result limits, and explicit source.</td></tr>
+        <tr><td><code>summarize_data()</code></td><td>Calculate count, sum, average, minimum, maximum, or grouped statistics.</td><td>Validated numeric fields and deterministic DuckDB execution.</td></tr>
+        <tr><td><code>compare_localities()</code></td><td>Run the same measure for multiple counties or cities.</td><td>Consistent year, unit, denominator, and missing-data handling.</td></tr>
+      </tbody>
+    </table>
+
+    <p>All statistics should be computed by DuckDB and returned with the dataset, locality, year, measure, unit, and calculation method. Percentages should identify the numerator and denominator whenever possible.</p>
+
+    <h3>3.4 Add semantic retrieval in stages</h3>
+    <ol>
+      <li>Embed dataset descriptions, column descriptions, keywords, geographic coverage, and temporal coverage.</li>
+      <li>Use semantic similarity to produce candidate datasets, then apply deterministic eligibility checks.</li>
+      <li>For PDFs, extract text, split it into page-aware chunks, attach source metadata, and retrieve only relevant chunks.</li>
+      <li>Require page-level citations for document answers and dataset-level citations for tabular answers.</li>
+    </ol>
+    <p>Embeddings should support retrieval and routing. They should not replace database calculations or exact filtering.</p>
+
+    <h3>3.5 Strengthen safety and reproducibility</h3>
+    <ul>
+      <li>Escape or sanitize user input, model output, and imported chat history before HTML rendering.</li>
+      <li>Validate uploaded session files against an expected schema.</li>
+      <li>Use parameterized queries and metadata allowlists.</li>
+      <li>Add tests for routing, locality resolution, multi-question decomposition, calculation accuracy, and citations.</li>
+      <li>Create a fixed evaluation set of representative questions and expected results.</li>
+    </ul>
+
+    <h2>4. Concrete Multi-Question Examples</h2>
+
+    <h3>Example A: Two independent intents</h3>
+    <p><strong>User prompt:</strong> “What data do you have on crops? Also, what city is Bath Community Hospital in?”</p>
+    <pre>[
+  {
+    "task_id": 1,
+    "dataset_ids": ["nass_crops"],
+    "operation": "describe"
+  },
+  {
+    "task_id": 2,
+    "dataset_ids": ["vgin_hospitals"],
+    "entity": "Bath Community Hospital",
+    "operation": "lookup"
+  }
+]</pre>
+    <p>The second task requires entity-name lookup, not county-first filtering. Adding only a locality loop would not solve this case.</p>
+
+    <h3>Example B: One intent across two localities</h3>
+    <p><strong>User prompt:</strong> “What disease data do you have for Roanoke County? What about Fairfax County?”</p>
+    <pre>{
+  "task_id": 1,
+  "dataset_ids": ["vdh_diseases"],
+  "localities": [
+    {"name": "Roanoke County", "fips": "51161"},
+    {"name": "Fairfax County", "fips": "51059"}
+  ],
+  "operation": "compare"
+}</pre>
+    <p>The same query definition should be applied to both localities, and the final answer should clearly separate or compare the results using consistent years and units.</p>
+
+    <h2>5. Recommended Delivery Sequence</h2>
+    <table>
+      <thead><tr><th>Phase</th><th>Scope</th><th>Completion evidence</th></tr></thead>
+      <tbody>
+        <tr><td>1. Stabilize</td><td>Metadata schema, registry, paths, locality mappings, validation.</td><td>All approved datasets pass automated contract checks.</td></tr>
+        <tr><td>2. Multi-task MVP</td><td>Question decomposition, task-list cache, entity and multi-locality routing.</td><td>Both Week 7 examples return correctly separated answers.</td></tr>
+        <tr><td>3. Data tools</td><td>Validated lookup, count, sum, average, and comparison operations.</td><td>Results match independently calculated reference values.</td></tr>
+        <tr><td>4. Semantic retrieval</td><td>Metadata embeddings and hybrid candidate ranking.</td><td>Improved routing on paraphrased evaluation questions.</td></tr>
+        <tr><td>5. Documents</td><td>PDF ingestion, chunking, retrieval, and page citations.</td><td>Answers cite the correct document and page.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>6. Decisions Requested from the Team</h2>
+    <div class="decision">
+      <ol>
+        <li>Which statistical operations are required for the final demonstration?</li>
+        <li>Should the MVP answer independent sub-questions only, or also perform cross-dataset comparisons?</li>
+        <li>How should multi-jurisdiction school divisions be represented in county-level answers?</li>
+        <li>Which datasets are approved and complete enough to enter the routing registry?</li>
+        <li>What evaluation questions and accuracy criteria will define a successful prototype?</li>
+      </ol>
+    </div>
+
+    <h2>7. Conclusion</h2>
+    <p>The recommended path is incremental: make retrieval reliable, make the pipeline multi-task, add deterministic calculations, and then expand to semantic and multimodal retrieval. This preserves the team’s existing work, reduces implementation risk, and produces a testable minimum viable system before advanced agent behavior is attempted.</p>
+  </div>
+
+  <footer>VCE AI Tool - Proposed Technical Modification Record - Prepared for team discussion</footer>
+</main>
+</body>
+</html>
