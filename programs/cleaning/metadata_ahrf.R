@@ -2,7 +2,7 @@ library(readxl)
 library(dplyr)
 library(jsonlite)
 
-# 1. Load the Excel file directly using your absolute path
+# 1. Load the Excel file directly using absolute path
 crosswalk_path <- "C:/Users/nebiy/Downloads/AHRF_USER_TECH_2024-2025/Technical Documentation/AHRFCrosswalk2025.xlsx"
 crosswalk_raw  <- read_excel(crosswalk_path)
 
@@ -30,11 +30,11 @@ columns_list <- crosswalk_raw %>%
       if_else(char_clean != "", paste0(" (Details: ", char_clean, ")"), "")
     )
   ) %>%
-  # Isolate only the two fields required by your normalize_metadata function
+  # Isolate only the two fields required by our normalize_metadata function
   select(name, desc) %>%
   distinct(name, .keep_all = TRUE)
 
-# 3. Assemble your master system profile packet
+# 3. Make our structure for the metadata file (before the 4000+ column pairs come in)
 ahrf_metadata <- list(
   dataset_id       = "Area Health Resources",
   file_name        = "ahrf_virginia.csv",
@@ -50,8 +50,8 @@ ahrf_metadata <- list(
   columns          = columns_list
 )
 
-# 4. Export the comprehensive structural map back to your project directory
-# We use here::here() now because we are writing to your local project space, not your downloads folder
+# 4. Export the comprehensive structural map back to my project directory
+# im using here::here() now because im' writing to my local project space, not my downloads folder
 write_json(ahrf_metadata, here::here("data/outcome/Health-Resources-and-Services-Administration/hrsa_ahrf_metadata.json"), pretty = TRUE, auto_unbox = TRUE)
 
 message(paste("SUCCESS! Generated metadata file containing", nrow(columns_list), "variables."))
