@@ -9153,7 +9153,7 @@
     },
     {
       "name": "stgh_tele_conslttn_ofc_vists_23",
-      "desc": "[Category: HF] # Hsp W/Telhlth Consl/Off Visit (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] # Hsp W/Telehealth Consl/Off Visit (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_tele_eicu_23",
@@ -9165,23 +9165,23 @@
     },
     {
       "name": "stgh_tele_psych_addictn_tx_23",
-      "desc": "[Category: HF] #Hsp W/Telhlth Psyc/Addict Trmt (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] #Hsp W/Telehealth Psyc/Addict Trmt (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_tele_remote_post_dischrg_23",
-      "desc": "[Category: HF] #Hsp W/Telhlth Monitor Post Dis (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] #Hsp W/Telehealth Monitor Post Dis (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_tele_remote_ongong_ccm_23",
-      "desc": "[Category: HF] #Hsp W/Telhlth Monitor Chron Cr (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] #Hsp W/Telehealth Monitor Chron Cr (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_tele_oth_remote_23",
-      "desc": "[Category: HF] #Hsp W/Telhlth Oth Rem Monitor (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] #Hsp W/Telehealth Oth Rem Monitor (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_tele_oth_tele_23",
-      "desc": "[Category: HF] #Hsp W/Telehealth Other Telhlth (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] #Hsp W/Telehealth Other Telehealth (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_bone_marrw_transpl_svc_23",
@@ -9381,11 +9381,11 @@
     },
     {
       "name": "stgh_skilld_nursng_care_beds_23",
-      "desc": "[Category: HF] Skilled Nurs Care, Beds Set Up (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] Skilled Nurse Care, Beds Set Up (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_skilld_nursng_care_beds_22",
-      "desc": "[Category: HF] Skilled Nurs Care, Beds Set Up (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] Skilled Nurse Care, Beds Set Up (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_interm_nursng_care_beds_23",
@@ -9413,11 +9413,11 @@
     },
     {
       "name": "stgh_biocontnmnt_pc_un_beds_23",
-      "desc": "[Category: HF] Biocontnmnt Pat Cr Un,Bed Set Up (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] Biocontainment Pat Cr Un,Bed Set Up (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_biocontnmnt_pc_un_beds_22",
-      "desc": "[Category: HF] Biocontnmnt Pat Cr Un,Bed Set Up (Details: Short Term General Hospitals)"
+      "desc": "[Category: HF] Biocontainment Pat Cr Un,Bed Set Up (Details: Short Term General Hospitals)"
     },
     {
       "name": "stgh_oth_care_beds_23",
@@ -10645,115 +10645,115 @@
     },
     {
       "name": "stnglth_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in STNG/LT Hosp (Details: ST Non-Gen + Long Term Hosps)"
+      "desc": "[Category: UTL] Inpatient Days in STNG/LT Hosp (Details: ST Non-Gen + Long Term Hosps)"
     },
     {
       "name": "stnglth_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in STNG/LT Hosp (Details: ST Non-Gen + Long Term Hosps)"
+      "desc": "[Category: UTL] Inpatient Days in STNG/LT Hosp (Details: ST Non-Gen + Long Term Hosps)"
     },
     {
       "name": "sth_psych_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in ST Psychiatric (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Psychiatric (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_psych_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in ST Psychiatric (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Psychiatric (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_rehab_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in ST Rehabilitation (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Rehabilitation (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_rehab_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in ST Rehabilitation (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Rehabilitation (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_child_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in ST Chldrn's Gen (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Chldrn's Gen (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_child_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in ST Chldrn's Gen (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Chldrn's Gen (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_child_psych_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in ST Chldrn's Psych (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Chldrn's Psych (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_child_psych_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in ST Chldrn's Psych (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Chldrn's Psych (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_acute_lt_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in ST Acute LT Care (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Acute LT Care (Details: Short Term Hospitals)"
     },
     {
       "name": "sth_acute_lt_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in ST Acute LT Care (Details: Short Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in ST Acute LT Care (Details: Short Term Hospitals)"
     },
     {
       "name": "ltgh_med_surg_hosp_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in LT Gen Med/Surg (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Gen Med/Surg (Details: Long Term Hospitals)"
     },
     {
       "name": "ltgh_med_surg_hosp_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in LT Gen Med/Surg (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Gen Med/Surg (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_psych_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in LT Psychiatric (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Psychiatric (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_psych_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in LT Psychiatric (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Psychiatric (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_rehab_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in LT Rehabilitation (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Rehabilitation (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_rehab_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in LT Rehabilitation (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Rehabilitation (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_chronc_dis_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Day in LT Chronic Disease (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Chronic Disease (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_chronc_dis_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Day in LT Chronic Disease (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Chronic Disease (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_intel_disblts_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Day in LT Intel Disablity (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Intel Disablity (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_intel_disblts_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Day in LT Intel Disablity (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Intel Disablity (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_child_psych_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in LT Chldrn's Psych (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Chldrn's Psych (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_child_psych_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in LT Chldrn's Psych (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Chldrn's Psych (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_acute_lt_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in LT Acute LT Care (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Acute LT Care (Details: Long Term Hospitals)"
     },
     {
       "name": "lth_acute_lt_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in LT Acute LT Care (Details: Long Term Hospitals)"
+      "desc": "[Category: UTL] Inpatient Days in LT Acute LT Care (Details: Long Term Hospitals)"
     },
     {
       "name": "sth_comn_inpat_dys_23",
-      "desc": "[Category: UTL] Inptn Days in Short Term Comm"
+      "desc": "[Category: UTL] Inpatient Days in Short Term Community Hospitals"
     },
     {
       "name": "sth_comn_inpat_dys_22",
-      "desc": "[Category: UTL] Inptn Days in Short Term Comm"
+      "desc": "[Category: UTL] Inpatient Days in Short Term Community Hospitals"
     },
     {
       "name": "vetn_hosp_inpat_dys_23",
@@ -12849,11 +12849,11 @@
     },
     {
       "name": "famls_aian_20",
-      "desc": "[Category: POP] # Am Ind/Alaska Native Families (Details: Table PCT10C)"
+      "desc": "[Category: POP] # American Indian/Alaska Native Families (Details: Table PCT10C)"
     },
     {
       "name": "famls_aian_10",
-      "desc": "[Category: POP] # Am Ind/Alaska Native Families (Details: Table P39C)"
+      "desc": "[Category: POP] # American Indian/Alaska Native Families (Details: Table P39C)"
     },
     {
       "name": "famls_asn_20",
@@ -12865,11 +12865,11 @@
     },
     {
       "name": "famls_nhpi_20",
-      "desc": "[Category: POP] # Nat Haw/Oth Pac Isl Families (Details: Table PCT10E)"
+      "desc": "[Category: POP] # Native Hawaiian/Other Pacific Islander Families (Details: Table PCT10E)"
     },
     {
       "name": "famls_nhpi_10",
-      "desc": "[Category: POP] # Nat Haw/Oth Pac Isl Families (Details: Table P39E)"
+      "desc": "[Category: POP] # Native Hawaiian/Other Pacific Islander Families (Details: Table P39E)"
     },
     {
       "name": "famls_othrace_20",
@@ -13953,51 +13953,51 @@
     },
     {
       "name": "hhld_inc_lt10k_nhsp_wh_23",
-      "desc": "[Category: POP] #Wh non/Hisp HHld Inc < $10,000 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHld Inc < $10,000 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_lt10k_nhsp_wh_22",
-      "desc": "[Category: POP] #Wh non/Hisp HHld Inc < $10,000 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHld Inc < $10,000 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_10_14k_nhsp_wh_23",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$10,000-14,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$10,000-14,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_10_14k_nhsp_wh_22",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$10,000-14,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$10,000-14,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_15_24k_nhsp_wh_23",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$15,000-24,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$15,000-24,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_15_24k_nhsp_wh_22",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$15,000-24,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$15,000-24,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_25_49k_nhsp_wh_23",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$25,000-49,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$25,000-49,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_25_49k_nhsp_wh_22",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$25,000-49,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$25,000-49,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_50_99k_nhsp_wh_23",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$50,000-99,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$50,000-99,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_50_99k_nhsp_wh_22",
-      "desc": "[Category: POP] #Wh n/His HHd Inc$50,000-99,999 (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHd Inc$50,000-99,999 (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_ge100k_nhsp_wh_23",
-      "desc": "[Category: POP] #Wh non/Hisp HHld Inc $100,000+ (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHld Inc $100,000+ (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "hhld_inc_ge100k_nhsp_wh_22",
-      "desc": "[Category: POP] #Wh non/Hisp HHld Inc $100,000+ (Details: B19001H;White not/Hisp/Latino)"
+      "desc": "[Category: POP] #White non/Hisp HHld Inc $100,000+ (Details: B19001H;White not/Hisp/Latino)"
     },
     {
       "name": "popn_incpovlt50_23",
