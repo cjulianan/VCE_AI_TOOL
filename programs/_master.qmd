@@ -23,6 +23,8 @@ library(markdown)
 library(rlang)
 library(stringdist)
 library(readxl)
+library(ragnar)
+library(httr2)
 ```
 
 ```{r Load API Keys}

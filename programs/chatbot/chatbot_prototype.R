@@ -11,6 +11,7 @@ library(markdown)
 library(rlang)
 library(here) # fixes directory issues with Shiny app
 library(stringdist) # helps us do syntactic scoring (doesnt use embeddings - this package mainly solves typos)
+library(ragnar)
 
 # function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
 normalize_metadata <- function(meta, meta_path) {
@@ -63,7 +64,23 @@ onStop(function() {
   dbDisconnect(DB_CON, shutdown = TRUE)
 })
 
+REGISTRY_STORE <- ragnar_store_create(
+  location = here("data/outcome/registry_store.duckdb"),
+  overwrite = TRUE,
+  embed = embed_ollama(model = "embeddinggemma:300m")
+)
 
+# read markdown
+registry_doc <- read_as_markdown(here("data/outcome/master_registry.md"))
+
+# split markdown into chunks
+registry_chunks <- markdown_chunk(registry_doc)
+
+# insert chunks into registry store
+ragnar_store_insert(REGISTRY_STORE, registry_chunks)
+
+# index to help with retrieval
+ragnar_store_build_index(REGISTRY_STORE)
 
 # UI ----------------------------------------------------------------------
 
