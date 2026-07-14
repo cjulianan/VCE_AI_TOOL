@@ -383,28 +383,6 @@ server <- function(input, output, session) {
       # Path 3: neither metadata path nor fips is found
       data_context <- "Provide context on what the user can ask based on available data."
     }
-        
-        # COMMENTED OUT CCD IF STATEMENT BLOCK (PROBABLY GONNA CHANGE LOGIC FOR THIS LATER)
-        # # Branch if querying school data to hit the bridge table
-        # if (!is.null(metadata$file_name) && metadata$file_name %in% c("2020-2024_ccd_directory.csv", "2020-2024_ccd_enrollment.csv")) {
-        #   matching_bridges <- SCHOOL_BRIDGES[SCHOOL_BRIDGES$fips == target_fips, ]
-        #   
-        #   if (nrow(matching_bridges) > 0) {
-        #     target_leaid <- matching_bridges$leaid[1]
-        #     relationship <- matching_bridges$relationship_type[1]
-        #     
-        #     query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s'", raw_file_absolute_path, target_leaid)
-        #     records <- dbGetQuery(DB_CON, query)
-        #     
-        #     if (relationship == "shared") {
-        #       data_context <- paste0(data_context, "⚠️ NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
-        #     }
-        #   } else {
-        #     query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col_name, target_fips)
-        #     records <- dbGetQuery(DB_CON, query)
-        #   }
-        #   
-        # }
     
     # =========================================================================
     # AI EXECUTION & STREAMING HAND-OFF
