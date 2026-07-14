@@ -219,6 +219,7 @@ server <- function(input, output, session) {
       }
       
       # Locks in the path ONLY if the highest score clears our confidence threshold
+      print(paste0("Similarity Score is: ", best_overall_score))
       if (best_overall_score >= similarity_threshold && !is.null(target_metadata_path)) {
         matched_metadata_paths <- c(matched_metadata_paths, target_metadata_path)
       } else {
@@ -398,7 +399,29 @@ server <- function(input, output, session) {
       }
     } else {
       # Path 3: neither metadata path nor fips is found
-      data_context <- "Provide context on what the user can ask based on available data."
+      
+      # use semantic retrieval to find relevant master registry information
+      semantic_results <- ragnar_retrieve(
+        REGISTRY_STORE, 
+        text = input$user_prompt, 
+        limit = 3
+      )
+      
+      # if there were any matches, grabs the texts from results and puts into data_context
+      if (length(semantic_results) > 0) {
+        # Extract the matched text content from the returned list of chunks
+        retrieved_text <- sapply(semantic_results, function(res) res$text)
+        combined_chunks <- paste(retrieved_text, collapse = "\n\n---\n\n")
+        
+        data_context <- paste0(
+          "The following relevant excerpts were retrieved semantically from the registry database:\n\n",
+          combined_chunks, 
+          "\n\nUse this information to answer the user's question or help direct them to the right data."
+        )
+      } else {
+        # else set data context as the following
+        data_context <- "No direct matches found. Inform the user of what general topics are covered in the available registry."
+      }
     }
     
     # =========================================================================
