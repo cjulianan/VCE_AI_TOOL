@@ -34,7 +34,7 @@
 
 ## Dataset: 2020-2024 ccd directory metadata
 - **Metadata Path**: data/outcome/Urban-Institute/2020-2024_ccd_directory_metadata.json
-- **Keywords**: ccd directory, school, school profile, district info, teacher count, gade levels, virtual school, magnet school, charter school, direct certification, free lunch, reduced lunch
+- **Keywords**: ccd directory, school, school profile, district info, teacher count, grade levels, virtual school, magnet school, charter school, direct certification, free lunch, reduced lunch
 
 ## Dataset: 2020-2024 ccd enrollment metadata
 - **Metadata Path**: data/outcome/Urban-Institute/2020-2024_ccd_enrollment_metadata.json
