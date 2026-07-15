@@ -64,6 +64,8 @@ onStop(function() {
   dbDisconnect(DB_CON, shutdown = TRUE)
 })
 
+REGISTRY_STORE <- ragnar_store_connect("data/outcome/registry_store.duckdb",read_only = TRUE)
+
 # UI ----------------------------------------------------------------------
 
 ui <- page_fixed(
