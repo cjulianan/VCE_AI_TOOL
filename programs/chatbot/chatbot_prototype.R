@@ -201,9 +201,10 @@ server <- function(input, output, session) {
       
       # 3. Parse the retrieved text blocks to find your JSON metadata paths.
       # This looks for relative paths like 'data/outcome/hrsa_ahrf_metadata.json'
+      
       found_paths <- unlist(regmatches(
         retrieved_text, 
-        gregexpr("data/outcome/[A-Za-z0-9_.-]+\\.json", retrieved_text)
+        gregexpr("data/outcome/[A-Za-z0-9_./-]+\\.json", retrieved_text) # added "/" to regex, now should be able to look through subdirectories
       ))
       
       # Clean up any duplicate matches
