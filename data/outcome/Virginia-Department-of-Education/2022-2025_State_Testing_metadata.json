@@ -1,0 +1,219 @@
+{
+    "file_name": "2022-2025_State_Testing.csv",
+    "desc": "Pass rates of state testing by subject by school",
+    "organization": "Virginia Department of Education",
+    "file_path": "data/outcome/Virginia-Department-of-Education/2022-2025_State_Testing.csv",
+    "raw_file_path": "data/sources/Virginia-Department-of-Education/2022-2025_State_Testing.csv",
+    "url_source": "https://www.doe.virginia.gov/data-policy-funding/data-reports/statistics-reports/sol-test-pass-rates-other-results",
+    "geographic_level": "county",
+    "time_coverage": "2022-2025",
+    "unit_of_analysis": "Pass rate of state testing results",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_00_State_Testing.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": "fips_code",
+        "locality_name": "Div Name"
+    },
+    "columns": [
+        {
+            "name": "Div Name",
+            "data_type": "string",
+            "keywords": [
+                "division name",
+                "county",
+                "county name",
+                "location",
+                "place"
+            ],
+            "desc": "The name of the school division or school district in Virginia.",
+            "missing": null
+        },
+        {
+            "name": "fips_code",
+            "data_type": "int",
+            "keywords": [
+                "fips code",
+                "county code"
+            ],
+            "desc": "Federal Information Processing Series unique numerical code identifier for the county.",
+            "missing": null
+        },
+        {
+            "name": "Sch Name",
+            "data_type": "string",
+            "keywords": [
+                "school name",
+                "school"
+            ],
+            "desc": "The specific school name for particular school in dataset.",
+            "missing": null
+        },
+        {
+            "name": "Sch Type",
+            "data_type": "int",
+            "keywords": [
+                "school type",
+                "school classification"
+            ],
+            "desc": "The specific school name for particular school in dataset (e.g. elementary, middle school, high school).",
+            "missing": null
+        },
+        {
+            "name": "Low Grade",
+            "data_type": "string",
+            "keywords": [
+                "lowest grade",
+                "starting grade"
+            ],
+            "desc": "The lowest grade level offered or tested at this specific school.",
+            "missing": null
+        },
+        {
+            "name": "High Grade",
+            "data_type": "string",
+            "keywords": [
+                "highest grade",
+                "ending grade"
+            ],
+            "desc": "The highest grade level offered or tested at this specific school.",
+            "missing": null
+        },
+        {
+            "name": "Subject",
+            "data_type": "string",
+            "keywords": [
+                "subject",
+                "test subject",
+                "Standards of Learning",
+                "SOL",
+                "math",
+                "english",
+                "reading",
+                "science",
+                "history",
+                "social sciences"
+            ],
+            "desc": "The academic subject area of the Standards of Learning (SOL) test.",
+            "missing": null
+        },
+        {
+            "name": "Student Group",
+            "data_type": "string",
+            "keywords": [
+                "student group",
+                "demographic",
+                "ethnicity",
+                "race",
+                "gender"
+            ],
+            "desc": "The demographic or performance subgroup being reported.",
+            "missing": null
+        },
+        {
+            "name": "2022-2023 Numerator",
+            "data_type": "int",
+            "keywords": [
+                "2022-2023 numerator",
+                "2022 passed",
+                "2023 passed"
+            ],
+            "desc": "The number of students who passed the SOL test during the 2022-2023 school year.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2022-2023 Denominator",
+            "data_type": "int",
+            "keywords": [
+                "2022-2023 denominator",
+                "2022 total tested",
+                "2022 total tested"
+            ],
+            "desc": "The total number of students who took the SOL test during the 2022-2023 school year.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2022-2023 Pass Rate",
+            "data_type": "int",
+            "keywords": [
+                "2022-2023 pass rate",
+                "2022 pass-rate",
+                "2022 pass-rate"
+            ],
+            "desc": "The percentage of students who passed the SOL test in 2022-2023.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2023-2024 Numerator",
+            "data_type": "int",
+            "keywords": [
+                "2023-2024 numerator",
+                "2023 passed",
+                "2024 passed"
+            ],
+            "desc": "The number of students who passed the SOL test during the 2023-2024 school year.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2023-2024 Denominator",
+            "data_type": "int",
+            "keywords": [
+                "2022-2023 denominator",
+                "2023 total tested",
+                "2024 total tested"
+            ],
+            "desc": "The total number of students who took the SOL test during the 2023-2024 school year.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2023-2024 Pass Rate",
+            "data_type": "int",
+            "keywords": [
+                "2023-2024 pass rate",
+                "2023 pass-rate",
+                "2024 pass-rate"
+            ],
+            "desc": "The percentage of students who passed the SOL test in 2023-2024.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2024-2025 Numerator",
+            "data_type": "int",
+            "keywords": [
+                "2024-2025 numerator",
+                "2024 passed",
+                "2025 passed"
+            ],
+            "desc": "The number of students who passed the SOL test during the 2024-2025 school year.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2024-2025 Denominator",
+            "data_type": "int",
+            "keywords": [
+                "2024-2025 denominator",
+                "2024 total tested",
+                "2025 total tested"
+            ],
+            "desc": "The total number of students who took the SOL test during the 2024-2025 school year.",
+            "missing": "NA | <"
+        },
+        {
+            "name": "2024-2025 Pass Rate",
+            "data_type": "int",
+            "keywords": [
+                "2024-2025 pass rate",
+                "2024 pass-rate",
+                "2025 pass-rate"
+            ],
+            "desc": "The percentage of students who passed the SOL test in 2024-2025.",
+            "missing": "NA | <"
+        }
+    ]
+}
