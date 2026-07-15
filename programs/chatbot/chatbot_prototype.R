@@ -176,59 +176,43 @@ server <- function(input, output, session) {
       user_prompt_clean <- combined_prompt
       
     } else {
-      master_registry <- jsonlite::fromJSON(txt = readLines(here("data/outcome/master_registry.json"), warn = FALSE), simplifyVector = FALSE)
+      # =========================================================================
+      # NEW SEMANTIC ROUTING VIA VECTOR EMBEDDINGS
+      # =========================================================================
       matched_metadata_paths <- c()
       
-      #  Tokenize the clean user prompt into individual words
-      user_words <- unlist(strsplit(user_prompt_clean, "\\s+"))
+      # 1. Query our local vector registry store using the user's prompt
+      semantic_results <- ragnar_retrieve(
+        REGISTRY_STORE, 
+        text = user_prompt_clean, 
+        limit = 3
+      )
       
-      # Setup tracking variables for our numerical scoring engine
-      best_overall_score <- 0
-      target_metadata_path <- NULL
-      similarity_threshold <- 0.75 # 75% similarity required to trigger a match
-      
-      #  Loop through every dataset in the registry to find the highest match
-      for (dataset in master_registry$routing_registry) {
-        max_dataset_score <- 0
-        
-        for (keyword in dataset$keywords) {
-          # 1. Force keyword to lowercase to prevent casing mismatches
-          keyword_clean <- tolower(keyword)
-          
-          # 2. DEFENSIVE PHRASE CHECK: If the exact phrase is inside the prompt,
-          # we skip the word-splitting math and give it a perfect score
-          if (grepl(keyword_clean, user_prompt_clean, fixed = TRUE)) {
-            max_keyword_score <- 1.00
-          } else {
-            # 3. TYPO FALLBACK: Calculate character-distance similarity
-            scores <- 1 - stringdist::stringdistmatrix(user_words, keyword_clean, method = "jw")
-            max_keyword_score <- max(scores, na.rm = TRUE)
-          }
-          
-          # Keeps track of the highest match word within this specific dataset
-          if (max_keyword_score > max_dataset_score) {
-            max_dataset_score <- max_keyword_score
-          }
-        }
-        
-        # Checks if this dataset is our best-scoring match so far across the whole registry
-        if (max_dataset_score > best_overall_score) {
-          best_overall_score <- max_dataset_score
-          target_metadata_path <- dataset$metadata_path
+      # 2. Extract the text segments from the returned chunks safely, 
+      # handling both data frame and nested list return formats
+      retrieved_text <- c()
+      if (length(semantic_results) > 0) {
+        if (is.data.frame(semantic_results)) {
+          retrieved_text <- semantic_results$text
+        } else if (is.list(semantic_results)) {
+          retrieved_text <- sapply(semantic_results, function(res) res$text %||% "")
         }
       }
       
-      # Locks in the path ONLY if the highest score clears our confidence threshold
-      print(paste0("Similarity Score is: ", best_overall_score))
-      if (best_overall_score >= similarity_threshold && !is.null(target_metadata_path)) {
-        matched_metadata_paths <- c(matched_metadata_paths, target_metadata_path)
-      } else {
-        # If no keyword clears the threshold, 
-        # fall back to the last successfully used dataset in the cache!
-        # (we don't overwrite the context just because we couldnt find a relevant dataset)
-        if (!is.null(cache$last_metadata_path)) {
-          matched_metadata_paths <- cache$last_metadata_path
-        }
+      # 3. Parse the retrieved text blocks to find your JSON metadata paths.
+      # This looks for relative paths like 'data/outcome/hrsa_ahrf_metadata.json'
+      found_paths <- unlist(regmatches(
+        retrieved_text, 
+        gregexpr("data/outcome/[A-Za-z0-9_.-]+\\.json", retrieved_text)
+      ))
+      
+      # Clean up any duplicate matches
+      matched_metadata_paths <- unique(found_paths)
+      
+      # 4. If vector similarity fails to find any path, fall back 
+      # to the last successfully queried dataset in the cache
+      if (length(matched_metadata_paths) == 0 && !is.null(cache$last_metadata_path)) {
+        matched_metadata_paths <- cache$last_metadata_path
       }
     }
     
@@ -244,7 +228,7 @@ server <- function(input, output, session) {
           
           # cache the current metadata path and user prompt and set disambiguation flag to true so next prompt will use the stored cache values
           cache$last_metadata_path <- matched_metadata_paths
-          cache$cached_intent_phrase = input$user_prompt
+          cache$cached_intent_phrase <- input$user_prompt
           cache$pending_disambiguation <- TRUE
           
           # updated_history <- paste0(
@@ -409,8 +393,14 @@ server <- function(input, output, session) {
       
       # if there were any matches, grabs the texts from results and puts into data_context
       if (length(semantic_results) > 0) {
-        # Extract the matched text content from the returned list of chunks
-        retrieved_text <- sapply(semantic_results, function(res) res$text)
+        # Extract the matched text content safely depending on data structure
+        retrieved_text <- c()
+        if (is.data.frame(semantic_results)) {
+          retrieved_text <- semantic_results$text
+        } else if (is.list(semantic_results)) {
+          retrieved_text <- sapply(semantic_results, function(res) res$text %||% "")
+        }
+        
         combined_chunks <- paste(retrieved_text, collapse = "\n\n---\n\n")
         
         data_context <- paste0(
@@ -418,12 +408,8 @@ server <- function(input, output, session) {
           combined_chunks, 
           "\n\nUse this information to answer the user's question or help direct them to the right data."
         )
-      } else {
-        # else set data context as the following
-        data_context <- "No direct matches found. Inform the user of what general topics are covered in the available registry."
       }
     }
-    
     # =========================================================================
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
