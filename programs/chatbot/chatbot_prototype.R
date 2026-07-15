@@ -64,23 +64,8 @@ onStop(function() {
   dbDisconnect(DB_CON, shutdown = TRUE)
 })
 
-REGISTRY_STORE <- ragnar_store_create(
-  location = here("data/outcome/registry_store.duckdb"),
-  overwrite = TRUE,
-  embed = embed_ollama(model = "embeddinggemma:300m")
-)
 
-# read markdown
-registry_doc <- read_as_markdown(here("data/outcome/master_registry.md"))
-
-# split markdown into chunks
-registry_chunks <- markdown_chunk(registry_doc)
-
-# insert chunks into registry store
-ragnar_store_insert(REGISTRY_STORE, registry_chunks)
-
-# index to help with retrieval
-ragnar_store_build_index(REGISTRY_STORE)
+source(here("programs/chatbot/build_registry_store.R"))
 
 # UI ----------------------------------------------------------------------
 
@@ -184,8 +169,8 @@ server <- function(input, output, session) {
       # 1. Query our local vector registry store using the user's prompt
       semantic_results <- ragnar_retrieve(
         REGISTRY_STORE, 
-        text = user_prompt_clean, 
-        limit = 3
+        text = user_prompt_clean,
+        top_k = 10, deoverlap = FALSE
       )
       
       # 2. Extract the text segments from the returned chunks safely, 

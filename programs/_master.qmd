@@ -25,6 +25,7 @@ library(stringdist)
 library(readxl)
 library(ragnar)
 library(httr2)
+library(DBI)
 ```
 
 ```{r Load API Keys}
