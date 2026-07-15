@@ -64,9 +64,6 @@ onStop(function() {
   dbDisconnect(DB_CON, shutdown = TRUE)
 })
 
-
-source(here("programs/chatbot/build_registry_store.R"))
-
 # UI ----------------------------------------------------------------------
 
 ui <- page_fixed(
