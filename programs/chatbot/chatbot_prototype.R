@@ -64,7 +64,19 @@ onStop(function() {
   dbDisconnect(DB_CON, shutdown = TRUE)
 })
 
-REGISTRY_STORE <- ragnar_store_connect("data/outcome/registry_store.duckdb",read_only = TRUE)
+registry_store_path <- here("data", "outcome", "registry_store.duckdb")
+
+if (!file.exists(registry_store_path)) {
+  stop(
+    "The registry store does not exist. Run : ",
+    "Rscript programs/chatbot/build_registry_store.R"
+  )
+}
+
+REGISTRY_STORE <- ragnar_store_connect(
+  registry_store_path,
+  read_only = TRUE
+)
 
 # UI ----------------------------------------------------------------------
 
@@ -169,7 +181,8 @@ server <- function(input, output, session) {
       semantic_results <- ragnar_retrieve(
         REGISTRY_STORE, 
         text = user_prompt_clean,
-        top_k = 10, deoverlap = FALSE
+        top_k = 2, 
+        deoverlap = TRUE
       )
       
       # 2. Extract the text segments from the returned chunks safely, 
@@ -373,7 +386,8 @@ server <- function(input, output, session) {
       semantic_results <- ragnar_retrieve(
         REGISTRY_STORE, 
         text = input$user_prompt, 
-        limit = 3
+        top_k = 2,
+        deoverlap = TRUE
       )
       
       # if there were any matches, grabs the texts from results and puts into data_context
