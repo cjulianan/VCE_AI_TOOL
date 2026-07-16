@@ -141,11 +141,11 @@ server <- function(input, output, session) {
   chat_log <- reactiveVal("<div class='text-center text-muted large my-2'><strong>Conversation Started</strong></div>") # can adjust size for the text
   
   # cache to save previous metadata paths, user prompts, and solve ambiguations between counties/cities
-  cache <- reactiveValues(
-    last_metadata_path = NULL,
-    cached_intent_phrase = NULL,
-    pending_disambiguation = FALSE
-  )
+  # cache <- reactiveValues(
+  #   last_metadata_path = NULL,
+  #   cached_intent_phrase = NULL,
+  #   pending_disambiguation = FALSE
+  # )
   
   # only update chat box if user hits submit button and user has something in prompt input box
   observeEvent(input$submit_button, {
@@ -162,16 +162,16 @@ server <- function(input, output, session) {
     collision_words <- c("richmond", "roanoke", "fairfax")
     
     # check first if there is a pending disambiguation from user's last prompt
-    if (isTRUE(cache$pending_disambiguation)) {
-      # set the current metadata path to whatever was retrieved from last prompt
-      matched_metadata_paths <- cache$last_metadata_path
+    # if (isTRUE(cache$pending_disambiguation)) {
+    #   # set the current metadata path to whatever was retrieved from last prompt
+    #   matched_metadata_paths <- cache$last_metadata_path
 
       
       # the new prompt will be whatever prompt was cached from previous prompt combined with the new prompt where user clarifies
-      combined_prompt <- paste(cache$cached_intent_phrase, user_prompt_clean)
+      combined_prompt <- paste(user_prompt_clean)
       user_prompt_clean <- combined_prompt
       
-    } else {
+    # } else {
       # =========================================================================
       # NEW SEMANTIC ROUTING VIA VECTOR EMBEDDINGS
       # =========================================================================
@@ -211,22 +211,22 @@ server <- function(input, output, session) {
           message("Skipped Runner-ups:\n", formatted_skipped)
         }
       }
-    }
+    # }
     
     # here if no new dataset keywords are found, we carry forward the last successfully 
     # queried metadata path from the cache.
-    if (length(matched_metadata_paths) == 0 && !is.null(cache$last_metadata_path)) {
-      matched_metadata_paths <- cache$last_metadata_path
-    }
+    # if (length(matched_metadata_paths) == 0 && !is.null(cache$last_metadata_path)) {
+    #   matched_metadata_paths <- cache$last_metadata_path
+    # }
     
     for (word in collision_words) {
       if (grepl(word, user_prompt_clean)) {
         if (!grepl("city", user_prompt_clean) && !grepl("county", user_prompt_clean)) {
           
           # cache the current metadata path and user prompt and set disambiguation flag to true so next prompt will use the stored cache values
-          cache$last_metadata_path <- matched_metadata_paths
-          cache$cached_intent_phrase <- input$user_prompt
-          cache$pending_disambiguation <- TRUE
+          # cache$last_metadata_path <- matched_metadata_paths
+          # cache$cached_intent_phrase <- input$user_prompt
+          # cache$pending_disambiguation <- TRUE
           
           # updated_history <- paste0(
           #   chat_log(), "<br>",
@@ -412,16 +412,27 @@ server <- function(input, output, session) {
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
     # resolved prompt to clarify if there is ambiguous city/county
-    if (!is.null(cache$cached_intent_phrase)) {
-      resolved_prompt <- paste(cache$cached_intent_phrase, "-> Clarified as:", input$user_prompt)
-    } else {
-      resolved_prompt <- input$user_prompt
-    }
+    # if (!is.null(cache$cached_intent_phrase)) {
+    #   resolved_prompt <- paste(cache$cached_intent_phrase, "-> Clarified as:", input$user_prompt)
+    # } else {
+    #   resolved_prompt <- input$user_prompt
+    # }
     
     final_prompt <- sprintf(
-      "You are a helpful data assistant. Use the following data context to answer the user's question accurately. Format your response in clear and precise sentence form. Don't add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source. If the context is empty, say that you don't have the information to help the user.\n\nContext: %s\n\nUser Question: %s",
+      "You are a helpful data assistant. Use the following data context to answer the user's question accurately. Format your response in clear and precise sentence form. Don't add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source. If the context is empty, say that you don't have the information to help the user. 
+      \n
+      \n
+For every incoming user prompt, your first task is to analyze the context and make a decision:
+
+1. **Scenario A: The prompt is a Follow-Up.** - **Definition:** The user's current prompt refers to, builds upon, clarifies, or asks a related question about the previous turn of the conversation.
+   - **Action:** Use the topic from the previous user prompt to answer the question for the current user's prompt.
+
+2. **Scenario B: The prompt is a New Topic.**
+   - **Definition:** The user is starting a completely new train of thought, asking about a different subject, or explicitly pivoting away from the previous topic.
+   - **Action:** Treat this as a fresh start and do not let previous topics bias or confuse your response to this new topic.
+      \n\nContext: %s\n\nUser Question: %s",
       data_context,
-      resolved_prompt
+      input$user_prompt
     )
     # cat(final_prompt)
     
@@ -468,12 +479,12 @@ server <- function(input, output, session) {
     
     chat_log(updated_history)
     # reset cache and input box
-    cache$pending_disambiguation <- FALSE
-    cache$cached_intent_phrase   <- NULL
-    # Update our long-term baseline cache if we found data during this run
-    if (length(matched_metadata_paths) > 0) {
-      cache$last_metadata_path <- matched_metadata_paths
-    }
+    # cache$pending_disambiguation <- FALSE
+    # cache$cached_intent_phrase   <- NULL
+    # # Update our long-term baseline cache if we found data during this run
+    # if (length(matched_metadata_paths) > 0) {
+    #   cache$last_metadata_path <- matched_metadata_paths
+    # }
     updateTextInput(session, "user_prompt", value = "")
   })
   
@@ -492,12 +503,12 @@ server <- function(input, output, session) {
     },
     content = function(file) {
       # Take a complete snapshot of your active reactive values
-      session_snapshot <- list(
-        saved_chat_text        = chat_log(), 
-        last_metadata_path     = cache$last_metadata_path,
-        pending_disambiguation = cache$pending_disambiguation,
-        cached_intent_phrase   = cache$cached_intent_phrase
-      )
+      # session_snapshot <- list(
+      #   saved_chat_text        = chat_log(), 
+      #   last_metadata_path     = cache$last_metadata_path,
+      #   pending_disambiguation = cache$pending_disambiguation,
+      #   cached_intent_phrase   = cache$cached_intent_phrase
+      # )
       
       # Pack it into a structured text file and download it
       jsonlite::write_json(session_snapshot, file, pretty = TRUE, auto_unbox = TRUE)
@@ -524,9 +535,9 @@ server <- function(input, output, session) {
     chat_log(uploaded_snapshot$saved_chat_text)
     
     # 2. Re-inject all background tracking variables back into the cache
-    cache$last_metadata_path      <- uploaded_snapshot$last_metadata_path
-    cache$pending_disambiguation  <- uploaded_snapshot$pending_disambiguation
-    cache$cached_intent_phrase    <- uploaded_snapshot$cached_intent_phrase
+    # cache$last_metadata_path      <- uploaded_snapshot$last_metadata_path
+    # cache$pending_disambiguation  <- uploaded_snapshot$pending_disambiguation
+    # cache$cached_intent_phrase    <- uploaded_snapshot$cached_intent_phrase
     
     showNotification("Chat session successfully restored!", type = "message")
   })
