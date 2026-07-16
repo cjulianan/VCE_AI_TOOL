@@ -175,37 +175,17 @@ server <- function(input, output, session) {
       # =========================================================================
       # NEW SEMANTIC ROUTING VIA VECTOR EMBEDDINGS
       # =========================================================================
-      matched_metadata_paths <- c()
-      
-      # 1. Query our local vector registry store using the user's prompt
       semantic_results <- ragnar_retrieve(
-        REGISTRY_STORE, 
+        REGISTRY_STORE,
         text = user_prompt_clean,
-        top_k = 2, 
-        deoverlap = TRUE
+        top_k = 2,
+        deoverlap = FALSE
       )
       
-      # 2. Extract the text segments from the returned chunks safely, 
-      # handling both data frame and nested list return formats
-      retrieved_text <- c()
-      if (length(semantic_results) > 0) {
-        if (is.data.frame(semantic_results)) {
-          retrieved_text <- semantic_results$text
-        } else if (is.list(semantic_results)) {
-          retrieved_text <- sapply(semantic_results, function(res) res$text %||% "")
-        }
-      }
+      candidates <- semantic_results |>
+        dplyr::distinct(dataset_id, metadata_path, .keep_all = TRUE)
       
-      # 3. Parse the retrieved text blocks to find your JSON metadata paths.
-      # This looks for relative paths like 'data/outcome/hrsa_ahrf_metadata.json'
-      
-      found_paths <- unlist(regmatches(
-        retrieved_text, 
-        gregexpr("data/outcome/[A-Za-z0-9_./-]+\\.json", retrieved_text) # added "/" to regex, now should be able to look through subdirectories
-      ))
-      
-      # Clean up any duplicate matches
-      matched_metadata_paths <- unique(found_paths)
+      matched_metadata_paths <- candidates$metadata_path
       
       # 4. If vector similarity fails to find any path, fall back 
       # to the last successfully queried dataset in the cache
@@ -387,7 +367,7 @@ server <- function(input, output, session) {
         REGISTRY_STORE, 
         text = input$user_prompt, 
         top_k = 2,
-        deoverlap = TRUE
+        deoverlap = FALSE
       )
       
       # if there were any matches, grabs the texts from results and puts into data_context
