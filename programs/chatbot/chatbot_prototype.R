@@ -175,24 +175,42 @@ server <- function(input, output, session) {
       # =========================================================================
       # NEW SEMANTIC ROUTING VIA VECTOR EMBEDDINGS
       # =========================================================================
+      # can edit the top_k num from here for whole script
+      top_k <- 3
+      
+      # call ragnar retrieve
       semantic_results <- ragnar_retrieve(
         REGISTRY_STORE,
         text = user_prompt_clean,
-        top_k = 2,
+        top_k = top_k,
         deoverlap = FALSE
       )
       
-      candidates <- semantic_results |>
-        dplyr::distinct(dataset_id, metadata_path, .keep_all = TRUE)
+      # put all top k unique semantic results into candidates
+      candidates <- semantic_results %>% 
+        dplyr::distinct(dataset_id, metadata_path, .keep_all = TRUE) %>% 
+        head(top_k)
       
-      matched_metadata_paths <- candidates$metadata_path
+      # print out user prompt for debugging
+      message("User prompt: \n - ", user_prompt_clean, "\n")
       
-      # 4. If vector similarity fails to find any path, fall back 
-      # to the last successfully queried dataset in the cache
-      if (length(matched_metadata_paths) == 0 && !is.null(cache$last_metadata_path)) {
-        matched_metadata_paths <- cache$last_metadata_path
+      if (nrow(candidates) == 0) {
+        # if there were no candidates found initialize with empty char vector
+        matched_metadata_paths <- character()
+      } else {
+        # if candidates found, grab the best one
+        matched_metadata_paths <- candidates$metadata_path[[1]]
+        
+        # print out top candidate for debugging
+        message("Top candidate: \n - ", matched_metadata_paths, "\n")
+        
+        # for each remaining skipped candidates, print them out for debugging
+        if (nrow(candidates) > 1) {
+          skipped <- candidates$metadata_path[2:nrow(candidates)]
+          formatted_skipped <- paste0("  - ", skipped, collapse = "\n")
+          message("Skipped Runner-ups:\n", formatted_skipped)
+        }
       }
-    }
     
     # here if no new dataset keywords are found, we carry forward the last successfully 
     # queried metadata path from the cache.
@@ -366,7 +384,7 @@ server <- function(input, output, session) {
       semantic_results <- ragnar_retrieve(
         REGISTRY_STORE, 
         text = input$user_prompt, 
-        top_k = 2,
+        top_k = top_k,
         deoverlap = FALSE
       )
       
