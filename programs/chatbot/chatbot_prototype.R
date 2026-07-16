@@ -211,6 +211,7 @@ server <- function(input, output, session) {
           message("Skipped Runner-ups:\n", formatted_skipped)
         }
       }
+    }
     
     # here if no new dataset keywords are found, we carry forward the last successfully 
     # queried metadata path from the cache.
