@@ -1,4 +1,3 @@
-
 ## ALL THE TOOLS DEFINED BELOW
 
 summarize_data_tool <- tool(
@@ -17,16 +16,20 @@ summarize_data_tool <- tool(
       "depression"     = "data/outcome/Mental-Health-America/Depression_County_Map_Full_Data.csv"
     )
     
-    file_path <- dataset_map[[dataset_id]]
+    file_path = dataset_map[[dataset_id]]
     if (is.null(file_path)) return("Error: Unregistered or unauthorized dataset ID.")
     
     # 3. Clean, Deterministic Parameterized Query Execution
     if (!is.null(fips) && fips != "") {
-      query <- sprintf("SELECT %s(%s) AS result FROM '%s' WHERE CAST(GEOID AS VARCHAR) = ?", operation, metric_column, file_path)
-      res <- dbGetQuery(DB_CON, query, params = list(as.character(fips)))
+      # Wrapped column parameter in double quotes to handle spaces safely
+      query <- sprintf('SELECT %s("%s") AS result FROM \'%s\' WHERE CAST(GEOID AS VARCHAR) = ?', operation, metric_column, file_path)
+      # Pointed connection directly to the Global Environment
+      res <- dbGetQuery(.GlobalEnv$DB_CON, query, params = list(as.character(fips)))
     } else {
-      query <- sprintf("SELECT %s(%s) AS result FROM '%s'", operation, metric_column, file_path)
-      res <- dbGetQuery(DB_CON, query)
+      # Wrapped column parameter in double quotes to handle spaces safely
+      query <- sprintf('SELECT %s("%s") AS result FROM \'%s\'', operation, metric_column, file_path)
+      # Pointed connection directly to the Global Environment
+      res <- dbGetQuery(.GlobalEnv$DB_CON, query)
     }
     
     # 4. Straightforward Output Handling

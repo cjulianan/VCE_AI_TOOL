@@ -54,6 +54,9 @@ SCHOOL_BRIDGES      <- read.csv(here("data/outcome/Urban-Institute/institution-l
 # Force names to lowercase to make string matching bulletproof
 VIRGINIA_LOCALITIES$alias <- tolower(VIRGINIA_LOCALITIES$alias)
 
+# EXTRACTION: We load our data tools script here
+source(here("programs/chatbot/data_tools.R"))
+
 # 2. Spin up the background serverless DuckDB engine
 DB_CON <- dbConnect(duckdb())
 
@@ -130,6 +133,9 @@ server <- function(input, output, session) {
     base_url = "https://llm-api.arc.vt.edu/api/v1",
     credentials = function() Sys.getenv("VT_ARC_API_KEY")
   )
+  
+  # REGISTRATION: Register our Data Tool with the chat object
+  chat_obj$register_tool(summarize_data_tool)
   
   # Replaced with a clean, centered starter label:
   chat_log <- reactiveVal("<div class='text-center text-muted large my-2'><strong>Conversation Started</strong></div>")
