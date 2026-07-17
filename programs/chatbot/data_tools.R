@@ -10,6 +10,7 @@ summarize_data_tool <- tool(
     if (!operation %in% valid_ops) return("Error: Unsupported statistical operation.")
     
     # 2. Dataset ID Allowlist (Maps safe internal shortcodes to relative paths)
+    # WE WILL ADD THE OTHER DATSETS LATER
     dataset_map <- list(
       "nass_crops"     = "data/outcome/census_nass_crops.csv",
       "vdh_diseases"   = "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
