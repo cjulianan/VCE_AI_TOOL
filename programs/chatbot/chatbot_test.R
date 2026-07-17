@@ -54,8 +54,6 @@ SCHOOL_BRIDGES      <- read.csv(here("data/outcome/Urban-Institute/institution-l
 # Force names to lowercase to make string matching bulletproof
 VIRGINIA_LOCALITIES$alias <- tolower(VIRGINIA_LOCALITIES$alias)
 
-# View(VIRGINIA_LOCALITIES) # testing it looaded
-
 # 2. Spin up the background serverless DuckDB engine
 DB_CON <- dbConnect(duckdb())
 
@@ -83,6 +81,16 @@ REGISTRY_STORE <- ragnar_store_connect(
 ui <- page_fixed(
   # bslib theme
   theme = bs_theme(version = 5, bootswatch = "yeti"),
+  
+  # JavaScript to trigger the submit button when the user presses "Enter"
+  tags$script(HTML("
+    $(document).on('keypress', '#user_prompt', function(e) {
+      if (e.which == 13) { // 13 is the keycode for Enter
+        e.preventDefault();
+        $('#submit_button').click();
+      }
+    });
+  ")),
   
   div (
     # center the chatbot box
@@ -120,7 +128,6 @@ ui <- page_fixed(
       )
     )
   )
-  
 )
 
 
@@ -134,15 +141,14 @@ server <- function(input, output, session) {
     credentials = function() Sys.getenv("VT_ARC_API_KEY")
   )
   
-  # keep record of chat log so new responses aren't overwritten
-  ## chat_log <- reactiveVal("Chat Started: <br>") ## OLD LINE 
-  
   # Replaced with a clean, centered starter label:
-  chat_log <- reactiveVal("<div class='text-center text-muted large my-2'><strong>Conversation Started</strong></div>") # can adjust size for the text
+  chat_log <- reactiveVal("<div class='text-center text-muted large my-2'><strong>Conversation Started</strong></div>")
   
   # cache to save previous metadata paths, user prompts, and solve ambiguations between counties/cities
   cache <- reactiveValues(
     last_metadata_path = NULL,
+    last_fips = NULL,
+    last_locality_name = NULL,
     cached_intent_phrase = NULL,
     pending_disambiguation = FALSE
   )
@@ -151,100 +157,112 @@ server <- function(input, output, session) {
   observeEvent(input$submit_button, {
     req(input$user_prompt) 
     
-    # =========================================================================
-    # MILESTONE 1: DISAMBIGUATION GATEKEEPER
-    # =========================================================================
-    
-    # This shouldd take care of when a user asks about one of these ambiguoous areas (the code stops and asks)
-    # the way its supposed to, but context is not updated (Roanoke, Fairfax, Richmond)
-    
     user_prompt_clean <- tolower(trimws(input$user_prompt))
     collision_words <- c("richmond", "roanoke", "fairfax")
     
-    # check first if there is a pending disambiguation from user's last prompt
+    # -------------------------------------------------------------------------
+    # DEFENSIVE INITIALIZATION: Ensure these always exist in all logical paths
+    # -------------------------------------------------------------------------
+    target_fips            <- NULL
+    target_locality_name   <- NULL
+    is_follow_up           <- FALSE
+    matched_metadata_paths <- character()
+    top_k                  <- 3 # Guaranteed fallback if vector search is bypassed
+    
+    # =========================================================================
+    # MILESTONE 1: DISAMBIGUATION GATEKEEPER
+    # =========================================================================
     if (isTRUE(cache$pending_disambiguation)) {
       # set the current metadata path to whatever was retrieved from last prompt
       matched_metadata_paths <- cache$last_metadata_path
-      
       
       # the new prompt will be whatever prompt was cached from previous prompt combined with the new prompt where user clarifies
       combined_prompt <- paste(cache$cached_intent_phrase, user_prompt_clean)
       user_prompt_clean <- combined_prompt
       
-    } else {
+    } else { # [START OF MAIN ELSE BLOCK]
+      
       # =========================================================================
-      # NEW SEMANTIC ROUTING VIA VECTOR EMBEDDINGS (STEP 4 SELECTOR)
+      # MILESTONE 2: LOCALITY MATCHING (MOVED UP TO RUN FIRST)
       # =========================================================================
-      # can edit the top_k num from here for whole script
-      top_k <- 3
-      
-      # call ragnar retrieve
-      semantic_results <- ragnar_retrieve(
-        REGISTRY_STORE,
-        text = user_prompt_clean,
-        top_k = top_k,
-        deoverlap = FALSE
-      )
-      
-      # put all top k unique semantic results into candidates
-      candidates <- semantic_results %>% 
-        dplyr::distinct(dataset_id, metadata_path, .keep_all = TRUE) %>% 
-        head(top_k)
-      
-      # print out user prompt for debugging
-      message("User prompt: \n - ", user_prompt_clean, "\n")
-      
-      # Initialize as empty by default so we only query if a true match occurs
-      matched_metadata_paths <- character()
-      
-      if (nrow(candidates) == 0) {
-        # if there were no candidates found initialize with empty char vector
-        matched_metadata_paths <- character()
-      } else {
-        # STEP 4 FILTER: grab only the single best candidate
-        matched_metadata_paths <- candidates$metadata_path[[1]]
-        
-        # print out top candidate for debugging
-        message("Top candidate: \n - ", matched_metadata_paths, "\n")
-        
-        # for each remaining skipped candidates, print them out for debugging
-        if (nrow(candidates) > 1) {
-          skipped <- candidates$metadata_path[2:nrow(candidates)]
-          formatted_skipped <- paste0("  - ", skipped, collapse = "\n")
-          message("Skipped Runner-ups:\n", formatted_skipped)
+      for (i in 1:nrow(VIRGINIA_LOCALITIES)) {
+        if (grepl(VIRGINIA_LOCALITIES$alias[i], user_prompt_clean)) {
+          target_fips <- sprintf("%05d", as.integer(VIRGINIA_LOCALITIES$fips[i]))
+          target_locality_name <- VIRGINIA_LOCALITIES$locality[i]
+          break
         }
       }
-    } # Closes the disambiguation check else block
+      
+      # =========================================================================
+      # INTENT GATEKEEPER: STEP 4 REUSE OR ROUTE RULE
+      # =========================================================================
+      if (length(chat_obj$get_turns()) > 0 && !is.null(cache$last_metadata_path)) {
+        classification_chat <- chat_obj$clone()$set_turns(list())
+        classification_prompt <- sprintf(
+          "You are an internal routing system. The user just asked: '%s'. Does this question sound like a short conversational follow-up to the previous topic (e.g., asking about a different year, different county, or related metric) or is it a completely new, distinct topic? Answer with EXACTLY ONE WORD: 'YES' if it is a follow-up, or 'NO' if it is a new topic.",
+          user_prompt_clean
+        )
+        intent_response <- classification_chat$chat(classification_prompt, echo = "none")
+        
+        if (grepl("YES", toupper(intent_response))) {
+          is_follow_up <- TRUE
+          message("LLM Gatekeeper: Detected follow-up query. Bypassing vector search.")
+        }
+      }
+      
+      # =========================================================================
+      # ROUTING EXECUTION (NESTED SAFELY INSIDE THE ELSE BLOCK)
+      # =========================================================================
+      if (is_follow_up) {
+        # Step 4 Rule: "What about 2024?" reuses previous dataset
+        matched_metadata_paths <- cache$last_metadata_path
+        
+        # If they didn't specify a new county, carry over the old one
+        if (is.null(target_fips) && !is.null(cache$last_fips)) {
+          target_fips <- cache$last_fips
+          target_locality_name <- cache$last_locality_name
+        }
+      } else {
+        # Step 4 Rule: "Tell me about chickenpox in Accomack" performs new routing
+        semantic_results <- ragnar_retrieve(
+          REGISTRY_STORE,
+          text = user_prompt_clean,
+          top_k = top_k,
+          deoverlap = FALSE
+        )
+        candidates <- semantic_results %>% 
+          dplyr::distinct(dataset_id, metadata_path, .keep_all = TRUE) %>% 
+          head(top_k)
+        
+        message("User prompt: \n - ", user_prompt_clean, "\n")
+        
+        if (nrow(candidates) > 0) {
+          matched_metadata_paths <- candidates$metadata_path[[1]]
+          message("Top candidate: \n - ", matched_metadata_paths, "\n")
+          if (nrow(candidates) > 1) {
+            skipped <- candidates$metadata_path[2:nrow(candidates)]
+            formatted_skipped <- paste0("  - ", skipped, collapse = "\n")
+            message("Skipped Runner-ups:\n", formatted_skipped)
+          }
+        }
+      }
+      
+    } # [END OF MAIN ELSE BLOCK - Closes the disambiguation check else block]
     
-    # COMMENTED OUT FOR STEP 4: We bypass the R-side fallback cache completely.
-    # if (length(matched_metadata_paths) == 0 && !is.null(cache$last_metadata_path)) {
-    #   matched_metadata_paths <- cache$last_metadata_path
-    # }
-    
+    # =========================================================================
+    # COLLISION WORD CHECK
+    # =========================================================================
     for (word in collision_words) {
       if (grepl(word, user_prompt_clean)) {
         if (!grepl("city", user_prompt_clean) && !grepl("county", user_prompt_clean)) {
           
-          # cache the current metadata path and user prompt and set disambiguation flag to true so next prompt will use the stored cache values
+          # cache the current metadata path and user prompt
           cache$last_metadata_path <- matched_metadata_paths
           cache$cached_intent_phrase <- input$user_prompt
           cache$pending_disambiguation <- TRUE
           
-          # updated_history <- paste0(
-          #   chat_log(), "<br>",
-          #   "<strong>User:</strong> ", input$user_prompt, "<br>",
-          #   "⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ",
-          #   tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i><br>"
-          # )
-          
-          
-          # Construct a centered system alert bubble using Bootstrap flexbox
           system_bubble <- paste0(
-            # 'd-flex' opens a flex container; 'justify-content-center' pushes the box to the exact middle
             "<div class='d-flex justify-content-center mb-3'>",
-            
-            # 'bg-secondary' makes the box dark gray; 'text-white' colors the text; 'rounded-3' rounds the corners
-            # 'small' drops font size; 'max-width: 85%' stops the gray bar from completely hitting the card edge
             "  <div class='bg-secondary text-secondary-inverse p-2 px-3 rounded-3 text-center small' style='max-width: 85%;'>",
             "    ⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ", 
             tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i>",
@@ -252,9 +270,7 @@ server <- function(input, output, session) {
             "</div>"
           )
           
-          # Append the newly generated system bubble to our master HTML chat string
           updated_history <- paste0(chat_log(), system_bubble)
-          
           chat_log(updated_history)
           updateTextInput(session, "user_prompt", value = "")
           return() 
@@ -262,35 +278,12 @@ server <- function(input, output, session) {
       }
     }
     
-    # =========================================================================
-    # MILESTONE 2: DYNAMIC ROUTING & LOCALITY MATCHING
-    # =========================================================================
-    
-    # Match prompt against virginia_localities data frame to find FIPS
-    target_fips <- NULL
-    target_locality_name <- NULL
-    
-    for (i in 1:nrow(VIRGINIA_LOCALITIES)) {
-      if (grepl(VIRGINIA_LOCALITIES$alias[i], user_prompt_clean)) {
-        target_fips <- sprintf("%05d", as.integer(VIRGINIA_LOCALITIES$fips[i]))
-        target_locality_name <- VIRGINIA_LOCALITIES$locality[i]
-        break
-      }
-    }
-    
-    # Initialize the data context tracker
+    # Initialize the data context tracker for Milestone 3
     data_context <- ""
     
     # =========================================================================
     # MILESTONE 3: DUCKDB DIRECT-FROM-DISK EXTRACTION LOOP
     # =========================================================================
-    
-    # debug statements
-    # cat(paste0("MATCHED METADATA PATHS: ", matched_metadata_paths))
-    # cat(paste0("TARGET FIPS: ", target_fips))
-    # cat(paste0("TARGET LOCALITY NAME", target_locality_name))
-    
-    # Three paths based on availability of metadata path and fips
     if (length(matched_metadata_paths) > 0 && !is.null(target_fips)) {
       # Path 1: metadata path and fips is found
       data_context <- paste0("Targeting Locality: ", target_locality_name, " (FIPS: ", target_fips, ")\n\n")
@@ -423,9 +416,15 @@ server <- function(input, output, session) {
     # System prompt directing the LLM how to handle current context vs historical turns
     final_prompt <- sprintf(
       "You are a helpful data assistant. Format your response in clear and precise sentence form. Do not add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source.
-      \n\n=== RECONCILING CONTEXT AND HISTORY ===\n1. If the 'New Context' block below contains data, use it as your primary source of truth.\n2. If the 'New Context' block is empty, inspect your active conversation history. 
-      If the user's question is a follow-up (such as asking about a different year, different county, or related metric for the topic under discussion), use the data previously loaded in your history to answer.\n3. 
-      If 'New Context' is empty and the question is a completely new topic or dataset, state clearly and politely that you do not have the information in active memory and ask them to specify.\n\nNew Context: %s\n\nUser Question: %s",
+
+=== RECONCILING CONTEXT AND HISTORY ===
+1. If the 'New Context' block below contains data, use it as your primary source of truth.
+2. If the 'New Context' block is empty, inspect your active conversation history. If the user's question is a follow-up (such as asking about a different year, different county, or related metric for the topic under discussion), use the data previously loaded in your history to answer.
+3. If 'New Context' is empty and the question is a completely new topic or dataset, state clearly and politely that you do not have the information in active memory and ask them to specify.
+
+New Context: %s
+
+User Question: %s",
       data_context,
       resolved_prompt
     )
@@ -435,19 +434,9 @@ server <- function(input, output, session) {
       chat_obj$chat(final_prompt, echo = "none")
     })
     
-    # updated_history <- paste0(
-    #   chat_log(), "<br>",
-    #   "<strong>User:</strong> ", input$user_prompt, "<br>",
-    #   "<strong>AI:</strong> <i>", new_response, "</i><br>"
-    # )
-    
     # Build a Right-Aligned User Bubble
     user_bubble <- paste0(
-      # 'justify-content-end' acts like a right-side magnet, pulling the text box to the right side of the screen
       "<div class='d-flex justify-content-end mb-3'>",
-      
-      # 'bg-primary' sets the background to your theme color (Yeti Blue); 'text-white' forces white lettering
-      # 'shadow-sm' adds a tiny drop shadow; 'max-width: 75%' forces long sentences to wrap into a clean block
       "  <div class='bg-primary text-white p-2 px-3 rounded-3 shadow-sm' style='max-width: 75%; text-align: left;'>",
       "    ", input$user_prompt,
       "  </div>",
@@ -456,10 +445,7 @@ server <- function(input, output, session) {
     
     # Build a Left-Aligned AI Bubble
     ai_bubble <- paste0(
-      # 'justify-content-start' acts like a left-side magnet, pinning the text box to the left side of the screen
       "<div class='d-flex justify-content-start mb-3'>",
-      
-      # 'bg-light' colors the box light gray; 'text-dark' keeps text black; 'border' draws a clean separator line
       "  <div class='bg-light text-dark p-2 px-3 rounded-3 border shadow-sm' style='max-width: 75%; text-align: left;'>",
       "    ", new_response,
       "  </div>",
@@ -470,22 +456,26 @@ server <- function(input, output, session) {
     updated_history <- paste0(chat_log(), user_bubble, ai_bubble)
     
     chat_log(updated_history)
-    # reset cache and input box
+    # Reset disambiguation flags
     cache$pending_disambiguation <- FALSE
     cache$cached_intent_phrase   <- NULL
     
-    ######## COMMENTED OUT FOR STEP 4 - R SIDE CACHE IS NO LONGER NEEDED 
-    # if (length(matched_metadata_paths) > 0) {
-    #   cache$last_metadata_path <- matched_metadata_paths
-    # }
+    # Save the current state so our LLM Gatekeeper can reuse them on the next turn
+    if (length(matched_metadata_paths) > 0) {
+      cache$last_metadata_path <- matched_metadata_paths
+    }
+    if (!is.null(target_fips)) {
+      cache$last_fips <- target_fips
+      cache$last_locality_name <- target_locality_name
+    }
+    
     updateTextInput(session, "user_prompt", value = "")
-  })
+  })  
   
   # render the new chat along with all the previous dialogues coming before it
   output$ai_response <- renderUI({
     HTML(markdown::markdownToHTML(text = chat_log(), fragment.only = TRUE))
   })
-  
   
   # =========================================================================
   # CHAT LOG EXPORT HANDLER (USER CAN SAVE FILE TO LAPTOP)
@@ -535,7 +525,8 @@ server <- function(input, output, session) {
     showNotification("Chat session successfully restored!", type = "message")
   })
   
-}
+} # <--- Correctly closes the server function at the very bottom!
+
 
 # Launch App ------------------------------------------------------------------
 
