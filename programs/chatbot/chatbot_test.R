@@ -82,16 +82,6 @@ ui <- page_fixed(
   # bslib theme
   theme = bs_theme(version = 5, bootswatch = "yeti"),
   
-  # JavaScript to trigger the submit button when the user presses "Enter"
-  tags$script(HTML("
-    $(document).on('keypress', '#user_prompt', function(e) {
-      if (e.which == 13) { // 13 is the keycode for Enter
-        e.preventDefault();
-        $('#submit_button').click();
-      }
-    });
-  ")),
-  
   div (
     # center the chatbot box
     class = "d-flex flex-column justify-content-center min-vh-100",
