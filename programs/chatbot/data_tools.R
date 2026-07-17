@@ -1,5 +1,6 @@
 ## ALL THE TOOLS DEFINED BELOW
 
+# SUMMARIZE FUNCTION
 summarize_data_tool <- tool(
   function(dataset_id, metric_column, operation, fips = NULL) {
     
