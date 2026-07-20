@@ -54,11 +54,11 @@ SCHOOL_BRIDGES      <- read.csv(here("data/outcome/Urban-Institute/institution-l
 # Force names to lowercase to make string matching bulletproof
 VIRGINIA_LOCALITIES$alias <- tolower(VIRGINIA_LOCALITIES$alias)
 
+# 2. Spin up the background serverless DuckDB engine
+DB_CON <<- dbConnect(duckdb())
+
 # EXTRACTION: We load our data tools script here
 source(here("programs/chatbot/data_tools.R"))
-
-# 2. Spin up the background serverless DuckDB engine
-DB_CON <- dbConnect(duckdb())
 
 # 3. Clean up the database connection gracefully if the Shiny app stops
 onStop(function() {
@@ -412,6 +412,11 @@ server <- function(input, output, session) {
     # System prompt directing the LLM how to handle current context vs historical turns
     final_prompt <- sprintf(
       "You are a helpful data assistant. Format your response in clear and precise sentence form. Do not add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source.
+
+=== Performing Calculations ===
+1. Use data tools registered to perform calculations.
+2. Do not calculate anything by yourself without data tools.
+3. Only calculate for sum, count, average, max, and min
 
 === RECONCILING CONTEXT AND HISTORY ===
 1. If the 'New Context' block below contains data, use it as your primary source of truth.

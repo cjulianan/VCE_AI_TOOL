@@ -2,7 +2,11 @@
 
 # SUMMARIZE FUNCTION
 summarize_func <- function(dataset_id, metric_column, operation, fips = NULL) {
-  
+  message("Used Data Tool!")
+  conn <- get0("DB_CON", envir = .GlobalEnv)
+  if (is.null(conn) || !DBI::dbIsValid(conn)) {
+    return("Error: Database connection 'DB_CON' is missing or inactive in global memory.")
+  }
   # 1. Strict structural allowlist (No brittle regex checks)
   valid_ops <- c("COUNT", "SUM", "AVG", "MIN", "MAX")
   operation <- toupper(trimws(operation))
@@ -13,7 +17,7 @@ summarize_func <- function(dataset_id, metric_column, operation, fips = NULL) {
   dataset_map <- list(
     "nass_crops"     = "data/outcome/census_nass_crops.csv",
     "vdh_diseases"   = "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
-    "special_ed"     = "data/outcome/2022-2023_Special_Education_Child_Count.csv",
+    "special_ed"     = "data/outcome/Virginia-Department-of-Education/2022-2023_Special_Education_Child_Count.csv",
     "depression"     = "data/outcome/Mental-Health-America/Depression_County_Map_Full_Data.csv"
   )
   
