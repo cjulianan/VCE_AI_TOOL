@@ -1,0 +1,351 @@
+{
+    "file_name": "2025 County Health Rankings Virginia Data - v4.csv",
+    "desc": "This dataset contains county-level health rankings and related data for the state of Virginia, covering various health indicators and social determinants of health. The data is sourced from the County Health Rankings & Roadmaps program and provides insights into the health status and factors affecting health outcomes in Virginia counties.",
+    "organization": "County Health Rankings & Roadmaps",
+    "file_path": "data/outcome/County-Health-Rankings-&-Roadmaps/2025 County Health Rankings Virginia Data - v4.csv",
+    "raw_file_path": "data/sources/County-Health-Rankings-&-Roadmaps/2025 County Health Rankings Virginia Data - v4.xlsx",
+    "url_source": "https://www.countyhealthrankings.org/health-data/virginia/data-and-resources",
+    "geographic_level": "county",
+    "time_coverage": "2022-2024",
+    "unit_of_analysis": "",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        ""
+    ],
+    "spatial_alignment": {
+        "locality_fips": "FIPS",
+        "locality_name": "County"
+    },
+    "columns": [
+        {
+            "name": "Average Number of Physically Unhealthy Days",
+            "data_type": "float",
+            "keywords": [
+                "poor health",
+                "poor physical",
+                "bad health",
+                "bad health days"
+            ],
+            "desc": "Average number of reported physically unhealthy days per month",
+            "missing": null
+        },
+        {
+            "name": "% Low Birth Weight",
+            "data_type": "float",
+            "keywords": [
+                "low birth weight",
+                "low birth",
+                "birth weight"
+            ],
+            "desc": "Percentage of live births with low birth weight",
+            "missing": null
+        },
+        {
+            "name": "Average Number of Mentally Unhealthy Days",
+            "data_type": "float",
+            "keywords": [
+                "poor mental health",
+                "poor mental",
+                "bad mental health",
+                "bad mental health days"
+            ],
+            "desc": "Average number of reported mentally unhealthy days per month",
+            "missing": null
+        },
+        {
+            "name": "% Fair or Poor Health",
+            "data_type": "float",
+            "keywords": [
+                "fair health",
+                "poor health",
+                "bad health"
+            ],
+            "desc": "Percentage of adults reporting fair or poor health",
+            "missing": null
+        },
+        {
+            "name": "% Vaccinated",
+            "data_type": "float",
+            "keywords": [
+                "vaccinated",
+                "vaccine",
+                "immunized"
+            ],
+            "desc": "Percentage of adults who have received recommended vaccines",
+            "missing": null
+        },
+        {
+            "name": "% Smokers",
+            "data_type": "float",
+            "keywords": [
+                "smokers",
+                "smoking",
+                "tobacco"
+            ],
+            "desc": "Percentage of adults who are current smokers",
+            "missing": null
+        },
+        {
+            "name": "% With Access to Exercise Opportunities",
+            "data_type": "float",
+            "keywords": [
+                "exercise",
+                "physical activity",
+                "fitness",
+                "access to exercise"
+            ],
+            "desc": "Percentage of adults with access to exercise opportunities",
+            "missing": null
+        },
+        {
+            "name": "Food Environment Index",
+            "data_type": "float",
+            "keywords": [
+                "food environment",
+                "food access",
+                "nutrition",
+                "food quality",
+                "healthy food"
+            ],
+            "desc": "Index measuring the availability and quality of healthy food options in the county, on a scale of 1-10, with higher scores indicating better food environments.",
+            "missing": null
+        },
+        {
+            "name": "# Primary Care Physicians",
+            "data_type": "int",
+            "keywords": [
+                "primary care physicians",
+                "doctors",
+                "healthcare providers"
+            ],
+            "desc": "Number of primary care physician in each county",
+            "missing": null
+        },
+        {
+            "name": "Primary Care Physicians Rate",
+            "data_type": "float",
+            "keywords": [
+                "primary care physicians rate",
+                "doctors rate",
+                "healthcare providers rate",
+                "rate of primary care physicians"
+            ],   
+            "desc": "Rate of primary care physicians per 100,000 people",
+            "missing": null
+        },
+        {
+            "name": "# Mental Health Providers",
+            "data_type": "int",
+            "keywords": [
+                "mental health providers",
+                "therapists",
+                "counselors",
+                "psychologists"
+            ],
+            "desc": "Number of mental health providers in each county",
+            "missing": null
+        },
+        {
+            "name": "Mental Health Provider Rate",
+            "data_type": "float",
+            "keywords": [
+                "mental health provider rate",
+                "therapists rate",
+                "counselors rate",
+                "psychologists rate",
+                "rate of mental health providers"
+            ],
+            "desc": "Rate of mental health providers per 100,000 people in each county",
+            "missing": null
+        },
+        {
+            "name": "# Dentists",
+            "data_type": "int",
+            "keywords": [
+                "dentists",
+                "dental providers",
+                "oral health providers"
+            ],
+            "desc": "Number of dentists in each county",
+            "missing": null
+        },
+        {
+            "name": "Dentist Rate",
+            "data_type": "float",
+            "keywords": [
+                "dentist rate",
+                "dental providers rate",
+                "oral health providers rate",
+                "rate of dentists"
+            ],
+            "desc": "Rate of dentists per 100,000 people in each county",
+            "missing": null
+        },
+        {
+            "name": "Preventable Hospitalization Rate",
+            "data_type": "float",
+            "keywords": [
+                "preventable hospitalization rate",
+                "hospitalization rate",
+                "preventable hospitalizations"
+            ],
+            "desc": "Discharges for Ambulatory Care Sensitive Conditions per 100,000 Medicare Enrollees",
+            "missing": null
+        },
+        {
+            "name": "% with Annual Mammogram",
+            "data_type": "float",
+            "keywords": [
+                "annual mammogram",
+                "mammogram",
+                "breast cancer screening",
+                "breast cancer detection"
+            ],
+            "desc": "Percentage of female Medicare enrollees having an annual mammogram (age 65-74)",
+            "missing": null
+        },
+        {
+            "name": "% Uninsured",
+            "data_type": "float",
+            "keywords": [
+                "uninsured",
+                "health insurance",
+                "coverage",
+                "no insurance"
+            ],
+            "desc": "Percentage of the county under age 65 that is uninsured",
+            "missing": null
+        },
+        {
+            "name": "% Severe Housing Problems",
+            "data_type": "float",
+            "keywords": [
+                "severe housing problems",
+                "housing issues",
+                "housing problems",
+                "housing challenges"
+            ],
+            "desc": "Percentage of households with at least 1 of 4 housing problems: overcrowding, high housing costs, or lack of kitchen or plumbing facilities",
+            "missing": null
+        },
+        {
+            "name": "% Long Commute - Drives Alone",
+            "data_type": "float",
+            "keywords": [
+                "long commute",
+                "drives alone",
+                "commuting alone",
+                "single driver commute"
+            ],
+            "desc": "Among workers who commute in their car alone, the percentage that commute more than 30 minutes",
+            "missing": null
+        },
+        {
+            "name": "Average Daily PM2.5",
+            "data_type": "float",
+            "keywords": [
+                "pm2.5",
+                "air pollution",
+                "particulate matter",
+                "air quality"
+            ],
+            "desc": "Average daily amount of fine particulate matter in micrograms per cubic meter (PM2.5) in the air. An indication of air quality.",
+            "missing": null
+        },
+        {
+            "name": "Presence of Water Violation",
+            "data_type": "string",
+            "keywords": [
+                "water violation",
+                "water quality",
+                "water contamination",
+                "water safety"
+            ],
+            "desc": "Indicates with a Yes/No whether there has been a water violation in the county",
+            "missing": null
+        },
+        {
+            "name": "% Households with Broadband Access",
+            "data_type": "float",
+            "keywords": [
+                "broadband access",
+                "internet access",
+                "high speed internet",
+                "digital connectivity"
+            ],
+            "desc": "Percentage of households in the county that have broadband access",
+            "missing": null
+        },
+        {
+            "name": "% Completed High School",
+            "data_type": "float",
+            "keywords": [
+                "completed high school",
+                "high school graduation",
+                "high school graduates",
+                "education level",
+                "high school completion"
+            ],
+            "desc": "Percentage of adults age 25 and over with a high school diploma or equivalent",
+            "missing": null
+        },
+        {
+            "name": "% Children in Poverty",
+            "data_type": "float",
+            "keywords": [
+                "children in poverty",
+                "child poverty",
+                "kids in poverty",
+                "youth poverty",
+                "poor kids",
+                "poor children"
+            ],
+            "desc": "Percentage of children under age 18 living in poverty",
+            "missing": null
+        },
+        {
+            "name": "# Injury Deaths",
+            "data_type": "int",
+            "keywords": [
+                "injury deaths",
+                "accidental deaths",
+                "fatal injuries",
+                "trauma deaths"
+            ],
+            "desc": "Number of injury-related deaths in the county",
+            "missing": null
+        },
+        {
+            "name": "Injury Death Rate",
+            "data_type": "float",
+            "keywords": [
+                "injury death rate",
+                "accidental death rate",
+                "fatal injury rate",
+                "trauma death rate",
+                "rate of injury deaths"
+            ],
+            "desc": "Rate of injury-related deaths per 100,000 population in the county",
+            "missing": null
+        },
+        {
+            "name": "% Household Income Required for Child Care Expenses",
+            "data_type": "float",
+            "keywords": [
+                "child care expenses",
+                "child care costs",
+                "child care affordability",
+                "child care income percentage"
+            ],
+            "desc": "Percentage of median household income required for child care expenses for two children",
+            "missing": null
+        }
+    ]
+}
+
+

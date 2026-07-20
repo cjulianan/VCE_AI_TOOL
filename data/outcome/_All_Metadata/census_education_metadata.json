@@ -1,0 +1,2434 @@
+{
+    "file_name": "2020-2024_acs_master_county.csv",
+    "desc": "American Community Survey(ACS) data tracking education.",
+    "organization": "American Community Survey",
+    "file_path": "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "raw_file_path": "data/sources/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "url_source": "https://www.census.gov/data/developers/data-sets.html",
+    "geographic_level": "county",
+    "time_coverage": "2020-2024",
+    "unit_of_analysis": null,
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_00_acs.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": null,
+        "locality_name": null
+    },
+    "columns": [
+        {
+            "variable_code": "B14005_001",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14005_002",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B14005_003",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14005_005",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Enrolled in school:!!Unemployed"
+        },
+        {
+            "variable_code": "B14005_004",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Enrolled in school:!!Employed"
+        },
+        {
+            "variable_code": "B14005_006",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Enrolled in school:!!Not in labor force"
+        },
+        {
+            "variable_code": "B14005_007",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:"
+        },
+        {
+            "variable_code": "B14005_008",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!High school graduate (includes equivalency):"
+        },
+        {
+            "variable_code": "B14005_009",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!High school graduate (includes equivalency):!!Employed"
+        },
+        {
+            "variable_code": "B14005_010",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!High school graduate (includes equivalency):!!Unemployed"
+        },
+        {
+            "variable_code": "B14005_011",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!High school graduate (includes equivalency):!!Not in labor force"
+        },
+        {
+            "variable_code": "B14005_012",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!Not high school graduate:"
+        },
+        {
+            "variable_code": "B14005_013",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!Not high school graduate:!!Employed"
+        },
+        {
+            "variable_code": "B14005_014",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!Not high school graduate:!!Unemployed"
+        },
+        {
+            "variable_code": "B14005_016",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B14005_015",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Male:!!Not enrolled in school:!!Not high school graduate:!!Not in labor force"
+        },
+        {
+            "variable_code": "B14005_017",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14005_018",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Enrolled in school:!!Employed"
+        },
+        {
+            "variable_code": "B14005_019",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Enrolled in school:!!Unemployed"
+        },
+        {
+            "variable_code": "B14005_020",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Enrolled in school:!!Not in labor force"
+        },
+        {
+            "variable_code": "B14005_021",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:"
+        },
+        {
+            "variable_code": "B14005_022",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!High school graduate (includes equivalency):"
+        },
+        {
+            "variable_code": "B14005_023",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!High school graduate (includes equivalency):!!Employed"
+        },
+        {
+            "variable_code": "B14005_024",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!High school graduate (includes equivalency):!!Unemployed"
+        },
+        {
+            "variable_code": "B14005_025",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!High school graduate (includes equivalency):!!Not in labor force"
+        },
+        {
+            "variable_code": "B14005_027",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!Not high school graduate:!!Employed"
+        },
+        {
+            "variable_code": "B14005_026",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!Not high school graduate:"
+        },
+        {
+            "variable_code": "B14005_028",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!Not high school graduate:!!Unemployed"
+        },
+        {
+            "variable_code": "B14005_029",
+            "human_label": "Sex by School Enrollment by Educational Attainment by Employment Status for the Population 16 to 19 Years -> Estimate!!Total:!!Female:!!Not enrolled in school:!!Not high school graduate:!!Not in labor force"
+        },
+        {
+            "variable_code": "B06009_020",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Native; born outside the United States:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B06009_022",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Native; born outside the United States:!!Some college or associate's degree"
+        },
+        {
+            "variable_code": "B06009_021",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Native; born outside the United States:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B06009_012",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in state of residence:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B06009_011",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in state of residence:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B06009_014",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in other state in the United States:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B06009_015",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in other state in the United States:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B06009_013",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in other state in the United States:"
+        },
+        {
+            "variable_code": "B06009_017",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in other state in the United States:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B06009_016",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in other state in the United States:!!Some college or associate's degree"
+        },
+        {
+            "variable_code": "B06009_019",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Native; born outside the United States:"
+        },
+        {
+            "variable_code": "B06009_018",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in other state in the United States:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B06009_030",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Foreign born:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B06009_024",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Native; born outside the United States:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B06009_023",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Native; born outside the United States:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B06009_027",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Foreign born:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B06009_025",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Foreign born:"
+        },
+        {
+            "variable_code": "B06009_026",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Foreign born:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B06009_029",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Foreign born:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B06009_028",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Foreign born:!!Some college or associate's degree"
+        },
+        {
+            "variable_code": "B06009_010",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in state of residence:!!Some college or associate's degree"
+        },
+        {
+            "variable_code": "B06009_009",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in state of residence:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B06009_008",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in state of residence:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B06009_002",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B06009_001",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B06009_005",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B06009_003",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B06009_004",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Some college or associate's degree"
+        },
+        {
+            "variable_code": "B06009_007",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Born in state of residence:"
+        },
+        {
+            "variable_code": "B06009_006",
+            "human_label": "Place of Birth by Educational Attainment in the United States -> Estimate!!Total:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_014",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_015",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_016",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_017",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_010",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_011",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:"
+        },
+        {
+            "variable_code": "B15001_012",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_013",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_018",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!25 to 34 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_019",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B15001_002",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B15001_003",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:"
+        },
+        {
+            "variable_code": "B15001_004",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_005",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_001",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B15001_006",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_007",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_008",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_009",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!18 to 24 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_078",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_079",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_074",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_075",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_076",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "B15001_077",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_082",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_083",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_080",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_081",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!65 years and over:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_066",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_067",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_068",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:"
+        },
+        {
+            "variable_code": "B15001_069",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_062",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_063",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_064",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_065",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_070",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_071",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_072",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_073",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!45 to 64 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_038",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_039",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_034",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_035",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "B15001_036",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_037",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_030",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_031",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_032",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_033",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_026",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_027",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:"
+        },
+        {
+            "variable_code": "B15001_028",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_029",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!45 to 64 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_022",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_023",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_024",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_025",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_020",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_021",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!35 to 44 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_058",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_059",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_054",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_055",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_056",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_057",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_050",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B15001_051",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_052",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:"
+        },
+        {
+            "variable_code": "B15001_053",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!25 to 34 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_060",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B15001_061",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!35 to 44 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_046",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!9th to 12th grade, no diploma"
+        },
+        {
+            "variable_code": "B15001_047",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B15001_048",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!Some college, no degree"
+        },
+        {
+            "variable_code": "B15001_049",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_042",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!Graduate or professional degree"
+        },
+        {
+            "variable_code": "B15001_043",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B15001_044",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:"
+        },
+        {
+            "variable_code": "B15001_045",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Female:!!18 to 24 years:!!Less than 9th grade"
+        },
+        {
+            "variable_code": "B15001_040",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!Associate's degree"
+        },
+        {
+            "variable_code": "B15001_041",
+            "human_label": "Sex by Age by Educational Attainment for the Population 18 Years and Over -> Estimate!!Total:!!Male:!!65 years and over:!!Bachelor's degree"
+        },
+        {
+            "variable_code": "B14007I_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007I_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007I_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007I_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007I_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007I_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007I_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007I_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007I_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007I_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007I_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007I_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007I_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007I_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007I_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007I_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007I_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007I_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007I_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007D_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007D_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007D_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007D_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007D_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007D_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007D_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007D_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007D_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007D_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007D_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007D_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007D_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007D_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007D_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007D_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007D_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007D_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007D_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007E_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007E_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007E_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007E_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007E_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007E_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007E_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007E_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007E_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007E_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007E_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007E_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007E_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007E_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007E_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007E_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007E_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007E_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007E_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007A_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007A_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007A_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007A_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007A_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007A_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007A_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007A_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007A_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007A_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007A_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007A_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007A_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007A_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007A_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007A_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007A_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007A_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007A_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007F_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007F_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007F_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007F_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007F_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007F_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007F_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007F_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007F_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007F_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007F_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007F_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007F_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007F_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007F_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007F_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007F_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007F_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007F_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007B_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007B_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007B_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007B_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007B_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007B_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007B_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007B_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007B_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007B_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007B_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007B_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007B_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007B_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007B_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007B_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007B_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007B_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007B_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007G_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007G_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007G_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007G_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007G_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007G_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007G_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007G_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007G_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007G_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007G_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007G_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007G_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007G_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007G_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007G_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007G_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007G_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007G_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007C_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007C_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007C_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007C_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007C_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007C_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007H_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007H_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007H_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007H_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007H_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007H_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007H_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007H_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007H_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007H_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007H_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007H_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007H_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007H_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007H_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007H_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007H_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007H_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007H_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007C_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007C_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007C_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007C_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007C_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007C_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007C_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007C_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007C_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007C_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007C_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007C_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007C_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14003_009",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!20 to 24 years"
+        },
+        {
+            "variable_code": "B14003_005",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!5 to 9 years"
+        },
+        {
+            "variable_code": "B14003_004",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!3 and 4 years"
+        },
+        {
+            "variable_code": "B14003_008",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!18 and 19 years"
+        },
+        {
+            "variable_code": "B14003_006",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!10 to 14 years"
+        },
+        {
+            "variable_code": "B14003_007",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!15 to 17 years"
+        },
+        {
+            "variable_code": "B14003_013",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!3 and 4 years"
+        },
+        {
+            "variable_code": "B14003_012",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:"
+        },
+        {
+            "variable_code": "B14003_015",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!10 to 14 years"
+        },
+        {
+            "variable_code": "B14003_014",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!5 to 9 years"
+        },
+        {
+            "variable_code": "B14003_011",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!35 years and over"
+        },
+        {
+            "variable_code": "B14003_010",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:!!25 to 34 years"
+        },
+        {
+            "variable_code": "B14003_001",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14003_003",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in public school:"
+        },
+        {
+            "variable_code": "B14003_002",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B14003_028",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!25 to 34 years"
+        },
+        {
+            "variable_code": "B14003_029",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!35 years and over"
+        },
+        {
+            "variable_code": "B14003_031",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:"
+        },
+        {
+            "variable_code": "B14003_030",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B14003_037",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!20 to 24 years"
+        },
+        {
+            "variable_code": "B14003_036",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!18 and 19 years"
+        },
+        {
+            "variable_code": "B14003_039",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!35 years and over"
+        },
+        {
+            "variable_code": "B14003_038",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!25 to 34 years"
+        },
+        {
+            "variable_code": "B14003_033",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!5 to 9 years"
+        },
+        {
+            "variable_code": "B14003_032",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!3 and 4 years"
+        },
+        {
+            "variable_code": "B14003_035",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!15 to 17 years"
+        },
+        {
+            "variable_code": "B14003_034",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in public school:!!10 to 14 years"
+        },
+        {
+            "variable_code": "B14003_017",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!18 and 19 years"
+        },
+        {
+            "variable_code": "B14003_018",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!20 to 24 years"
+        },
+        {
+            "variable_code": "B14003_016",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!15 to 17 years"
+        },
+        {
+            "variable_code": "B14003_019",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!25 to 34 years"
+        },
+        {
+            "variable_code": "B14003_025",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!15 to 17 years"
+        },
+        {
+            "variable_code": "B14003_024",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!10 to 14 years"
+        },
+        {
+            "variable_code": "B14003_027",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!20 to 24 years"
+        },
+        {
+            "variable_code": "B14003_026",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!18 and 19 years"
+        },
+        {
+            "variable_code": "B14003_021",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:"
+        },
+        {
+            "variable_code": "B14003_020",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Enrolled in private school:!!35 years and over"
+        },
+        {
+            "variable_code": "B14003_023",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!5 to 9 years"
+        },
+        {
+            "variable_code": "B14003_022",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Male:!!Not enrolled in school:!!3 and 4 years"
+        },
+        {
+            "variable_code": "B14003_053",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!15 to 17 years"
+        },
+        {
+            "variable_code": "B14003_052",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!10 to 14 years"
+        },
+        {
+            "variable_code": "B14003_055",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!20 to 24 years"
+        },
+        {
+            "variable_code": "B14003_054",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!18 and 19 years"
+        },
+        {
+            "variable_code": "B14003_051",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!5 to 9 years"
+        },
+        {
+            "variable_code": "B14003_050",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!3 and 4 years"
+        },
+        {
+            "variable_code": "B14003_057",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!35 years and over"
+        },
+        {
+            "variable_code": "B14003_056",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:!!25 to 34 years"
+        },
+        {
+            "variable_code": "B14003_041",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!3 and 4 years"
+        },
+        {
+            "variable_code": "B14003_040",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:"
+        },
+        {
+            "variable_code": "B14003_043",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!10 to 14 years"
+        },
+        {
+            "variable_code": "B14003_042",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!5 to 9 years"
+        },
+        {
+            "variable_code": "B14003_049",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Not enrolled in school:"
+        },
+        {
+            "variable_code": "B14003_048",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!35 years and over"
+        },
+        {
+            "variable_code": "B14003_045",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!18 and 19 years"
+        },
+        {
+            "variable_code": "B14003_044",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!15 to 17 years"
+        },
+        {
+            "variable_code": "B14003_047",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!25 to 34 years"
+        },
+        {
+            "variable_code": "B14003_046",
+            "human_label": "Sex by School Enrollment by Type of School by Age for the Population 3 Years and Over -> Estimate!!Total:!!Female:!!Enrolled in private school:!!20 to 24 years"
+        },
+        {
+            "variable_code": "B14007I_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007I_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007I_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007I_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007I_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007I_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007I_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007I_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007I_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007I_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007I_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007I_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007I_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007I_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007I_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007I_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007I_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007I_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007I_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007D_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007D_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007D_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007D_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007D_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007D_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007D_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007D_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007D_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007D_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007D_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007D_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007D_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007D_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007D_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007D_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007D_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007D_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007D_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Asian Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007E_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007E_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007E_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007E_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007E_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007E_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007E_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007E_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007E_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007E_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007E_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007E_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007E_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007E_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007E_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007E_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007E_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007E_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007E_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007A_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007A_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007A_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007A_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007A_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007A_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007A_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007A_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007A_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007A_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007A_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007A_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007A_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007A_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007A_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007A_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007A_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007A_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007A_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007F_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007F_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007F_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007F_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007F_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007F_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007F_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007F_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007F_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007F_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007F_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007F_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007F_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007F_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007F_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007F_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007F_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007F_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007F_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Some Other Race Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007B_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007B_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007B_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007B_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007B_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007B_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007B_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007B_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007B_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007B_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007B_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007B_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007B_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007B_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007B_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007B_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007B_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007B_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007B_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Black or African American Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007G_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007G_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007G_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007G_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007G_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007G_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007G_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007G_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007G_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007G_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007G_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007G_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007G_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007G_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007G_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007G_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007G_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007G_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007G_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (Two or More Races) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007C_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007C_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007C_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007C_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007C_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007C_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007H_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007H_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007H_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007H_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007H_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007H_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007H_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007H_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007H_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007H_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007H_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007H_006",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 2"
+        },
+        {
+            "variable_code": "B14007H_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B14007H_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007H_001",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B14007H_003",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in nursery school, preschool"
+        },
+        {
+            "variable_code": "B14007H_002",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B14007H_005",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 1"
+        },
+        {
+            "variable_code": "B14007H_004",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in kindergarten"
+        },
+        {
+            "variable_code": "B14007C_019",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Not enrolled in school"
+        },
+        {
+            "variable_code": "B14007C_016",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 12"
+        },
+        {
+            "variable_code": "B14007C_014",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 10"
+        },
+        {
+            "variable_code": "B14007C_015",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 11"
+        },
+        {
+            "variable_code": "B14007C_018",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Graduate or professional school"
+        },
+        {
+            "variable_code": "B14007C_017",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in college, undergraduate years"
+        },
+        {
+            "variable_code": "B14007C_011",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 7"
+        },
+        {
+            "variable_code": "B14007C_010",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 6"
+        },
+        {
+            "variable_code": "B14007C_013",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 9"
+        },
+        {
+            "variable_code": "B14007C_012",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 8"
+        },
+        {
+            "variable_code": "B14007C_008",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 4"
+        },
+        {
+            "variable_code": "B14007C_007",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 3"
+        },
+        {
+            "variable_code": "B14007C_009",
+            "human_label": "School Enrollment by Detailed Level of School for the Population 3 Years and Over (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Enrolled in school:!!Enrolled in grade 5"
+        },
+        {
+            "variable_code": "B17003_007",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Male:!!Bachelor's degree or higher"
+        },
+        {
+            "variable_code": "B17003_006",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Male:!!Some college, associate's degree"
+        },
+        {
+            "variable_code": "B17003_005",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Male:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B17003_004",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Male:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B17003_009",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Female:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B17003_008",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Female:"
+        },
+        {
+            "variable_code": "B17003_003",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Male:"
+        },
+        {
+            "variable_code": "B17003_002",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:"
+        },
+        {
+            "variable_code": "B17003_001",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B17003_019",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Female:"
+        },
+        {
+            "variable_code": "B17003_018",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Male:!!Bachelor's degree or higher"
+        },
+        {
+            "variable_code": "B17003_017",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Male:!!Some college, associate's degree"
+        },
+        {
+            "variable_code": "B17003_016",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Male:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B17003_011",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Female:!!Some college, associate's degree"
+        },
+        {
+            "variable_code": "B17003_010",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Female:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B17003_015",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Male:!!Less than high school graduate"
+        },
+        {
+            "variable_code": "B17003_014",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Male:"
+        },
+        {
+            "variable_code": "B17003_013",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:"
+        },
+        {
+            "variable_code": "B17003_012",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months below poverty level:!!Female:!!Bachelor's degree or higher"
+        },
+        {
+            "variable_code": "B17003_023",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Female:!!Bachelor's degree or higher"
+        },
+        {
+            "variable_code": "B17003_022",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Female:!!Some college, associate's degree"
+        },
+        {
+            "variable_code": "B17003_021",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Female:!!High school graduate (includes equivalency)"
+        },
+        {
+            "variable_code": "B17003_020",
+            "human_label": "Poverty Status in the Past 12 Months of Individuals by Sex by Educational Attainment -> Estimate!!Total:!!Income in the past 12 months at or above poverty level:!!Female:!!Less than high school graduate"
+        }
+    ]
+}

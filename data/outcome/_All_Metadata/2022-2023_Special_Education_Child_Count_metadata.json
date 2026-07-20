@@ -1,0 +1,93 @@
+{
+    "file_name": "2022-2023_Special_Education_Child_Count.csv",
+    "desc": "Count of special education needs students by and school",
+    "organization": "Virginia Department of Education",
+    "file_path": "data/outcome/Virginia-Department-of-Education/2022-2023_Special_Education_Child_Count.csv",
+    "raw_file_path": "data/sources/Virginia-Department-of-Education/2022-2023_Special_Education_Child_Count.csv",
+    "url_source": "https://data.virginia.gov/dataset/special-education-child-count-2022-2023",
+    "geographic_level": "county",
+    "time_coverage": "2022-2023",
+    "unit_of_analysis": "Total count of special education needs students by school",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_01_special_education.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": "fips_code",
+        "locality_name": "Division Name"
+    },
+    "columns": [
+        {
+            "name": "School Year",
+            "data_type": "int",
+            "keywords": [
+                "school year",
+                "academic calander",
+                "year",
+                "time"
+            ],
+            "desc": "The academic school year the data was reported in.",
+            "missing": null
+        },
+        {
+            "name": "Division Name",
+            "data_type": "string",
+            "keywords": [
+                "division name",
+                "county",
+                "county name",
+                "location",
+                "place"
+            ],
+            "desc": "The school district/county in Virginia where the data was reported in",
+            "missing": null
+        },
+        {
+            "name": "fips_code",
+            "data_type": "int",
+            "keywords": [
+                "fips code",
+                "county code"
+            ],
+            "desc": "Federal Information Processing Series unique numerical code identifier for the county.",
+            "missing": null
+        },
+        {
+            "name": "School Number",
+            "data_type": "int",
+            "keywords": [
+                "school number",
+                "school identifier"
+            ],
+            "desc": "The specific school number identifier for particular school in dataset.",
+            "missing": null
+        },
+        {
+            "name": "School Name",
+            "data_type": "string",
+            "keywords": [
+                "school name",
+                "school"
+            ],
+            "desc": "The specific school name for particular school in dataset.",
+            "missing": null
+        },
+        {
+            "name": "Total Count",
+            "data_type": "int",
+            "keywords": [
+                "total count",
+                "special education count",
+                "count",
+                "number"
+            ],
+            "desc": "Total number of students needing special education in particular school.",
+            "missing": "<"
+        }
+    ]
+}

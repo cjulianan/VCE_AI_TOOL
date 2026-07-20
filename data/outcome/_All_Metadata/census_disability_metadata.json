@@ -1,0 +1,1358 @@
+{
+    "file_name": "2020-2024_acs_master_county.csv",
+    "desc": "American Community Survey(ACS) data tracking disability.",
+    "organization": "American Community Survey",
+    "file_path": "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "raw_file_path": "data/sources/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "url_source": "https://www.census.gov/data/developers/data-sets.html",
+    "geographic_level": "county",
+    "time_coverage": "2020-2024",
+    "unit_of_analysis": null,
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_00_acs.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": null,
+        "locality_name": null
+    },
+    "columns": [
+        {
+            "variable_code": "B18101H_010",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101H_007",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101H_006",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101H_009",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101H_008",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101H_001",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101H_003",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101H_002",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101H_005",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101H_004",
+            "human_label": "Age by Disability Status (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_020",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!75 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101_022",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!Under 5 years:"
+        },
+        {
+            "variable_code": "B18101_021",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18101_024",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!Under 5 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_023",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!Under 5 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_026",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!5 to 17 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_025",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18101_028",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18101_027",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!5 to 17 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_029",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!18 to 34 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_019",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!75 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_030",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!18 to 34 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_032",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!35 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_031",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18101_034",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18101_033",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!35 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_036",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!65 to 74 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_035",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!65 to 74 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_038",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!75 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_037",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18101_039",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Female:!!75 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101_002",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18101_001",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101_004",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!Under 5 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_003",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!Under 5 years:"
+        },
+        {
+            "variable_code": "B18101_006",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18101_005",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!Under 5 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101C_010",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101_010",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!18 to 34 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_012",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18101_011",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!18 to 34 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_014",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!35 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_013",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!35 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_016",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!65 to 74 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_015",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18101_018",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18101_017",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!65 to 74 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_008",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!5 to 17 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101_007",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!5 to 17 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101_009",
+            "human_label": "Sex by Age by Disability Status -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18101C_008",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101C_007",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101C_009",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101C_004",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101C_003",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101C_006",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101C_005",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101C_002",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101C_001",
+            "human_label": "Age by Disability Status (American Indian and Alaska Native Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101D_001",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101D_005",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101D_004",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101D_003",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101D_002",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101D_009",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101D_008",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101D_007",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101D_006",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101D_010",
+            "human_label": "Age by Disability Status (Asian Alone) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101I_008",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101I_007",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101I_006",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101I_005",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101I_004",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101I_003",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101I_002",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101I_001",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101I_009",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101I_010",
+            "human_label": "Age by Disability Status (Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101E_001",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101E_002",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101E_003",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101E_004",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101E_005",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101E_006",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101E_007",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101E_008",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101E_009",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101E_010",
+            "human_label": "Age by Disability Status (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101A_009",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101A_003",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101A_004",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101A_001",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101A_002",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101A_007",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101A_008",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101A_005",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101A_006",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101A_010",
+            "human_label": "Age by Disability Status (White Alone) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101F_008",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101F_009",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101F_006",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101F_007",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101F_004",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101F_005",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101F_002",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101F_003",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101F_001",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101F_010",
+            "human_label": "Age by Disability Status (Some Other Race Alone) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101G_010",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101G_002",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101G_001",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101G_006",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101G_005",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101G_004",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101G_003",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101G_009",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101G_008",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101G_007",
+            "human_label": "Age by Disability Status (Two or More Races) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101B_010",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!65 years and over:!!No disability"
+        },
+        {
+            "variable_code": "B18101B_003",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!Under 18 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101B_002",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!Under 18 years:"
+        },
+        {
+            "variable_code": "B18101B_001",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18101B_009",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!65 years and over:!!With a disability"
+        },
+        {
+            "variable_code": "B18101B_008",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B18101B_007",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!18 to 64 years:!!No disability"
+        },
+        {
+            "variable_code": "B18101B_006",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!18 to 64 years:!!With a disability"
+        },
+        {
+            "variable_code": "B18101B_005",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!18 to 64 years:"
+        },
+        {
+            "variable_code": "B18101B_004",
+            "human_label": "Age by Disability Status (Black or African American Alone) -> Estimate!!Total:!!Under 18 years:!!No disability"
+        },
+        {
+            "variable_code": "B18102_039",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_038",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_025",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18102_024",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!Under 5 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_023",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!Under 5 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_022",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!Under 5 years:"
+        },
+        {
+            "variable_code": "B18102_021",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18102_020",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_019",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_018",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18102_017",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_016",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_015",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18102_014",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_037",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18102_036",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_035",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_034",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18102_033",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_032",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_031",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18102_030",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_029",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_028",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18102_027",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_026",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_001",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18102_013",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_012",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18102_011",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_010",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_009",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18102_008",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_007",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_006",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18102_005",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!Under 5 years:!!No hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_004",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!Under 5 years:!!With a hearing difficulty"
+        },
+        {
+            "variable_code": "B18102_003",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:!!Under 5 years:"
+        },
+        {
+            "variable_code": "B18102_002",
+            "human_label": "Sex by Age by Hearing Difficulty -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18103_037",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18103_038",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_039",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_033",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_034",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18103_035",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_036",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_029",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_025",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18103_026",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_027",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_028",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18103_021",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18103_022",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!Under 5 years:"
+        },
+        {
+            "variable_code": "B18103_023",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!Under 5 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_024",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!Under 5 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_030",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_031",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18103_032",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_017",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_018",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18103_019",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_013",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_014",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_015",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18103_016",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_010",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_011",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_012",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18103_020",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_009",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18103_005",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!Under 5 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_006",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18103_007",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18103_008",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!No vision difficulty"
+        },
+        {
+            "variable_code": "B18103_001",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18103_002",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18103_003",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!Under 5 years:"
+        },
+        {
+            "variable_code": "B18103_004",
+            "human_label": "Sex by Age by Vision Difficulty -> Estimate!!Total:!!Male:!!Under 5 years:!!With a vision difficulty"
+        },
+        {
+            "variable_code": "B18104_008",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_009",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18104_002",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18104_003",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18104_001",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18104_006",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18104_007",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_004",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_005",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_030",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_031",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18104_032",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_033",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_026",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_027",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_024",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_025",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18104_028",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18104_029",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_022",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18104_023",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_020",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_021",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_014",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_015",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18104_012",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18104_013",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_018",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18104_019",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18104_016",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_017",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_010",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!With a cognitive difficulty"
+        },
+        {
+            "variable_code": "B18104_011",
+            "human_label": "Sex by Age by Cognitive Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!No cognitive difficulty"
+        },
+        {
+            "variable_code": "B18105_001",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18105_002",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18105_003",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18105_004",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_005",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_006",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18105_007",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_008",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_009",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18105_010",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_011",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_012",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18105_013",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_014",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_015",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18105_016",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_017",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_018",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18105_019",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18105_020",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_021",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_022",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18105_023",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_024",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_025",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18105_026",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_027",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_028",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18105_029",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_031",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18105_032",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!With an ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_033",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18105_030",
+            "human_label": "Sex by Age by Ambulatory Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!No ambulatory difficulty"
+        },
+        {
+            "variable_code": "B18106_003",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18106_002",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18106_005",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_004",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!5 to 17 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_001",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18106_008",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_007",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_006",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18106_009",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18106_015",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18106_014",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_018",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18106_017",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_016",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_011",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_010",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_013",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_012",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18106_019",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:"
+        },
+        {
+            "variable_code": "B18106_027",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_026",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_029",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_028",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18106_023",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_022",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18106_025",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18106_024",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_021",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_020",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!5 to 17 years:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_031",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18106_030",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_033",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!No self-care difficulty"
+        },
+        {
+            "variable_code": "B18106_032",
+            "human_label": "Sex by Age by Self-Care Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!With a self-care difficulty"
+        },
+        {
+            "variable_code": "B18107_004",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_003",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18107_002",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B18107_001",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B18107_009",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18107_008",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_007",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_005",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!18 to 34 years:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_006",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18107_020",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_024",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_023",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_022",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B18107_021",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_027",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_026",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!75 years and over:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_025",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18107_012",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B18107_011",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_010",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!65 to 74 years:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_016",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:"
+        },
+        {
+            "variable_code": "B18107_017",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_015",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B18107_014",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!No independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_013",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Male:!!75 years and over:!!With an independent living difficulty"
+        },
+        {
+            "variable_code": "B18107_019",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B18107_018",
+            "human_label": "Sex by Age by Independent Living Difficulty -> Estimate!!Total:!!Female:!!18 to 34 years:!!No independent living difficulty"
+        }
+    ]
+}

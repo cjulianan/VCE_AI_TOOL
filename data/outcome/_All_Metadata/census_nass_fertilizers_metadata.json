@@ -1,0 +1,337 @@
+{
+    "file_name": "census_nass_fertilizers.csv",
+    "desc": "United States Department of Agriculture (USDA) National Agricultural Statistics Service (NASS) data tracking fertilizer use from 2022 census.",
+    "organization": "National Agricultural Statistics Service",
+    "file_path": "data/outcome/National-Agricultural-Statistics-Service/census_nass_fertilizers.csv",
+    "raw_file_path": "data/sources/National-Agricultural-Statistics-Service/census_nass_fertilizers.csv",
+    "url_source": "https://quickstats.nass.usda.gov/api",
+    "geographic_level": "county",
+    "time_coverage": "2022",
+    "unit_of_analysis": "Agricultural statistic value per category per county.",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_02_nass.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": "fips_code",
+        "locality_name": "county_name"
+    },
+    "columns": [
+        {
+            "name": "source_desc",
+            "data_type": "string",
+            "keywords": [
+                "source desc",
+                "data source",
+                "census",
+                "survey"
+            ],
+            "desc": "Source of data (CENSUS or SURVEY). Census program includes the Census of Ag as well as follow up projects. Survey program includes national, state, and county surveys.",
+            "missing": null
+        },
+        {
+            "name": "sector_desc",
+            "data_type": "string",
+            "keywords": [
+                "sector desc",
+                "broad category"
+            ],
+            "desc": "Five high level, broad categories useful to narrow down choices (Crops, Animals & Products, Economics, Demographics, and Environmental).",
+            "missing": null
+        },
+        {
+            "name": "group_desc",
+            "data_type": "string",
+            "keywords": [
+                "group desc",
+                "group subset",
+                "field crops",
+                "vegetables"
+            ],
+            "desc": "Subsets within sector (e.g., under sector = Crops, the groups are Field Crops, Fruit & Tree Nuts, Horticulture, and Vegetables).",
+            "missing": null
+        },
+        {
+            "name": "commodity_desc",
+            "data_type": "string",
+            "keywords": [
+                "commodity desc",
+                "crop name",
+                "product",
+                "item name"
+            ],
+            "desc": "The primary subject of interest (e.g., CORN, CATTLE, LABOR, TRACTORS, OPERATORS)",
+            "missing": null
+        },
+        {
+            "name": "class_desc",
+            "data_type": "string",
+            "keywords": [
+                "class desc",
+                "variety",
+                "size"
+            ],
+            "desc": "Generally a physical attribute (e.g., variety, size, color, gender) of the commodity.",
+            "missing": null
+        },
+        {
+            "name": "prodn_practice_desc",
+            "data_type": "string",
+            "keywords": [
+                "prodn practice desc",
+                "production method",
+                "practice",
+                "organic",
+                "irrigated"
+            ],
+            "desc": "A method of production or action taken on the commodity (e.g., IRRIGATED, ORGANIC, ON FEED).",
+            "missing": null
+        },
+        {
+            "name": "util_practice_desc",
+            "data_type": "string",
+            "keywords": [
+                "util practice desc",
+                "utilization",
+                "marketing channel",
+                "grain",
+                "fresh market"
+            ],
+            "desc": "Utilizations (e.g., GRAIN, FROZEN, SLAUGHTER) or marketing channels (e.g., FRESH MARKET, PROCESSING, RETAIL).",
+            "missing": null
+        },
+        {
+            "name": "statisticcat_desc",
+            "data_type": "string",
+            "keywords": [
+                "statisticcat desc",
+                "metric",
+                "measurement aspect",
+                "area harvested",
+                "sales"
+            ],
+            "desc": "The aspect of a commodity being measured (e.g., AREA HARVESTED, PRICE RECEIVED, INVENTORY, SALES).",
+            "missing": null
+        },
+        {
+            "name": "unit_desc",
+            "data_type": "string",
+            "keywords": [
+                "unit desc",
+                "measurement unit",
+                "acres",
+                "dollars"
+            ],
+            "desc": "The unit associated with the statistic category (e.g., ACRES, $ / LB, HEAD, $, OPERATIONS).",
+            "missing": null
+        },
+        {
+            "name": "short_desc",
+            "data_type": "string",
+            "keywords": [
+                "short desc",
+                "short description"
+            ],
+            "desc": "A concatenation of six columns: commodity_desc, class_desc, prodn_practice_desc, util_practice_desc, statisticcat_desc, and unit_desc.",
+            "missing": null
+        },
+        {
+            "name": "domain_desc",
+            "data_type": "string",
+            "keywords": [
+                "domain desc",
+                "operation characteristic"
+            ],
+            "desc": "Generally another characteristic of operations that produce a particular commodity (e.g., ECONOMIC CLASS, AREA OPERATED, NAICS CLASSIFICATION, SALES). For chemical usage data, the domain describes the type of chemical applied to the commodity. The domain = TOTAL will have no further breakouts; i.e., the data value pertains completely to the short_desc.",
+            "missing": null
+        },
+        {
+            "name": "domaincat_desc",
+            "data_type": "string",
+            "keywords": [
+                "domaincat desc",
+                "domain category"
+            ],
+            "desc": "Categories or partitions within a domain (e.g., under domain = Sales, domain categories include $1,000 TO $9,999, $10,000 TO $19,999, etc).",
+            "missing": null
+        },
+        {
+            "name": "agg_level_desc",
+            "data_type": "string",
+            "keywords": [
+                "ag level desc",
+                "geographic granularity",
+                "aggregation level",
+                "scale"
+            ],
+            "desc": "Aggregation level or geographic granularity of the data (e.g., State, Ag District, County, Region, Zip Code).",
+            "missing": null
+        },
+        {
+            "name": "state_ansi",
+            "data_type": "int",
+            "keywords": [
+                "state ansi",
+                "state code"
+            ],
+            "desc": "American National Standards Institute (ANSI) standard 2-digit state codes.",
+            "missing": null
+        },
+        {
+            "name": "state_fips_code",
+            "data_type": "string",
+            "keywords": [
+                "state fips code"
+            ],
+            "desc": "NASS 2-digit state codes; include 99 and 98 for US TOTAL and OTHER STATES, respectively; otherwise match ANSI codes.",
+            "missing": null
+        },
+        {
+            "name": "state_alpha",
+            "data_type": "string",
+            "keywords": [
+                "state alpha",
+                "state abbreviation"
+            ],
+            "desc": "State abbreviation, 2-character alpha code.",
+            "missing": null
+        },
+        {
+            "name": "state_name",
+            "data_type": "string",
+            "keywords": [
+                "state name",
+                "state text"
+            ],
+            "desc": "State full name.",
+            "missing": null
+        },
+        {
+            "name": "asd_code",
+            "data_type": "int",
+            "keywords": [
+                "asd code",
+                "ag district code"
+            ],
+            "desc": "NASS defined county groups, unique within a state, 2-digit ag statistics district code.",
+            "missing": null
+        },
+        {
+            "name": "asd_desc",
+            "data_type": "string",
+            "keywords": [
+                "asd desc",
+                "agricultural district"
+            ],
+            "desc": "Ag statistics district name.",
+            "missing": null
+        },
+        {
+            "name": "county_ansi",
+            "data_type": "int",
+            "keywords": [
+                "county ansi",
+                "ansi county code"
+            ],
+            "desc": "ANSI standard 3-digit county codes.",
+            "missing": null
+        },
+        {
+            "name": "county_code",
+            "data_type": "int",
+            "keywords": [
+                "county code",
+                "nass county code"
+            ],
+            "desc": "NASS 3-digit county codes; includes 998 for OTHER (COMBINED) COUNTIES and Alaska county codes; otherwise match ANSI codes.",
+            "missing": null
+        },
+        {
+            "name": "county_name",
+            "data_type": "string",
+            "keywords": [
+                "county name",
+                "locality text"
+            ],
+            "desc": "County name.",
+            "missing": null
+        },
+        {
+            "name": "location_desc",
+            "data_type": "string",
+            "keywords": [
+                "location desc",
+                "geographic boundary"
+            ],
+            "desc": "Full description for the location dimension.",
+            "missing": null
+        },
+        {
+            "name": "year",
+            "data_type": "int",
+            "keywords": [
+                "year",
+                "calendar year",
+                "time period"
+            ],
+            "desc": "The numeric year of the data.",
+            "missing": null
+        },
+        {
+            "name": "freq_desc",
+            "data_type": "string",
+            "keywords": [
+                "freq_desc",
+                "time frequency",
+                "update"
+            ],
+            "desc": "Length of time covered (Annual, Season, Monthly, Weekly, Point in Time). Monthly often covers more than one month. Point in Time is as of a particular day.",
+            "missing": null
+        },
+        {
+            "name": "Value",
+            "data_type": "int",
+            "keywords": [
+                "Value",
+                "metric value",
+                "amount count"
+            ],
+            "desc": "Published data value or suppression reason code.",
+            "missing": [
+                "NA"
+            ]
+        },
+        {
+            "name": "CV (%)",
+            "data_type": "float",
+            "keywords": [
+                "CV (%)",
+                "coefficient of variation",
+                "error percentage"
+            ],
+            "desc": "Coefficient of variation. Available for the 2012 Census of Agriculture only (county-level CVs are generalized). Suppressed data is marked as '(D)' for privacy disclosure, '(H)' for high statistical error/unreliability, or '(L)' for values too low to round.",
+            "missing": [
+                "(D)",
+                "(H)",
+                "(L)"
+            ]
+        },
+        {
+            "name": "fips_code",
+            "data_type": "string",
+            "keywords": [
+                "fips",
+                "county"
+            ],
+            "desc": "The 5-digit Federal Information Processing Standard (FIPS) code uniquely identifying the county. Combines the 2-digit state FIPS code and the 3-digit county code. Maintained as a string to preserve leading zeros.",
+            "missing": [
+                null
+            ]
+        }
+    ]
+}

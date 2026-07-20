@@ -1,0 +1,3150 @@
+{
+    "file_name": "2020-2024_acs_master_county.csv",
+    "desc": "American Community Survey(ACS) data tracking health insurance.",
+    "organization": "American Community Survey",
+    "file_path": "data/outcome/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "raw_file_path": "data/sources/American-Community-Survey/2020-2024_acs_master_county.csv",
+    "url_source": "https://www.census.gov/data/developers/data-sets.html",
+    "geographic_level": "county",
+    "time_coverage": "2020-2024",
+    "unit_of_analysis": null,
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        "program/cleaning/cl_00_acs.R"
+    ],
+    "spatial_alignment": {
+        "locality_fips": null,
+        "locality_name": null
+    },
+    "columns": [
+        {
+            "variable_code": "B27019_039",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Bachelor's degree or higher:"
+        },
+        {
+            "variable_code": "B27019_038",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Some college or associate's degree:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_036",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Some college or associate's degree:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_037",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Some college or associate's degree:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_035",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Some college or associate's degree:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_034",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Some college or associate's degree:"
+        },
+        {
+            "variable_code": "B27019_033",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!High school graduate (includes equivalency):!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_032",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!High school graduate (includes equivalency):!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_031",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!High school graduate (includes equivalency):!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_042",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Bachelor's degree or higher:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_041",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Bachelor's degree or higher:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_040",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Bachelor's degree or higher:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_027",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Less than high school graduate:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_025",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Less than high school graduate:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_026",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Less than high school graduate:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_024",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Less than high school graduate:"
+        },
+        {
+            "variable_code": "B27019_023",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B27019_022",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Bachelor's degree or higher:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_021",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Bachelor's degree or higher:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_020",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Bachelor's degree or higher:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_029",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!High school graduate (includes equivalency):"
+        },
+        {
+            "variable_code": "B27019_028",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Less than high school graduate:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_030",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!High school graduate (includes equivalency):!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_043",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!65 years and over:!!Bachelor's degree or higher:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_014",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Some college or associate's degree:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_015",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Some college or associate's degree:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_013",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Some college or associate's degree:"
+        },
+        {
+            "variable_code": "B27019_012",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!High school graduate (includes equivalency):!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_011",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!High school graduate (includes equivalency):!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_010",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!High school graduate (includes equivalency):!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_019",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Bachelor's degree or higher:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_018",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Bachelor's degree or higher:"
+        },
+        {
+            "variable_code": "B27019_017",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Some college or associate's degree:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_016",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Some college or associate's degree:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_002",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:"
+        },
+        {
+            "variable_code": "B27019_001",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27019_009",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!High school graduate (includes equivalency):!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_008",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!High school graduate (includes equivalency):"
+        },
+        {
+            "variable_code": "B27019_007",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Less than high school graduate:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27019_006",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Less than high school graduate:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27019_005",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Less than high school graduate:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27019_003",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Less than high school graduate:"
+        },
+        {
+            "variable_code": "B27019_004",
+            "human_label": "Health Insurance Coverage Status and Type by Age by Educational Attainment -> Estimate!!Total:!!26 to 64 years:!!Less than high school graduate:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_008",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:!!Not enrolled in school:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_009",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B27022_006",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:!!Not enrolled in school:"
+        },
+        {
+            "variable_code": "B27022_007",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:!!Not enrolled in school:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_004",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:!!Enrolled in school:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_005",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:!!Enrolled in school:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_014",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:!!Not enrolled in school:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_015",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:!!Not enrolled in school:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_012",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:!!Enrolled in school:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_013",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:!!Not enrolled in school:"
+        },
+        {
+            "variable_code": "B27022_010",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B27022_011",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Female:!!Enrolled in school:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27022_002",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B27022_003",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:!!Male:!!Enrolled in school:"
+        },
+        {
+            "variable_code": "B27022_001",
+            "human_label": "Health Insurance Coverage Status by Sex by Enrollment Status for Young Adults Aged 19 to 25 -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27001_031",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:"
+        },
+        {
+            "variable_code": "B27001_032",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_030",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B27001_023",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_024",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B27001_021",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:"
+        },
+        {
+            "variable_code": "B27001_022",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_027",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B27001_028",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_025",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_026",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_029",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_040",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:"
+        },
+        {
+            "variable_code": "B27001_043",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B27001_044",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_041",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_042",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_035",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_036",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_033",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_034",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:"
+        },
+        {
+            "variable_code": "B27001_039",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_037",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:"
+        },
+        {
+            "variable_code": "B27001_038",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_051",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_052",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B27001_050",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_055",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B27001_056",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_053",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_054",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_047",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_048",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_045",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_046",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:"
+        },
+        {
+            "variable_code": "B27001_049",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:"
+        },
+        {
+            "variable_code": "B27001_057",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_003",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:"
+        },
+        {
+            "variable_code": "B27001_004",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_001",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27001_002",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B27001_007",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_008",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_005",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_006",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:"
+        },
+        {
+            "variable_code": "B27001_009",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:"
+        },
+        {
+            "variable_code": "B27001_020",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_011",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_012",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:"
+        },
+        {
+            "variable_code": "B27001_010",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_015",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B27001_016",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_013",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_014",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_019",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_017",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27001_018",
+            "human_label": "Health Insurance Coverage Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:"
+        },
+        {
+            "variable_code": "B27010_060",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!With employer-based and Medicare coverage"
+        },
+        {
+            "variable_code": "B27010_061",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!With direct-purchase and Medicare coverage"
+        },
+        {
+            "variable_code": "B27010_062",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!With Medicare and Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "B27010_063",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!Other private only combinations"
+        },
+        {
+            "variable_code": "B27010_064",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!Other public only combinations"
+        },
+        {
+            "variable_code": "B27010_065",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!Other coverage combinations"
+        },
+        {
+            "variable_code": "B27010_066",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27010_008",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:!!With TRICARE/military health coverage only"
+        },
+        {
+            "variable_code": "B27010_009",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:!!With VA Health Care only"
+        },
+        {
+            "variable_code": "B27010_016",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:!!Other coverage combinations"
+        },
+        {
+            "variable_code": "B27010_017",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27010_018",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:"
+        },
+        {
+            "variable_code": "B27010_019",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_012",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:!!With employer-based and Medicare coverage"
+        },
+        {
+            "variable_code": "B27010_013",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:!!With Medicare and Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "B27010_014",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:!!Other private only combinations"
+        },
+        {
+            "variable_code": "B27010_015",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:!!Other public only combinations"
+        },
+        {
+            "variable_code": "B27010_010",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_011",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With two or more types of health insurance coverage:!!With employer-based and direct-purchase coverage"
+        },
+        {
+            "variable_code": "B27010_004",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:!!With employer-based health insurance only"
+        },
+        {
+            "variable_code": "B27010_005",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:!!With direct-purchase health insurance only"
+        },
+        {
+            "variable_code": "B27010_006",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:!!With Medicare coverage only"
+        },
+        {
+            "variable_code": "B27010_007",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:!!With Medicaid/means-tested public coverage only"
+        },
+        {
+            "variable_code": "B27010_001",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27010_002",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "B27010_003",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!Under 19 years:!!With one type of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_036",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:!!With employer-based health insurance only"
+        },
+        {
+            "variable_code": "B27010_037",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:!!With direct-purchase health insurance only"
+        },
+        {
+            "variable_code": "B27010_038",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:!!With Medicare coverage only"
+        },
+        {
+            "variable_code": "B27010_039",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:!!With Medicaid/means-tested public coverage only"
+        },
+        {
+            "variable_code": "B27010_032",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:!!Other coverage combinations"
+        },
+        {
+            "variable_code": "B27010_033",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27010_034",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:"
+        },
+        {
+            "variable_code": "B27010_035",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_030",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:!!Other private only combinations"
+        },
+        {
+            "variable_code": "B27010_031",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:!!Other public only combinations"
+        },
+        {
+            "variable_code": "B27010_028",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:!!With employer-based and Medicare coverage"
+        },
+        {
+            "variable_code": "B27010_029",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:!!With Medicare and Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "B27010_024",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:!!With TRICARE/military health coverage only"
+        },
+        {
+            "variable_code": "B27010_025",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:!!With VA Health Care only"
+        },
+        {
+            "variable_code": "B27010_026",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_027",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With two or more types of health insurance coverage:!!With employer-based and direct-purchase coverage"
+        },
+        {
+            "variable_code": "B27010_020",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:!!With employer-based health insurance only"
+        },
+        {
+            "variable_code": "B27010_021",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:!!With direct-purchase health insurance only"
+        },
+        {
+            "variable_code": "B27010_022",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:!!With Medicare coverage only"
+        },
+        {
+            "variable_code": "B27010_023",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!19 to 34 years:!!With one type of health insurance coverage:!!With Medicaid/means-tested public coverage only"
+        },
+        {
+            "variable_code": "B27010_050",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27010_051",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "B27010_056",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With one type of health insurance coverage:!!With TRICARE/military health coverage only"
+        },
+        {
+            "variable_code": "B27010_057",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With one type of health insurance coverage:!!With VA Health Care only"
+        },
+        {
+            "variable_code": "B27010_058",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_059",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With two or more types of health insurance coverage:!!With employer-based and direct-purchase coverage"
+        },
+        {
+            "variable_code": "B27010_052",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With one type of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_053",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With one type of health insurance coverage:!!With employer-based health insurance only"
+        },
+        {
+            "variable_code": "B27010_054",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With one type of health insurance coverage:!!With direct-purchase health insurance only"
+        },
+        {
+            "variable_code": "B27010_055",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!65 years and over:!!With one type of health insurance coverage:!!With Medicare coverage only"
+        },
+        {
+            "variable_code": "B27010_048",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!Other public only combinations"
+        },
+        {
+            "variable_code": "B27010_049",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!Other coverage combinations"
+        },
+        {
+            "variable_code": "B27010_044",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!With employer-based and Medicare coverage"
+        },
+        {
+            "variable_code": "B27010_045",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!With direct-purchase and Medicare coverage"
+        },
+        {
+            "variable_code": "B27010_046",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!With Medicare and Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "B27010_047",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!Other private only combinations"
+        },
+        {
+            "variable_code": "B27010_040",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:!!With TRICARE/military health coverage only"
+        },
+        {
+            "variable_code": "B27010_041",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With one type of health insurance coverage:!!With VA Health Care only"
+        },
+        {
+            "variable_code": "B27010_042",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:"
+        },
+        {
+            "variable_code": "B27010_043",
+            "human_label": "Types of Health Insurance Coverage by Age -> Estimate!!Total:!!35 to 64 years:!!With two or more types of health insurance coverage:!!With employer-based and direct-purchase coverage"
+        },
+        {
+            "variable_code": "B27020_013",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Noncitizen:"
+        },
+        {
+            "variable_code": "B27020_012",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Naturalized:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27020_011",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Naturalized:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27020_010",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Naturalized:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27020_017",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Noncitizen:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27020_016",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Noncitizen:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27020_015",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Noncitizen:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27020_014",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Noncitizen:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27020_001",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27020_005",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Native Born:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27020_004",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Native Born:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27020_003",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Native Born:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27020_002",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Native Born:"
+        },
+        {
+            "variable_code": "B27020_009",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Naturalized:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27020_008",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:!!Naturalized:"
+        },
+        {
+            "variable_code": "B27020_007",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Foreign Born:"
+        },
+        {
+            "variable_code": "B27020_006",
+            "human_label": "Health Insurance Coverage Status and Type by Citizenship Status -> Estimate!!Total:!!Native Born:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27002_052",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B27002_053",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_054",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_055",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B27002_056",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_057",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_040",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:"
+        },
+        {
+            "variable_code": "B27002_041",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_042",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_043",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B27002_044",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_045",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_046",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:"
+        },
+        {
+            "variable_code": "B27002_047",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_048",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_049",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:"
+        },
+        {
+            "variable_code": "B27002_050",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_051",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_010",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_011",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_012",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:"
+        },
+        {
+            "variable_code": "B27002_013",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_014",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_015",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B27002_016",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_017",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_018",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:"
+        },
+        {
+            "variable_code": "B27002_019",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_001",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27002_002",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B27002_003",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:"
+        },
+        {
+            "variable_code": "B27002_004",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_005",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_006",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:"
+        },
+        {
+            "variable_code": "B27002_007",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_008",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_009",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:"
+        },
+        {
+            "variable_code": "B27002_030",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B27002_031",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:"
+        },
+        {
+            "variable_code": "B27002_032",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_033",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_034",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:"
+        },
+        {
+            "variable_code": "B27002_035",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_036",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_037",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:"
+        },
+        {
+            "variable_code": "B27002_038",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_039",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_020",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_021",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:"
+        },
+        {
+            "variable_code": "B27002_022",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_023",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_024",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B27002_025",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_026",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27002_027",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B27002_028",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "B27002_029",
+            "human_label": "Private Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "B27003_012",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:"
+        },
+        {
+            "variable_code": "B27003_011",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_014",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_013",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!26 to 34 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_010",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_019",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_016",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_015",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B27003_018",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:"
+        },
+        {
+            "variable_code": "B27003_017",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!35 to 44 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_002",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "B27003_001",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27003_009",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!19 to 25 years:"
+        },
+        {
+            "variable_code": "B27003_008",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_007",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_004",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_003",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:"
+        },
+        {
+            "variable_code": "B27003_006",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!6 to 18 years:"
+        },
+        {
+            "variable_code": "B27003_005",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!Under 6 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_036",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_035",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_038",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_037",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:"
+        },
+        {
+            "variable_code": "B27003_032",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_031",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:"
+        },
+        {
+            "variable_code": "B27003_034",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!6 to 18 years:"
+        },
+        {
+            "variable_code": "B27003_033",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!Under 6 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_030",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "B27003_039",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!19 to 25 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_024",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B27003_023",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_026",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_025",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!65 to 74 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_020",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!45 to 54 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_022",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_021",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!55 to 64 years:"
+        },
+        {
+            "variable_code": "B27003_028",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_027",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:"
+        },
+        {
+            "variable_code": "B27003_029",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Male:!!75 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_056",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_055",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:"
+        },
+        {
+            "variable_code": "B27003_057",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!75 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_052",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:"
+        },
+        {
+            "variable_code": "B27003_051",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_054",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_053",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!65 to 74 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_050",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_048",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_047",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_049",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!55 to 64 years:"
+        },
+        {
+            "variable_code": "B27003_044",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27003_043",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:"
+        },
+        {
+            "variable_code": "B27003_046",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!45 to 54 years:"
+        },
+        {
+            "variable_code": "B27003_045",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!35 to 44 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_040",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:"
+        },
+        {
+            "variable_code": "B27003_042",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:!!No public coverage"
+        },
+        {
+            "variable_code": "B27003_041",
+            "human_label": "Public Health Insurance Status by Sex by Age -> Estimate!!Total:!!Female:!!26 to 34 years:!!With public coverage"
+        },
+        {
+            "variable_code": "B27011_010",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Unemployed:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27011_012",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Unemployed:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27011_011",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Unemployed:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27011_014",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!Not in labor force:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27011_013",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!Not in labor force:"
+        },
+        {
+            "variable_code": "B27011_004",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Employed:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27011_003",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Employed:"
+        },
+        {
+            "variable_code": "B27011_006",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Employed:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27011_005",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Employed:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27011_008",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Unemployed:"
+        },
+        {
+            "variable_code": "B27011_007",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Employed:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27011_009",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:!!Unemployed:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27011_002",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!In labor force:"
+        },
+        {
+            "variable_code": "B27011_001",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27011_016",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!Not in labor force:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27011_015",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!Not in labor force:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27011_017",
+            "human_label": "Health Insurance Coverage Status and Type by Employment Status -> Estimate!!Total:!!Not in labor force:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_023",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$100,000 or more:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_024",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$100,000 or more:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27015_025",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$100,000 or more:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27015_026",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$100,000 or more:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_020",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$75,000 to $99,999:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27015_021",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$75,000 to $99,999:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_022",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$100,000 or more:"
+        },
+        {
+            "variable_code": "B27015_011",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$25,000 to $49,999:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_012",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$50,000 to $74,999:"
+        },
+        {
+            "variable_code": "B27015_013",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$50,000 to $74,999:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_014",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$50,000 to $74,999:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27015_015",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$50,000 to $74,999:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27015_016",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$50,000 to $74,999:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_017",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$75,000 to $99,999:"
+        },
+        {
+            "variable_code": "B27015_018",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$75,000 to $99,999:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_019",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$75,000 to $99,999:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27015_010",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$25,000 to $49,999:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27015_001",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "B27015_002",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!Under $25,000:"
+        },
+        {
+            "variable_code": "B27015_003",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!Under $25,000:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_004",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!Under $25,000:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "B27015_005",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!Under $25,000:!!With health insurance coverage!!With public coverage"
+        },
+        {
+            "variable_code": "B27015_006",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!Under $25,000:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_007",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$25,000 to $49,999:"
+        },
+        {
+            "variable_code": "B27015_008",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$25,000 to $49,999:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "B27015_009",
+            "human_label": "Health Insurance Coverage Status and Type by Household Income in the Past 12 Months (in 2022 Inflation-Adjusted Dollars) -> Estimate!!Total:!!$25,000 to $49,999:!!With health insurance coverage!!With private health insurance"
+        },
+        {
+            "variable_code": "C27001G_001",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001G_002",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001G_007",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001G_008",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001G_009",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001G_003",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001G_004",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001G_005",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001G_006",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001G_010",
+            "human_label": "Health Insurance Coverage Status by Age (Two or More Races) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001B_010",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001B_004",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001B_005",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001B_006",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001B_007",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001B_008",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001B_009",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001B_001",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001B_002",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001B_003",
+            "human_label": "Health Insurance Coverage Status by Age (Black or African American Alone) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001H_007",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001H_006",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001H_009",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001H_008",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001H_001",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001H_003",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001H_002",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001H_005",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001H_004",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001H_010",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone, Not Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001C_004",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001C_003",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001C_006",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001C_005",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001C_002",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001C_001",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001C_010",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001C_008",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001C_007",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001C_009",
+            "human_label": "Health Insurance Coverage Status by Age (American Indian and Alaska Native Alone) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_005",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001D_004",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_003",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_002",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001D_009",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_008",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001D_007",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_006",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_010",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001D_001",
+            "human_label": "Health Insurance Coverage Status by Age (Asian Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001I_009",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001I_010",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001I_008",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001I_007",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001I_006",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001I_005",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001I_004",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001I_003",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001I_002",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001I_001",
+            "human_label": "Health Insurance Coverage Status by Age (Hispanic or Latino) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001E_010",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001E_001",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001E_002",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001E_003",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001E_004",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001E_005",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001E_006",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001E_007",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001E_008",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001E_009",
+            "human_label": "Health Insurance Coverage Status by Age (Native Hawaiian and Other Pacific Islander Alone) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001A_010",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001A_009",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001A_003",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001A_004",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001A_001",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27001A_002",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001A_007",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001A_008",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001A_005",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001A_006",
+            "human_label": "Health Insurance Coverage Status by Age (White Alone) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_010",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_008",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27001F_009",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_006",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_007",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_004",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_005",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27001F_002",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27001F_003",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27001F_001",
+            "human_label": "Health Insurance Coverage Status by Age (Some Other Race Alone) -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27004_020",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_021",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!No employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_010",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_011",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!No employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_014",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_015",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!No employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_012",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "C27004_013",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27004_018",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!No employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_019",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27004_016",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27004_017",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_002",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "C27004_003",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27004_001",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27004_006",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27004_007",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_004",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_005",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!No employer-based health insurance"
+        },
+        {
+            "variable_code": "C27004_009",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27004_008",
+            "human_label": "Employer-Based Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!No employer-based health insurance"
+        },
+        {
+            "variable_code": "C27005_003",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27005_004",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_005",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!No direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_006",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27005_007",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_008",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!No direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_009",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27005_001",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27005_002",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "C27005_020",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_021",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!No direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_015",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!No direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_016",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27005_017",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_018",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!No direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_019",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27005_010",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_011",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!No direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27005_012",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "C27005_013",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27005_014",
+            "human_label": "Direct-Purchase Health Insurance by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27007_017",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_016",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27007_015",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!No Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_014",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_013",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27007_019",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27007_018",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!No Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_012",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "C27007_011",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!No Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_010",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_020",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_021",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!No Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_004",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_003",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27007_002",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "C27007_001",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27007_009",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27007_008",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!No Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_007",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27007_006",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27007_005",
+            "human_label": "Medicaid/Means-Tested Public Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!No Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27006_020",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_021",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!No Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_019",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27006_016",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27006_017",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_018",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!No Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_014",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_015",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!No Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_012",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "C27006_013",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27006_010",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_011",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!No Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_009",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27006_006",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27006_007",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_008",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!No Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_004",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_005",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!No Medicare coverage"
+        },
+        {
+            "variable_code": "C27006_002",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "C27006_003",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27006_001",
+            "human_label": "Medicare Coverage by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27008_001",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27008_003",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27008_002",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "C27008_011",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!No TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_010",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!With TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_013",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27008_012",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "C27008_015",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!No TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_016",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27008_014",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!With TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_006",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27008_004",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!With TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_005",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!No TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_008",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!No TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_007",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!With TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_009",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27008_021",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!No TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_020",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!With TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_018",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!No TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_017",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!With TRICARE/military health coverage"
+        },
+        {
+            "variable_code": "C27008_019",
+            "human_label": "TRICARE/Military Health Coverage by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27009_018",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!No VA Health Care"
+        },
+        {
+            "variable_code": "C27009_019",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27009_016",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27009_017",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!19 to 64 years:!!With VA Health Care"
+        },
+        {
+            "variable_code": "C27009_013",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27009_015",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!No VA Health Care"
+        },
+        {
+            "variable_code": "C27009_014",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!Under 19 years:!!With VA Health Care"
+        },
+        {
+            "variable_code": "C27009_011",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!No VA Health Care"
+        },
+        {
+            "variable_code": "C27009_012",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:"
+        },
+        {
+            "variable_code": "C27009_021",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!No VA Health Care"
+        },
+        {
+            "variable_code": "C27009_020",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Female:!!65 years and over:!!With VA Health Care"
+        },
+        {
+            "variable_code": "C27009_006",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27009_007",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!With VA Health Care"
+        },
+        {
+            "variable_code": "C27009_004",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!With VA Health Care"
+        },
+        {
+            "variable_code": "C27009_003",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27009_005",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!Under 19 years:!!No VA Health Care"
+        },
+        {
+            "variable_code": "C27009_001",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27009_002",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:"
+        },
+        {
+            "variable_code": "C27009_008",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!19 to 64 years:!!No VA Health Care"
+        },
+        {
+            "variable_code": "C27009_009",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27009_010",
+            "human_label": "VA Health Care by Sex by Age -> Estimate!!Total:!!Male:!!65 years and over:!!With VA Health Care"
+        },
+        {
+            "variable_code": "C27012_022",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27012_020",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:!!With health insurance coverage!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27012_021",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:!!With health insurance coverage!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27012_008",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27012_009",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:"
+        },
+        {
+            "variable_code": "C27012_018",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:!!With health insurance coverage!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27012_019",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:!!With health insurance coverage!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27012_016",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:"
+        },
+        {
+            "variable_code": "C27012_017",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Did not work:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27012_014",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With health insurance coverage!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27012_015",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27012_012",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With health insurance coverage!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27012_013",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With health insurance coverage!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27012_010",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27012_011",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With health insurance coverage!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27012_006",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With health insurance coverage!!With Medicare coverage"
+        },
+        {
+            "variable_code": "C27012_007",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With health insurance coverage!!With Medicaid/means-tested public coverage"
+        },
+        {
+            "variable_code": "C27012_004",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With health insurance coverage!!With employer-based health insurance"
+        },
+        {
+            "variable_code": "C27012_005",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With health insurance coverage!!With direct-purchase health insurance"
+        },
+        {
+            "variable_code": "C27012_002",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:"
+        },
+        {
+            "variable_code": "C27012_003",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27012_001",
+            "human_label": "Health Insurance Coverage Status and Type by Work Experience -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27013_010",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Did not work:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27013_007",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27013_008",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Did not work:"
+        },
+        {
+            "variable_code": "C27013_009",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Did not work:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27013_003",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27013_004",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27013_005",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:"
+        },
+        {
+            "variable_code": "C27013_006",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27013_001",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27013_002",
+            "human_label": "Private Health Insurance by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:"
+        },
+        {
+            "variable_code": "C27014_007",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!No public coverage"
+        },
+        {
+            "variable_code": "C27014_006",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:!!With public coverage"
+        },
+        {
+            "variable_code": "C27014_009",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Did not work:!!With public coverage"
+        },
+        {
+            "variable_code": "C27014_008",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Did not work:"
+        },
+        {
+            "variable_code": "C27014_001",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27014_003",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!With public coverage"
+        },
+        {
+            "variable_code": "C27014_002",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:"
+        },
+        {
+            "variable_code": "C27014_005",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Worked less than full-time, year-round:"
+        },
+        {
+            "variable_code": "C27014_004",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Worked full-time, year-round:!!No public coverage"
+        },
+        {
+            "variable_code": "C27014_010",
+            "human_label": "Public Health Insurance by Work Experience -> Estimate!!Total:!!Did not work:!!No public coverage"
+        },
+        {
+            "variable_code": "C27016_051",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_050",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_041",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_040",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_043",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27016_042",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:"
+        },
+        {
+            "variable_code": "C27016_049",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27016_048",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_045",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_044",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_047",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_046",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27016_013",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27016_012",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27016_015",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_014",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_011",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_010",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_017",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_016",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27016_018",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_019",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27016_001",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27016_003",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27016_002",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27016_009",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27016_005",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_004",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_007",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_008",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_006",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27016_031",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_030",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_037",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_036",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27016_039",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27016_038",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_033",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27016_032",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27016_035",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_034",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_025",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_024",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_027",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_026",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27016_021",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_020",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27016_023",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27016_022",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27016_029",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27016_028",
+            "human_label": "Health Insurance Coverage Status by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27017_013",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27017_014",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_011",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_012",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27017_018",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_017",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_019",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27017_015",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_016",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27017_010",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_001",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27017_002",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27017_005",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_007",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_006",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27017_003",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27017_004",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_008",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_009",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27017_037",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_038",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_035",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_036",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27017_039",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27017_030",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_033",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27017_034",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_031",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_032",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27017_025",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_026",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27017_023",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27017_024",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_027",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_029",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27017_028",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_021",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_022",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27017_020",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_050",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_051",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_049",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27017_047",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_048",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_041",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_042",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:"
+        },
+        {
+            "variable_code": "C27017_040",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27017_045",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:!!No private health insurance"
+        },
+        {
+            "variable_code": "C27017_046",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27017_043",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27017_044",
+            "human_label": "Private Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:!!With private health insurance"
+        },
+        {
+            "variable_code": "C27018_020",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_021",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_022",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27018_023",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27018_024",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_025",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!Under 19 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_026",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27018_028",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_027",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!19 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_029",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27018_030",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_031",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.38 to 1.99 of poverty threshold:!!65 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_032",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27018_033",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27018_034",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_035",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!Under 19 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_036",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27018_037",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_039",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27018_038",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!19 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_001",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27018_002",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27018_003",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27018_004",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_006",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27018_005",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!Under 19 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_007",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_008",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!19 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_009",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27018_010",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_011",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!Under 1.00 of poverty threshold:!!65 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_012",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:"
+        },
+        {
+            "variable_code": "C27018_013",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27018_014",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_015",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!Under 19 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_017",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_016",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27018_018",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!19 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_019",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!1.00 to 1.37 of poverty threshold:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27018_040",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_041",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!2.00 to 3.99 of poverty threshold:!!65 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_042",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:"
+        },
+        {
+            "variable_code": "C27018_043",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:"
+        },
+        {
+            "variable_code": "C27018_044",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_045",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!Under 19 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_046",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:"
+        },
+        {
+            "variable_code": "C27018_047",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_048",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!19 to 64 years:!!No public coverage"
+        },
+        {
+            "variable_code": "C27018_049",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:"
+        },
+        {
+            "variable_code": "C27018_050",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:!!With public coverage"
+        },
+        {
+            "variable_code": "C27018_051",
+            "human_label": "Public Health Insurance by Ratio of Income to Poverty Level in the Past 12 Months by Age -> Estimate!!Total:!!4.00 of poverty threshold and over:!!65 years and over:!!No public coverage"
+        },
+        {
+            "variable_code": "C27021_001",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:"
+        },
+        {
+            "variable_code": "C27021_002",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:"
+        },
+        {
+            "variable_code": "C27021_003",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In married couple families:"
+        },
+        {
+            "variable_code": "C27021_004",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In married couple families:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_005",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In married couple families:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_006",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:"
+        },
+        {
+            "variable_code": "C27021_007",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:!!Male reference person, no spouse present:"
+        },
+        {
+            "variable_code": "C27021_008",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:!!Male reference person, no spouse present:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_009",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:!!Male reference person, no spouse present:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_010",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:!!Female reference person, no spouse present:"
+        },
+        {
+            "variable_code": "C27021_011",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:!!Female reference person, no spouse present:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_012",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In family households:!!In other families:!!Female reference person, no spouse present:!!No health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_013",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In non-family households and other living arrangements:"
+        },
+        {
+            "variable_code": "C27021_014",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In non-family households and other living arrangements:!!With health insurance coverage"
+        },
+        {
+            "variable_code": "C27021_015",
+            "human_label": "Health Insurance Coverage Status by Living Arrangement -> Estimate!!Total:!!In non-family households and other living arrangements:!!No health insurance coverage"
+        }
+    ]
+}

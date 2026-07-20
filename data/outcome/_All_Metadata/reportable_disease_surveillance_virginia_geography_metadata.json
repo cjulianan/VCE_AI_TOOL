@@ -1,0 +1,108 @@
+{
+    "file_name": "reportable_disease_surveillance_virginia_geography",
+    "desc": "Virginia Department of Health public use dataset containing annual case counts and incidence rates for reportable diseases.",
+    "organization": "Virginia Department of Health",
+    "file_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
+    "raw_file_path": "data/sources/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
+    "url_source": "https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography",
+    "geographic_level": "county",
+    "time_coverage": "2024",
+    "unit_of_analysis": "Health condition cases reported per geography per 100000 population",
+    "primary_keys": [
+        ""
+    ],
+    "join_keys": [
+        ""
+    ],
+    "cleaning_scripts": [
+        null
+    ],
+    "spatial_alignment": {
+        "locality_fips": "FIPS",
+        "locality_name": "Geography Value"
+    },
+    "columns": [
+        {
+            "name": "Year",
+            "data_type": "int",
+            "keywords": [
+                "Year",
+                "calendar year",
+                "time period"
+            ],
+            "desc": "The specific year the disease surveillance data was recorded.",
+            "missing": null
+        },
+        {
+            "name": "Condition",
+            "data_type": "string",
+            "keywords": [
+                "Condition",
+                "disease",
+                "illness",
+                "sickness",
+                "infection"
+            ],
+            "desc": "The name of the reportable disease.",
+            "missing": null
+        },
+        {
+            "name": "Geography Level",
+            "data_type": "string",
+            "keywords": [
+                "Geography Level",
+                "geographic scale",
+                "region type"
+            ],
+            "desc": "The scale of the geographic boundary used for reporting, typically classified as State, Health Planning Region, or Locality.",
+            "missing": null
+        },
+        {
+            "name": "Geography Value",
+            "data_type": "string",
+            "keywords": [
+                "Geography Value",
+                "location name",
+                "region name",
+                "county name",
+                "locality"
+            ],
+            "desc": "The specific text name of the reporting area corresponding to the geography level (e.g., Virginia, Eastern Region, Fairfax County).",
+            "missing": null
+        },
+        {
+            "name": "FIPS",
+            "data_type": "int",
+            "keywords": [
+                "FIPS",
+                "location id"
+            ],
+            "desc": "The standard Federal Information Processing Series numeric code uniquely identifying the specific Virginia county, independent city, or state boundary.",
+            "missing": [
+                "NA"
+            ]
+        },
+        {
+            "name": "Annual Case Count",
+            "data_type": "int",
+            "keywords": [
+                "Annual Case Count",
+                "total cases",
+                "number of cases"
+            ],
+            "desc": "The total integer count of confirmed or probable cases of the condition reported within that geography during the calendar year.",
+            "missing": null
+        },
+        {
+            "name": "Incidence Rate",
+            "data_type": "float",
+            "keywords": [
+                "Incidence Rate",
+                "frequency rate",
+                "cases per 100k"
+            ],
+            "desc": "The calculated rate of disease occurrence expressed as the number of reported cases per 100,000 population within the specified geography.",
+            "missing": null
+        }
+    ]
+}
