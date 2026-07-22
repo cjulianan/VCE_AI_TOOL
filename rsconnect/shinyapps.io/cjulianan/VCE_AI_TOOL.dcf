@@ -1,0 +1,13 @@
+name: VCE_AI_TOOL
+title: VCE_AI_TOOL
+username: cjulianan
+account: cjulianan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17628961
+bundleId: 12304618
+url: https://cjulianan.shinyapps.io/VCE_AI_TOOL/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .Renviron|README.md|Validation-Questions.txt|week7_technical_modification_record.html|week8_0716_technical_reply.md|week8_reply.md|old|references
