@@ -1,15 +1,14 @@
-Questions to test embeddings:
+------- Questions to test embeddings:
 What data do you have on magnet and charter schools?
 What data is there about vision difficulties?
 Do you have data on the location of hospitals in virginia?
 Give me data on chicken pox
 What's the most recent year you have on state testing data?
 
-Questions for Test Tools:
-What is the average count of special education kids in accomack county in 2023?
+------- Questions for Test Tools:
+What is the average count of special education kids in accomack county in 2023? (72.7)
 
-
-Other general test questions:
+------- Other general test questions:
 what is the incident rate of Gonorrhea disease in Petersburg (834.6)
 What is the city that Bath Community Hospital is in (hot springs city)
 give me data about diseases in Roanoke county
