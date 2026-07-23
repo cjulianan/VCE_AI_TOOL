@@ -8,7 +8,8 @@ library(googlesheets4)
 library(bslib)
 
 
-## Hyperlinks don't work yet, I'm gonna try to fix that. They are available in the Google Spreadsheet though
+##### Hyperlinks don't work yet, I'm gonna try to fix that. They are available in the Google Spreadsheet though
+
 # 1. Authorizes Google Sheets to read public links without a login prompt
 gs4_deauth()
 
@@ -21,8 +22,8 @@ SECRET_GOOGLE_SHEET_URL <- "https://docs.google.com/spreadsheets/d/1n7NAei9LGKbb
 ui <- fluidPage(
   theme = bs_theme(version = 5, bootswatch = "minty"), 
   
-  titlePanel("DSPG 2026: VCE Team Data Availability Portal"),
-  p("Search and filter for clean variables available in our shared database repository"),
+  titlePanel("DSPG 2026: Building VCE AI Tool Team Data Availability Portal"),
+  p("Search and filter for variables available in our database repository"),
   hr(),
   
   sidebarLayout(
@@ -31,7 +32,7 @@ ui <- fluidPage(
       selectInput("team_filter", "Filter by Research Team:", choices = c("All Teams")),
       selectInput("cat_filter", "Filter by Sector Domain:", choices = c("All Categories")),
       hr(),
-      helpText("💡 Type any variable into the global search bar (like insurance) or the 'Variables' column filter to instantly find the containing cluster file")
+      helpText("💡 Type any variable into the global search bar (like insurance or education) or the 'Variables' column filter to instantly find the containing cluster file")
     ),
     
     mainPanel(
