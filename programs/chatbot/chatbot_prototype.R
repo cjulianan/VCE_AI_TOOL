@@ -145,8 +145,6 @@ server <- function(input, output, session) {
     last_metadata_path = NULL,
     last_fips = NULL,
     last_locality_name = NULL,
-    cached_intent_phrase = NULL,
-    pending_disambiguation = FALSE
   )
   
   # only update chat box if user hits submit button and user has something in prompt input box
@@ -154,7 +152,6 @@ server <- function(input, output, session) {
     req(input$user_prompt) 
     
     user_prompt_clean <- tolower(trimws(input$user_prompt))
-    collision_words <- c("richmond", "roanoke", "fairfax")
     
     # -------------------------------------------------------------------------
     # DEFENSIVE INITIALIZATION: Ensure these always exist in all logical paths
@@ -165,18 +162,6 @@ server <- function(input, output, session) {
     matched_metadata_paths <- character()
     top_k                  <- 3 # Guaranteed fallback if vector search is bypassed
     
-    # =========================================================================
-    # MILESTONE 1: DISAMBIGUATION GATEKEEPER
-    # =========================================================================
-    if (isTRUE(cache$pending_disambiguation)) {
-      # set the current metadata path to whatever was retrieved from last prompt
-      matched_metadata_paths <- cache$last_metadata_path
-      
-      # the new prompt will be whatever prompt was cached from previous prompt combined with the new prompt where user clarifies
-      combined_prompt <- paste(cache$cached_intent_phrase, user_prompt_clean)
-      user_prompt_clean <- combined_prompt
-      
-    } else { # [START OF MAIN ELSE BLOCK]
       
       # =========================================================================
       # MILESTONE 2: LOCALITY MATCHING (MOVED UP TO RUN FIRST)
@@ -242,37 +227,7 @@ server <- function(input, output, session) {
           }
         }
       }
-      
-    } # [END OF MAIN ELSE BLOCK - Closes the disambiguation check else block]
-    
-    # =========================================================================
-    # COLLISION WORD CHECK
-    # =========================================================================
-    for (word in collision_words) {
-      if (grepl(word, user_prompt_clean)) {
-        if (!grepl("city", user_prompt_clean) && !grepl("county", user_prompt_clean)) {
-          
-          # cache the current metadata path and user prompt
-          cache$last_metadata_path <- matched_metadata_paths
-          cache$cached_intent_phrase <- input$user_prompt
-          cache$pending_disambiguation <- TRUE
-          
-          system_bubble <- paste0(
-            "<div class='d-flex justify-content-center mb-3'>",
-            "  <div class='bg-secondary text-secondary-inverse p-2 px-3 rounded-3 text-center small' style='max-width: 85%;'>",
-            "    ⚠️ <strong>System Notice:</strong> <i>Ambiguous locality detected. Did you mean ", 
-            tools::toTitleCase(word), " City or ", tools::toTitleCase(word), " County? Please clarify.</i>",
-            "  </div>",
-            "</div>"
-          )
-          
-          updated_history <- paste0(chat_log(), system_bubble)
-          chat_log(updated_history)
-          updateTextInput(session, "user_prompt", value = "")
-          return() 
-        }
-      }
-    }
+  
     
     # Initialize the data context tracker for Milestone 3
     data_context <- ""
@@ -402,12 +357,7 @@ server <- function(input, output, session) {
     # =========================================================================
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
-    # resolved prompt to clarify if there is ambiguous city/county
-    if (!is.null(cache$cached_intent_phrase)) {
-      resolved_prompt <- paste(cache$cached_intent_phrase, "-> Clarified as:", input$user_prompt)
-    } else {
       resolved_prompt <- input$user_prompt
-    }
     
     # System prompt directing the LLM how to handle current context vs historical turns
     final_prompt <- sprintf(
@@ -457,9 +407,6 @@ User Question: %s",
     updated_history <- paste0(chat_log(), user_bubble, ai_bubble)
     
     chat_log(updated_history)
-    # Reset disambiguation flags
-    cache$pending_disambiguation <- FALSE
-    cache$cached_intent_phrase   <- NULL
     
     # Save the current state so our LLM Gatekeeper can reuse them on the next turn
     if (length(matched_metadata_paths) > 0) {
@@ -468,6 +415,7 @@ User Question: %s",
     if (!is.null(target_fips)) {
       cache$last_fips <- target_fips
       cache$last_locality_name <- target_locality_name
+      
     }
     
     updateTextInput(session, "user_prompt", value = "")
@@ -490,8 +438,8 @@ User Question: %s",
       session_snapshot <- list(
         saved_chat_text        = chat_log(), 
         last_metadata_path     = cache$last_metadata_path,
-        pending_disambiguation = cache$pending_disambiguation,
-        cached_intent_phrase   = cache$cached_intent_phrase
+        last_locality_name     = cache$last_locality_name,
+        last_fips              = cache$last_fips
       )
       
       # Pack it into a structured text file and download it
@@ -520,8 +468,8 @@ User Question: %s",
     
     # 2. Re-inject all background tracking variables back into the cache
     cache$last_metadata_path      <- uploaded_snapshot$last_metadata_path
-    cache$pending_disambiguation  <- uploaded_snapshot$pending_disambiguation
-    cache$cached_intent_phrase    <- uploaded_snapshot$cached_intent_phrase
+    cache$last_locality_name      <- uploaded_snapshot$last_locality_name
+    cache$last_fips               <- uploaded_snapshot$last_fips
     
     showNotification("Chat session successfully restored!", type = "message")
   })
