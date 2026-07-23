@@ -10,7 +10,6 @@ library(readr)
 library(markdown)
 library(rlang)
 library(here) # fixes directory issues with Shiny app
-library(stringdist) # helps us do syntactic scoring (doesnt use embeddings - this package mainly solves typos)
 library(ragnar)
 
 # function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
@@ -164,7 +163,7 @@ server <- function(input, output, session) {
     
       
       # =========================================================================
-      # MILESTONE 2: LOCALITY MATCHING (MOVED UP TO RUN FIRST)
+      # MILESTONE 1: LOCALITY MATCHING (MOVED UP TO RUN FIRST)
       # =========================================================================
       for (i in 1:nrow(VIRGINIA_LOCALITIES)) {
         if (grepl(VIRGINIA_LOCALITIES$alias[i], user_prompt_clean)) {
@@ -175,7 +174,7 @@ server <- function(input, output, session) {
       }
       
       # =========================================================================
-      # INTENT GATEKEEPER: STEP 4 REUSE OR ROUTE RULE
+      # INTENT GATEKEEPER: FOLLOW-UP QUERY (STEP 4 REUSE OR ROUTE RULE)
       # =========================================================================
       if (length(chat_obj$get_turns()) > 0 && !is.null(cache$last_metadata_path)) {
         classification_chat <- chat_obj$clone()$set_turns(list())
@@ -192,13 +191,13 @@ server <- function(input, output, session) {
       }
       
       # =========================================================================
-      # ROUTING EXECUTION (NESTED SAFELY INSIDE THE ELSE BLOCK)
+      # ROUTING EXECUTION
       # =========================================================================
       if (is_follow_up) {
         # Step 4 Rule: "What about 2024?" reuses previous dataset
         matched_metadata_paths <- cache$last_metadata_path
         
-        # If they didn't specify a new county, carry over the old one
+        # If user didn't specify a new county, carry over the old one
         if (is.null(target_fips) && !is.null(cache$last_fips)) {
           target_fips <- cache$last_fips
           target_locality_name <- cache$last_locality_name
@@ -233,7 +232,7 @@ server <- function(input, output, session) {
     data_context <- ""
     
     # =========================================================================
-    # MILESTONE 3: DUCKDB DIRECT-FROM-DISK EXTRACTION LOOP
+    # MILESTONE 2: DUCKDB DIRECT-FROM-DISK EXTRACTION LOOP
     # =========================================================================
     if (length(matched_metadata_paths) > 0 && !is.null(target_fips)) {
       # Path 1: metadata path and fips is found
@@ -426,7 +425,7 @@ User Question: %s",
   })
   
   # =========================================================================
-  # CHAT LOG EXPORT HANDLER (USER CAN SAVE FILE TO LAPTOP)
+  # CHAT LOG EXPORT HANDLER (USER CAN SAVE FILE TO LAPTOP) /// NEEDS FIXING
   # =========================================================================
   output$export_log <- downloadHandler(
     filename = function() {
@@ -447,7 +446,7 @@ User Question: %s",
   )
   
   # =========================================================================
-  # CHAT LOG IMPORT HANDLER (USER CAN RELOAD PAST FILE)
+  # CHAT LOG IMPORT HANDLER (USER CAN RELOAD PAST FILE) //// NEEDS FIXING
   # =========================================================================
   observeEvent(input$import_log, {
     req(input$import_log)
@@ -462,7 +461,7 @@ User Question: %s",
     
     req(uploaded_snapshot)
     
-    # 1. Update the reactiveVal to restore visual HTML history on screen
+    # 1. Update the reactiveValues to restore visual HTML history on screen
     chat_log(uploaded_snapshot$saved_chat_text)
     
     # 2. Re-inject all background tracking variables back into the cache
@@ -473,7 +472,7 @@ User Question: %s",
     showNotification("Chat session successfully restored!", type = "message")
   })
   
-} # <--- Correctly closes the server function at the very bottom!
+}
 
 
 # Launch App ------------------------------------------------------------------
