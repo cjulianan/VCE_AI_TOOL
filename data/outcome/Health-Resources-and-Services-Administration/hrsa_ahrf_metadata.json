@@ -2,6 +2,7 @@
   "dataset_id": "Area Health Resources",
   "file_name": "health_resources_va.csv",
   "file_path": "data/outcome/Health-Resources-and-Services-Administration/health_resources_va.csv",
+  "url_source": "https://data.hrsa.gov/data/download",
   "desc": "Health Resources and Services Administration (HRSA) Area Health Resources Files (AHRF). This county-level dataset features longitudinal indicators tracking healthcare worker distribution, clinical facility assets, utilization trends, and regional economic characteristics across Virginia.",
   "organization": "Health Resources and Services Administration (HRSA)",
   "geographic_level": "County",
