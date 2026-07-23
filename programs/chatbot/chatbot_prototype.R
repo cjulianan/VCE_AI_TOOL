@@ -144,7 +144,7 @@ server <- function(input, output, session) {
   cache <- reactiveValues(
     last_metadata_path = NULL,
     last_fips = NULL,
-    last_locality_name = NULL,
+    last_locality_name = NULL
   )
   
   # only update chat box if user hits submit button and user has something in prompt input box
@@ -415,7 +415,6 @@ User Question: %s",
     if (!is.null(target_fips)) {
       cache$last_fips <- target_fips
       cache$last_locality_name <- target_locality_name
-      
     }
     
     updateTextInput(session, "user_prompt", value = "")
