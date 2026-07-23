@@ -38,7 +38,8 @@ normalize_metadata <- function(meta, meta_path) {
     geo_coverage = meta$geographic_level %||% "N/A",
     time_coverage = meta$time_coverage %||% "N/A",
     locality_fips_col = meta$spatial_alignment$locality_fips %||% "GEOID",
-    columns_schema = col_string
+    columns_schema = col_string,
+    url = meta$url_source %||% "N/A"
   ))
 }
 
@@ -254,7 +255,8 @@ server <- function(input, output, session) {
         }
         safe_select_columns <- unique(c("year", fips_col, defined_columns))
         
-        data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\n", "Dataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
+        # Inject source URL into structured context for citations
+        data_context <- paste0(data_context, "Dataset Baseline Description: ", metadata$desc, "\nSource URL: ", metadata$url, "\nDataset Column Definitions Legend:\n", metadata$columns_schema, "\n\n")
         
         raw_file_absolute_path <- here(metadata$file_path)
         
@@ -318,6 +320,7 @@ server <- function(input, output, session) {
           "Source: ", metadata$organization, "\n",
           "Geographic Coverage: ", metadata$geo_coverage, "\n",
           "Temporal Coverage: ", metadata$time_coverage, "\n",
+          "Source URL: ", metadata$url, "\n",
           "Dataset Columns:\n", metadata$columns_schema, "\n",
           "---------------------------------\n\n"
         )
@@ -360,7 +363,11 @@ server <- function(input, output, session) {
     
     # System prompt directing the LLM how to handle current context vs historical turns
     final_prompt <- sprintf(
-      "You are a helpful data assistant. Format your response in clear and precise sentence form. Do not add irrelevant information unless the prompt asks for it. Cite what dataset you used for your source.
+      "You are a helpful data assistant. Format your response in clear and precise sentence form. Do not add irrelevant information unless the prompt asks for it. 
+      
+=== CITATIONS ===
+If a Source URL is provided in the New Context, you MUST cite it at the end of your response using EXACTLY this markdown format: (URL). 
+CRITICAL RULE: Do NOT use special citation brackets like 【 or 】. Use only standard markdown brackets.
 
 === Performing Calculations ===
 1. Use data tools registered to perform calculations.
@@ -384,6 +391,12 @@ User Question: %s",
       chat_obj$chat(final_prompt, echo = "none")
     })
     
+    # We parse Markdown to HTML BEFORE wrapping it inside a block-level HTML tag, so citations render properly
+    parsed_ai_response <- markdown::markdownToHTML(text = new_response, fragment.only = TRUE)
+    
+    # Sanitize model output before UI injection to make new tab navigation secure
+    parsed_ai_response <- gsub("<a href", "<a target='_blank' rel='noopener noreferrer' href", parsed_ai_response, ignore.case = TRUE)
+    
     # Build a Right-Aligned User Bubble
     user_bubble <- paste0(
       "<div class='d-flex justify-content-end mb-3'>",
@@ -397,7 +410,7 @@ User Question: %s",
     ai_bubble <- paste0(
       "<div class='d-flex justify-content-start mb-3'>",
       "  <div class='bg-light text-dark p-2 px-3 rounded-3 border shadow-sm' style='max-width: 75%; text-align: left;'>",
-      "    ", new_response,
+      "    ", parsed_ai_response,
       "  </div>",
       "</div>"
     )
@@ -421,7 +434,7 @@ User Question: %s",
   
   # render the new chat along with all the previous dialogues coming before it
   output$ai_response <- renderUI({
-    HTML(markdown::markdownToHTML(text = chat_log(), fragment.only = TRUE))
+    HTML(chat_log()) # Chat log is now pre-rendered HTML, so we don't need to parse again
   })
   
   # =========================================================================
