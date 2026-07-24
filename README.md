@@ -44,8 +44,7 @@ When the user asks a prompt, Ragnar ranks the top k relevant metadata and picks 
 | `programs/cleaning/` | Cleaning scripts | |
 | `references/codebook/` | Codebooks | Sorted by organization |
 | `data/sources/` | Uncleaned datasets | Sorted by organization |
-| `data/outcome/` | Cleaned datasets | Sorted by organization |
-| `data/outcome/_All_Metadata/` | All metadata files | Also saved alongside datasets |
+| `data/outcome/` | Cleaned datasets and metadata files | Sorted by organization |
 | `data/outcome/` | Master registry & Registry store | Standalone files |
 
 **List of Datasets by Topic**
