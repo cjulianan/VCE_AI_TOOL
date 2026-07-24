@@ -8,8 +8,6 @@ library(googlesheets4)
 library(bslib)
 
 
-##### Hyperlinks don't work yet, I'm gonna try to fix that. They are available in the Google Spreadsheet though
-
 # 1. Authorizes Google Sheets to read public links without a login prompt
 gs4_deauth()
 
@@ -29,7 +27,6 @@ ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
       width = 3,
-      selectInput("team_filter", "Filter by Research Team:", choices = c("All Teams")),
       selectInput("cat_filter", "Filter by Sector Domain:", choices = c("All Categories")),
       hr(),
       helpText("💡 Type any variable into the global search bar (like insurance or education) or the 'Variables' column filter to instantly find the containing cluster file")
@@ -58,7 +55,7 @@ server <- function(input, output, session) {
       mutate(across(everything(), as.character)) %>%
       # Safety Net: Replace missing values with readable placeholders
       replace_na(list(
-        team = "Unknown Team", dataset_name = "Unlabeled", 
+        dataset_name = "Unlabeled", 
         variable = "", label = "No description provided", 
         category = "Unassigned", package_api = "N/A"
       ))
@@ -67,7 +64,6 @@ server <- function(input, output, session) {
   # Update sidebars based on sheet data contents
   observe({
     df <- raw_registry()
-    updateSelectInput(session, "team_filter", choices = c("All Teams", unique(df$team)))
     updateSelectInput(session, "cat_filter", choices = c("All Categories", unique(df$category)))
   })
   
@@ -75,10 +71,7 @@ server <- function(input, output, session) {
   output$master_registry_table <- renderReactable({
     df <- raw_registry()
     
-    # Apply filtering selections
-    if (input$team_filter != "All Teams") {
-      df <- df %>% filter(team == input$team_filter)
-    }
+    # Apply filtering selection for Categories
     if (input$cat_filter != "All Categories") {
       df <- df %>% filter(category == input$cat_filter)
     }
@@ -107,15 +100,27 @@ server <- function(input, output, session) {
       
       # Maps the spreadsheet columns to capitalized UI headers
       columns = list(
-        team = colDef(name = "Research Team", minWidth = 100),
         dataset_name = colDef(name = "Source Dataset"),
         file_name = colDef(name = "File Name", style = list(fontFamily = "monospace")),
         variable = colDef(name = "Variables / Parent Codes", minWidth = 150, style = list(fontWeight = "bold", color = "#2c3e50")),
-        label = colDef(name = "Plain Description", minWidth = 250, html = TRUE), # html = TRUE preserves any embedded hyperlinks (this doesn't work, will fix it
-        category = colDef(name = "Domain"),                                     # so that links are clickable in R shinny app
+        label = colDef(name = "Plain Description", minWidth = 250), 
+        category = colDef(name = "Domain"),                                   
         years_available = colDef(name = "Years Covered"),
         geographic_level = colDef(name = "Geography"),
-        package_api = colDef(name = "Package / API Used", style = list(fontFamily = "monospace"))
+        package_api = colDef(name = "Package / API Used", style = list(fontFamily = "monospace")),
+        codebook_url = colDef( # Builds HTML Link
+          name = "Codebook Reference",
+          html = TRUE,
+          cell = function(value) {
+            # Check if a valid URL string exists before building the HTML 
+            if (!is.na(value) && value != "" && value != "N/A") {
+              paste0("<a href='", value, "' target='_blank' rel='noopener noreferrer'>View Link</a>")
+            } else {
+              "N/A"
+            }
+          }
+          
+        )
       )
     )
   })
