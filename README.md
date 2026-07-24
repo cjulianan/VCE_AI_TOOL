@@ -93,7 +93,7 @@ When the user asks a prompt, Ragnar ranks the top k relevant metadata and picks 
   * **Datasets:** 2025 County Health Rankings Virginia Data (including mental health providers, food environment index, air quality etc.)
   * **Update Frequency:** Annual
   * **Last Time Updated as of 6/3/2026:** 2025
-  * **URL:** Data and Resources | County Health Rankings & Roadmaps
+  * **URL:** https://www.countyhealthrankings.org/health-data/virginia/data-and-resources
   * **API Dependencies:** None
   * **Known Limitations:** None
 
