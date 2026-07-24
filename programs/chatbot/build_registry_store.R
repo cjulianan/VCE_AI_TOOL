@@ -1,3 +1,6 @@
+library(here)
+library(ragnar)
+
 # define where the registry store will be
 db_path <- here("data", "outcome", "registry_store.duckdb")
 
