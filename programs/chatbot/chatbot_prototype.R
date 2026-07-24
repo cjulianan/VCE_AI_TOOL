@@ -11,6 +11,7 @@ library(markdown)
 library(rlang)
 library(here) # fixes directory issues with Shiny app
 library(ragnar)
+library(dplyr)
 
 # function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
 normalize_metadata <- function(meta, meta_path) {
