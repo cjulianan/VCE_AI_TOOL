@@ -31,8 +31,11 @@ registry_rows <- purrr::map_dfr(
 # embed all other metadata ---------------------------------------------------
 
 # define paths for json metadata files
-metadata_dir <- here("data", "outcome", "_All_Metadata")
-metadata_files <- list.files(metadata_dir, pattern = "\\.json$", full.names = TRUE)
+metadata_dir <- here("data", "outcome")
+metadata_files <- list.files(metadata_dir, pattern = "\\.json$", full.names = TRUE, recursive = TRUE)
+
+# exclude master_registry.json so it isn't processed twice
+metadata_files <- metadata_files[!grepl("master_registry\\.json$", metadata_files)]
 
 metadata_rows <- purrr::map_dfr(
   metadata_files,
