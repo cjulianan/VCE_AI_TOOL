@@ -11,7 +11,7 @@ library(bslib)
 # 1. Authorizes Google Sheets to read public links without a login prompt
 gs4_deauth()
 
-# Google Sheets Link
+# Google Sheets Link for Data Availability Dashboard
 SECRET_GOOGLE_SHEET_URL <- "https://docs.google.com/spreadsheets/d/1n7NAei9LGKbbgVZYKWlY7CWOYWVFuXrz35i3F5APDkw/edit?gid=0#gid=0"
 
 # =========================================================================
@@ -19,7 +19,7 @@ SECRET_GOOGLE_SHEET_URL <- "https://docs.google.com/spreadsheets/d/1n7NAei9LGKbb
 # =========================================================================
 ui <- page_navbar(
   title = "DSPG 2026: VCE AI Tool",
-  theme = bs_theme(version = 5, bootswatch = "minty"), 
+  theme = bs_theme(version = 5, bootswatch = "cosmo"), 
   
   # -------------------------------------------------------------------------
   # TAB 1: Chatbot Showcase (Default Landing Page)
@@ -30,31 +30,38 @@ ui <- page_navbar(
     div(
       class = "container mt-4",
       h2("VCE AI Assistant Prototype"),
-      p("Below are static demonstrations of our interactive LLM chatbot. The tool utilizes DuckDB and localized vector retrieval to perform calculations and data routing."),
+      p("Below are static demonstrations of our interactive LLM chatbot. The tool uses DuckDB and localized vector retrieval to perform calculations and route to the right datasets."),
       hr(),
       
-      # Placeholder for static screenshots
-      # NOTE: Images must be placed inside a folder named 'www' in the same directory as this script.
-      h4("Default Interface"),
-      tags$img(src = "chatbot_main.png", style = "max-width: 100%; border: 1px solid #ccc; border-radius: 5px;", class = "mb-4"),
+      # NOTE: Images must be placed inside folder 'www' in the same directory as this script.
+      h4("Default Interface of the App"),
+      tags$img(src = "chatbot_pic_1.png", style = "max-width: 85%; border: 1px solid #ccc; border-radius: 5px;", class = "mb-4"),
       
-      h4("Query Execution & Thinking State"),
-      p("We implemented a visual loading state to provide immediate UI feedback during complex LLM generation or DuckDB data aggregations."),
-      tags$img(src = "chatbot_thinking.png", style = "max-width: 100%; border: 1px solid #ccc; border-radius: 5px;", class = "mb-4"),
+      h4("Features"),
+      p("Here are some of the features our chatbot currently support:"),
+      tags$img(src = "chatbot_pic_3.png", style = "max-width: 85%; border: 1px solid #ccc; border-radius: 5px;"),
+      h5("Save Chat Session:"),
+      p("You can export your chat session into a small JSON file for continuing it later."),
+      h5("Upload Previous Chat Session"),
+      p("Upload the same chat session at a later time to see what you were working on & easily get back into it."),
       
-      h4("Example Output & Citations"),
-      tags$img(src = "chatbot_example.png", style = "max-width: 100%; border: 1px solid #ccc; border-radius: 5px;")
+      
+      h4("Example Questions & Answers with Citations"),
+      p("Here are some examples of questions one could ask, with citations being provided for where each dataset that the LLM used
+        to answer the question comes from."),
+      tags$img(src = "chatbot_pic_2.png", style = "max-width: 85%; border: 1px solid #ccc; border-radius: 5px;"),
+      h5("Example 1: Chickenpox disease from the VDH PUD Reportable Diseases Dataset - you can follow up with a new county, too.")
     )
   ),
   
   # -------------------------------------------------------------------------
-  # TAB 2: Data Availability Dashboard (Your existing UI nested here)
+  # TAB 2: Data Availability Dashboard 
   # -------------------------------------------------------------------------
   
   nav_panel(
     title = "Data Availability",
     div(
-      class = "container-fluid mt4",
+      class = "container-fluid mt-4",
       h3("Data Availability Portal"),
       p("Search and filter for variables available in our database repository"),
       hr(),
@@ -76,29 +83,29 @@ ui <- page_navbar(
 ),
 
 # -------------------------------------------------------------------------
-# TAB 3: Overview
+# TAB 3: Overview (Image of US & Description of Project)
 # -------------------------------------------------------------------------
 nav_panel(
   title = "Overview",
   div(
     class = "container mt-4",
     h3("Project Overview"),
-    p("Insert executive summary, goals, and methodologies here.")
+    p("Pic of me and Sherlock, motivation for the project, goals, and what we managed to do with the project.")
   )
 ),
 
 # -------------------------------------------------------------------------
-# TAB 4: Literature Review & Repository
+# TAB 4: Literature Review & Github Repository Link
 # -------------------------------------------------------------------------
 nav_panel(
-  title = "Literature Review",
+  title = "Literature Review & Github Repository",
   div(
     class = "container mt-4",
     h3("Literature Review"),
     p("Summary of the existing research and documentation."),
     hr(),
     h4("Source Code"),
-    p("Review the complete architecture, routing logs, and data pipelines on our repository:"),
+    p("Review the complete architecture and data pipelines on our repository:"),
     tags$a(
       href = "https://github.com/cjulianan/VCE_AI_TOOL", 
       target = "_blank", 
@@ -128,7 +135,8 @@ server <- function(input, output, session) {
       replace_na(list(
         dataset_name = "Unlabeled", 
         variable = "", label = "No description provided", 
-        category = "Unassigned", package_api = "N/A"
+        category = "Unassigned", package_api = "N/A",
+        codebook_url = "N/A"
       ))
   })
   
