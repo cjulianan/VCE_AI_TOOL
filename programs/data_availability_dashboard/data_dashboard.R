@@ -17,26 +17,97 @@ SECRET_GOOGLE_SHEET_URL <- "https://docs.google.com/spreadsheets/d/1n7NAei9LGKbb
 # =========================================================================
 # USER INTERFACE
 # =========================================================================
-ui <- fluidPage(
+ui <- page_navbar(
+  title = "DSPG 2026: VCE AI Tool",
   theme = bs_theme(version = 5, bootswatch = "minty"), 
   
-  titlePanel("DSPG 2026: Building VCE AI Tool Team Data Availability Portal"),
-  p("Search and filter for variables available in our database repository"),
-  hr(),
-  
-  sidebarLayout(
-    sidebarPanel(
-      width = 3,
-      selectInput("cat_filter", "Filter by Sector Domain:", choices = c("All Categories")),
+  # -------------------------------------------------------------------------
+  # TAB 1: Chatbot Showcase (Default Landing Page)
+  # -------------------------------------------------------------------------
+  nav_panel(
+    title = "Chatbot Showcase",
+    # Wrap content in a container for centered, readable maximum widths
+    div(
+      class = "container mt-4",
+      h2("VCE AI Assistant Prototype"),
+      p("Below are static demonstrations of our interactive LLM chatbot. The tool utilizes DuckDB and localized vector retrieval to perform calculations and data routing."),
       hr(),
-      helpText("💡 Type any variable into the global search bar (like insurance or education) or the 'Variables' column filter to instantly find the containing cluster file")
-    ),
-    
-    mainPanel(
-      width = 9,
-      reactableOutput("master_registry_table")
+      
+      # Placeholder for static screenshots
+      # NOTE: Images must be placed inside a folder named 'www' in the same directory as this script.
+      h4("Default Interface"),
+      tags$img(src = "chatbot_main.png", style = "max-width: 100%; border: 1px solid #ccc; border-radius: 5px;", class = "mb-4"),
+      
+      h4("Query Execution & Thinking State"),
+      p("We implemented a visual loading state to provide immediate UI feedback during complex LLM generation or DuckDB data aggregations."),
+      tags$img(src = "chatbot_thinking.png", style = "max-width: 100%; border: 1px solid #ccc; border-radius: 5px;", class = "mb-4"),
+      
+      h4("Example Output & Citations"),
+      tags$img(src = "chatbot_example.png", style = "max-width: 100%; border: 1px solid #ccc; border-radius: 5px;")
+    )
+  ),
+  
+  # -------------------------------------------------------------------------
+  # TAB 2: Data Availability Dashboard (Your existing UI nested here)
+  # -------------------------------------------------------------------------
+  
+  nav_panel(
+    title = "Data Availability",
+    div(
+      class = "container-fluid mt4",
+      h3("Data Availability Portal"),
+      p("Search and filter for variables available in our database repository"),
+      hr(),
+      
+      sidebarLayout(
+        sidebarPanel(
+          width = 3,
+          selectInput("cat_filter", "Filter by Sector Domain:", choices = c("All Categories")),
+          hr(),
+          helpText("💡 Type any variable into the global search bar (like insurance or education) or the 'Variables' column filter to instantly find the containing cluster file")
+        ),
+        
+        mainPanel(
+          width = 9,
+          reactableOutput("master_registry_table")
     )
   )
+    )
+),
+
+# -------------------------------------------------------------------------
+# TAB 3: Overview
+# -------------------------------------------------------------------------
+nav_panel(
+  title = "Overview",
+  div(
+    class = "container mt-4",
+    h3("Project Overview"),
+    p("Insert executive summary, goals, and methodologies here.")
+  )
+),
+
+# -------------------------------------------------------------------------
+# TAB 4: Literature Review & Repository
+# -------------------------------------------------------------------------
+nav_panel(
+  title = "Literature Review",
+  div(
+    class = "container mt-4",
+    h3("Literature Review"),
+    p("Summary of the existing research and documentation."),
+    hr(),
+    h4("Source Code"),
+    p("Review the complete architecture, routing logs, and data pipelines on our repository:"),
+    tags$a(
+      href = "https://github.com/cjulianan/VCE_AI_TOOL", 
+      target = "_blank", 
+      rel = "noopener noreferrer", 
+      class = "btn btn-primary",
+      icon("github"), "View on GitHub"
+    )
+  )
+)
 )
 
 # =========================================================================
