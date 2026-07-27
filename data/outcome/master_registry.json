@@ -165,18 +165,6 @@
       ]
     },
     {
-      "dataset_id": "ccd_enrollment",
-      "metadata_path": "data/outcome/Urban-Institute/2020-2024_ccd_enrollment_metadata.json",
-      "keywords": [
-        "ccd enrollment",
-        "student counts",
-        "enrollment totals",
-        "school size",
-        "student demographics",
-        "grade enrollment"
-      ]
-    },
-    {
       "dataset_id": "vdh_diseases",
       "metadata_path": "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography_metadata.json",
       "keywords": [
