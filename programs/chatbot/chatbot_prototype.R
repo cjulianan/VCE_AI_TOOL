@@ -367,8 +367,8 @@ server <- function(input, output, session) {
       "You are a helpful data assistant. Format your response in clear and precise sentence form. Do not add irrelevant information unless the prompt asks for it. 
       
 === CITATIONS ===
-If a Source URL is provided in the New Context, you MUST cite it at the end of your response using EXACTLY this markdown format: (URL). 
-CRITICAL RULE: Do NOT use special citation brackets like 【 or 】. Use only standard markdown brackets.
+If a Source URL is provided in the New Context, you MUST cite it at the end of your response, like this: (URL) 
+Do not use any other kinds of brackets for citations, ONLY parentheses.
 
 === Performing Calculations ===
 1. Use data tools registered to perform calculations.
