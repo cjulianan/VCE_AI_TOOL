@@ -11,6 +11,72 @@ Standard LLMs frequenty hallucinate and give false answers to the user. VCE AI T
 
 ---
 
+## 📖 User Guide
+
+**Prerequisites:**
+
+Before getting started, make sure that you have completed the following (**note:** for the following instructions, use terminal on macOS/Linux or PowerShell on Windows): 
+
+* **Ollama** – For processing data
+  * In your terminal, run “ollama --version” to check if Ollama is installed on your device. If not, install it here: https://ollama.com/download 
+  * Once Ollama is installed, run the following command in your terminal to download the required data embedding model:
+    ```
+    ollama pull nomic-embed-text
+    ```
+* **Git** – For downloading this project
+  * In your terminal, run “git --version” to check if Git is installed on your device. If not, install it here: https://git-scm.com/install/
+  * Once Git is installed, run the following command in your terminal to download this project:
+    ```
+    git clone https://github.com/cjulianan/VCE_AI_TOOL.git
+    ```
+* **R** – For programming language
+  * In your terminal, run “R --version” to check if R is installed on your device. If not, install it here: https://cran.rstudio.com/
+* **R Studio** – Interface for running app
+  * In your terminal, run “rstudio --version” to check if R Studio is installed on your device. If not, install it here: https://posit.co/downloads
+  * Open the project folder “VCE_AI_TOOL” and open the “VCE_AI_TOOL.Rproj” file with R Studio to access the project.
+  * Run the following commands in the console to install required packages:
+    ```
+    # Install standard CRAN packages  
+    install.packages(c("bslib", "shiny", "DBI", "duckdb", "jsonlite", "readr", "markdown", "rlang", "here", “dplyr”, "remotes"))  
+    
+    # Install GitHub packages 
+    remotes::install_github("r-lib/ellmer") remotes::install_github("tidyverse/ragnar") 
+    ```
+
+ * **VT ARC API Access** – For calling LLM
+   * Ensure you have an API key from ARC VT. If not, follow the instructions under the Access section of the following website to generate an API key:   https://www.docs.arc.vt.edu/ai/011_llm_api_arc_vt_edu.html
+   * Inside the VCE_AI_TOOL project folder’s root directory, create a file named “.Renviron” and add the following line within it:
+     ```
+     VT_ARC_API_KEY="your_actual_api_key_here" 
+     ```
+
+**Setting Up Chatbot:**
+1. Open the project folder “VCE_AI_TOOL” and open the “VCE_AI_TOOL.Rproj” file with R Studio to access the project. 
+
+2. Inside R Studio within the “VCE_AI_TOOL” project, run the script located in programs/chatbot/ called “build_registry_store.R” to embed the metadata the chatbot will rely on (you will only need to do this once). You can run the script by pressing Ctrl + Shift + Enter for windows or Cmd + Shift + Return. 
+
+3. Run the script located in programs/chatbot/ called “chatbot_prototype.R” (this is the script that holds all the chatbot logic). You can run the script by pressing Ctrl + Shift + Enter for windows or Cmd + Shift + Return.This script is to be run every time you wish to open and use the chatbot.  
+ 1. If you encounter the following error message when running the chatbot script: 
+```
+Error in ..stacktraceon..({ : The registry store does not exist. Run : Rscript programs/chatbot/build_registry_store.R 
+```
+
+ Go to the toolbar on the top of R Studio and click Session > Restart R. 
+
+ Then redo steps 2 and 3 again. 
+
+**Querying with Chatbot:**
+The chatbot is designed to answer county level questions of Virginia and currently contains information on the broad topics of health, education, and agriculture. The chatbot is designed with a Retrieval-Augmented Generation system, meaning it only answers questions it has datasets on to mitigate hallucinations and fabricated information commonly encountered in conventional chatbots. Thus, if it is asked a question that it doesn’t have dataset information on, it will respond that it cannot answer (more datasets and topics will be added in the future). 
+
+To ask the chatbot a question, input your prompt inside the textbox on the bottom of the chatbot interface and click the button with the paper airplane symbol to send. The chatbot will answer the question and also provide a clickable hyperlink to the source of information if applicable. Chatbot responses will work best when given a specific Virginia county in the user’s prompt.  
+
+Below is an example conversation flow: 
+
+**Chatbot Export Feature:**
+There are also two button options on the top of the chatbot designed to allow the user to save and upload their chat sessions locally. Press the button titled “Save Chat Session” to download a copy of your current chat session anywhere on your device. The next time you boot up the chatbot again with a new chat session, you can click the button titled “Upload Previous Chat Session” to view any previous chat sessions you have saved previously. 
+
+---
+
 ## 📊 Data Pipeline
 
 **Data Collection:**
