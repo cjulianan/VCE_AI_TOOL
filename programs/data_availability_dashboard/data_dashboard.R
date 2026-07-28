@@ -90,64 +90,64 @@ ui <- page_navbar(
         mainPanel(
           width = 9,
           reactableOutput("master_registry_table")
+        )
+      )
     )
-  )
-    )
-),
-
-# -------------------------------------------------------------------------
-# TAB 3: Overview (Image of US & Description of Project)
-# -------------------------------------------------------------------------
-nav_panel(
-  title = "Overview",
-  div(
-    class = "container mt-4",
+  ),
+  
+  # -------------------------------------------------------------------------
+  # TAB 3: Overview (Image of US & Description of Project)
+  # -------------------------------------------------------------------------
+  nav_panel(
+    title = "Overview",
     div(
-      class = "bg-dark text-white p-3 rounded mb-3",
-      h3("Project Overview")
-    ),
-    
-    p("Pic of me and Sherlock, motivation for the project, goals, and what we managed to do with the project.")
-  )
-),
-
-# -------------------------------------------------------------------------
-# TAB 4: Literature Review & Github Repository Link
-# -------------------------------------------------------------------------
-nav_panel(
-  title = "Literature Review & Github Repository",
-  div(
-    class = "container mt-4",
-    div(
-      class = "bg-dark text-white p-3 rounded mb-3",
-      h3("Literature Review")
-    ),
-    p("Summary of the existing research and documentation."),
-    
-    
-    h6("📚 Source: A Survey on Knowledge-Oriented Retrieval-Augmented Generation, ",
-    tags$a(
-      href = "https://arxiv.org/pdf/2503.10677",
-      target = "_blank",
-      rel = "noopener noreferrer",
-      "PDF Source"
+      class = "container mt-4",
+      div(
+        class = "bg-dark text-white p-3 rounded mb-3",
+        h3("Project Overview")
+      ),
+      
+      p("Pic of me and Sherlock, motivation for the project, goals, and what we managed to do with the project.")
     )
-    )  
-    ,
-    p("RAG has been used in multiple fields, such as pulling information from financial, legal, and industrial texts (Section 8.2). Denoising techniques of dataset, such as confidence scoring to reduce hallucinations (Section 5.7). 
+  ),
+  
+  # -------------------------------------------------------------------------
+  # TAB 4: Literature Review & Github Repository Link
+  # -------------------------------------------------------------------------
+  nav_panel(
+    title = "Literature Review & Github Repository",
+    div(
+      class = "container mt-4",
+      div(
+        class = "bg-dark text-white p-3 rounded mb-3",
+        h3("Literature Review")
+      ),
+      p("Summary of the existing research and documentation."),
+      
+      
+      h6("📚 Source: A Survey on Knowledge-Oriented Retrieval-Augmented Generation, ",
+         tags$a(
+           href = "https://arxiv.org/pdf/2503.10677",
+           target = "_blank",
+           rel = "noopener noreferrer",
+           "PDF Source"
+         )
+      )  
+      ,
+      p("RAG has been used in multiple fields, such as pulling information from financial, legal, and industrial texts (Section 8.2). Denoising techniques of dataset, such as confidence scoring to reduce hallucinations (Section 5.7). 
        Agentic RAG, most relevant to this project, has limitations such as error propagations (tasks requiring many steps can easily lead to errors), cannot interpret data very deeply (explaining why rather than just giving facts), and is not as flexible at retrieval planning (may waste resources unnecessarily calling API when it can just reference data it found previously) (Section 9.4)."),
-    hr(),
-    h4("Source Code"),
-    p("Review the complete architecture and data pipelines on our repository:"),
-    tags$a(
-      href = "https://github.com/cjulianan/VCE_AI_TOOL", 
-      target = "_blank", 
-      rel = "noopener noreferrer", 
-      class = "btn btn-primary",
-      icon("github"), "View on GitHub"
+      hr(),
+      h4("Source Code"),
+      p("Review the complete architecture and data pipelines on our repository:"),
+      tags$a(
+        href = "https://github.com/cjulianan/VCE_AI_TOOL", 
+        target = "_blank", 
+        rel = "noopener noreferrer", 
+        class = "btn btn-primary",
+        icon("github"), "View on GitHub"
+      )
     )
   )
-)
 )
 
 # =========================================================================
