@@ -55,7 +55,7 @@ Before getting started, make sure that you have completed the following (**note:
 
 2. Inside R Studio within the “VCE_AI_TOOL” project, run the script located in programs/chatbot/ called “build_registry_store.R” to embed the metadata the chatbot will rely on (you will only need to do this once). You can run the script by pressing Ctrl + Shift + Enter for windows or Cmd + Shift + Return. 
 
-3. Run the script located in programs/chatbot/ called “chatbot_prototype.R” (this is the script that holds all the chatbot logic). You can run the script by pressing Ctrl + Shift + Enter for windows or Cmd + Shift + Return.This script is to be run every time you wish to open and use the chatbot.  
+3. Run the script located in programs/chatbot/ called “chatbot_prototype.R” (this is the script that holds all the chatbot logic). You can run the script by pressing Ctrl + Shift + Enter for windows or Cmd + Shift + Return for mac.This script is to be run every time you wish to open and use the chatbot.  
  1. If you encounter the following error message when running the chatbot script: 
      ```
      Error in ..stacktraceon..({ : The registry store does not exist. Run : Rscript programs/chatbot/build_registry_store.R 
