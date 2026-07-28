@@ -15,10 +15,19 @@ summarize_func <- function(dataset_id, metric_column, operation, fips = NULL) {
   # 2. Dataset ID Allowlist (Maps safe internal shortcodes to relative paths)
   # WE WILL ADD THE OTHER DATSETS LATER
   dataset_map <- list(
-    "nass_crops"     = "data/outcome/census_nass_crops.csv",
-    "vdh_diseases"   = "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
-    "special_ed"     = "data/outcome/Virginia-Department-of-Education/2022-2023_Special_Education_Child_Count.csv",
-    "depression"     = "data/outcome/Mental-Health-America/Depression_County_Map_Full_Data.csv"
+    "acs_census" = "data/outcome/American-Community-Survey/2020-2024_acs_master_county",
+    "nass_crops" = "data/outcome/census_nass_crops.csv",
+    "nass_fertilizers" = "data/outcome/National-Agricultural-Statistics-Service/census_nass_fertilizers.csv",
+    "nass_irrigation" = "data/outcome/National-Agricultural-Statistics-Service/census_nass_irrigation.csv",
+    "survey_nass_crops" = "data/outcome/National-Agricultural-Statistics-Service/survey_nass_irrigation.csv",
+    "ccd_directory" = "data/outcome/Urban-Institute/2020-2024_ccd_directory.csv",
+    "vdh_diseases" = "data/outcome/Virginia-Department-of-Health/reportable_disease_surveillance_virginia_geography.csv",
+    "vgin_hospitals" = "data/outcome/Virginia-Geographic-Information-Network/vgin_hospitals.csv",
+    "Depression_County_Map_Full_Data" = "data/outcome/Mental-Health-America/Depression_County_Map_Full_Data.csv",
+    "2022-2023_Special_Education_Child_Count" = "data/outcome/Virginia-Department-of-Education/2022-2023_Special_Education_Child_Count.csv",
+    "2021-2022_Special_Education_Child_Count" = "data/outcome/Virginia-Department-of-Education/2021-2022_Special_Education_Child_Count.csv",
+    "2022-2025_State_Testing" = "data/outcome/Virginia-Department-of-Education/2022-2025_State_Testing.csv",
+    "2025 County Health Rankings Virginia Data - v4" = "data/outcome/County-Health-Rankings-&-Roadmaps/2025 County Health Rankings Virginia Data - v4"
   )
   
   file_path = dataset_map[[dataset_id]]
