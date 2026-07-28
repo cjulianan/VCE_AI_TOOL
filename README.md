@@ -320,7 +320,8 @@ The disease with the highest count in 2024 was Chlamydia trachomatis infection, 
 * Campylobacteriosis – 25 cases  
 * Lyme disease – 14 cases  
 All remaining conditions had fewer than ten reported cases, and several (e.g., Hepatitis A, Malaria, Tuberculosis, Vibriosis) reported zero cases.  
-(Source: Virginia Department of Health, reportable disease surveillance dataset for Roanoke County, 2023‑2024) (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)  
+(Source: Virginia Department of Health, reportable disease surveillance dataset for Roanoke County, 2023‑2024) (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)
+
 **Notes:** Correctly identifies that question 2 is a follow-up question to question 1 and uses the same metadata path to answer that question.  
 
 <br>
