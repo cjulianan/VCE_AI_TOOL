@@ -310,7 +310,8 @@ The most common condition in 2024 was Chlamydia trachomatis infection, with 95 c
 * Gonorrhea – 24 cases  
 * Campylobacteriosis – 13 cases  
 All other conditions had fewer than ten reported cases, and several (e.g., Hepatitis A, Malaria, Shigellosis, Tuberculosis, Vibriosis) reported zero cases.  
-(Source: Virginia Department of Health, reportable disease surveillance dataset for Orange County, 2023‑2024) (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)  
+(Source: Virginia Department of Health, reportable disease surveillance dataset for Orange County, 2023‑2024) (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)
+
 **Follow-up Question:** What about for Roanoke county?  
 **Follow-up Answer:** In Roanoke County (FIPS 51161) the 2023‑2024 Virginia Department of Health surveillance data record 26 distinct reportable diseases. Across the two years, a total of 400 cases were reported.  
 The disease with the highest count in 2024 was Chlamydia trachomatis infection, accounting for 170 cases (incidence ≈ 175 per 100 000). Other notable counts in 2024 include:  
@@ -326,6 +327,7 @@ All remaining conditions had fewer than ten reported cases, and several (e.g., H
 
 **2. Question:** What counties serve Williamsburg-James City County Public Schools?  
 **Answer:** Williamsburg‑James City County Public Schools serves schools located in two counties: those with FIPS code 51095 and those with FIPS code 51830. (These correspond to the counties that appear in the district’s school directory.)  
+
 **Subsequent Question:** What is the incident rate of Gonorrhea disease in Petersburg?  
 **Subsequent Answer:** In 2024, the reported incidence rate for gonorrhea in Petersburg was 834.6 cases per 100,000 population. (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)  
 **Notes:** Correctly identifies that question 2 is not a follow-up question to question 1 since they are on different topics and answers both with their respective metadata.
