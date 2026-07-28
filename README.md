@@ -114,7 +114,7 @@ When the user asks a prompt, Ragnar ranks the top k relevant metadata and picks 
 | `data/outcome/` | Cleaned datasets and metadata files | Sorted by organization |
 | `data/outcome/` | Master registry & Registry store | Standalone files |
 
-**List of Datasets by Topic**
+**List of Datasets by Topic:**
 <details>
 <summary><b>🏥 Health Datasets</b></summary>
 
@@ -224,6 +224,116 @@ When the user asks a prompt, Ragnar ranks the top k relevant metadata and picks 
   * **Known Limitations:** None
 
 </details>
+
+---
+
+## 🎯 Evaluation & Validation
+
+**Methodology**
+
+To evaluate the chatbot’s performance, we created a set of validation questions covering general dataset queries and manually check datasets to ensure accuracy of responses, both with and without Virginia counties. Additionally, these tests focus on three core features: 
+
+* **Semantic Search:** Verifying that the chatbot successfully routes queries to correct datasets based on semantic meaning built from embeddings, even when the prompt wording doesn’t exactly match metadata keywords. 
+* **Calculations:** Testing the chatbot’s ability to accurately perform calculations using data tools (minimum, maximum, count, average, summation).
+* **Follow-up Questions:** Assessing that the chatbot can respond to follow-up questions by distinguishing if the two prompts are on the same or different topics.
+
+**Validation Questions:**
+
+<details>
+<summary><b>🧠 Semantic Search Questions:</b></summary>
+
+<br>
+
+**1. Question:** Do you have data on chicken pox?  
+**Answer:** Yes. The reportable_disease_surveillance_virginia_geography dataset includes a Condition column that records the name of each reportable disease for every county and year. Because chicken‑pox (varicella) is a reportable disease in Virginia, the dataset contains annual case counts and incidence rates for it in the 2024 data. (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography) 
+**Notes:** Correctly routes to the disease surveillance dataset from the semantic meaning of “chicken pox.”  
+
+<br>
+
+**2. Question:** Briefly tell me the data you have on medical facilities.  
+**Answer:** The VGIN Hospitals dataset provides geospatial details for inpatient, outpatient, and mental‑health hospital facilities across Virginia counties (2024). It includes each facility’s name, address, city, ZIP code, longitude (X) and latitude (Y), the date of its last verification (LastCheck), its operating classification (SrcTyp), the reporting agency (Src), and both the 5‑digit FIPS code and county name (FIPScode and FIPSname). The data are sourced from the Virginia Geographic Information Network (VGIN) and cover every Virginia county and independent city (https://vgin.vdem.virginia.gov/datasets/VGIN::virginia-hospitals/about).  
+**Notes:** Correctly routes to the VGIN Hospitals dataset from the semantic meaning of “medical facilities.”  
+
+<br>
+
+**3. Question:** What data do you have on chrter schools?  
+**Answer:** The CCD directory includes a specific column `charter` that flags each institution as a public charter school (indicator = 1) or not (indicator = 0). This column is part of a broader school‑level record that also contains the school’s name, ID numbers, location (county code, city, latitude/longitude), urbanicity, school level and type, enrollment, teacher FTE, lunch‑program counts, and other characteristics. All of these fields are available for every school in the 2020‑2024 public‑school directory. (Source: https://educationdata.urban.org/documentation/index.html)  
+**Notes:** Correctly routes to the CCD directory dataset based on semantic meaning even though “charter schools” is spelled wrong.
+
+</details>
+
+   <details>
+<summary><b>🔢 Calculation Questions</b></summary>
+
+<br>
+
+**1. Question:** What is the average count of special education students in accomack county in 2023?  
+**Answer:** The average number of special‑education students per school in Accomack County for the 2022‑2023 school year is approximately 72.7. (https://data.virginia.gov/dataset/special-education-child-count-2022-2023)  
+**Notes:** Correctly uses data tool to calculate the average.  
+
+<br>
+
+**2. Question:** How many total high schools in Roanoke County Public Schools?  
+**Answer:** Roanoke County Public Schools includes five distinct high‑school campuses: Cave Spring High, Glenvar High, Hidden Valley High, Northside High, and William Byrd High (all appear in the dataset across the years) (https://educationdata.urban.org/documentation/index.html).  
+**Notes:** Correctly uses data tool to calculate total.  
+
+<br>
+
+**3. Question:** What school in fairfax county had the max count of students with special education needs in 2023?  
+**Answer:** Lake Braddock Secondary had the highest number of special‑education students in Fairfax County for the 2022‑2023 school year, with a total count of 643. (https://data.virginia.gov/dataset/special-education-child-count-2022-2023)  
+**Notes:** Correctly uses data tool to calculate the maximum.  
+
+<br>
+
+**4. Question:** What school in fairfax county had the min count of students with special education needs in 2023?  
+**Answer:** Bryant High had the lowest number of students identified as needing special education in Fairfax County for the 2022‑2023 school year, with only 13 students reported. (https://data.virginia.gov/dataset/special-education-child-count-2022-2023)  
+**Notes:** Correctly uses data tool to calculate the minimum.  
+
+<br>
+
+**5. Question:** What is the sum of all students with special education needs in Bristol City in 2023?  
+**Answer:** The total number of students identified as needing special education in Bristol City for the 2022‑2023 school year is 442.(https://data.virginia.gov/dataset/special-education-child-count-2022-2023) 
+**Notes:** Correctly uses data tool to calculate sum.
+
+</details>
+
+<details>
+<summary><b>💬 Follow-up Questions</b></summary>
+
+<br>
+
+**1. Question:** Briefly give me data on diseases in Orange county.  
+**Answer:** In Orange County (FIPS 51137) the 2023‑2024 Virginia Department of Health surveillance data contain reports for 26 distinct reportable diseases. Across the two years, the total number of reported cases is 214.  
+The most common condition in 2024 was Chlamydia trachomatis infection, with 95 cases (incidence ≈ 246 per 100 000). Other notable counts include:  
+* Salmonellosis – 20 cases  
+* Hepatitis C, chronic – 24 cases  
+* Gonorrhea – 24 cases  
+* Campylobacteriosis – 13 cases  
+All other conditions had fewer than ten reported cases, and several (e.g., Hepatitis A, Malaria, Shigellosis, Tuberculosis, Vibriosis) reported zero cases.  
+(Source: Virginia Department of Health, reportable disease surveillance dataset for Orange County, 2023‑2024) (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)  
+**Follow-up Question:** What about for Roanoke county?  
+**Follow-up Answer:** In Roanoke County (FIPS 51161) the 2023‑2024 Virginia Department of Health surveillance data record 26 distinct reportable diseases. Across the two years, a total of 400 cases were reported.  
+The disease with the highest count in 2024 was Chlamydia trachomatis infection, accounting for 170 cases (incidence ≈ 175 per 100 000). Other notable counts in 2024 include:  
+* Gonorrhea – 65 cases  
+* Hepatitis C, chronic – 51 cases  
+* Campylobacteriosis – 25 cases  
+* Lyme disease – 14 cases  
+All remaining conditions had fewer than ten reported cases, and several (e.g., Hepatitis A, Malaria, Tuberculosis, Vibriosis) reported zero cases.  
+(Source: Virginia Department of Health, reportable disease surveillance dataset for Roanoke County, 2023‑2024) (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)  
+**Notes:** Correctly identifies that question 2 is a follow-up question to question 1 and uses the same metadata path to answer that question.  
+
+<br>
+
+**2. Question:** What counties serve Williamsburg-James City County Public Schools?  
+**Answer:** Williamsburg‑James City County Public Schools serves schools located in two counties: those with FIPS code 51095 and those with FIPS code 51830. (These correspond to the counties that appear in the district’s school directory.)  
+**Subsequent Question:** What is the incident rate of Gonorrhea disease in Petersburg?  
+**Subsequent Answer:** In 2024, the reported incidence rate for gonorrhea in Petersburg was 834.6 cases per 100,000 population. (https://data.virginia.gov/dataset/vdh_pud_reportable-disease-surveillance-virginia_geography)  
+**Notes:** Correctly identifies that question 2 is not a follow-up question to question 1 since they are on different topics and answers both with their respective metadata.
+
+</details>
+
+**Future Validation:**
+Currently, the validation only consists of a set of questions, which only shows if the expected response was returned. For future validation methods to be more robust, Mean Reciprocal Rank (MRR) can be incorporated. This method of validation shows not only if the correct metadata was retrieved but also how high it was ranked compared to the others. For example, if the metadata was the first correct match, it would return a score of 1/1 while if it were the second correct match, it would return a lower score of 1/2. By averaging the score across multiple test queries, MRR provides a clearer picture of retrieval accuracy and response order than pure right/wrong test questions.  
 
 ---
 
