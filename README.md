@@ -377,8 +377,6 @@ The prototype of VCE AI Tool was built over the course of 10 weeks. Below are sp
 
 <br>
 
----
-
 **2.** **Issue:** How can the chatbot consistently perform calculations from datasets?  
 
 **Solution:** We implemented a data summarization tool to perform calculations such as minimum, maximum, average, count, and total. The data tool is used to perform these calculations instead of the LLM itself.  
@@ -405,7 +403,7 @@ For example:
 
 **Notes:** None
 
----
+<br>
 
 **2. Issue:** For the CCD Directory dataset, a school district may span between more than one county, but the dataset only lists one of them. For example, Williamsburg-James City County Public Schools serves both Williamsburg City and James City County but the dataset only accounts for Williamsburg.  
 
@@ -419,7 +417,7 @@ WILLIAMSBURG-JAMES CITY PBLC SCHS,51830,Williamsburg City,serves,shared
 
 **Notes:** None
 
----
+<br>
 
 **3. Issue:** In Virginia, there are localities with the same name. For example, Fairfax County and Fairfax City. If the user only mentions Fairfax and does not specify city or county, how will the chatbot know which one to query for? 
 
@@ -433,7 +431,7 @@ fairfax city,Fairfax City,city,51600
 
 **Notes:** Previously in the chatbot, we also added a feature where the chatbot would first check in its retrieval process whether one of these localities sharing the same names (e.g. Fairfax) appeared in user prompt. The chatbot would stop the compuing process and ask the user to clarify if they meant the city or county. However, we removed it since there are only three of these localities in Virginia (Richmond, Fairfax, and Roanoke). Currently, if the user mentions any of these localities, the chatbot will automatically choose either the city or county to answer, and the user can follow up with a clarifying prompt if needed. 
 
----
+<br>
 
 **4. Issue:** Most metadata JSON files follow the same format except for some. For example, the metadata format for the ACS dataset uses “variable_code” instead of “name” and “human_label” instead of “desc.” It also does not have keywords. How do we generalize metadata files even if formats differ? 
 
@@ -456,8 +454,6 @@ fairfax city,Fairfax City,city,51600
 
 <br>
 
----
-
 **2. Issue:** Chatbot crashes when not given a specific county to match a FIPS code since querying is built on having a locality.  
 
 **Solution:** Create 3 possible paths in logic.  
@@ -468,8 +464,6 @@ Path 3: If user prompt does not provide county and no metadata path is found, th
 **Notes:** None  
 
 <br>
-
----
 
 **3. Issue:** Chatbot does not always retrieve the correct columns for questions on the ACS dataset.  
 
@@ -505,8 +499,6 @@ Path 3: If user prompt does not provide county and no metadata path is found, th
 
 <br>
 
----
-
 **2. Issue:** Area Health Resource Files (AHRF) metadata file is too long, causing the chatbot to hit a context window limit when it routes to that dataset.  
 
 **Solution:** Add a context limit budget by adding a limit for max characters in our chat window, and (for big datasets especially) selecting the top 15-20 most semantically relevant columns instead of passing huge metadata files and filling up our context window early, adding a SQL row limit for DuckDB.  
@@ -527,8 +519,6 @@ Path 3: If user prompt does not provide county and no metadata path is found, th
 **Notes:** None  
 
 <br>
-
----
 
 **2. Issue:** We wanted to add the source for where we got the dataset from as a URL, instead of simply listing the filename of the answer source like we were doing before (VCE agents likely would not find it useful). At first with trying to fix it, the URL would mess up the links by putting weird markdown brackets we didn’t want in the URLs.  
 **Solution:** We fixed this by explicitly instructing the LLM via the system prompt to output standard hyperlinks, nested instead “()” for the dataset URLs. To ensure the application remained stable, we parsed this Markdown into HTML before UI injection and used a deterministic string replacement to force the external links to open safely in a new tab.  
