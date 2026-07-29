@@ -68,12 +68,20 @@ transparency. The chatbot will serve as a proof-of
 concept prototype to be utilized by VCE agents to efficiently access complex data and use 
 that information to respond to emerging local needs."),
             
-            p("Below are static demonstrations of our interactive LLM chatbot.")
+            p("Below is a practical example of why RAG chatbots are preferred for prioritizing accuracy. We also include static demonstrations of our interactive LLM chatbot.")
         )
       ),
       
       card(
         class = "shadow-sm mb-4",
+        card_header(
+          class = "bg-primary text-white",
+          h4("Convential Chatbot VS VCE AI Tool (Highlighting Hallucination of Popular LLMs)")
+        ),
+        tags$img(src = "chatbot_pic_6.png", class = "img-fluid rounded border mb-4", style = "max-width: 65%;"),
+        tags$img(src = "chatbot_pic_7.png", class = "img-fluid rounded border mb-4", style = "max-width: 65%;"),
+        p(strong("Same question asked with ChatGPT VS VCE AI Tool:"), " This example gives a basis for why it is important to use Retrieval Augmented Generation for chatbots like our AI tool for reducing hallucination.
+          Our chatbot won't give answers to questions it does not have answers to - unlike popular LLMs, which (by design) generate an answer, regardless of its truthfulness."),
         card_header(
           class = "bg-primary text-white",
           h4("Default Interface of the App", class = "m-1")
@@ -191,12 +199,12 @@ that information to respond to emerging local needs."),
           class = "bg-primary text-white",
           h3("Kohl Center @ Virginia Tech")
         ),
-        tags$img(src = "KohlCentre_Vertical_FullColor_RGB.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 90;"),
+        tags$img(src = "KohlCentre_Vertical_FullColor_RGB.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 65%;"),
         card_header(
           class = "bg-primary text-white",
           h3("Our Stakeholders - Virginia Cooperative Extension")
         ),
-        tags$img(src = "vce_logo.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 90;")
+        tags$img(src = "vce_logo.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 70%;")
       ),
       
       card(
