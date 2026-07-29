@@ -1,5 +1,3 @@
-## HERE IS THE START OF OUR PROTOTYPE
-
 library(ellmer)
 library(bslib)
 library(shiny)
@@ -9,11 +7,11 @@ library(jsonlite)
 library(readr)
 library(markdown)
 library(rlang)
-library(here) # fixes directory issues with Shiny app
+library(here)
 library(ragnar)
 library(dplyr)
 
-# function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
+# Function to normalize metadata (e.g. dataset a uses "desc" key but dataset b uses "human_label" b)
 normalize_metadata <- function(meta, meta_path) {
   col_list <- meta$columns %||% list()
   col_string <- "N/A"
@@ -22,7 +20,7 @@ normalize_metadata <- function(meta, meta_path) {
       name <- c$name %||% c$variable_code %||% "No name"
       desc <- c$desc %||% c$human_label %||% "No description."
       
-      # used to clean acs metadata so the chatbot doesn't get confused over the !! and choose wrong columns
+      # Used to clean acs metadata so the chatbot doesn't get confused over the !! and choose wrong columns
       clean_desc <- gsub("Estimate!!Total:!!", "Total for ", desc)
       clean_desc <- gsub("!!", " ", clean_desc)
       
@@ -48,11 +46,11 @@ normalize_metadata <- function(meta, meta_path) {
 # GLOBAL INITIALIZATION (Runs once when app boots)
 # =========================================================================
 
-# 1. Load our structural lookup files using here() to prevent working directory issues
+# 1. Load our structural lookup files
 VIRGINIA_LOCALITIES <- read.csv(here("data/outcome/virginia_localities.csv"), stringsAsFactors = FALSE)
 SCHOOL_BRIDGES      <- read.csv(here("data/outcome/Urban-Institute/institution-locality_relationship_table.csv"), stringsAsFactors = FALSE)
 
-# Force names to lowercase to make string matching bulletproof
+# Force names to lowercase for consistency
 VIRGINIA_LOCALITIES$alias <- tolower(VIRGINIA_LOCALITIES$alias)
 
 # 2. Spin up the background serverless DuckDB engine
@@ -83,11 +81,9 @@ REGISTRY_STORE <- ragnar_store_connect(
 # UI ----------------------------------------------------------------------
 
 ui <- page_fixed(
-  # bslib theme
   theme = bs_theme(version = 5, bootswatch = "yeti"),
   
   div (
-    # center the chatbot box
     class = "d-flex flex-column justify-content-center min-vh-100",
     
     # this part is UI for the export and import chat log buttons
@@ -98,21 +94,21 @@ ui <- page_fixed(
     ),
     
     card(
-      # website banner to match color picked by theme
+      # Website banner to match color picked by theme
       card_header(
         class = "bg-primary text-primary-inverse",
         icon("robot"),
         span("VCE AI Tool", class = "fw-bold")
       ),
       
-      # website body, where chat is recorded
+      # Website body, where chat is recorded
       card_body(
         uiOutput("ai_response"),
         height = "500px",       
         fillable = FALSE        
       ),
       
-      # website footer, where input box and submit button are located
+      # Website footer, where input box and submit button are located
       card_footer(
         layout_columns(
           col_widths = c(10, 2),
@@ -128,7 +124,7 @@ ui <- page_fixed(
 # Server ------------------------------------------------------------------
 
 server <- function(input, output, session) {
-  # set up chatbot parameters
+  # Set up chatbot parameters
   chat_obj <- chat_openai_compatible(
     model = "gpt-oss-120b",
     base_url = "https://llm-api.arc.vt.edu/api/v1",
@@ -141,14 +137,14 @@ server <- function(input, output, session) {
   # Replaced with a clean, centered starter label:
   chat_log <- reactiveVal("<div class='text-center text-muted large my-2'><strong>Conversation Started</strong></div>")
   
-  # cache to save previous metadata paths, user prompts, and solve ambiguations between counties/cities
+  # Cache to save previous metadata paths and user prompts
   cache <- reactiveValues(
     last_metadata_path = NULL,
     last_fips = NULL,
     last_locality_name = NULL
   )
   
-  # only update chat box if user hits submit button and user has something in prompt input box
+  # Only update chat box if user hits submit button and user has something in prompt input box
   observeEvent(input$submit_button, {
     req(input$user_prompt) 
     
@@ -161,11 +157,11 @@ server <- function(input, output, session) {
     target_locality_name   <- NULL
     is_follow_up           <- FALSE
     matched_metadata_paths <- character()
-    top_k                  <- 2 # Guaranteed fallback if vector search is bypassed
+    top_k                  <- 2 
     
       
       # =========================================================================
-      # MILESTONE 1: LOCALITY MATCHING (MOVED UP TO RUN FIRST)
+      # MILESTONE 1: LOCALITY MATCHING
       # =========================================================================
       for (i in 1:nrow(VIRGINIA_LOCALITIES)) {
         if (grepl(VIRGINIA_LOCALITIES$alias[i], user_prompt_clean)) {
@@ -176,8 +172,8 @@ server <- function(input, output, session) {
       }
       
       # =========================================================================
-      # INTENT GATEKEEPER: FOLLOW-UP QUERY (STEP 4 REUSE OR ROUTE RULE)
-      # =======================================g==================================
+      # INTENT GATEKEEPER: FOLLOW-UP QUERY
+      # =========================================================================
       if (length(chat_obj$get_turns()) > 0 && !is.null(cache$last_metadata_path)) {
         classification_chat <- chat_obj$clone()$set_turns(list())
         classification_prompt <- sprintf(
@@ -196,7 +192,7 @@ server <- function(input, output, session) {
       # ROUTING EXECUTION
       # =========================================================================
       if (is_follow_up) {
-        # Step 4 Rule: "What about 2024?" reuses previous dataset
+        # Reuses previous dataset
         matched_metadata_paths <- cache$last_metadata_path
         
         # If user didn't specify a new county, carry over the old one
@@ -205,7 +201,7 @@ server <- function(input, output, session) {
           target_locality_name <- cache$last_locality_name
         }
       } else {
-        # Step 4 Rule: "Tell me about chickenpox in Accomack" performs new routing
+        # Else, performs new routing
         semantic_results <- ragnar_retrieve(
           REGISTRY_STORE,
           text = user_prompt_clean,
@@ -241,15 +237,15 @@ server <- function(input, output, session) {
       data_context <- paste0("Targeting Locality: ", target_locality_name, " (FIPS: ", target_fips, ")\n\n")
       
       for (meta_path in matched_metadata_paths) {
-        # gets the raw metadata json and normalizes it with normalize_metadata function
+        # Gets the raw metadata json and normalizes it with normalize_metadata function
         raw_json <- jsonlite::fromJSON(txt = readLines(here(meta_path), warn = FALSE), simplifyVector = FALSE)
         metadata <- normalize_metadata(raw_json, meta_path)
         
-        # build list of columns that will be used
+        # Build list of columns that will be used
         col_list <- raw_json$columns %||% list()
         defined_columns <- sapply(col_list, function(c) c$name %||% c$variable_code)
         
-        # make sure the locality is just one code so the querying doesn't break
+        # Make sure the locality is just one code so the querying doesn't break
         fips_col <- as.character(metadata$locality_fips_col)[1]
         if (is.null(fips_col) || length(fips_col) == 0 || is.na(fips_col) || fips_col == "") {
           fips_col <- "GEOID"
@@ -261,29 +257,29 @@ server <- function(input, output, session) {
         
         raw_file_absolute_path <- here(metadata$file_path)
         
-        # path for ccd files
+        # Path for ccd files
         if (!is.null(metadata$file_name) && metadata$file_name %in% c("2020-2024_ccd_directory.csv", "2020-2024_ccd_enrollment.csv")) {
           
-          # see if the target fips matches any fips inside the school bridges csv (school district spans 2 counties)
+          # See if the target fips matches any fips inside the school bridges csv (school district spans 2 counties)
           matching_bridges <- SCHOOL_BRIDGES[as.integer(SCHOOL_BRIDGES$locality_fips) == as.integer(target_fips), ]
           if (nrow(matching_bridges) > 0) {
             target_leaid <- as.character(matching_bridges$institution_id[1])
             relationship <- matching_bridges$relationship_type[1]
             
-            # query for school districts spanning across two counties
+            # Query for school districts spanning across two counties
             query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s' LIMIT 50", raw_file_absolute_path, target_leaid)
             records <- dbGetQuery(DB_CON, query)
             
             if (relationship == "shared") {
-              data_context <- paste0(data_context, "⚠️ NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
+              data_context <- paste0(data_context, "NOTE TO ASSISTANT: This data belongs to a shared regional school division encompassing multiple political jurisdictions. Do not attribute metrics solely to one county.\n")
             }
           } else {
-            # query for if the school district doesn't span across two counties
+            # Query for if the school district doesn't span across two counties
             query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s' LIMIT 50", raw_file_absolute_path, fips_col, target_fips)
             records <- dbGetQuery(DB_CON, query)
           }
         } else {
-          # query for all other datasets other than ccd
+          # Query for all other datasets other than ccd
           query <- sprintf(
             "SELECT * FROM '%s' WHERE (CAST(%s AS VARCHAR) = '%s' OR TRY_CAST(%s AS BIGINT) = %d) LIMIT 50", 
             raw_file_absolute_path, 
@@ -293,13 +289,13 @@ server <- function(input, output, session) {
           records <- dbGetQuery(DB_CON, query) 
         }
         
-        # drops all columns not used
+        # Drops all columns not used
         available_cols <- intersect(safe_select_columns, names(records))
         if(length(available_cols) > 0) {
           records <- records[, available_cols, drop = FALSE]
         }
         
-        # loops through the rows that match the query results and store them into a vector to be read in data_context
+        # Loops through the rows that match the query results and store them into a vector to be read in data_context
         if (nrow(records) > 0) {
           record_string <- jsonlite::toJSON(records, auto_unbox = TRUE, pretty = FALSE)
           data_context <- paste0(data_context, "Dataset [", metadata$file_name, "] Minified JSON Records:\n", record_string, "\n\n")
@@ -330,7 +326,7 @@ server <- function(input, output, session) {
     } else {
       # Path 3: neither metadata path nor fips is found
       
-      # use semantic retrieval to find relevant master registry information
+      # Use semantic retrieval to find relevant master registry information
       semantic_results <- ragnar_retrieve(
         REGISTRY_STORE, 
         text = input$user_prompt, 
@@ -338,7 +334,7 @@ server <- function(input, output, session) {
         deoverlap = FALSE
       )
       
-      # if there were any matches, grabs the texts from results and puts into data_context
+      # If there were any matches, grabs the texts from results and puts into data_context
       if (length(semantic_results) > 0) {
         # Extract the matched text content safely depending on data structure
         retrieved_text <- c()
@@ -361,7 +357,7 @@ server <- function(input, output, session) {
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
     
-    # ADDED: Enforce strict 60,000 character limit on the final payload before AI hand-off
+    # Enforce strict 60,000 character limit on the final payload before LLM hand-off
     if (nchar(data_context) > 60000) {
       data_context <- paste0(
         substr(data_context, 1, 60000), 
@@ -442,7 +438,7 @@ User Question: %s",
     updateTextInput(session, "user_prompt", value = "")
   })  
   
-  # render the new chat along with all the previous dialogues coming before it
+  # Render the new chat along with all the previous dialogues coming before it
   output$ai_response <- renderUI({
     HTML(chat_log()) # Chat log is now pre-rendered HTML, so we don't need to parse again
   })
@@ -469,8 +465,9 @@ User Question: %s",
   )
   
   # =========================================================================
-  # CHAT LOG IMPORT HANDLER (USER CAN RELOAD PAST FILE) //// NEEDS FIXING
+  # CHAT LOG IMPORT HANDLER 
   # =========================================================================
+  # Right now if you do a follow-up question after uploading a previous chat session, the chatbot will not know (needs fixing)
   observeEvent(input$import_log, {
     req(input$import_log)
     
@@ -494,9 +491,7 @@ User Question: %s",
     
     showNotification("Chat session successfully restored!", type = "message")
   })
-  
 }
-
 
 # Launch App ------------------------------------------------------------------
 
