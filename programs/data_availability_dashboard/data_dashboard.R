@@ -169,6 +169,21 @@ ui <- page_navbar(
     title = "Acknowledgements",
     div(
       class = "container mt-4",
+      
+      card(
+        class = "shadow-sm",
+        card_header(
+          class = "bg-primary text-white",
+          h3("Kohl Center @ Virginia Tech")
+        ),
+        tags$img(src = "KohlCentre_Vertical_FullColor_RGB.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 90;"),
+        card_header(
+          class = "bg-primary text-white",
+          h3("Our Stakeholders - Virginia Cooperative Extension")
+        ),
+        tags$img(src = "vce_logo.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 90;")
+      ),
+      
       card(
         class = "shadow-sm",
         card_header(
