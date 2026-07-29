@@ -53,7 +53,22 @@ ui <- page_navbar(
           h3("VCE AI Assistant Prototype", class = "m-0")
         ),
         card_body(
-          p(class = "lead", "Below are static demonstrations of our interactive LLM chatbot. The tool uses DuckDB and localized vector retrieval to perform calculations and route to the right datasets.")
+          p("
+            As the adoption of chatbots has increased substantially in recent years, ensuring the 
+accuracy and reliability of their responses has become increasingly important. However, 
+hallucinations and limited transparency of data sources from conventional chatbots lead 
+to inaccurate information and misleading responses. For Virginia Cooperative Extension 
+(VCE) agents, hallucinations or misleading responses from chatbots could have negative 
+impacts on the communities they serve. To address these limitations, we developed the 
+VCE AI Tool, a chatbot that combats these challenges through the implementation of 
+retrieval-augmented generation (RAG). Instead of relying on pretrained data, the RAG 
+system restricts the chatbot in generating responses and sources based on the specific 
+data it is provided, mitigating the risk of fabricated information as well as improving source 
+transparency. The chatbot will serve as a proof-of
+concept prototype to be utilized by VCE agents to efficiently access complex data and use 
+that information to respond to emerging local needs."),
+            
+            p("Below are static demonstrations of our interactive LLM chatbot.")
         )
       ),
       
