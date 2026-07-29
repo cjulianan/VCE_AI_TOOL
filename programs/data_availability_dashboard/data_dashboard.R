@@ -87,7 +87,7 @@ that information to respond to emerging local needs."),
           h4("Default Interface of the App", class = "m-1")
         ),
         card_body(
-          tags$img(src = "chatbot_pic_1.png", class = "img-fluid rounded border mb-4", style = "max-width: 90%;")
+          tags$img(src = "chatbot_pic_1.png", class = "img-fluid rounded border mb-4", style = "max-width: 70%;")
         ),
         
         card_header(
@@ -95,7 +95,7 @@ that information to respond to emerging local needs."),
           h4("Export & Upload Feature", class = "m-1")
         ),
         card_body( 
-          tags$img(src = "chatbot_pic_3.png", class = "img-fluid rounded border mb-4", style = "max-width: 90%;"),
+          tags$img(src = "chatbot_pic_3.png", class = "img-fluid rounded border mb-4", style = "max-width: 75%;"),
           
           layout_columns(
             col_widths = c(6, 6),
@@ -199,12 +199,12 @@ that information to respond to emerging local needs."),
           class = "bg-primary text-white",
           h3("Kohl Center @ Virginia Tech")
         ),
-        tags$img(src = "KohlCentre_Vertical_FullColor_RGB.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 65%;"),
+        tags$img(src = "KohlCentre_Vertical_FullColor_RGB.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 40%;"),
         card_header(
           class = "bg-primary text-white",
           h3("Our Stakeholders - Virginia Cooperative Extension")
         ),
-        tags$img(src = "vce_logo.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 70%;")
+        tags$img(src = "vce_logo.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 50%;")
       ),
       
       card(
@@ -214,8 +214,8 @@ that information to respond to emerging local needs."),
           h3("Interns on VCE AI Tool Team", class = "m-1")
         ),
         card_body(
-          p("Nebiyou Mengistu & Sherlock Chen"),
-          tags$img(src = "nebiyou_sherlock.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 90%;")
+          p("Nebiyou Mengistu (The College of Wooster) & Sherlock Chen (University of Virginia)"),
+          tags$img(src = "nebiyou_sherlock.jpg", class = "img-fluid rounded border mb-3", style = "max-width: 65%;")
         )
       )
     )
