@@ -161,7 +161,7 @@ server <- function(input, output, session) {
     target_locality_name   <- NULL
     is_follow_up           <- FALSE
     matched_metadata_paths <- character()
-    top_k                  <- 3 # Guaranteed fallback if vector search is bypassed
+    top_k                  <- 2 # Guaranteed fallback if vector search is bypassed
     
       
       # =========================================================================
@@ -271,7 +271,7 @@ server <- function(input, output, session) {
             relationship <- matching_bridges$relationship_type[1]
             
             # query for school districts spanning across two counties
-            query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s'", raw_file_absolute_path, target_leaid)
+            query <- sprintf("SELECT * FROM '%s' WHERE leaid = '%s' LIMIT 50", raw_file_absolute_path, target_leaid)
             records <- dbGetQuery(DB_CON, query)
             
             if (relationship == "shared") {
@@ -279,13 +279,13 @@ server <- function(input, output, session) {
             }
           } else {
             # query for if the school district doesn't span across two counties
-            query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s'", raw_file_absolute_path, fips_col, target_fips)
+            query <- sprintf("SELECT * FROM '%s' WHERE %s = '%s' LIMIT 50", raw_file_absolute_path, fips_col, target_fips)
             records <- dbGetQuery(DB_CON, query)
           }
         } else {
           # query for all other datasets other than ccd
           query <- sprintf(
-            "SELECT * FROM '%s' WHERE CAST(%s AS VARCHAR) = '%s' OR TRY_CAST(%s AS BIGINT) = %d", 
+            "SELECT * FROM '%s' WHERE (CAST(%s AS VARCHAR) = '%s' OR TRY_CAST(%s AS BIGINT) = %d) LIMIT 50", 
             raw_file_absolute_path, 
             fips_col, target_fips,
             fips_col, as.integer(target_fips)
@@ -360,7 +360,16 @@ server <- function(input, output, session) {
     # =========================================================================
     # AI EXECUTION & STREAMING HAND-OFF
     # =========================================================================
-      resolved_prompt <- input$user_prompt
+    
+    # ADDED: Enforce strict 60,000 character limit on the final payload before AI hand-off
+    if (nchar(data_context) > 60000) {
+      data_context <- paste0(
+        substr(data_context, 1, 60000), 
+        "\n\n[SYSTEM WARNING: Context truncated due to strict budget limits. Proceed with available data.]"
+      )
+    }
+    
+    resolved_prompt <- input$user_prompt
     
     # System prompt directing the LLM how to handle current context vs historical turns
     final_prompt <- sprintf(
